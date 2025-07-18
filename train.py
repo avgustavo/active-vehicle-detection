@@ -72,7 +72,7 @@ def prepare_yolo_dataset(cycle_name: str, file: str, dataset_path: str, dataset_
     os.makedirs(output_dir, exist_ok=True)    
     # Criando o data.yaml
     yaml = f"""
-path: {dataset_path}
+path: {Path(dataset_path).absolute()}
 train: {file}
 val: val 
 test: test
@@ -210,7 +210,7 @@ def main():
         shutil.copyfile(file_path, str(output_dir / file))
 
         # Treinar o modelo YOLO
-        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name, epochs=0)
+        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
         
         # Display results as CSV format
         val_csv = results.to_csv()    
