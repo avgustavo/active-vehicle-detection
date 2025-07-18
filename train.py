@@ -30,7 +30,7 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
         dataset_name (str): Nome do dataset
     """
     #iniciar o cliente e setar dataset
-    client = ApiWorkflowClient(token=LIGHTLY_TOKEN)
+    client = ApiWorkflowClient(token=token)
     client.set_dataset_id_by_name(dataset_name=dataset_name)
 
     # Pegando todas as tags
@@ -215,11 +215,11 @@ def main():
         # Display results as CSV format
         val_csv = results.to_csv()    
 
-        csv_filename = output_dir + "/validation_results.csv"
+        csv_filename = output_dir / "validation_results.csv"
         with open(csv_filename, "w") as f:
             f.write(val_csv)  
         
-        move_folder(dataset_name, f'runs/{dataset_name}')
+    move_folder(dataset_name, f'runs/{dataset_name}')
     
 
 
