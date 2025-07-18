@@ -30,3 +30,25 @@ def move_files(origem, destino):
                 print(f"Erro ao mover o arquivo '{nome_arquivo}': {e}")
         else:
             print(f"'{nome_arquivo}' é uma pasta, será ignorada.")
+
+def move_folder(origem, destino):
+    """
+    Move uma pasta inteira de origem para destino.
+
+    Args:
+        origem (str): O caminho da pasta de origem.
+        destino (str): O caminho da pasta de destino.
+    """
+    if not os.path.exists(origem):
+        print(f"Erro: A pasta de origem '{origem}' não existe.")
+        return
+
+    if not os.path.exists(destino):
+        os.makedirs(destino) # Cria a pasta de destino se ela não existir
+        print(f"Pasta de destino '{destino}' criada.")
+
+    try:
+        shutil.move(origem, destino)
+        print(f"Pasta '{origem}' movida para '{destino}'.")
+    except Exception as e:
+        print(f"Erro ao mover a pasta '{origem}': {e}")

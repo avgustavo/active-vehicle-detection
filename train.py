@@ -5,6 +5,7 @@ from ultralytics import YOLO
 import os
 import comet_ml
 import shutil
+from utils.move_files import move_folder
 
 ######################################## CONSTANTES ########################################
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
@@ -217,7 +218,8 @@ def main():
         csv_filename = output_dir + "/validation_results.csv"
         with open(csv_filename, "w") as f:
             f.write(val_csv)  
-
+        
+        move_folder(dataset_name, f'runs/{dataset_name}')
     
 
 
