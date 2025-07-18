@@ -162,7 +162,7 @@ names:
     with open(output_dir / "data.yaml", "w") as f:
         f.write(yaml)
 
-    return str(output_dir / "data.yaml")
+    return output_dir
 
 def train_yolo(cycle_name, yaml_path, dataset_name, epochs=25):
     
@@ -202,15 +202,22 @@ def main():
 
 
         # Preparar o dataset para o YOLO
-        yaml_path = prepare_yolo_dataset(cycle_name, file, DATASET_PATH, dataset_name)
+        output_dir = prepare_yolo_dataset(cycle_name, file, DATASET_PATH, dataset_name)
 
-        print(yaml_path.split('data.yaml')[0] + file)
-        
-        shutil.copyfile(file_path, yaml_path.split('data.yaml')[0] + file)
+        print(output_dir / file)
+
+        shutil.copyfile(file_path, str(output_dir / file))
 
         # Treinar o modelo YOLO
-        train_yolo(cycle_name, yaml_path, dataset_name, epochs=0)
-    
+        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name, epochs=0)
+        
+        # Display results as CSV format
+        val_csv = results.to_csv()    
+
+        csv_filename = output_dir + "/validation_results.csv"
+        with open(csv_filename, "w") as f:
+            f.write(val_csv)  
+
     
 
 
