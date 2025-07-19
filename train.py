@@ -44,68 +44,40 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
     Para cada tag, criar o arquivo de texto acumulado com os nomes no DATASET_PATH,
     pois necessita para o arquivo de configuração do YOLO.    
     '''
+
+    caminho_abs_imagens_treino = (DATASET_PATH / 'images' / 'train').absolute()
     tag_files = []
-    image_names = ''
+    image_names_list = [] # Usar uma lista em vez de uma string gigante é mais limpo
     for tag in tags:
         print(tag.name)
 
         novos_nomes = client.export_filenames_by_tag_name(tag_name=tag.name)
-        nomes_prefixados = [f"images/train/{name}" for name in novos_nomes.splitlines()]
-        novos_nomes_formatados = '\n'.join(nomes_prefixados)
+        # Para cada nome de arquivo, crie o CAMINHO ABSOLUTO completo.
+        for name in novos_nomes.splitlines():
+            if name: # Garante que não adicionamos linhas em branco
+                image_names_list.append(os.path.join(caminho_abs_imagens_treino, name.strip()))
 
-
-        if image_names == '':
-            image_names = novos_nomes_formatados
-        else:
-            # Adiciona uma nova linha antes de adicionar os nomes da próxima tag
-            image_names += '\n' + novos_nomes_formatados
 
         file_name = f"{tag.name}.txt"
         file_path = DATASET_PATH / 'images' /  file_name
         
         with open(file_path, "w") as f:
-            f.write(image_names)
-        tag_files.append(file_name)
+            f.write('\n'.join(image_names_list))
+
+        tag_files.append(str(file_path.absolute()))
 
     print(f"Arquivos de texto criados! =D")
-    print("\n" + "="*25 + " INICIANDO DEBUG DE CAMINHOS " + "="*25)
-    
-    # Teste 1: Usando um caminho que sabemos ser 100% correto
-    caminho_hardcoded = "/mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/images/train/nneo_pcd_customdata-s6nwj6hi-defaultproject-y7kXsvQVPdwizbRQBxFJ33HE_00408.pcd.jpg"
-    print(f"Testando caminho HARDCODED: {caminho_hardcoded}")
-    print(f"--> O caminho HARDCODED existe? -> {os.path.exists(caminho_hardcoded)}")
-
-    # Teste 2: Usando o primeiro nome de arquivo obtido da API do Lightly
-    if 'novos_nomes' in locals() and novos_nomes:
-        # Pega o primeiro nome de arquivo da última tag que foi processada
-        primeiro_nome_api = novos_nomes.splitlines()[0]
-        
-        # Imprime o nome com delimitadores para revelar caracteres invisíveis
-        print(f"\nTestando com o primeiro nome da API. Nome bruto: >{primeiro_nome_api}<")
-
-        # Limpa possíveis espaços/quebras de linha
-        nome_api_limpo = primeiro_nome_api.strip()
-        print(f"Nome da API após .strip(): >{nome_api_limpo}<")
-        
-        # Monta o caminho completo usando a variável DATASET_PATH
-        caminho_base_abs = str(DATASET_PATH.absolute())
-        caminho_api_completo = os.path.join(caminho_base_abs, "images/train", nome_api_limpo)
-        
-        print(f"Testando caminho montado com nome da API: {caminho_api_completo}")
-        print(f"--> O caminho da API existe? -> {os.path.exists(caminho_api_completo)}")
-
-    print("="*28 + " FIM DO DEBUG " + "="*28 + "\n")
     return tag_files
 
 
-def prepare_yolo_dataset(cycle_name: str, file: str, dataset_path: Path, dataset_name: str) -> Path:
+def prepare_yolo_dataset(cycle_name: str, file_path: str, dataset_path: Path, dataset_name: str) -> Path:
     
     output_dir = Path(f"runs/{dataset_name}/config/{cycle_name}")
     os.makedirs(output_dir, exist_ok=True)    
     # Criando o data.yaml
     yaml = f"""
 path: {dataset_path.absolute()}
-train: images/{file}
+train: {file_path}
 val: images/val
 test: images/test
 nc: 80
@@ -217,11 +189,11 @@ def train_yolo(cycle_name, yaml_path, dataset_name, epochs=25):
 
 def main():
     parse = argparse.ArgumentParser(description="Train YOLO model with Lightly dataset")
-    parse.add_argument("--dataset_name", type=str, required=True, help="Name of the dataset")
+    parse.add_argument("--dn", type=str, required=True, help="Name of the dataset")
 
     args = parse.parse_args()
 
-    dataset_name = args.dataset_name
+    dataset_name = args.dn
 
     comet_ml.login(project_name=dataset_name)
 
@@ -229,17 +201,15 @@ def main():
     
     tag_files = lightly_init(dataset_name)
 
-    for file in tag_files:
-        cycle_name = file.split('.')[0]
-        file_path = Path(DATASET_PATH) / 'images' / file
-
+    for file_path in tag_files:
+        cycle_name = Path(file_path).stem
 
         # Preparar o dataset para o YOLO
-        output_dir = prepare_yolo_dataset(cycle_name, file, DATASET_PATH, dataset_name)
+        output_dir = prepare_yolo_dataset(cycle_name, file_path, DATASET_PATH, dataset_name)
 
-        print(output_dir / file)
+        print(output_dir / cycle_name)
 
-        shutil.copyfile(file_path, str(output_dir / file))
+        shutil.copyfile(file_path, str(output_dir / cycle_name))
 
         # Treinar o modelo YOLO
         results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
