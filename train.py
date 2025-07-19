@@ -68,7 +68,7 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
         tag_files.append(file_name)
 
     print(f"Arquivos de texto criados! =D")
-     print("\n" + "="*25 + " INICIANDO DEBUG DE CAMINHOS " + "="*25)
+    print("\n" + "="*25 + " INICIANDO DEBUG DE CAMINHOS " + "="*25)
     
     # Teste 1: Usando um caminho que sabemos ser 100% correto
     caminho_hardcoded = "/mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/images/train/nneo_pcd_customdata-s6nwj6hi-defaultproject-y7kXsvQVPdwizbRQBxFJ33HE_00408.pcd.jpg"
