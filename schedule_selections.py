@@ -177,3 +177,8 @@ def main():
     print('=' * 60)
 
     print_commands(DATASET_PATH, LIGHTLY_TOKEN)    
+
+if __name__ == "__main__":
+    print('Iniciando o script...')
+    main()
+    print("Script executado com sucesso!")
