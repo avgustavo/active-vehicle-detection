@@ -183,24 +183,8 @@ def train_yolo(cycle_name, yaml_path, dataset_name, epochs=25):
         device=[0, 1],
         plots=True,
     )
-
-    metrics_val = model.val(
-            data=yaml_path,
-            name=f"{cycle_name}",
-            project=dataset_name,
-            split="val",
-        )
     
-    metrics_test = model.val(
-            data=yaml_path,
-            name=f"{cycle_name}",
-            project=dataset_name,
-            split="test",
-        )
-    
-    
-    
-    return results, metrics_val, metrics_test
+    return results
 
 
 def main():
@@ -228,10 +212,25 @@ def main():
         shutil.copyfile(file_path, str(output_dir / cycle_name))
 
         # Treinar o modelo YOLO
-        results, metrics_val, metrics_test = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
+        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
 
         print(f"Resultados do ciclo {cycle_name}: {results}")
+
+
+        best_model_path = Path(dataset_name) / cycle_name / "weights" / "best.pt"
+        if not best_model_path.exists():
+            print(f"Não foi possível encontrar os pesos do melhor modelo em {best_model_path}")
+            continue # Pula para o próximo ciclo
+
+        best_model = YOLO(best_model_path)
+
+         # Valida no conjunto 'val'
+        metrics_val = best_model.val(data=str(output_dir / "data.yaml"), split='val', name=f'{cycle_name}, project={dataset_name}')
         
+        # Valida no conjunto 'test'
+        metrics_test = best_model.val(data=str(output_dir / "data.yaml"), split='test', name=f'{cycle_name}, project={dataset_name}')
+
+        # --- FASE 3: SALVAR RESULTADOS ---
         # Display results as CSV format
         val_csv = metrics_val.to_csv()
         test_csv = metrics_test.to_csv()
