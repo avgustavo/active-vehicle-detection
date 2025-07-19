@@ -68,7 +68,33 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
         tag_files.append(file_name)
 
     print(f"Arquivos de texto criados! =D")
+     print("\n" + "="*25 + " INICIANDO DEBUG DE CAMINHOS " + "="*25)
+    
+    # Teste 1: Usando um caminho que sabemos ser 100% correto
+    caminho_hardcoded = "/mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/images/train/nneo_pcd_customdata-s6nwj6hi-defaultproject-y7kXsvQVPdwizbRQBxFJ33HE_00408.pcd.jpg"
+    print(f"Testando caminho HARDCODED: {caminho_hardcoded}")
+    print(f"--> O caminho HARDCODED existe? -> {os.path.exists(caminho_hardcoded)}")
 
+    # Teste 2: Usando o primeiro nome de arquivo obtido da API do Lightly
+    if 'novos_nomes' in locals() and novos_nomes:
+        # Pega o primeiro nome de arquivo da última tag que foi processada
+        primeiro_nome_api = novos_nomes.splitlines()[0]
+        
+        # Imprime o nome com delimitadores para revelar caracteres invisíveis
+        print(f"\nTestando com o primeiro nome da API. Nome bruto: >{primeiro_nome_api}<")
+
+        # Limpa possíveis espaços/quebras de linha
+        nome_api_limpo = primeiro_nome_api.strip()
+        print(f"Nome da API após .strip(): >{nome_api_limpo}<")
+        
+        # Monta o caminho completo usando a variável DATASET_PATH
+        caminho_base_abs = str(DATASET_PATH.absolute())
+        caminho_api_completo = os.path.join(caminho_base_abs, "images/train", nome_api_limpo)
+        
+        print(f"Testando caminho montado com nome da API: {caminho_api_completo}")
+        print(f"--> O caminho da API existe? -> {os.path.exists(caminho_api_completo)}")
+
+    print("="*28 + " FIM DO DEBUG " + "="*28 + "\n")
     return tag_files
 
 
