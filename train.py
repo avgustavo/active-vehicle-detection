@@ -184,7 +184,23 @@ def train_yolo(cycle_name, yaml_path, dataset_name, epochs=25):
         plots=True,
     )
 
-    return results
+    metrics_val = model.val(
+            data=yaml_path,
+            name=f"{cycle_name}",
+            project=dataset_name,
+            split="val",
+        )
+    
+    metrics_test = model.val(
+            data=yaml_path,
+            name=f"{cycle_name}",
+            project=dataset_name,
+            split="test",
+        )
+    
+    
+    
+    return results, metrics_val, metrics_test
 
 
 def main():
@@ -212,15 +228,22 @@ def main():
         shutil.copyfile(file_path, str(output_dir / cycle_name))
 
         # Treinar o modelo YOLO
-        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
+        results, metrics_val, metrics_test = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
+
+        print(f"Resultados do ciclo {cycle_name}: {results}")
         
         # Display results as CSV format
-        val_csv = results.to_csv()    
+        val_csv = metrics_val.to_csv()
+        test_csv = metrics_test.to_csv()
 
         csv_filename = output_dir / "validation_results.csv"
         with open(csv_filename, "w") as f:
-            f.write(val_csv)  
-        
+            f.write(val_csv)
+
+        csv_filename = output_dir / "test_results.csv"
+        with open(csv_filename, "w") as f:
+            f.write(test_csv)
+
     move_folder(dataset_name, f'runs/{dataset_name}')
     
 
