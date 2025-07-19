@@ -156,8 +156,8 @@ def main():
     """
 
     parse = argparse.ArgumentParser(description="Algoritmo de seleção aleatória ou de aprendizado ativo.")
-    parse.add_argument("--dn", type=str, required=True, help="Nome do dataset") 
-    parse.add_argument("--al", action='store_true', help="Ativa o modo de aprendizado ativo (default: aleatório)")
+    parse.add_argument("-dn", type=str, required=True, help="Nome do dataset") 
+    parse.add_argument("-al", action='store_true', help="Ativa o modo de aprendizado ativo (default: aleatório)")
     args = parse.parse_args()
 
     dataset_name = args.dn
