@@ -9,7 +9,7 @@ from utils.move_files import move_folder
 
 ######################################## CONSTANTES ########################################
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
-DATASET_PATH = 'FOCAL/yolov5_format'
+DATASET_PATH = Path('FOCAL/yolov5_format')
 
 
 def create_dir(dataset_name):
@@ -61,7 +61,7 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
             image_names += '\n' + novos_nomes_formatados
 
         file_name = f"{tag.name}.txt"
-        file_path = DATASET_PATH + "/images/" + file_name
+        file_path = DATASET_PATH / 'images' /  file_name
         
         with open(file_path, "w") as f:
             f.write(image_names)
@@ -72,16 +72,15 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
     return tag_files
 
 
-def prepare_yolo_dataset(cycle_name: str, file: str, dataset_path: str, dataset_name: str) -> Path:
+def prepare_yolo_dataset(cycle_name: str, file: str, dataset_path: Path, dataset_name: str) -> Path:
     
     output_dir = Path(f"runs/{dataset_name}/config/{cycle_name}")
     os.makedirs(output_dir, exist_ok=True)    
     # Criando o data.yaml
     yaml = f"""
-path: {Path(dataset_path).absolute()}
-train: images/{file}
-val: images/val
-test: images/test
+train: {dataset_path.absolute()}/images/{file}
+val: {dataset_path.absolute()}/images/val
+test: {dataset_path.absolute()}/images/test
 nc: 80
 names:
   0: person
