@@ -1,9 +1,9 @@
+import comet_ml
 import argparse
 from pathlib import Path
 from lightly.api import ApiWorkflowClient
 from ultralytics import YOLO
 import os
-import comet_ml
 import shutil
 from utils.move_files import move_folder
 
