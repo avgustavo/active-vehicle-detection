@@ -78,9 +78,10 @@ def prepare_yolo_dataset(cycle_name: str, file: str, dataset_path: Path, dataset
     os.makedirs(output_dir, exist_ok=True)    
     # Criando o data.yaml
     yaml = f"""
-train: {dataset_path.absolute()}/images/{file}
-val: {dataset_path.absolute()}/images/val
-test: {dataset_path.absolute()}/images/test
+path: {dataset_path.absolute()}
+train: images/{file}
+val: images/val
+test: images/test
 nc: 80
 names:
   0: person
