@@ -9,7 +9,7 @@ from utils.move_files import move_folder
 
 ######################################## CONSTANTES ########################################
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
-DATASET_PATH = 'FOCAL/yolov5_format/images'
+DATASET_PATH = 'FOCAL/yolov5_format'
 
 
 def create_dir(dataset_name):
@@ -50,7 +50,7 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
         print(tag.name)
 
         novos_nomes = client.export_filenames_by_tag_name(tag_name=tag.name)
-        nomes_prefixados = [f"train/{name}" for name in novos_nomes.splitlines()]
+        nomes_prefixados = [f"images/train/{name}" for name in novos_nomes.splitlines()]
         novos_nomes_formatados = '\n'.join(nomes_prefixados)
 
 
@@ -61,7 +61,7 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
             image_names += '\n' + novos_nomes_formatados
 
         file_name = f"{tag.name}.txt"
-        file_path = DATASET_PATH + "/" + file_name
+        file_path = DATASET_PATH + "/images/" + file_name
         
         with open(file_path, "w") as f:
             f.write(image_names)
@@ -205,7 +205,7 @@ def main():
 
     for file in tag_files:
         cycle_name = file.split('.')[0]
-        file_path = Path(DATASET_PATH) / file
+        file_path = Path(DATASET_PATH) / 'images' / file
 
 
         # Preparar o dataset para o YOLO
