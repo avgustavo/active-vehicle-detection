@@ -169,6 +169,7 @@ names:
 
     return output_dir
 
+#################################### Treinamento YOLO ####################################
 def train_yolo(cycle_name, yaml_path, dataset_name, epochs=25):
     
     #Carregar modelo
@@ -190,10 +191,12 @@ def train_yolo(cycle_name, yaml_path, dataset_name, epochs=25):
 def main():
     parse = argparse.ArgumentParser(description="Train YOLO model with Lightly dataset")
     parse.add_argument("--dn", type=str, required=True, help="Name of the dataset")
+    parse.add_argument("--eps", type=int, default=25, help="Number of training epochs")
 
     args = parse.parse_args()
 
     dataset_name = args.dn
+    epochs = args.eps
 
     comet_ml.login(project_name=dataset_name)
 
@@ -212,7 +215,7 @@ def main():
         shutil.copyfile(file_path, str(output_dir / cycle_name))
 
         # Treinar o modelo YOLO
-        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name)
+        results = train_yolo(cycle_name, str(output_dir / "data.yaml"), dataset_name, epochs=epochs)
 
         print(f"Resultados do ciclo {cycle_name}: {results}")
 
