@@ -48,11 +48,17 @@ def lightly_init(dataset_name, token=LIGHTLY_TOKEN) -> list:
     image_names = ''
     for tag in tags:
         print(tag.name)
+
+        novos_nomes = client.export_filenames_by_tag_name(tag_name=tag.name)
+        nomes_prefixados = [f"train/{name}" for name in novos_nomes.splitlines()]
+        novos_nomes_formatados = '\n'.join(nomes_prefixados)
+
+
         if image_names == '':
-            image_names = client.export_filenames_by_tag_name(tag_name=tag.name)
+            image_names = novos_nomes_formatados
         else:
             # Adiciona uma nova linha antes de adicionar os nomes da próxima tag
-            image_names += '\n' + client.export_filenames_by_tag_name(tag_name=tag.name)
+            image_names += '\n' + novos_nomes_formatados
 
         file_name = f"{tag.name}.txt"
         file_path = DATASET_PATH + "/" + file_name
