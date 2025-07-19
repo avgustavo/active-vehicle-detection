@@ -225,23 +225,21 @@ def main():
         best_model = YOLO(best_model_path)
 
          # Valida no conjunto 'val'
-        metrics_val = best_model.val(data=str(output_dir / "data.yaml"), split='val', name=f'{cycle_name}', project=f'{dataset_name}')
+        metrics_val = best_model.val(data=str(output_dir / "data.yaml"), split='val', name=f'{cycle_name}_val', project=f'{dataset_name}')
         
         # Valida no conjunto 'test'
-        metrics_test = best_model.val(data=str(output_dir / "data.yaml"), split='test', name=f'{cycle_name}', project=f'{dataset_name}')
+        # metrics_test = best_model.val(data=str(output_dir / "data.yaml"), split='test', name=f'{cycle_name}', project=f'{dataset_name}')
 
-        # --- FASE 3: SALVAR RESULTADOS ---
-        # Display results as CSV format
         val_csv = metrics_val.to_csv()
-        test_csv = metrics_test.to_csv()
+        # test_csv = metrics_test.to_csv()
 
         csv_filename = output_dir / "validation_results.csv"
         with open(csv_filename, "w") as f:
             f.write(val_csv)
 
-        csv_filename = output_dir / "test_results.csv"
-        with open(csv_filename, "w") as f:
-            f.write(test_csv)
+        # csv_filename = output_dir / "test_results.csv"
+        # with open(csv_filename, "w") as f:
+        #     f.write(test_csv)
 
     move_folder(dataset_name, f'runs/{dataset_name}')
     
