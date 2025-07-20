@@ -21,7 +21,7 @@ LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8"
 DATASET_PATH = Path('FOCAL/yolov5_format')
 LIGHTLY_INPUT = Path('lightly')
 DATA_POOL = Path('pool.csv')
-ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.csv')
+ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.txt')
 
 
 
@@ -341,34 +341,34 @@ def main():
 
         if i == 0:
             cycle_name = "ciclo_0"
-            scheduled_run_id = client.schedule_compute_worker_run(
-                worker_config = {
-                    "shutdown_when_job_finished": True,
-                    "use_datapool": True,
-                    "datasource": {
-                        "process_all": True,
-                    },
-                },
-                selection_config={
-                    "proportion_samples": 0.01, # 1% do dataset
-                    "strategies": [
-                        {
-                            "input": {
-                                "type": "RANDOM",
-                                "random_seed": 42, # optional, for reproducibility
-                            },
-                            "strategy": {
-                                "type": "WEIGHTS",
-                            }
-                        }
-                    ]
-                },
-            )
-            print(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
-            print('\n\n')
-            print_commands(DATASET_PATH, LIGHTLY_TOKEN)
+            # scheduled_run_id = client.schedule_compute_worker_run(
+            #     worker_config = {
+            #         "shutdown_when_job_finished": True,
+            #         "use_datapool": True,
+            #         "datasource": {
+            #             "process_all": True,
+            #         },
+            #     },
+            #     selection_config={
+            #         "proportion_samples": 0.01, # 1% do dataset
+            #         "strategies": [
+            #             {
+            #                 "input": {
+            #                     "type": "RANDOM",
+            #                     "random_seed": 42, # optional, for reproducibility
+            #                 },
+            #                 "strategy": {
+            #                     "type": "WEIGHTS",
+            #                 }
+            #             }
+            #         ]
+            #     },
+            # )
+            # print(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
+            # print('\n\n')
+            # print_commands(DATASET_PATH, LIGHTLY_TOKEN)
             
-            monitoring_run(client, scheduled_run_id)
+            # monitoring_run(client, scheduled_run_id)
             # 4. criar o arquivo de tags com os caminhos das imagens selecionadas
             data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
 
