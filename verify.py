@@ -22,8 +22,8 @@ def analisar_labels(path_labels: Path):
         print("Nenhum arquivo .txt de label encontrado.", file=sys.stderr)
         return
     one_label = [0,0,0,0]
-    i = 0
-    count = 0
+    # i = 0
+    # count = 0
     for label_file in label_files:
         try:
             with open(label_file, 'r') as f:
@@ -33,18 +33,18 @@ def analisar_labels(path_labels: Path):
                         try:
                             class_index = int(parts[0])
                             unique_classes.add(class_index)
-                            if class_index == i:
-                                one_label[i] += 1
-                                i += 1
-                                image = f"{label_file.absolute()}".replace('labels', 'images')
-                                image = image.replace('.txt', '.jpg')
-                                print(f"Índice de classe {class_index} encontrado no arquivo {image}.")
+                            # if class_index == i:
+                            one_label[class_index] += 1
+                            # i += 1
+                            image = f"{label_file.absolute()}".replace('labels', 'images')
+                            image = image.replace('.txt', '.jpg')
+                            print(f"Índice de classe {class_index} encontrado no arquivo {image}.")
                         except ValueError:
                             # Ignora linhas mal formatadas
                             pass
-            count += 1
-            if i == 4:
-                break
+            # count += 1
+            # if i == 4:
+            #     break
         except Exception as e:
             print(f"Não foi possível ler o arquivo {label_file}: {e}", file=sys.stderr)
 
@@ -54,7 +54,8 @@ def analisar_labels(path_labels: Path):
         sorted_classes = sorted(list(unique_classes))
         max_class = max(sorted_classes)
         num_classes = max_class + 1
-        print(f"Número total de arquivos analisados: {count}")
+        # print(f"Número total de arquivos analisados: {count}")
+        print(f"Total de labels encontrados: {sum(one_label)}, com a distribuição por classe: {one_label}")
         print("\n--- Resultados da Análise ---")
         print(f"Índices de classe únicos encontrados: {sorted_classes}")
         print(f"Índice máximo encontrado: {max_class}")
