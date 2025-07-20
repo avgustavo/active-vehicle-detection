@@ -322,8 +322,8 @@ def main():
 
     args = parse.parse_args()
 
-    dataset_name = args.d
-    epochs = args.e
+    dataset_name = args.dataset
+    epochs = args.epochs
 
     comet_ml.login(project_name=dataset_name)
 
