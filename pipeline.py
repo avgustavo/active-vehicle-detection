@@ -264,7 +264,7 @@ def print_commands(dataset_path: Path, lightly_token: str):
         f"{linesep}Docker Run command: {linesep}"
         f"\033[7m"
         f"docker run {gpus_flag} --shm-size='32768m' --rm -it \\{linesep}"
-        f"\t-v '{dataset_path.absolute()}':/input_mount:ro \\{linesep}"
+        f"\t-v '{dataset_path.absolute()}/images/train':/input_mount:ro \\{linesep}"
         f"\t-v '{Path('lightly').absolute()}':/lightly_mount \\{linesep}"
         f"\t-e LIGHTLY_TOKEN={lightly_token} \\{linesep}"
         f"\tlightly/worker:latest{linesep}"
@@ -274,7 +274,7 @@ def print_commands(dataset_path: Path, lightly_token: str):
         f"{linesep}Lightly Serve command:{linesep}"
         f"\033[7m"
         f"lightly-serve \\{linesep}"
-        f"\tinput_mount='{dataset_path.absolute()}' \\{linesep}"
+        f"\tinput_mount='{dataset_path.absolute()}/images/train' \\{linesep}"
         f"\tlightly_mount='{Path('lightly').absolute()}'{linesep}"
         f"\033[0m"
     )
