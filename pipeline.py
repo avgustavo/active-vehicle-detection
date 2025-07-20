@@ -460,7 +460,7 @@ def main():
                 image_paths_for_prediction = [line.strip() for line in f if line.strip()]
             
             generate_lightly_predictions(
-                model=str(model.absolute()), # Carrega o modelo treinado
+                model_path=str(model.absolute()), # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
                 batch_size=32
