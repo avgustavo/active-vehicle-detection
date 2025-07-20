@@ -303,7 +303,7 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
         f.write(val_csv)
 
     # Avaliar no conjunto de teste
-    metrics_test = model.test(data=yaml_path, split='test', name=f'{name}_test', project=project)
+    metrics_test = model.val(data=yaml_path, split='test', name=f'{name}_test', project=project)
 
     print(f"  > mAP50-95 (test): {metrics_test.box.map:.4f}")
     print(f"  > mAP50 (test):    {metrics_test.box.map50:.4f}")
