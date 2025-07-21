@@ -226,41 +226,39 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
         """Processa as imagens em lotes e salva as predições."""
         model = YOLO(model_path)
 
-        for i in range(0, len(image_paths), batch_size):
-            chunk_paths = image_paths[i:i + batch_size]
-            try:
-                results = model(chunk_paths, stream=True, verbose=False, batch=int(batch_size/2), device=gpu_id)
-                for result in results:
-                    original_filename = Path(result.path).name
-                    output_json_path = output_dir / f"{Path(original_filename).stem}.json"
-                    
-                    if output_json_path.exists():
-                        with lock:
-                            pbar.update(1)
-                        continue
-
-                    lightly_data = {"file_name": original_filename, "predictions": []}
-                    boxes = result.boxes.xywh.cpu().numpy()
-                    confidences = result.boxes.conf.cpu().numpy()
-                    class_ids = result.boxes.cls.cpu().numpy().astype(int)
-                    
-                    for j in range(len(boxes)):
-                        lightly_data["predictions"].append({
-                            "category_id": int(class_ids[j]),
-                            "bbox": boxes[j].tolist(),
-                            "score": float(confidences[j])
-                        })
-                    
-                    with open(output_json_path, 'w') as f:
-                        json.dump(lightly_data, f, indent=4)
-                    
+        try:
+            results = model(image_paths, stream=True, verbose=False, batch=batch_size, device=gpu_id)
+            for result in results:
+                original_filename = Path(result.path).name
+                output_json_path = output_dir / f"{Path(original_filename).stem}.json"
+                
+                if output_json_path.exists():
                     with lock:
                         pbar.update(1)
-            except Exception as e:
-                print(f"\nERRO ao processar o lote: {e}")
-                time.sleep(2)
+                    continue
+
+                lightly_data = {"file_name": original_filename, "predictions": []}
+                boxes = result.boxes.xywh.cpu().numpy()
+                confidences = result.boxes.conf.cpu().numpy()
+                class_ids = result.boxes.cls.cpu().numpy().astype(int)
+                
+                for j in range(len(boxes)):
+                    lightly_data["predictions"].append({
+                        "category_id": int(class_ids[j]),
+                        "bbox": boxes[j].tolist(),
+                        "score": float(confidences[j])
+                    })
+                
+                with open(output_json_path, 'w') as f:
+                    json.dump(lightly_data, f, indent=4)
+                
                 with lock:
-                    pbar.update(len(chunk_paths))
+                    pbar.update(1)
+        except Exception as e:
+            print(f"\nERRO ao processar o lote: {e}")
+            time.sleep(2)
+            with lock:
+                pbar.update(len(image_paths))
     
     with tqdm(total=len(image_paths), desc=f"Criando as predições das imagens") as pbar:
 
@@ -608,15 +606,28 @@ if __name__ == "__main__":
     if args.debug:
         print(f"Debug mode is ON. Dataset: {dataset_name}, Epochs: {epochs}, Start Cycle: {start}, Selection Type: {selection_type}")
 
-        txt_path = Path('runs/pipeline/config/ciclo_0/ciclo_0_labeled.txt')
+        init_model = str((Path(dataset_name) / f'ciclo_{start}' / "weights" / "best.pt").absolute())
+
+        train_yolo(
+            cycle_name=f'ciclo_{start}',
+            yaml_path=str(Path(f'runs/{dataset_name}/config/ciclo_{start}/data.yaml').absolute()),
+            project_name=f'debug_{dataset_name}',
+            epochs=epochs,
+            model_path=init_model
+        )
+
+        final_model = Path(f'debug_{dataset_name}/ciclo_{start}/weights/best.pt')
+
+        txt_path = Path(f'runs/{dataset_name}/config/ciclo_{start}/ciclo_{start}_unlabeled.txt')
+
 
         with open(txt_path, 'r') as f:
             image_paths_for_prediction = [line.strip() for line in f if line.strip()]
 
         generate_lightly_predictions(
-            model_path=args.model,
+            model_path=str(final_model.absolute()),
             image_paths=image_paths_for_prediction,
-            output_dir=Path('runs') / 'teste_generate',
+            output_dir=Path('runs') / f'debug_{dataset_name}'/ 'predictions',
             batch_size=128
         )
 
