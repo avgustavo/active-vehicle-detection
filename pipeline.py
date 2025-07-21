@@ -537,7 +537,7 @@ if __name__ == "__main__":
     parse.add_argument("-e", "--epochs", type=int, default=25, help="Number of training epochs")
     parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
     parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
-    parse.add_argument("-t", "--type", type=str, required=True, default='uncert', help="Type of selection strategy to use (uncertainty with or without balance)")
+    parse.add_argument("-t", "--type", type=str, default='uncert', help="Type of selection strategy to use (uncertainty with or without balance)")
     parse.add_argument("--debug", action='store_true', help="Enable debug mode")
 
     args = parse.parse_args()
