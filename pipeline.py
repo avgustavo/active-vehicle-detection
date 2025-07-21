@@ -32,7 +32,7 @@ def create_dir(dataset_name):
         os.makedirs(f'runs/{dataset_name}')
         print(f'Diretório do dataset {dataset_name} criado com sucesso!')
     else:
-        print(f'Esse diretório já existe!')
+        print(f'Esse diretório {dataset_name} já existe!')
 
 
 def configure_lightly_client(token: str, dataset_name: str) -> ApiWorkflowClient:
@@ -52,6 +52,7 @@ def configure_lightly_client(token: str, dataset_name: str) -> ApiWorkflowClient
         print(f"Erro ao criar o dataset: {e}")
         # Se o dataset já existir, apenas configurar o cliente
         client.set_dataset_id_by_name(dataset_name=dataset_name)
+        print(f"Usando o já existente.")
 
     client.set_local_config(purpose=DatasourcePurpose.INPUT)
     client.set_local_config(purpose=DatasourcePurpose.LIGHTLY)
@@ -70,6 +71,7 @@ def update_pool(
     """
     print('='*80)
     print(f"\n--- Atualizando pool de dados para o ciclo: {cycle_name} ---")
+    print('\n'+'='*80)
     
     # Define o diretório de configuração central para este ciclo
     config_dir = Path("runs") / project_name / "config" / cycle_name
@@ -143,6 +145,11 @@ def prepare_yolo_dataset(labeled_txt_path: Path) -> Path:
     """
     # O diretório de configuração é o mesmo onde o 'labeled_txt_path' está
     config_dir = labeled_txt_path.parent
+
+    print("=" * 100)
+    print(f"Criando arquivo de configuração YAML em: {config_dir}")
+    print(f"Arquivo de imagens rotuladas: {labeled_txt_path.absolute()} vai para o 'train' do data.yaml")
+    print("=" * 100)
     
     yaml_path = config_dir / "data.yaml"
     yaml_content = f"""
@@ -183,7 +190,9 @@ def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, mode
         device=[0, 1],
         plots=True,
     )
-    
+    print("="*100)
+    print(f"Treinamento concluído para o ciclo {cycle_name}. ")
+    print("="*100)
     return results
 
 
@@ -428,6 +437,10 @@ def main():
 
     for i in range(start, num_total_cycles):
 
+        print('='*100)
+        print(f"--- Iniciando o ciclo {i} ---")
+        print('='*100)
+
         if i == 0:
             cycle_name = "ciclo_0"
             scheduled_run_id = client.schedule_compute_worker_run(
@@ -505,7 +518,6 @@ def main():
             unlabeled_txt = data_splits["unlabeled_txt_path"]
 
             yaml_path = prepare_yolo_dataset(labeled_txt)
-
 
             results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=str(baseline_model.absolute()))
 
