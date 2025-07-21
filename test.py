@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from ultralytics import YOLO
 
 def main():
@@ -7,13 +8,13 @@ def main():
 
     files = []
 
-    abs_path = '/home/avgus/active-vehicle-detection/FOCAL/yolov5_format/images/train'
+    abs_path = Path('FOCAL/yolov5_format/images/train').absolute()
 
     with open('/home/avgus/active-vehicle-detection/FOCAL/image_paths.txt', 'r') as f:
 
         i = 0 
         for line in f:
-            files.append(os.path.join(abs_path, line.strip()))
+            files.append(os.path.join(str(abs_path), line.strip()))
             i += 1
             if i == 32:
                 break
