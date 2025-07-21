@@ -1,4 +1,5 @@
 import json
+import threading
 import comet_ml
 import argparse
 from pathlib import Path
@@ -192,20 +193,29 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
         print("Nenhuma imagem para processar nesta partição.")
         return
 
-    model = YOLO(model_path)
     print(f"\nIniciando predição para {len(image_paths)} imagens...")
-    
-    with tqdm(total=len(image_paths), desc=f"Criando as predições das imagens") as pbar:
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Dividir as imagens igualmente para cada GPU
+    mid = len(image_paths) // 2
+    paths_splits = [image_paths[:mid], image_paths[mid:]]
+
+    def worker_process(model_path, image_paths, output_dir, batch_size, gpu_id, pbar, lock):
+        """Processa as imagens em lotes e salva as predições."""
+        model = YOLO(model_path)
+
         for i in range(0, len(image_paths), batch_size):
             chunk_paths = image_paths[i:i + batch_size]
             try:
-                results = model(chunk_paths, stream=True, verbose=False, batch=int(batch_size/2), device=0)
+                results = model(chunk_paths, stream=True, verbose=False, batch=int(batch_size/2), device=gpu_id)
                 for result in results:
                     original_filename = Path(result.path).name
                     output_json_path = output_dir / f"{Path(original_filename).stem}.json"
                     
                     if output_json_path.exists():
-                        pbar.update(1)
+                        with lock:
+                            pbar.update(1)
                         continue
 
                     lightly_data = {"file_name": original_filename, "predictions": []}
@@ -223,11 +233,31 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
                     with open(output_json_path, 'w') as f:
                         json.dump(lightly_data, f, indent=4)
                     
-                    pbar.update(1)
+                    with lock:
+                        pbar.update(1)
             except Exception as e:
                 print(f"\nERRO ao processar o lote: {e}")
                 time.sleep(2)
-                pbar.update(len(chunk_paths))
+                with lock:
+                    pbar.update(len(chunk_paths))
+    
+    with tqdm(total=len(image_paths), desc=f"Criando as predições das imagens") as pbar:
+
+        lock = threading.Lock()
+        threads = []
+
+        for i, split in enumerate(paths_splits):
+
+            thread = threading.Thread(
+                target=worker_process,
+                args=(model_path, split, output_dir, batch_size, i, pbar, lock),
+            )
+            threads.append(thread)
+            thread.start()
+
+        for thread in threads:
+            thread.join()
+
 
 
 def monitoring_run(client: ApiWorkflowClient, run_id: str):
@@ -315,15 +345,67 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
 
 
 def main():
-    parse = argparse.ArgumentParser(description="Train YOLO model with Lightly dataset")
-    parse.add_argument("-d", "--dataset", type=str, required=True, help="Name of the dataset")
-    parse.add_argument("-e", "--epochs", type=int, default=25, help="Number of training epochs")
-    parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
 
-    args = parse.parse_args()
-
-    dataset_name = args.dataset
-    epochs = args.epochs
+    if selection_type == 'uncert':
+        selection_config = {
+            "proportion_samples": 0.01, # +1% do dataset
+            "strategies": [
+                {
+                    "input": {
+                        "type": "SCORES",
+                        "task": "object_detection", 
+                        "score": "uncertainty_entropy",
+                    },
+                    "strategy": {
+                        "type": "WEIGHTS"
+                    }
+                },
+                {
+                    "input": {
+                        "type": "EMBEDDINGS",
+                    },
+                    "strategy": {
+                        "type": "DIVERSITY",
+                    }
+                },
+            ],
+        }
+    elif selection_type == 'balance':
+        selection_config = {
+            "proportion_samples": 0.01, # +1% do dataset
+            "strategies": [
+                {
+                    "input": {
+                        "type": "SCORES",
+                        "task": "object_detection", 
+                        "score": "uncertainty_entropy",
+                    },
+                    "strategy": {
+                        "type": "WEIGHTS"
+                    }
+                },
+                {
+                    "input": {
+                        "type": "EMBEDDINGS",
+                    },
+                    "strategy": {
+                        "type": "DIVERSITY",
+                    },
+                },
+                {
+                    "input": {
+                        "type": "PREDICTIONS",
+                        "task": "object_detection",
+                        "name": "CLASS_DISTRIBUTION"
+                    },
+                    "strategy": {  
+                        "type": "BALANCE",  
+                        "distribution": "UNIFORM"  
+                    }
+                }                
+            ],
+        }
+        
 
     comet_ml.login(project_name=dataset_name)
 
@@ -337,38 +419,38 @@ def main():
 
     num_total_cycles = 10
 
-    for i in range(num_total_cycles):
+    for i in range(start, num_total_cycles):
 
         if i == 0:
             cycle_name = "ciclo_0"
-            # scheduled_run_id = client.schedule_compute_worker_run(
-            #     worker_config = {
-            #         "shutdown_when_job_finished": True,
-            #         "use_datapool": True,
-            #         "datasource": {
-            #             "process_all": True,
-            #         },
-            #     },
-            #     selection_config={
-            #         "proportion_samples": 0.01, # 1% do dataset
-            #         "strategies": [
-            #             {
-            #                 "input": {
-            #                     "type": "RANDOM",
-            #                     "random_seed": 42, # optional, for reproducibility
-            #                 },
-            #                 "strategy": {
-            #                     "type": "WEIGHTS",
-            #                 }
-            #             }
-            #         ]
-            #     },
-            # )
-            # print(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
-            # print('\n\n')
-            # print_commands(DATASET_PATH, LIGHTLY_TOKEN)
+            scheduled_run_id = client.schedule_compute_worker_run(
+                worker_config = {
+                    "shutdown_when_job_finished": True,
+                    "use_datapool": True,
+                    "datasource": {
+                        "process_all": True,
+                    },
+                },
+                selection_config={
+                    "proportion_samples": 0.01, # 1% do dataset
+                    "strategies": [
+                        {
+                            "input": {
+                                "type": "RANDOM",
+                                "random_seed": 42, # optional, for reproducibility
+                            },
+                            "strategy": {
+                                "type": "WEIGHTS",
+                            }
+                        }
+                    ]
+                },
+            )
+            print(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
+            print('\n\n')
+            print_commands(DATASET_PATH, LIGHTLY_TOKEN)
             
-            # monitoring_run(client, scheduled_run_id)
+            monitoring_run(client, scheduled_run_id)
             # 4. criar o arquivo de tags com os caminhos das imagens selecionadas
             data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
 
@@ -402,29 +484,7 @@ def main():
                         "process_all": True,
                     },
                 },
-                selection_config={
-                        "proportion_samples": 0.01, # +1% do dataset
-                        "strategies": [
-                            {
-                                "input": {
-                                    "type": "SCORES",
-                                    "task": "object_detection", 
-                                    "score": "uncertainty_entropy",
-                                },
-                                "strategy": {
-                                    "type": "WEIGHTS"
-                                }
-                            },
-                            {
-                                "input": {
-                                    "type": "EMBEDDINGS",
-                                },
-                                "strategy": {
-                                    "type": "DIVERSITY",
-                                },
-                            }
-                        ],
-                    },
+                selection_config=selection_config
             )
             print(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
             print('\n\n')
@@ -463,7 +523,7 @@ def main():
                 model_path=str(model.absolute()), # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                batch_size=64
+                batch_size=128
             )
 
     move_folder(dataset_name, f'runs/{dataset_name}')
@@ -471,6 +531,39 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+
+    parse = argparse.ArgumentParser(description="Train YOLO model with Lightly dataset")
+    parse.add_argument("-d", "--dataset", type=str, required=True, help="Name of the dataset")
+    parse.add_argument("-e", "--epochs", type=int, default=25, help="Number of training epochs")
+    parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
+    parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
+    parse.add_argument("-t", "--type", type=str, required=True, default='uncert', help="Type of selection strategy to use (uncertainty with or without balance)")
+    parse.add_argument("--debug", action='store_true', help="Enable debug mode")
+
+    args = parse.parse_args()
+
+    dataset_name = args.dataset
+    epochs = args.epochs
+    start = args.start
+    selection_type = args.type
+
+    if args.debug:
+        print(f"Debug mode is ON. Dataset: {dataset_name}, Epochs: {epochs}, Start Cycle: {start}, Selection Type: {selection_type}")
+
+        txt_path = Path('runs/pipeline/config/ciclo_0/ciclo_0_labeled.txt')
+
+        with open(txt_path, 'r') as f:
+            image_paths_for_prediction = [line.strip() for line in f if line.strip()]
+
+        generate_lightly_predictions(
+            model_path=args.model,
+            image_paths=image_paths_for_prediction,
+            output_dir=Path('runs') / 'teste_generate',
+            batch_size=128
+        )
+
+
+    else:
+        main()
 
 
