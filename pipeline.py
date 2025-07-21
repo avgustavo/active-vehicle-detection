@@ -15,6 +15,7 @@ import torch
 import time
 from typing import Dict, List
 import pandas as pd
+from time import time
 
 
 ######################################## CONSTANTES ########################################
@@ -25,6 +26,17 @@ DATA_POOL = Path('pool.csv')
 ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.txt')
 
 
+def calculate_time(start: float, end: float) -> str:
+    diff = end - start
+    h = int(diff // 3600)
+    m = int((diff % 3600) // 60)
+    s = int(diff % 60)
+    if h > 0:
+        return f"{h} horas, {m} minutos e {s} segundos"
+    elif m > 0:
+        return f"{m} minutos e {s} segundos"
+    else:
+        return f"{s} segundos"
 
 def create_dir(dataset_name):
 
@@ -353,7 +365,7 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
         f.write(test_csv)
 
 
-def main():
+def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, selection_type: str = 'uncert'):
 
     if selection_type == 'uncert':
         print('='*80)
@@ -443,6 +455,9 @@ def main():
 
         if i == 0:
             cycle_name = "ciclo_0"
+            
+            t1 = time()
+
             scheduled_run_id = client.schedule_compute_worker_run(
                 worker_config = {
                     "shutdown_when_job_finished": True,
@@ -471,18 +486,27 @@ def main():
             print_commands(DATASET_PATH, LIGHTLY_TOKEN)
             
             monitoring_run(client, scheduled_run_id)
-            # 4. criar o arquivo de tags com os caminhos das imagens selecionadas
-            data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
+            t2 = time()
 
+            print(f"Tempo total de execução da seleção no ciclo 0: {calculate_time(t1, t2)}")
+
+            # criar o arquivo de tags com os caminhos das imagens selecionadas
+            data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
+            
             labeled_txt = data_splits["labeled_txt_path"]
             unlabeled_txt = data_splits["unlabeled_txt_path"]
             
             # 5. criar o arquivo yaml de configuração do modelo
             yaml_path = prepare_yolo_dataset(labeled_txt)
+            
+            t3 = time()
+            print(f"Tempo total da atualização do pool no ciclo 0: {calculate_time(t2, t3)}")
 
-            results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=args.model)
-
+            results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=initial_model_path)
             print(f"Resultados do ciclo {cycle_name}: {results}")
+            
+            t4 = time()
+            print(f"Tempo total do treinamento no ciclo 0: {calculate_time(t3, t4)}")
 
             model = baseline_model
 
@@ -494,8 +518,12 @@ def main():
                 project=dataset_name
             )
 
+            t5 = time()
+            print(f"Tempo total da avaliação do modelo no ciclo 0: {calculate_time(t4, t5)}")
+
         else:
             cycle_name = f'ciclo_{i}'
+            t1 = time()
             scheduled_run_id = client.schedule_compute_worker_run(
                 worker_config = {
                     "shutdown_when_job_finished": True,
@@ -511,6 +539,8 @@ def main():
             print_commands(DATASET_PATH, LIGHTLY_TOKEN)
             
             monitoring_run(client, scheduled_run_id)
+            t2 = time()
+            print(f"Tempo total de execução da seleção no ciclo {i}: {calculate_time(t1, t2)}")
 
             data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
 
@@ -518,10 +548,14 @@ def main():
             unlabeled_txt = data_splits["unlabeled_txt_path"]
 
             yaml_path = prepare_yolo_dataset(labeled_txt)
+            t3 = time()
+            print(f"Tempo total da atualização do pool no ciclo {i}: {calculate_time(t2, t3)}")
 
             results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=str(baseline_model.absolute()))
-
             print(f"Resultados do ciclo {cycle_name}: {results}")
+            
+            t4 = time()
+            print(f"Tempo total do treinamento no ciclo {i}: {calculate_time(t3, t4)}")
 
             model = Path(dataset_name) / cycle_name / "weights" / "best.pt"
 
@@ -532,6 +566,8 @@ def main():
                 name=cycle_name,
                 project=dataset_name
             )
+            t5 = time()
+            print(f"Tempo total da avaliação do modelo no ciclo {i}: {calculate_time(t4, t5)}")
 
         if i < num_total_cycles - 1:
         # Lê a lista de caminhos não rotulados do arquivo de texto
@@ -544,6 +580,9 @@ def main():
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
                 batch_size=128
             )
+            t6 = time()
+            print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
+            print(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
 
     move_folder(dataset_name, f'runs/{dataset_name}')
     
@@ -583,6 +622,13 @@ if __name__ == "__main__":
 
 
     else:
-        main()
-
-
+        ts = time()
+        main(
+            dataset_name=dataset_name,
+            epochs=epochs,
+            initial_model_path=args.model,
+            start=start,
+            selection_type=selection_type
+        )
+        te = time()
+        print(f"Tempo total de execução do pipeline: {calculate_time(ts, te)}")
