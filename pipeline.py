@@ -12,7 +12,6 @@ from os import linesep
 import shutil
 from utils.move_files import move_folder
 import torch
-import time
 from typing import Dict, List
 import pandas as pd
 from time import time
