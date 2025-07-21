@@ -199,7 +199,7 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
         for i in range(0, len(image_paths), batch_size):
             chunk_paths = image_paths[i:i + batch_size]
             try:
-                results = model(chunk_paths, stream=True, verbose=False, device=[0, 1])
+                results = model(chunk_paths, stream=True, verbose=False, batch=int(batch_size/2), device=0)
                 for result in results:
                     original_filename = Path(result.path).name
                     output_json_path = output_dir / f"{Path(original_filename).stem}.json"
@@ -463,7 +463,7 @@ def main():
                 model_path=str(model.absolute()), # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                batch_size=16
+                batch_size=64
             )
 
     move_folder(dataset_name, f'runs/{dataset_name}')
