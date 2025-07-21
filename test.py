@@ -10,7 +10,9 @@ def main():
 
     abs_path = Path('FOCAL/yolov5_format/images/train').absolute()
 
-    with open('/home/avgus/active-vehicle-detection/FOCAL/image_paths.txt', 'r') as f:
+    txt_all = Path('FOCAL/image_paths.txt')
+
+    with open(txt_all, 'r') as f:
 
         i = 0 
         for line in f:
