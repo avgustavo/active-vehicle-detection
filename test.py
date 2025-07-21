@@ -10,7 +10,7 @@ def main():
 
     abs_path = Path('FOCAL/yolov5_format/images/train').absolute()
 
-    txt_all = Path('FOCAL/all_images.txt')
+    txt_all = Path('FOCAL/yolov5_format/images/all_images.txt')
 
     with open(txt_all, 'r') as f:
 
