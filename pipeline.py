@@ -347,6 +347,9 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
 def main():
 
     if selection_type == 'uncert':
+        print('='*80)
+        print(f"Configuração de seleção: sem balanceamento")
+        print('='*80)
         selection_config = {
             "proportion_samples": 0.01, # +1% do dataset
             "strategies": [
@@ -371,6 +374,10 @@ def main():
             ],
         }
     elif selection_type == 'balance':
+        print('='*80)
+        print(f"Configuração de seleção: com balanceamento")
+        print('='*80)
+
         selection_config = {
             "proportion_samples": 0.01, # +1% do dataset
             "strategies": [
