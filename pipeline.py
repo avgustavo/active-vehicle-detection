@@ -225,39 +225,41 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
         """Processa as imagens em lotes e salva as predições."""
         model = YOLO(model_path)
 
-        try:
-            results = model(image_paths, stream=True, verbose=False, batch=batch_size, device=gpu_id)
-            for result in results:
-                original_filename = Path(result.path).name
-                output_json_path = output_dir / f"{Path(original_filename).stem}.json"
-                
-                if output_json_path.exists():
+        for i in range(0, len(image_paths), batch_size):
+            chunk_paths = image_paths[i:i + batch_size]
+            try:
+                results = model(chunk_paths, stream=True, verbose=False, batch=128, device=gpu_id)
+                for result in results:
+                    original_filename = Path(result.path).name
+                    output_json_path = output_dir / f"{Path(original_filename).stem}.json"
+                    
+                    if output_json_path.exists():
+                        with lock:
+                            pbar.update(1)
+                        continue
+
+                    lightly_data = {"file_name": original_filename, "predictions": []}
+                    boxes = result.boxes.xywh.cpu().numpy()
+                    confidences = result.boxes.conf.cpu().numpy()
+                    class_ids = result.boxes.cls.cpu().numpy().astype(int)
+                    
+                    for j in range(len(boxes)):
+                        lightly_data["predictions"].append({
+                            "category_id": int(class_ids[j]),
+                            "bbox": boxes[j].tolist(),
+                            "score": float(confidences[j])
+                        })
+                    
+                    with open(output_json_path, 'w') as f:
+                        json.dump(lightly_data, f, indent=4)
+                    
                     with lock:
                         pbar.update(1)
-                    continue
-
-                lightly_data = {"file_name": original_filename, "predictions": []}
-                boxes = result.boxes.xywh.cpu().numpy()
-                confidences = result.boxes.conf.cpu().numpy()
-                class_ids = result.boxes.cls.cpu().numpy().astype(int)
-                
-                for j in range(len(boxes)):
-                    lightly_data["predictions"].append({
-                        "category_id": int(class_ids[j]),
-                        "bbox": boxes[j].tolist(),
-                        "score": float(confidences[j])
-                    })
-                
-                with open(output_json_path, 'w') as f:
-                    json.dump(lightly_data, f, indent=4)
-                
+            except Exception as e:
+                print(f"\nERRO ao processar o lote: {e}")
+                time.sleep(2)
                 with lock:
-                    pbar.update(1)
-        except Exception as e:
-            print(f"\nERRO ao processar o lote: {e}")
-            time.sleep(2)
-            with lock:
-                pbar.update(len(image_paths))
+                    pbar.update(len(chunk_paths))
     
     with tqdm(total=len(image_paths), desc=f"Criando as predições das imagens") as pbar:
 
@@ -575,7 +577,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 model_path=str(model.absolute()), # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                batch_size=128
+                batch_size=1024
             )
             t6 = time()
             print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
@@ -630,7 +632,7 @@ if __name__ == "__main__":
             model_path=str(final_model.absolute()),
             image_paths=image_paths_for_prediction,
             output_dir=Path('runs') / f'debug_{dataset_name}'/ 'predictions',
-            batch_size=128
+            batch_size=1024
         )
         t4 = time()
         print(f"Tempo total da geração de predições no ciclo {start}: {calculate_time(t3, t4)}")
