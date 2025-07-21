@@ -607,7 +607,7 @@ if __name__ == "__main__":
         print(f"Debug mode is ON. Dataset: {dataset_name}, Epochs: {epochs}, Start Cycle: {start}, Selection Type: {selection_type}")
 
         init_model = str((Path(dataset_name) / f'ciclo_{start}' / "weights" / "best.pt").absolute())
-
+        t1 = time()
         train_yolo(
             cycle_name=f'ciclo_{start}',
             yaml_path=str(Path(f'runs/{dataset_name}/config/ciclo_{start}/data.yaml').absolute()),
@@ -615,6 +615,9 @@ if __name__ == "__main__":
             epochs=epochs,
             model_path=init_model
         )
+        t2 = time()
+        print(f"Tempo total do treinamento no ciclo {start}: {calculate_time(t1, t2)}")
+
 
         final_model = Path(f'debug_{dataset_name}/ciclo_{start}/weights/best.pt')
 
@@ -623,15 +626,17 @@ if __name__ == "__main__":
 
         with open(txt_path, 'r') as f:
             image_paths_for_prediction = [line.strip() for line in f if line.strip()]
-
+        t3 = time()
         generate_lightly_predictions(
             model_path=str(final_model.absolute()),
             image_paths=image_paths_for_prediction,
             output_dir=Path('runs') / f'debug_{dataset_name}'/ 'predictions',
             batch_size=128
         )
+        t4 = time()
+        print(f"Tempo total da geração de predições no ciclo {start}: {calculate_time(t3, t4)}")
 
-
+        print(f"Tempo total de execução do ciclo {start}: {calculate_time(t1, t4)}")
     else:
         ts = time()
         main(
