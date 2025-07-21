@@ -463,7 +463,7 @@ def main():
                 model_path=str(model.absolute()), # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                batch_size=32
+                batch_size=16
             )
 
     move_folder(dataset_name, f'runs/{dataset_name}')
