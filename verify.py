@@ -62,19 +62,20 @@ def analisar_labels(path_labels: Path):
         print(f"Índice máximo encontrado: {max_class}")
         print(f"Número total de classes inferido: {num_classes} (índices de 0 a {max_class})")
 
-def contar_classes_por_status(csv_path, labels_dir, status=1):
+def contar_classes_por_status(csv_name, labels_dir, status=1):
     """
     Conta a distribuição das classes para imagens com determinado status no CSV.
 
     Args:
-        csv_path (str or Path): Caminho para o CSV com colunas 'filename' e 'status'.
+        csv_name (str or Path): Caminho para o CSV com colunas 'filename' e 'status'.
         labels_dir (str or Path): Diretório raiz dos arquivos de label.
         status (int or str): Status a ser filtrado (ex: 1 ou '01').
 
     Returns:
         dict: Distribuição das classes {classe: contagem}
     """
-    df = pd.read_csv(csv_path, dtype={'status': int, 'filename': str})
+    csv = Path(csv_name)
+    df = pd.read_csv(csv, dtype={'status': int, 'filename': str})
     status = int(status)
     selecionados = df[df['status'] == status]['filename']
 
