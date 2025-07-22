@@ -173,11 +173,12 @@ train: {labeled_txt_path.absolute()}
 val: images/val
 test: images/test
 
-nc: 3
+nc: 4
 names:
   0: person
   1: bicycle
   2: car
+  3: cart
 """.strip()
     with open(yaml_path, "w") as f:
         f.write(yaml_content.strip())
