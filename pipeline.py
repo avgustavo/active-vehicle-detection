@@ -608,6 +608,7 @@ def validate_yolo_zero(name:str):
         split='val',
         device=[0, 1],
         plots=True,
+        classes = [0, 1, 2]  # Classes: person, bicycle, car, cart
     )
     val_csv = results.to_csv()
     csv_filename = Path('yolo11n_zero_validation') / f'{name}' / "validation_results.csv"
