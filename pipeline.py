@@ -228,7 +228,7 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
         for i in range(0, len(image_paths), batch_size):
             chunk_paths = image_paths[i:i + batch_size]
             try:
-                results = model(chunk_paths, stream=True, verbose=False, batch=32, device=gpu_id)
+                results = model(chunk_paths, stream=True, verbose=False, batch=128, device=gpu_id)
                 for result in results:
                     original_filename = Path(result.path).name
                     output_json_path = output_dir / f"{Path(original_filename).stem}.json"
@@ -632,7 +632,7 @@ if __name__ == "__main__":
             model_path=str(final_model.absolute()),
             image_paths=image_paths_for_prediction,
             output_dir=Path('runs') / f'debug_{dataset_name}'/ 'predictions',
-            batch_size=128
+            batch_size=256
         )
         t4 = time()
         print(f"Tempo total da geração de predições no ciclo {start}: {calculate_time(t3, t4)}")
