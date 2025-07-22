@@ -1,4 +1,5 @@
 import json
+import re
 import threading
 import comet_ml
 import argparse
@@ -174,7 +175,7 @@ test: images/test
 
 nc: 4
 names:
-  0: pedestrian
+  0: person
   1: bicycle
   2: car
   3: cart
@@ -555,6 +556,66 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
     move_folder(dataset_name, f'runs/{dataset_name}')
     
 
+def complete_train(dataset_name: str, epochs: int ):
+
+    create_dir(dataset_name);
+    data_yaml = prepare_yolo_dataset(ALL_IMAGES)
+
+    # 2. Ler o conteúdo do arquivo gerado
+    with open(data_yaml, "r") as f:
+        content = f.read()
+
+    # 3. Substituir a linha 'train:' usando uma expressão regular para garantir
+    #    que apenas essa linha específica seja alterada.
+    #    O padrão `^train: .*` casa com qualquer linha que comece com "train:"
+    modified_content = re.sub(
+        pattern=r"^train: .*", 
+        repl="train: images/train", 
+        string=content, 
+        flags=re.MULTILINE
+    )
+
+    print(modified_content)
+
+    with open(data_yaml, "w") as f:
+        f.write(modified_content)
+
+
+    model = YOLO('yolo11n.pt')
+
+    results = model.train(
+        data=str(data_yaml.absolute()),
+        epochs=epochs,
+        project=dataset_name,
+        device=[0, 1],
+        plots=True,
+    )
+
+    move_folder(dataset_name, f'runs/{dataset_name}')
+
+def validate_yolo_zero(name:str):
+    """
+    Valida a yolo sem treinamento com o conjunto de validação
+    """
+    create_dir('yolo11n_zero_validation')
+    data_yaml = prepare_yolo_dataset(ALL_IMAGES)
+    model = YOLO('yolo11n.pt')
+
+    results = model.val(
+        data=str(data_yaml.absolute()),
+        project='yolo11n_zero_validation',
+        name=name,
+        split='val',
+        device=[0, 1],
+        plots=True,
+    )
+    val_csv = results.to_csv()
+    csv_filename = Path('yolo11n_zero_validation') / f'{name}' / "validation_results.csv"
+    with open(csv_filename, "w") as f:
+        f.write(val_csv)
+
+    move_folder('yolo11n_zero_validation', f'runs/yolo11n_zero_validation')
+
 
 if __name__ == "__main__":
 
@@ -565,6 +626,7 @@ if __name__ == "__main__":
     parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
     parse.add_argument("-t", "--type", type=str, default='uncert', help="Type of selection strategy to use (uncertainty with or without balance)")
     parse.add_argument("-r", "--retrain", action='store_true', help="Retrain the model from the beginning")
+    parse.add_argument("--mode", type=str, default='al', choices=['al', 'val', 'train'], help="Mode of operation: 'al' for active learning, 'val' for zero validation, 'train' for complete training")
     parse.add_argument("--debug", action='store_true', help="Enable debug mode")
 
     args = parse.parse_args()
@@ -580,8 +642,22 @@ if __name__ == "__main__":
         print(f"Initial Model Path: {args.model}, Retrain: {args.retrain}")
         print('='*100)
 
+        # complete_train(dataset_name, epochs)
+
         init_model = str((Path(dataset_name) / f'ciclo_{start}' / "weights" / "best.pt").absolute())
         t1 = time.time()
+
+        # model = YOLO('yolo11n.pt')
+
+        # results = model.train(
+        #     data=str(Path('data.yaml').absolute()),
+        #     epochs=epochs,
+        #     name=f'ciclo_{start}',
+        #     project=f'debug_train',
+        #     device=[0, 1],
+        #     plots=True,
+        # )
+
         train_yolo(
             cycle_name=f'ciclo_{start}',
             yaml_path=str(Path(f'runs/{dataset_name}/config/ciclo_{start}/data.yaml').absolute()),
@@ -611,7 +687,12 @@ if __name__ == "__main__":
         print(f"Tempo total da geração de predições no ciclo {start}: {calculate_time(t3, t4)}")
 
         print(f"Tempo total de execução do ciclo {start}: {calculate_time(t1, t4)}")
-    else:
+    
+    elif args.mode == 'val':
+        
+        validate_yolo_zero(name=dataset_name)
+
+    elif args.mode == 'al':
         ts = time.time()
         main(
             dataset_name=dataset_name,
