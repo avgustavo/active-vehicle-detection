@@ -74,8 +74,8 @@ def contar_classes_por_status(csv_path, labels_dir, status=1):
     Returns:
         dict: Distribuição das classes {classe: contagem}
     """
-    df = pd.read_csv(csv_path, dtype={'status': str})
-    status = str(status)
+    df = pd.read_csv(csv_path, dtype={'status': int, 'filename': str})
+    status = int(status)
     selecionados = df[df['status'] == status]['filename']
 
     class_counts = {}
