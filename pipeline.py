@@ -173,7 +173,7 @@ train: {labeled_txt_path.absolute()}
 val: images/val
 test: images/test
 
-nc: 4
+nc: 3
 names:
   0: person
   1: bicycle
