@@ -97,12 +97,46 @@ def contar_classes_por_status(csv_name, labels_dir, status=1):
     print(f"Distribuição das classes para status={status}: {class_counts}")
     return class_counts
 
+def contar_classes_por_txt(txt_path, labels_dir):
+    """
+    Conta a distribuição das classes para imagens listadas em um arquivo de texto.
+
+    Args:
+        txt_path (str or Path): Caminho para o arquivo de texto com caminhos das imagens (um por linha).
+        labels_dir (str or Path): Diretório raiz dos arquivos de label.
+
+    Returns:
+        dict: Distribuição das classes {classe: contagem}
+    """
+    txt_path = Path(txt_path)
+    labels_dir = Path(labels_dir)
+    with open(txt_path, 'r') as f:
+        imagens = [line.strip() for line in f if line.strip()]
+
+    class_counts = {}
+    for img_path in imagens:
+        img_stem = Path(img_path).stem
+        label_file = labels_dir / f"{img_stem}.txt"
+        if label_file.exists():
+            with open(label_file, 'r') as f:
+                for line in f:
+                    parts = line.strip().split()
+                    if parts:
+                        try:
+                            class_idx = int(parts[0])
+                            class_counts[class_idx] = class_counts.get(class_idx, 0) + 1
+                        except ValueError:
+                            continue
+    print(f"Distribuição das classes para imagens do arquivo '{txt_path}': {class_counts}")
+    return class_counts
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Verifica os índices de classe em arquivos de label no formato YOLO.")
     parser.add_argument("-p","--path", type=str, required=True, help="Caminho para o diretório raiz dos arquivos de label (ex: FOCAL/yolov5_format/labels/train).")
     parser.add_argument("-c","--csv", type=str, help="Caminho para o CSV com colunas 'filename' e 'status' (opcional).")
     parser.add_argument("-s","--status", type=str, default='1', help="Status a ser filtrado no CSV (padrão: '1').")
-    parser.add_argument("-t","--type", type=str, default='count', choices=['count', 'analise'], help="Tipo de função a ser executada (padrão: 'count').")
+    parser.add_argument("-t","--type", type=str, default='count', choices=['count', 'analise', 'txt'], help="Tipo de função a ser executada (padrão: 'count').")
+    parser.add_argument("-x","--txt", type=str, help="Caminho para o arquivo de texto com imagens selecionadas (opcional, para --type txt).")
     
     args = parser.parse_args()
 
@@ -113,4 +147,8 @@ if __name__ == '__main__':
         contar_classes_por_status(args.csv, args.path, args.status)
     elif args.type == 'analise':
         analisar_labels(Path(args.path))
-    
+    elif args.type == 'txt':
+        if not args.txt:
+            print("Erro: Para a função 'txt', é necessário fornecer o caminho para o arquivo de texto.", file=sys.stderr)
+            sys.exit(1)
+        contar_classes_por_txt(args.txt, args.path)
