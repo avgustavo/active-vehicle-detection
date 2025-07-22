@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 import sys
+import pandas as pd
 
 def analisar_labels(path_labels: Path):
     """
@@ -61,10 +62,54 @@ def analisar_labels(path_labels: Path):
         print(f"Índice máximo encontrado: {max_class}")
         print(f"Número total de classes inferido: {num_classes} (índices de 0 a {max_class})")
 
+def contar_classes_por_status(csv_path, labels_dir, status=1):
+    """
+    Conta a distribuição das classes para imagens com determinado status no CSV.
+
+    Args:
+        csv_path (str or Path): Caminho para o CSV com colunas 'filename' e 'status'.
+        labels_dir (str or Path): Diretório raiz dos arquivos de label.
+        status (int or str): Status a ser filtrado (ex: 1 ou '01').
+
+    Returns:
+        dict: Distribuição das classes {classe: contagem}
+    """
+    df = pd.read_csv(csv_path, dtype={'status': str})
+    status = str(status)
+    selecionados = df[df['status'] == status]['filename']
+
+    class_counts = {}
+
+    for fname in selecionados:
+        label_path = Path(labels_dir) / fname
+        label_path = label_path.with_suffix('.txt')
+        if label_path.exists():
+            with open(label_path, 'r') as f:
+                for line in f:
+                    parts = line.strip().split()
+                    if parts:
+                        try:
+                            class_idx = int(parts[0])
+                            class_counts[class_idx] = class_counts.get(class_idx, 0) + 1
+                        except ValueError:
+                            continue
+    print(f"Distribuição das classes para status={status}: {class_counts}")
+    return class_counts
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Verifica os índices de classe em arquivos de label no formato YOLO.")
-    parser.add_argument("--pth", type=str, required=True, help="Caminho para o diretório raiz dos arquivos de label (ex: FOCAL/yolov5_format/labels/train).")
+    parser.add_argument("-p","--path", type=str, required=True, help="Caminho para o diretório raiz dos arquivos de label (ex: FOCAL/yolov5_format/labels/train).")
+    parser.add_argument("-c","--csv", type=str, help="Caminho para o CSV com colunas 'filename' e 'status' (opcional).")
+    parser.add_argument("-s","--status", type=str, default='1', help="Status a ser filtrado no CSV (padrão: '1').")
+    parser.add_argument("-t","--type", type=str, default='count', choices=['count', 'analise'], help="Tipo de função a ser executada (padrão: 'count').")
     
     args = parser.parse_args()
+
+    if args.type == 'count':
+        if not args.csv:
+            print("Erro: Para a função 'count', é necessário fornecer o caminho para o CSV.", file=sys.stderr)
+            sys.exit(1)
+        contar_classes_por_status(args.csv, args.path, args.status)
+    elif args.type == 'analise':
+        analisar_labels(Path(args.path))
     
-    analisar_labels(Path(args.pth))
