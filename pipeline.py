@@ -514,6 +514,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 init_model_path = str(baseline_model.absolute())
             else:
                 init_model_path = str((Path(dataset_name) / f'ciclo_{i-1}' / "weights" / "best.pt").absolute())
+        print(f"Modelo inicial para o ciclo {i}: {init_model_path}")    
         ####################################################################################################
         #################################### Treinamento do modelo YOLO ####################################
         results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=init_model_path)
