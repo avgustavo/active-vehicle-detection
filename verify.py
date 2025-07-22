@@ -36,9 +36,9 @@ def analisar_labels(path_labels: Path):
                             # if class_index == i:
                             one_label[class_index] += 1
                             # i += 1
-                            image = f"{label_file.absolute()}".replace('labels', 'images')
-                            image = image.replace('.txt', '.jpg')
-                            print(f"Índice de classe {class_index} encontrado no arquivo {image}.")
+                            # image = f"{label_file.absolute()}".replace('labels', 'images')
+                            # image = image.replace('.txt', '.jpg')
+                            # print(f"Índice de classe {class_index} encontrado no arquivo {image}.")
                         except ValueError:
                             # Ignora linhas mal formatadas
                             pass
@@ -55,7 +55,7 @@ def analisar_labels(path_labels: Path):
         max_class = max(sorted_classes)
         num_classes = max_class + 1
         # print(f"Número total de arquivos analisados: {count}")
-        print(f"Total de labels encontrados: {sum(one_label)}, com a distribuição por classe: {one_label}")
+        print(f"\nTotal de labels encontrados: {sum(one_label)}, com a distribuição por classe: {one_label}")
         print("\n--- Resultados da Análise ---")
         print(f"Índices de classe únicos encontrados: {sorted_classes}")
         print(f"Índice máximo encontrado: {max_class}")

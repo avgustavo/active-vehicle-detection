@@ -15,8 +15,6 @@ import torch
 from typing import Dict, List
 import pandas as pd
 import time
-from time import time as now
-
 
 ######################################## CONSTANTES ########################################
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
@@ -208,7 +206,7 @@ def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, mode
     return results
 
 
-def generate_lightly_predictions(model_path, image_paths: list[str], output_dir: Path, batch_size: int):
+def generate_lightly_predictions(model_path, image_paths: list[str], output_dir: Path, chunk_size: int):
     """Executa a predição, otimizado para o ambiente Kaggle."""
     if not image_paths:
         print("Nenhuma imagem para processar nesta partição.")
@@ -222,12 +220,12 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
     mid = len(image_paths) // 2
     paths_splits = [image_paths[:mid], image_paths[mid:]]
 
-    def worker_process(model_path, image_paths, output_dir, batch_size, gpu_id, pbar, lock):
+    def worker_process(model_path, image_paths, output_dir, chunk_size, gpu_id, pbar, lock):
         """Processa as imagens em lotes e salva as predições."""
         model = YOLO(model_path)
 
-        for i in range(0, len(image_paths), batch_size):
-            chunk_paths = image_paths[i:i + batch_size]
+        for i in range(0, len(image_paths), chunk_size):
+            chunk_paths = image_paths[i:i + chunk_size]
             try:
                 results = model(chunk_paths, stream=True, verbose=False, batch=32, device=gpu_id)
                 for result in results:
@@ -271,7 +269,7 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
 
             thread = threading.Thread(
                 target=worker_process,
-                args=(model_path, split, output_dir, batch_size, i, pbar, lock),
+                args=(model_path, split, output_dir, chunk_size, i, pbar, lock),
             )
             threads.append(thread)
             thread.start()
@@ -365,7 +363,7 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
         f.write(test_csv)
 
 
-def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, selection_type: str = 'uncert'):
+def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, selection_type: str = 'uncert', retrain: bool = False):
 
     if selection_type == 'uncert':
         print('='*80)
@@ -452,12 +450,10 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         print('='*100)
         print(f"--- Iniciando o ciclo {i} ---")
         print('='*100)
+        cycle_name = f'ciclo_{i}'
 
-        if i == 0:
-            cycle_name = "ciclo_0"
-            
-            t1 = now()
-
+        if i == 0:            
+            t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
                 worker_config = {
                     "shutdown_when_job_finished": True,
@@ -482,48 +478,8 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 },
             )
             print(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
-            print('\n\n')
-            print_commands(DATASET_PATH, LIGHTLY_TOKEN)
-            
-            monitoring_run(client, scheduled_run_id)
-            t2 = now()
-
-            print(f"Tempo total de execução da seleção no ciclo 0: {calculate_time(t1, t2)}")
-
-            # criar o arquivo de tags com os caminhos das imagens selecionadas
-            data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
-            
-            labeled_txt = data_splits["labeled_txt_path"]
-            unlabeled_txt = data_splits["unlabeled_txt_path"]
-            
-            # 5. criar o arquivo yaml de configuração do modelo
-            yaml_path = prepare_yolo_dataset(labeled_txt)
-            
-            t3 = now()
-            print(f"Tempo total da atualização do pool no ciclo 0: {calculate_time(t2, t3)}")
-
-            results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=initial_model_path)
-            print(f"Resultados do ciclo {cycle_name}: {results}")
-            
-            t4 = now()
-            print(f"Tempo total do treinamento no ciclo 0: {calculate_time(t3, t4)}")
-
-            model = baseline_model
-
-            evaluate_yolo(
-                model_path=str(model.absolute()),
-                yaml_path=str(yaml_path.absolute()),
-                output_dir=labeled_txt.parent,
-                name=cycle_name,
-                project=dataset_name
-            )
-
-            t5 = now()
-            print(f"Tempo total da avaliação do modelo no ciclo 0: {calculate_time(t4, t5)}")
-
         else:
-            cycle_name = f'ciclo_{i}'
-            t1 = now()
+            t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
                 worker_config = {
                     "shutdown_when_job_finished": True,
@@ -535,54 +491,65 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 selection_config=selection_config
             )
             print(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
-            print('\n\n')
-            print_commands(DATASET_PATH, LIGHTLY_TOKEN)
-            
-            monitoring_run(client, scheduled_run_id)
-            t2 = now()
-            print(f"Tempo total de execução da seleção no ciclo {i}: {calculate_time(t1, t2)}")
+        ####################################### Seleção das imagens ########################################
+        print('\n\n')
+        print_commands(DATASET_PATH, LIGHTLY_TOKEN)
+        monitoring_run(client, scheduled_run_id)
+        t2 = time.time()
+        print(f"Tempo total de execução da seleção no ciclo {i}: {calculate_time(t1, t2)}")
+        ####################################################################################################
+        ################################ Atualização do pool de dados ######################################
+        data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
+        labeled_txt = data_splits["labeled_txt_path"]
+        unlabeled_txt = data_splits["unlabeled_txt_path"]
+        yaml_path = prepare_yolo_dataset(labeled_txt)
+        t3 = time.time()
+        print(f"Tempo total da atualização do pool no ciclo {i}: {calculate_time(t2, t3)}")
+        ####################################################################################################
+        #################################### Escolha do modelo inicial #####################################
+        if i == 0:
+            init_model_path = initial_model_path
+        else:
+            if retrain:
+                init_model_path = str(baseline_model.absolute())
+            else:
+                init_model_path = str((Path(dataset_name) / f'ciclo_{i-1}' / "weights" / "best.pt").absolute())
+        ####################################################################################################
+        #################################### Treinamento do modelo YOLO ####################################
+        results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=init_model_path)
+        print(f"Resultados do ciclo {cycle_name}: {results}")
+        t4 = time.time()
+        print(f"Tempo total do treinamento no ciclo {i}: {calculate_time(t3, t4)}")
+        ####################################################################################################
+        ##################################### Avaliação do modelo YOLO #####################################
+        final_model_path = str((Path(dataset_name) / cycle_name / "weights" / "best.pt").absolute())
 
-            data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
-
-            labeled_txt = data_splits["labeled_txt_path"]
-            unlabeled_txt = data_splits["unlabeled_txt_path"]
-
-            yaml_path = prepare_yolo_dataset(labeled_txt)
-            t3 = now()
-            print(f"Tempo total da atualização do pool no ciclo {i}: {calculate_time(t2, t3)}")
-
-            results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=str(baseline_model.absolute()))
-            print(f"Resultados do ciclo {cycle_name}: {results}")
-            
-            t4 = now()
-            print(f"Tempo total do treinamento no ciclo {i}: {calculate_time(t3, t4)}")
-
-            model = Path(dataset_name) / cycle_name / "weights" / "best.pt"
-
-            evaluate_yolo(
-                model_path=str(model.absolute()),
-                yaml_path=str(yaml_path.absolute()),
-                output_dir=labeled_txt.parent,
-                name=cycle_name,
-                project=dataset_name
-            )
-            t5 = now()
-            print(f"Tempo total da avaliação do modelo no ciclo {i}: {calculate_time(t4, t5)}")
-
+        evaluate_yolo(
+            model_path=final_model_path,
+            yaml_path=str(yaml_path.absolute()),
+            output_dir=labeled_txt.parent,
+            name=cycle_name,
+            project=dataset_name
+        )
+        t5 = time.time()
+        print(f"Tempo total da avaliação do modelo no ciclo {i}: {calculate_time(t4, t5)}")
+        ####################################################################################################
+        ############################## Geração de predições para o LightlyOne ##############################
         if i < num_total_cycles - 1:
         # Lê a lista de caminhos não rotulados do arquivo de texto
             with open(unlabeled_txt, 'r') as f:
                 image_paths_for_prediction = [line.strip() for line in f if line.strip()]
             
             generate_lightly_predictions(
-                model_path=str(model.absolute()), # Carrega o modelo treinado
+                model_path=final_model_path, # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                batch_size=64
+                chunk_size=64
             )
-            t6 = now()
+            t6 = time.time()
             print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
-            print(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
+        ####################################################################################################
+        print(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
 
     move_folder(dataset_name, f'runs/{dataset_name}')
     
@@ -596,6 +563,7 @@ if __name__ == "__main__":
     parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
     parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
     parse.add_argument("-t", "--type", type=str, default='uncert', help="Type of selection strategy to use (uncertainty with or without balance)")
+    parse.add_argument("-r", "--retrain", action='store_true', help="Retrain the model from the beginning")
     parse.add_argument("--debug", action='store_true', help="Enable debug mode")
 
     args = parse.parse_args()
@@ -606,10 +574,13 @@ if __name__ == "__main__":
     selection_type = args.type
 
     if args.debug:
+        print('='*100)
         print(f"Debug mode is ON. Dataset: {dataset_name}, Epochs: {epochs}, Start Cycle: {start}, Selection Type: {selection_type}")
+        print(f"Initial Model Path: {args.model}, Retrain: {args.retrain}")
+        print('='*100)
 
         init_model = str((Path(dataset_name) / f'ciclo_{start}' / "weights" / "best.pt").absolute())
-        t1 = now()
+        t1 = time.time()
         train_yolo(
             cycle_name=f'ciclo_{start}',
             yaml_path=str(Path(f'runs/{dataset_name}/config/ciclo_{start}/data.yaml').absolute()),
@@ -617,7 +588,7 @@ if __name__ == "__main__":
             epochs=epochs,
             model_path=init_model
         )
-        t2 = now()
+        t2 = time.time()
         print(f"Tempo total do treinamento no ciclo {start}: {calculate_time(t1, t2)}")
 
 
@@ -628,25 +599,26 @@ if __name__ == "__main__":
 
         with open(txt_path, 'r') as f:
             image_paths_for_prediction = [line.strip() for line in f if line.strip()]
-        t3 = now()
+        t3 = time.time()
         generate_lightly_predictions(
             model_path=str(final_model.absolute()),
             image_paths=image_paths_for_prediction,
             output_dir=Path('runs') / f'debug_{dataset_name}'/ 'predictions',
-            batch_size=64
+            chunk_size=64
         )
-        t4 = now()
+        t4 = time.time()
         print(f"Tempo total da geração de predições no ciclo {start}: {calculate_time(t3, t4)}")
 
         print(f"Tempo total de execução do ciclo {start}: {calculate_time(t1, t4)}")
     else:
-        ts = now()
+        ts = time.time()
         main(
             dataset_name=dataset_name,
             epochs=epochs,
             initial_model_path=args.model,
             start=start,
-            selection_type=selection_type
+            selection_type=selection_type,
+            retrain=args.retrain
         )
-        te = now()
+        te = time.time()
         print(f"Tempo total de execução do pipeline: {calculate_time(ts, te)}")
