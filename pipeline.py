@@ -577,7 +577,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 model_path=str(model.absolute()), # Carrega o modelo treinado
                 image_paths=image_paths_for_prediction,
                 output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                batch_size=1024
+                batch_size=256
             )
             t6 = time()
             print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
@@ -632,7 +632,7 @@ if __name__ == "__main__":
             model_path=str(final_model.absolute()),
             image_paths=image_paths_for_prediction,
             output_dir=Path('runs') / f'debug_{dataset_name}'/ 'predictions',
-            batch_size=1024
+            batch_size=256
         )
         t4 = time()
         print(f"Tempo total da geração de predições no ciclo {start}: {calculate_time(t3, t4)}")
