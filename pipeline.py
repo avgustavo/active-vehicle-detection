@@ -178,7 +178,6 @@ names:
   0: person
   1: bicycle
   2: car
-  3: cart
 """.strip()
     with open(yaml_path, "w") as f:
         f.write(yaml_content.strip())
