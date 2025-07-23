@@ -558,7 +558,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
 
 def complete_train(dataset_name: str, epochs: int ):
 
-    create_dir(dataset_name);
+    create_dir('complete_train');
     data_yaml = prepare_yolo_dataset(ALL_IMAGES)
 
     # 2. Ler o conteúdo do arquivo gerado
@@ -591,7 +591,7 @@ def complete_train(dataset_name: str, epochs: int ):
         plots=True,
     )
 
-    move_folder(dataset_name, f'runs/{dataset_name}')
+    move_folder(dataset_name, f'runs/complete_train')
 
 def validate_yolo_zero(name:str):
     """
