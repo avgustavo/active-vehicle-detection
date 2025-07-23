@@ -21,7 +21,6 @@ import time
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
 DATASET_PATH = Path('FOCAL/yolov5_format')
 LIGHTLY_INPUT = Path('lightly')
-DATA_POOL = Path('pool.csv')
 ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.txt')
 
 
@@ -37,13 +36,15 @@ def calculate_time(start: float, end: float) -> str:
     else:
         return f"{s} segundos"
 
-def create_dir(dataset_name):
+def create_dir(dataset_name:str) -> Path:
 
     if not os.path.exists(f'runs/{dataset_name}'):
         os.makedirs(f'runs/{dataset_name}')
         print(f'Diretório do dataset {dataset_name} criado com sucesso!')
     else:
         print(f'Esse diretório {dataset_name} já existe!')
+
+    return Path(f'runs/{dataset_name}')
 
 
 def configure_lightly_client(token: str, dataset_name: str) -> ApiWorkflowClient:
@@ -72,10 +73,9 @@ def configure_lightly_client(token: str, dataset_name: str) -> ApiWorkflowClient
 
 def update_pool(
     client: ApiWorkflowClient,
-    pool_path: Path,
     all_images_path: Path,
     cycle_name: str,
-    project_name: str
+    run_dir: Path
 ) -> Dict[str, Path]:    
     """
     Atualiza o pool de imagens no Lightly.
@@ -85,8 +85,9 @@ def update_pool(
     print('\n'+'='*80)
     
     # Define o diretório de configuração central para este ciclo
-    config_dir = Path("runs") / project_name / "config" / cycle_name
+    config_dir = run_dir / "config" / cycle_name
     config_dir.mkdir(parents=True, exist_ok=True)
+    pool_path = run_dir / "pool.csv"
 
     if not pool_path.exists():
         print('Criando o arquivo principal controle de imagens rotuladas e não rotuladas...')
@@ -128,8 +129,8 @@ def update_pool(
 
 
     # Salva os arquivos .txt DENTRO do diretório de configuração do ciclo
-    path_labeled_txt = config_dir / f"{cycle_name}_labeled.txt"
-    path_unlabeled_txt = config_dir / f"{cycle_name}_unlabeled.txt"
+    path_labeled_txt = config_dir / "labeled.txt"
+    path_unlabeled_txt = config_dir / "unlabeled.txt"
     
     # Escreve os caminhos nos arquivos de texto
     print(f"Salvando lista de {len(caminhos_rotulados)} caminhos rotulados em: {path_labeled_txt}")
@@ -437,7 +438,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
     comet_ml.login(project_name=dataset_name)
 
     #################### 1. criar o diretório de saída da execução ####################
-    create_dir(dataset_name)
+    run_dir = create_dir(dataset_name)
 
     #################### 2. iniciar o cliente do lightly ####################
     client = configure_lightly_client(LIGHTLY_TOKEN, dataset_name)
@@ -500,7 +501,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         print(f"Tempo total de execução da seleção no ciclo {i}: {calculate_time(t1, t2)}")
         ####################################################################################################
         ################################ Atualização do pool de dados ######################################
-        data_splits = update_pool(client, DATA_POOL, ALL_IMAGES, cycle_name, dataset_name)
+        data_splits = update_pool(client, ALL_IMAGES, cycle_name, run_dir)
         labeled_txt = data_splits["labeled_txt_path"]
         unlabeled_txt = data_splits["unlabeled_txt_path"]
         yaml_path = prepare_yolo_dataset(labeled_txt)
@@ -556,9 +557,10 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
     move_folder(dataset_name, f'runs/{dataset_name}')
     
 
-def complete_train(dataset_name: str, epochs: int , classes: int = 4):
+def complete_train(dataset_name: str, epochs: int):
 
-    create_dir('complete_train');
+    run_dir = create_dir('complete_train');
+
     data_yaml = prepare_yolo_dataset(ALL_IMAGES)
 
     # 2. Ler o conteúdo do arquivo gerado
@@ -580,30 +582,205 @@ def complete_train(dataset_name: str, epochs: int , classes: int = 4):
     with open(data_yaml, "w") as f:
         f.write(modified_content)
 
-    class_list = [i for i in range(classes)]
+    #################################################################################################### Total 4 classes 
+    model_1 = YOLO('yolo11n.pt')
 
-    model = YOLO('yolo11n.pt')
+    print("="*100)
+    print('Treinamento completo do modelo YOLO, usando todas as imagens rotuladas e as 4 classes.')
+    print("="*100)
 
-    results = model.train(
+    model_1.train(
         data=str(data_yaml.absolute()),
         epochs=epochs,
         project=dataset_name,
+        name='classes_4',
         device=[0, 1],
         plots=True,
-        classes=class_list,  
     )
 
-    final_model_path = str((Path(dataset_name)  / "weights" / "best.pt").absolute())
+    f_m_path = str((Path(dataset_name)  / "classes_4" / "weights" / "best.pt").absolute())
 
     evaluate_yolo(
-        model_path=final_model_path,
+        model_path=f_m_path,
         yaml_path=str(data_yaml.absolute()),
         output_dir=Path(dataset_name),
-        name=dataset_name,
+        name='classes_4',
         project=dataset_name
     )
 
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+
+    #################################################################################################### Total 3 classes
+
+    print("="*100)
+    print('Treinamento completo do modelo YOLO, usando todas as imagens rotuladas e as 3 primeiras classes.')
+    print("="*100)
+
+    model_2 = YOLO('yolo11n.pt')
+    model_2.train(
+        data=str(data_yaml.absolute()),
+        epochs=epochs,
+        project=dataset_name,
+        name='classes_3',
+        device=[0, 1],
+        plots=True,
+        classes=[0, 1, 2]  # Classes: person, bicycle, car
+    )
+
+    final_model_path = str((Path(dataset_name)  / "classes_3" / "weights" / "best.pt").absolute())
+
+    final_model = YOLO(final_model_path)
+    res_val = final_model.val(data=str(data_yaml.absolute()), split='val', name='classes_3_val', project=dataset_name)
+    res_val_csv = res_val.to_csv()
+    csv_filename = Path(dataset_name) / "classes_3" / "val_results.csv"
+    with open(csv_filename, "w") as f:
+        f.write(res_val_csv)
+
+    res_test = final_model.val(data=str(data_yaml.absolute()), split='test', name='classes_3_test', project=dataset_name)
+    res_test_csv = res_test.to_csv()
+    csv_filename = Path(dataset_name) / "classes_3" / "test_results.csv"
+    with open(csv_filename, "w") as f:
+        f.write(res_test_csv)
+        
+    
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+    ####################################################################################################
     move_folder(dataset_name, f'runs/complete_train')
+
+    print(f"{dataset_name} concluído e movido para o diretório 'runs/complete_train'.")
+
+    #################################################################################################### COM FREEZE E 4 CLASSES
+
+    print("="*100)
+    print (f'Treinamento do modelo para 1% aleatório do dataset COM freeze e com 4 classes.')
+    print("="*100)
+    model_3 = YOLO('yolo11n.pt')
+    yaml_3 = Path('runs/pipeline2/config/ciclo_0/data.yaml') 
+    model_3.train(
+        data=str(yaml_3.absolute()),
+        epochs=epochs,
+        project='freeze_4_classes',
+        name='classes_4',
+        device=[0, 1],
+        plots=True,
+        freeze=10
+    )
+
+    f_model_3 = str((Path('freeze_4_classes')  / "classes_4" / "weights" / "best.pt").absolute())
+
+    evaluate_yolo(
+        model_path=f_model_3,
+        yaml_path=str(yaml_3.absolute()),
+        output_dir=Path('freeze_4_classes'),
+        name='classes_4',
+        project='freeze_4_classes'
+    )
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+    ###################################################################################################
+    print("="*100)
+    print (f'Treinamento do modelo para 1% aleatório do dataset COM freeze, com 4 classes. e learning rate de 0.0001.')
+    print("="*100)
+
+    model_4 = YOLO('yolo11n.pt')
+    yaml_4 = Path('runs/pipeline2/config/ciclo_0/data.yaml')
+    model_4.train(
+        data=str(yaml_4.absolute()),
+        epochs=epochs,
+        project='freeze_4_classes',
+        name='lr_1e4',
+        device=[0, 1],
+        plots=True,
+        freeze=10,
+        lr0=0.0001,
+    )
+    f_model_4 = str((Path('freeze_4_classes')  / "lr_1e4" / "weights" / "best.pt").absolute())
+
+    evaluate_yolo(
+        model_path=f_model_4,
+        yaml_path=str(yaml_4.absolute()),
+        output_dir=Path('freeze_4_classes'),
+        name='lr_1e4',
+        project='freeze_4_classes'
+    )
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+
+    move_folder('freeze_4_classes', f'runs/complete_train')
+
+    ####################################################################################################
+
+    print("="*100)
+    print (f'Treinamento do modelo para 1% aleatório do dataset sem freeze e com 3 classes.')
+    print("="*100)
+    model_5 = YOLO('yolo11n.pt')
+    yaml_5 = Path('runs/pipeline2/config/ciclo_0/data.yaml') 
+    model_5.train(
+        data=str(yaml_5.absolute()),
+        epochs=epochs,
+        project='freeze_3_classes',
+        name='classes_3_sem_freeze',
+        device=[0, 1],
+        plots=True,
+        classes=[0, 1, 2]  # Classes: person, bicycle, car
+    )
+
+
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+    ###############################################################################################
+    print("="*100)
+    print (f'Treinamento do modelo para 1% aleatório do dataset COM freeze e com 3 classes.')
+    print("="*100)
+
+    model_6 = YOLO('yolo11n.pt')
+    yaml_6 = Path('runs/pipeline2/config/ciclo_0/data.yaml')
+    model_6.train(
+        data=str(yaml_6.absolute()),
+        epochs=epochs,
+        project='freeze_3_classes',
+        name='classes_3',
+        device=[0, 1],
+        plots=True,
+        classes=[0, 1, 2],
+        freeze=10
+    )
+
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+   #######################################################################################################################
+    print("="*100)
+    print (f'Treinamento do modelo para 1% aleatório do dataset COM freeze, com 3 classes. e learning rate de 0.0001.')
+    print("="*100)
+
+    model_7 = YOLO('yolo11n.pt')
+    yaml_7 = Path('runs/pipeline2/config/ciclo_0/data.yaml')
+    model_7.train(
+        data=str(yaml_7.absolute()),
+        epochs=epochs,
+        project='freeze_3_classes',
+        name='lr_1e4',
+        device=[0, 1],
+        plots=True,
+        freeze=10,
+        classes=[0, 1, 2],  # Classes: person, bicycle, car
+        lr0=0.0001,  
+    )
+
+    print(f"Treinamento e avaliação concluídos.")
+    time.sleep(10)
+    print("="*100)
+
+    move_folder('freeze_3_classes', f'runs/complete_train')
+
 
 def validate_yolo_zero(name:str):
     """
