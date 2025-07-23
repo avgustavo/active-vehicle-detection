@@ -583,6 +583,63 @@ def complete_train(dataset_name: str, epochs: int):
         f.write(modified_content)
 
     #################################################################################################### 
+    #################### Treinamento completo com 3 classes, freeze e learning rate ####################
+    ####################################################################################################
+
+    print("="*100)
+    print('Treinamento completo do modelo YOLO, usando todas as imagens rotuladas e as 3 primeiras classes.')
+    print('Freeze de 10 camadas e learning rate de 0.0001.')
+    print("="*100)
+
+    model_0 = YOLO('yolo11n.pt')
+
+    t1 = time.time()
+
+    name = 'classes_3'
+
+    model_0.train(
+        data=str(data_yaml.absolute()),
+        epochs=epochs,
+        project=dataset_name,
+        name=name,
+        device=[0, 1],
+        plots=True,
+        classes=[0, 1, 2],
+        freeze=10,  # Freeze as primeiras 10 camadas
+        lr0=0.0001,  # Learning rate de 0.0001
+        optimizer='AdamW',  # Usando AdamW como otimizador
+        momentum=0.937,  # Momentum para o otimizador
+    )
+
+    t2 = time.time()
+    print(f"Tempo total do treinamento: {calculate_time(t1, t2)}")
+    print(f"Modelo treinado salvo em: {Path(dataset_name) / name / 'weights' / 'best.pt'}")
+
+    model_path = str((Path(dataset_name)  / name / "weights" / "best.pt").absolute())
+
+    save_dir = run_dir / dataset_name / name
+    save_dir.mkdir(parents=True, exist_ok=True)
+
+    final_model = YOLO(model_path)
+    res_val = final_model.val(data=str(data_yaml.absolute()), split='val', name=f'{name}_val', project=dataset_name, classes=[0, 1, 2]) 
+
+    res_val_csv = res_val.to_csv()
+    csv_val = save_dir / "val_results.csv"
+    with open(csv_val, "w") as f:
+        f.write(res_val_csv)
+
+    res_test = final_model.val(data=str(data_yaml.absolute()), split='test', name=f'{name}_test', project=dataset_name, classes=[0, 1, 2])
+    res_test_csv = res_test.to_csv()
+    csv_test = save_dir / "test_results.csv"
+    with open(csv_test, "w") as f:
+        f.write(res_test_csv)
+
+    t3 = time.time()
+    print(f"Tempo total da avaliação do modelo: {calculate_time(t2, t3)}")
+    print(f"Treinamento e avaliação concluídos.")
+    print(f'Tempo total de execução: {calculate_time(t1, t3)}')
+    print("="*100)
+    #################################################################################################### 
     ############################## Treinamento completo com 4  classes #################################
     ####################################################################################################
     # model_1 = YOLO('yolo11n.pt')
@@ -745,11 +802,11 @@ def complete_train(dataset_name: str, epochs: int):
     ############################## Treinamento 1% sem FREEZE e 3 classes ###############################
     ####################################################################################################
 
-    print("="*100)
-    print (f'Treinamento do modelo para 1% aleatório do dataset sem freeze e com 3 classes.')
-    print("="*100)
+    # print("="*100)
+    # print (f'Treinamento do modelo para 1% aleatório do dataset sem freeze e com 3 classes.')
+    # print("="*100)
     # model_5 = YOLO('yolo11n.pt')
-    yaml_5 = Path('runs/pipeline2/config/ciclo_0/data.yaml') 
+    # yaml_5 = Path('runs/pipeline2/config/ciclo_0/data.yaml') 
     # model_5.train(
     #     data=str(yaml_5.absolute()),
     #     epochs=epochs,
@@ -760,18 +817,18 @@ def complete_train(dataset_name: str, epochs: int):
     #     classes=[0, 1, 2]  # Classes: person, bicycle, car
     # )
 
-    fmp5 = str((Path('runs/complete_train/freeze_3_classes/classes_3_sem_freeze/weights/best.pt').absolute()))
+    # fmp5 = str((Path('runs/complete_train/freeze_3_classes/classes_3_sem_freeze/weights/best.pt').absolute()))
 
-    fm5 = YOLO(fmp5)
-    rv5 = fm5.val(data=str(yaml_5.absolute()), split='val', name='classes_3_sem_freeze_val', project='freeze_3_classes', classes=[0, 1, 2])
-    rv5_csv = rv5.to_csv()
-    csv_filename = Path('runs/complete_train/freeze_3_classes/classes_3_sem_freeze/val_results.csv')
-    with open(csv_filename, "w") as f:
-        f.write(rv5_csv)
+    # fm5 = YOLO(fmp5)
+    # rv5 = fm5.val(data=str(yaml_5.absolute()), split='val', name='classes_3_sem_freeze_val', project='freeze_3_classes', classes=[0, 1, 2])
+    # rv5_csv = rv5.to_csv()
+    # csv_filename = Path('runs/complete_train/freeze_3_classes/classes_3_sem_freeze/val_results.csv')
+    # with open(csv_filename, "w") as f:
+    #     f.write(rv5_csv)
 
-    print(f"Treinamento e avaliação concluídos.")
-    time.sleep(10)
-    print("="*100)
+    # print(f"Treinamento e avaliação concluídos.")
+    # time.sleep(10)
+    # print("="*100)
     #################################################################################################### 
     ############################## Treinamento 1% com FREEZE e 3 classes ###############################
     ####################################################################################################
@@ -808,12 +865,12 @@ def complete_train(dataset_name: str, epochs: int):
     #################################################################################################### 
     ######################### Treinamento 1% com FREEZE, 3 classes e lr=0.0001 #########################
     ####################################################################################################
-    print("="*100)
-    print (f'Treinamento do modelo para 1% aleatório do dataset COM freeze, com 3 classes. e learning rate de 0.0001.')
-    print("="*100)
+    # print("="*100)
+    # print (f'Treinamento do modelo para 1% aleatório do dataset COM freeze, com 3 classes. e learning rate de 0.0001.')
+    # print("="*100)
 
     # model_7 = YOLO('yolo11n.pt')
-    yaml_7 = Path('runs/pipeline2/config/ciclo_0/data.yaml')
+    # yaml_7 = Path('runs/pipeline2/config/ciclo_0/data.yaml')
     # model_7.train(
     #     data=str(yaml_7.absolute()),
     #     epochs=epochs,
@@ -828,19 +885,19 @@ def complete_train(dataset_name: str, epochs: int):
     #     momentum=0.937,  
     # )
 
-    fmp7 = str((Path('freeze_3_classes/lr_1e4/weights/best.pt').absolute()))
+    # fmp7 = str((Path('freeze_3_classes/lr_1e4/weights/best.pt').absolute()))
 
-    fm7 = YOLO(fmp7)
-    rv7 = fm7.val(data=str(yaml_7.absolute()), split='val', name='lr_1e4_val', project='freeze_3_classes', classes=[0, 1, 2])
+    # fm7 = YOLO(fmp7)
+    # rv7 = fm7.val(data=str(yaml_7.absolute()), split='val', name='lr_1e4_val', project='freeze_3_classes', classes=[0, 1, 2])
 
-    rv7_csv = rv7.to_csv()
-    csv_filename = Path('runs/complete_train/freeze_3_classes/lr_1e4/val_results.csv')
-    with open(csv_filename, "w") as f:
-        f.write(rv7_csv)
+    # rv7_csv = rv7.to_csv()
+    # csv_filename = Path('runs/complete_train/freeze_3_classes/lr_1e4/val_results.csv')
+    # with open(csv_filename, "w") as f:
+    #     f.write(rv7_csv)
 
-    print(f"Treinamento e avaliação concluídos.")
-    time.sleep(10)
-    print("="*100)
+    # print(f"Treinamento e avaliação concluídos.")
+    # time.sleep(10)
+    # print("="*100)
 
     # move_folder('freeze_3_classes', f'runs/complete_train')
 
