@@ -882,17 +882,11 @@ if __name__ == "__main__":
         
         validate_yolo_zero(name=dataset_name)
     elif args.mode == 'train':
-        print('='*80)
+        print('='*100)
         print(f"Modo de operação: treinamento completo do modelo YOLO")
-        print('='*80)
-        if start == 0:
-            print(f"Usando todas as classes.")
-            important_classes = 4
-        else:
-            print(f'Ignorando as classes maiores que {start-1}')
-            important_classes = start
+        print('='*100)
 
-        complete_train(dataset_name, epochs, important_classes)
+        complete_train(dataset_name, epochs)
 
     elif args.mode == 'al':
         ts = time.time()
