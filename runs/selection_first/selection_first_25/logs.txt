@@ -1,0 +1,1869 @@
+python3 train.py --dn selection_first
+Diretório do dataset selection_first criado com sucesso!
+ciclo1
+ciclo2
+ciclo3
+ciclo4
+ciclo5
+Arquivos de texto criados! =D
+runs/selection_first/config/ciclo1/ciclo1
+New https://pypi.org/project/ultralytics/8.3.168 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+engine/trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs/selection_first/config/ciclo1/data.yaml, degrees=0.0, deterministic=True, device=0,1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=25, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11n.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=ciclo1, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=selection_first, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=selection_first/ciclo1, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    111296  ultralytics.nn.modules.block.C3k2            [384, 128, 1, False]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     32096  ultralytics.nn.modules.block.C3k2            [256, 64, 1, False]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]
+ 23        [16, 19, 22]  1    464912  ultralytics.nn.modules.head.Detect           [80, [64, 128, 256]]
+YOLO11n summary: 181 layers, 2,624,080 parameters, 2,624,064 gradients, 6.6 GFLOPs
+
+Transferred 499/499 items from pretrained weights
+DDP: debug command /mnt/gustavo/active-vehicle-detection/venv/bin/python3 -m torch.distributed.run --nproc_per_node 2 --master_port 57219 /home/user/.config/Ultralytics/DDP/_temp_6hh8obxj140444121562608.py
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/gustavo-v/selection-first/020aa64968184c648a343e6126cab893
+
+Transferred 499/499 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Fast image access ✅ (ping: 0.0±0.0 ms, read: 6296.3±1030.5 MB/s, size: 426.0 KB)
+train: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train... 755 images, 0 backgrounds, 0 corrupt: 100%|██████████| 755/755 [00:00<00:00,
+train: New cache created: /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train.cache
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 1715.8±880.9 MB/s, size: 343.0 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+Plotting labels to selection_first/ciclo1/labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: AdamW(lr=0.000119, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005), 87 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to selection_first/ciclo1
+Starting training for 25 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/25      1.41G      1.887      2.252      1.369         50        640: 100%|██████████| 48/48 [00:05<00:00,  8.16it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.63it/s]
+                   all       7932      43421      0.454      0.251      0.315      0.192
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/25       1.7G      1.648      1.254      1.231         10        640: 100%|██████████| 48/48 [00:04<00:00, 10.30it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.64it/s]
+                   all       7932      43421      0.491      0.352      0.386      0.221
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/25      1.71G      1.579      1.141      1.185         24        640: 100%|██████████| 48/48 [00:04<00:00, 10.67it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.69it/s]
+                   all       7932      43421      0.824      0.418      0.463      0.265
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/25      1.71G      1.516      1.098      1.167         26        640: 100%|██████████| 48/48 [00:04<00:00, 10.88it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.70it/s]
+                   all       7932      43421      0.804      0.384      0.441      0.262
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/25      1.71G      1.508      1.049      1.131         16        640: 100%|██████████| 48/48 [00:04<00:00, 10.85it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.75it/s]
+                   all       7932      43421      0.523      0.417      0.455      0.274
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/25      1.71G      1.407      0.979       1.11         18        640: 100%|██████████| 48/48 [00:04<00:00, 10.74it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.525      0.416      0.456      0.273
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/25      1.71G      1.379     0.9564      1.095         19        640: 100%|██████████| 48/48 [00:04<00:00, 11.04it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.76it/s]
+                   all       7932      43421      0.569      0.408      0.464      0.274
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/25      1.71G      1.381     0.9478      1.097         89        640: 100%|██████████| 48/48 [00:04<00:00, 11.04it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.526       0.42      0.458       0.28
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/25      1.71G      1.393     0.9538      1.088         24        640: 100%|██████████| 48/48 [00:04<00:00, 11.02it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.64it/s]
+                   all       7932      43421      0.531      0.421      0.465      0.278
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/25      1.71G      1.356     0.9261       1.07         41        640: 100%|██████████| 48/48 [00:04<00:00, 10.88it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.71it/s]
+                   all       7932      43421      0.524      0.412      0.457      0.278
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/25      1.71G      1.373     0.9359      1.074         32        640: 100%|██████████| 48/48 [00:04<00:00, 10.88it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.69it/s]
+                   all       7932      43421      0.546      0.399      0.448      0.272
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/25      1.71G       1.28     0.8893      1.051          7        640: 100%|██████████| 48/48 [00:04<00:00, 10.98it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.76it/s]
+                   all       7932      43421      0.514      0.411      0.451      0.273
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/25      1.79G      1.274      0.885      1.044         43        640: 100%|██████████| 48/48 [00:04<00:00, 11.00it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.69it/s]
+                   all       7932      43421      0.547      0.407      0.461      0.277
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/25      1.79G      1.264     0.8793      1.033         19        640: 100%|██████████| 48/48 [00:04<00:00, 10.92it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.536       0.41      0.458      0.277
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/25      1.79G      1.253     0.8551      1.023         43        640: 100%|██████████| 48/48 [00:04<00:00, 10.95it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.73it/s]
+                   all       7932      43421      0.534      0.425      0.464      0.282
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/25      1.79G       1.23     0.8518      1.027         17        640: 100%|██████████| 48/48 [00:04<00:00, 10.47it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.70it/s]
+                   all       7932      43421      0.541      0.435      0.475      0.286
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/25      1.79G      1.188     0.8193       1.01         15        640: 100%|██████████| 48/48 [00:04<00:00, 11.35it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.505      0.437       0.47       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/25       1.8G      1.167     0.7998     0.9969         24        640: 100%|██████████| 48/48 [00:04<00:00, 11.45it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.61it/s]
+                   all       7932      43421      0.521      0.431       0.47       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/25       1.8G      1.156     0.7882     0.9898         27        640: 100%|██████████| 48/48 [00:04<00:00, 11.39it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.71it/s]
+                   all       7932      43421      0.525      0.427      0.471      0.287
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/25       1.8G      1.151     0.7883     0.9978          8        640: 100%|██████████| 48/48 [00:04<00:00, 11.57it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.74it/s]
+                   all       7932      43421      0.535      0.429      0.473      0.284
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/25       1.8G      1.145     0.7795     0.9942         15        640: 100%|██████████| 48/48 [00:04<00:00, 11.47it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.73it/s]
+                   all       7932      43421      0.528      0.438      0.476      0.285
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/25       1.8G      1.162     0.7753     0.9916         21        640: 100%|██████████| 48/48 [00:04<00:00, 11.57it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.73it/s]
+                   all       7932      43421       0.51       0.43      0.468       0.28
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/25       1.8G      1.106     0.7475     0.9835         16        640: 100%|██████████| 48/48 [00:04<00:00, 11.45it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.76it/s]
+                   all       7932      43421      0.508      0.426      0.465      0.281
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/25       1.8G      1.134     0.7701     0.9927         24        640: 100%|██████████| 48/48 [00:04<00:00, 11.58it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.80it/s]
+                   all       7932      43421      0.537      0.426      0.473      0.286
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/25       1.8G      1.137     0.7688     0.9882         12        640: 100%|██████████| 48/48 [00:04<00:00, 11.49it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.65it/s]
+                   all       7932      43421      0.538      0.432      0.475      0.288
+
+25 epochs completed in 0.273 hours.
+Optimizer stripped from selection_first/ciclo1/weights/last.pt, 5.5MB
+Optimizer stripped from selection_first/ciclo1/weights/best.pt, 5.5MB
+
+Validating selection_first/ciclo1/weights/best.pt...
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.504      0.437       0.47       0.29
+                person       5142       9698      0.678      0.507      0.582      0.354
+               bicycle       2306       3819      0.594      0.463      0.465      0.251
+                   car       7932      28849      0.745       0.78      0.833      0.555
+            motorcycle       1055       1055          0          0    0.00183   0.000581
+Speed: 0.2ms preprocess, 1.0ms inference, 0.0ms loss, 0.8ms postprocess per image
+Results saved to selection_first/ciclo1
+COMET ERROR: We failed to read file 'selection_first/ciclo1/F1_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo1/P_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo1/R_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo1/PR_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo1/labels_correlogram.jpg' for uploading.
+Please double-check the file path and permissions
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : opposite_ferret_8452
+COMET INFO:     url                   : https://www.comet.com/gustavo-v/selection-first/020aa64968184c648a343e6126cab893
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr/pg0 [26]               : (5.902400000000005e-06, 0.00010881426111111112)
+COMET INFO:     lr/pg1 [26]               : (5.902400000000005e-06, 0.00010881426111111112)
+COMET INFO:     lr/pg2 [26]               : (5.902400000000005e-06, 0.00010881426111111112)
+COMET INFO:     metrics/mAP50(B) [26]     : (0.31543, 0.4758)
+COMET INFO:     metrics/mAP50-95(B) [26]  : (0.19226, 0.29012)
+COMET INFO:     metrics/precision(B) [26] : (0.45387, 0.82392)
+COMET INFO:     metrics/recall(B) [26]    : (0.25134, 0.43826)
+COMET INFO:     model/GFLOPs              : 6.614
+COMET INFO:     model/parameters          : 2624080
+COMET INFO:     model/speed_PyTorch(ms)   : 1.126
+COMET INFO:     train/box_loss [25]       : (1.10611, 1.8873)
+COMET INFO:     train/cls_loss [25]       : (0.74748, 2.25185)
+COMET INFO:     train/dfl_loss [25]       : (0.98351, 1.36928)
+COMET INFO:     val/box_loss [25]         : (1.2261, 1.30119)
+COMET INFO:     val/cls_loss [25]         : (0.87085, 1.30707)
+COMET INFO:     val/dfl_loss [25]         : (1.01378, 1.06179)
+COMET INFO:   Others:
+COMET INFO:     Created from                 : ultralytics
+COMET INFO:     eval_batch_logging_interval  : 1
+COMET INFO:     log_confusion_matrix_on_eval : False
+COMET INFO:     log_image_predictions        : True
+COMET INFO:     max_image_predictions        : 100
+COMET INFO:   Parameters:
+COMET INFO:     agnostic_nms    : False
+COMET INFO:     amp             : True
+COMET INFO:     augment         : False
+COMET INFO:     auto_augment    : randaugment
+COMET INFO:     batch           : 16
+COMET INFO:     bgr             : 0.0
+COMET INFO:     box             : 7.5
+COMET INFO:     cache           : False
+COMET INFO:     cfg             : None
+COMET INFO:     classes         : None
+COMET INFO:     close_mosaic    : 10
+COMET INFO:     cls             : 0.5
+COMET INFO:     conf            : None
+COMET INFO:     copy_paste      : 0.0
+COMET INFO:     copy_paste_mode : flip
+COMET INFO:     cos_lr          : False
+COMET INFO:     cutmix          : 0.0
+COMET INFO:     data            : runs/selection_first/config/ciclo1/data.yaml
+COMET INFO:     degrees         : 0.0
+COMET INFO:     deterministic   : True
+COMET INFO:     device          : 0,1
+COMET INFO:     dfl             : 1.5
+COMET INFO:     dnn             : False
+COMET INFO:     dropout         : 0.0
+COMET INFO:     dynamic         : False
+COMET INFO:     embed           : None
+COMET INFO:     epochs          : 25
+COMET INFO:     erasing         : 0.4
+COMET INFO:     exist_ok        : False
+COMET INFO:     fliplr          : 0.5
+COMET INFO:     flipud          : 0.0
+COMET INFO:     format          : torchscript
+COMET INFO:     fraction        : 1.0
+COMET INFO:     freeze          : None
+COMET INFO:     half            : False
+COMET INFO:     hsv_h           : 0.015
+COMET INFO:     hsv_s           : 0.7
+COMET INFO:     hsv_v           : 0.4
+COMET INFO:     imgsz           : 640
+COMET INFO:     int8            : False
+COMET INFO:     iou             : 0.7
+COMET INFO:     keras           : False
+COMET INFO:     kobj            : 1.0
+COMET INFO:     line_width      : None
+COMET INFO:     lr0             : 0.01
+COMET INFO:     lrf             : 0.01
+COMET INFO:     mask_ratio      : 4
+COMET INFO:     max_det         : 300
+COMET INFO:     mixup           : 0.0
+COMET INFO:     mode            : train
+COMET INFO:     model           : yolo11n.pt
+COMET INFO:     momentum        : 0.937
+COMET INFO:     mosaic          : 1.0
+COMET INFO:     multi_scale     : False
+COMET INFO:     name            : ciclo1
+COMET INFO:     nbs             : 64
+COMET INFO:     nms             : False
+COMET INFO:     opset           : None
+COMET INFO:     optimize        : False
+COMET INFO:     optimizer       : auto
+COMET INFO:     overlap_mask    : True
+COMET INFO:     patience        : 100
+COMET INFO:     perspective     : 0.0
+COMET INFO:     plots           : True
+COMET INFO:     pose            : 12.0
+COMET INFO:     pretrained      : True
+COMET INFO:     profile         : False
+COMET INFO:     project         : selection_first
+COMET INFO:     rect            : False
+COMET INFO:     resume          : False
+COMET INFO:     retina_masks    : False
+COMET INFO:     save            : True
+COMET INFO:     save_conf       : False
+COMET INFO:     save_crop       : False
+COMET INFO:     save_dir        : selection_first/ciclo1
+COMET INFO:     save_frames     : False
+COMET INFO:     save_json       : False
+COMET INFO:     save_period     : -1
+COMET INFO:     save_txt        : False
+COMET INFO:     scale           : 0.5
+COMET INFO:     seed            : 0
+COMET INFO:     shear           : 0.0
+COMET INFO:     show            : False
+COMET INFO:     show_boxes      : True
+COMET INFO:     show_conf       : True
+COMET INFO:     show_labels     : True
+COMET INFO:     simplify        : True
+COMET INFO:     single_cls      : False
+COMET INFO:     source          : None
+COMET INFO:     split           : val
+COMET INFO:     stream_buffer   : False
+COMET INFO:     task            : detect
+COMET INFO:     time            : None
+COMET INFO:     tracker         : botsort.yaml
+COMET INFO:     translate       : 0.1
+COMET INFO:     val             : True
+COMET INFO:     verbose         : True
+COMET INFO:     vid_stride      : 1
+COMET INFO:     visualize       : False
+COMET INFO:     warmup_bias_lr  : 0.1
+COMET INFO:     warmup_epochs   : 3.0
+COMET INFO:     warmup_momentum : 0.8
+COMET INFO:     weight_decay    : 0.0005
+COMET INFO:     workers         : 8
+COMET INFO:     workspace       : None
+COMET INFO:   Uploads:
+COMET INFO:     confusion-matrix    : 1
+COMET INFO:     environment details : 1
+COMET INFO:     filename            : 1
+COMET INFO:     git metadata        : 1
+COMET INFO:     images              : 15
+COMET INFO:     installed packages  : 1
+COMET INFO:     model-element       : 1 (5.28 MB)
+COMET INFO:     os packages         : 1
+COMET INFO:     source_code         : 2 (25.68 KB)
+COMET INFO:
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Please wait for assets to finish uploading (timeout is 10800 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+Resultados do ciclo ciclo1: None
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 5549.9±3529.2 MB/s, size: 355.4 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:36<00:00, 13.77it/s]
+                   all       7932      43421      0.507      0.437      0.471      0.291
+                person       5142       9698       0.68      0.505      0.581      0.355
+               bicycle       2306       3819      0.602      0.464      0.467      0.253
+                   car       7932      28849      0.747      0.779      0.833      0.556
+            motorcycle       1055       1055          0          0    0.00184   0.000583
+Speed: 0.2ms preprocess, 1.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo1_val
+runs/selection_first/config/ciclo2/ciclo2
+New https://pypi.org/project/ultralytics/8.3.168 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+engine/trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs/selection_first/config/ciclo2/data.yaml, degrees=0.0, deterministic=True, device=0,1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=25, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11n.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=ciclo2, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=selection_first, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=selection_first/ciclo2, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    111296  ultralytics.nn.modules.block.C3k2            [384, 128, 1, False]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     32096  ultralytics.nn.modules.block.C3k2            [256, 64, 1, False]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]
+ 23        [16, 19, 22]  1    464912  ultralytics.nn.modules.head.Detect           [80, [64, 128, 256]]
+YOLO11n summary: 181 layers, 2,624,080 parameters, 2,624,064 gradients, 6.6 GFLOPs
+
+Transferred 499/499 items from pretrained weights
+DDP: debug command /mnt/gustavo/active-vehicle-detection/venv/bin/python3 -m torch.distributed.run --nproc_per_node 2 --master_port 41227 /home/user/.config/Ultralytics/DDP/_temp_li3xrc_h140444121562608.py
+WARNING ⚠️ Error decoding JSON from /home/user/.config/Ultralytics/settings.json. Starting with an empty dictionary.
+Creating new Ultralytics Settings v0.0.6 file ✅
+View Ultralytics Settings with 'yolo settings' or at '/home/user/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/gustavo-v/selection-first/c68a441be8f44465b78caae5262b5791
+
+Transferred 499/499 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Fast image access ✅ (ping: 0.0±0.0 ms, read: 6831.7±994.5 MB/s, size: 437.5 KB)
+train: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train... 1510 images, 0 backgrounds, 0 corrupt: 100%|██████████| 1510/1510 [00:00<00:0
+train: New cache created: /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train.cache
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 3742.5±2552.3 MB/s, size: 343.0 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+Plotting labels to selection_first/ciclo2/labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: AdamW(lr=0.000119, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005), 87 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to selection_first/ciclo2
+Starting training for 25 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/25      1.44G      1.623      1.764      1.268         42        640: 100%|██████████| 95/95 [00:10<00:00,  8.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.82it/s]
+                   all       7932      43421      0.472      0.267      0.337      0.207
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/25      1.61G      1.446      1.055      1.167         54        640: 100%|██████████| 95/95 [00:09<00:00, 10.46it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.12it/s]
+                   all       7932      43421      0.829      0.346      0.436      0.265
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/25      1.62G      1.367     0.9739      1.122         22        640: 100%|██████████| 95/95 [00:08<00:00, 10.88it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.08it/s]
+                   all       7932      43421       0.54       0.41      0.455       0.27
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/25      1.62G      1.309     0.9135      1.089         30        640: 100%|██████████| 95/95 [00:08<00:00, 10.95it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.18it/s]
+                   all       7932      43421      0.545      0.407       0.46      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/25      1.62G      1.258      0.869      1.068         50        640: 100%|██████████| 95/95 [00:08<00:00, 10.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 15.02it/s]
+                   all       7932      43421      0.519      0.426       0.47      0.294
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/25      1.62G      1.196     0.8159       1.04         42        640: 100%|██████████| 95/95 [00:08<00:00, 10.97it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.10it/s]
+                   all       7932      43421      0.481      0.449      0.465      0.288
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/25      1.62G      1.187     0.8063      1.039         28        640: 100%|██████████| 95/95 [00:08<00:00, 10.89it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.23it/s]
+                   all       7932      43421      0.514      0.433      0.472      0.296
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/25      1.62G       1.16     0.7734       1.02         37        640: 100%|██████████| 95/95 [00:08<00:00, 10.76it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.20it/s]
+                   all       7932      43421      0.517      0.423      0.459      0.282
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/25      1.62G      1.157     0.7851      1.022         52        640: 100%|██████████| 95/95 [00:08<00:00, 10.83it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.13it/s]
+                   all       7932      43421      0.509      0.438      0.464      0.289
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/25      1.64G      1.133     0.7655      1.011         46        640: 100%|██████████| 95/95 [00:08<00:00, 10.85it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.11it/s]
+                   all       7932      43421      0.502      0.446      0.464      0.293
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/25      1.64G      1.134      0.759      1.011         31        640: 100%|██████████| 95/95 [00:08<00:00, 11.00it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.27it/s]
+                   all       7932      43421      0.512      0.435      0.466      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/25      1.64G      1.082     0.7319     0.9929         48        640: 100%|██████████| 95/95 [00:08<00:00, 10.82it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.19it/s]
+                   all       7932      43421      0.521      0.425      0.456      0.286
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/25      1.64G      1.074     0.7258     0.9917         53        640: 100%|██████████| 95/95 [00:08<00:00, 10.93it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.28it/s]
+                   all       7932      43421      0.536      0.428      0.465      0.293
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/25      1.64G      1.107     0.7464     0.9956         31        640: 100%|██████████| 95/95 [00:08<00:00, 10.78it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.28it/s]
+                   all       7932      43421      0.551      0.432      0.467      0.287
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/25      1.64G      1.074     0.7247     0.9863         80        640: 100%|██████████| 95/95 [00:08<00:00, 10.84it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.22it/s]
+                   all       7932      43421      0.505      0.433      0.463      0.295
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/25      1.64G      1.038     0.7152     0.9723         21        640: 100%|██████████| 95/95 [00:08<00:00, 10.77it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.30it/s]
+                   all       7932      43421       0.55      0.434      0.472      0.296
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/25      1.64G      1.001     0.6739     0.9582         21        640: 100%|██████████| 95/95 [00:08<00:00, 11.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.16it/s]
+                   all       7932      43421      0.515      0.448      0.483      0.304
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/25      1.64G     0.9894     0.6671     0.9553         21        640: 100%|██████████| 95/95 [00:08<00:00, 11.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.25it/s]
+                   all       7932      43421      0.534      0.437      0.476      0.301
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/25      1.64G      0.959     0.6469     0.9439         16        640: 100%|██████████| 95/95 [00:08<00:00, 11.55it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.19it/s]
+                   all       7932      43421      0.511      0.445      0.475      0.299
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/25      1.64G     0.9458     0.6325     0.9384         35        640: 100%|██████████| 95/95 [00:08<00:00, 11.32it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.20it/s]
+                   all       7932      43421      0.507      0.455      0.477      0.301
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/25      1.64G     0.9378     0.6322     0.9401         18        640: 100%|██████████| 95/95 [00:08<00:00, 11.29it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.28it/s]
+                   all       7932      43421      0.532      0.442      0.474      0.297
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/25      1.64G     0.9423     0.6305     0.9394         16        640: 100%|██████████| 95/95 [00:08<00:00, 11.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.31it/s]
+                   all       7932      43421      0.518      0.447      0.475      0.297
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/25      1.64G     0.9279     0.6266     0.9357         41        640: 100%|██████████| 95/95 [00:08<00:00, 11.38it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.29it/s]
+                   all       7932      43421      0.514      0.443      0.474        0.3
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/25      1.64G      0.935     0.6324     0.9362         29        640: 100%|██████████| 95/95 [00:08<00:00, 11.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.28it/s]
+                   all       7932      43421      0.514      0.451      0.475      0.301
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/25      1.64G     0.9311     0.6299     0.9376         33        640: 100%|██████████| 95/95 [00:08<00:00, 11.44it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.27it/s]
+                   all       7932      43421      0.506      0.449      0.474      0.301
+
+25 epochs completed in 0.295 hours.
+Optimizer stripped from selection_first/ciclo2/weights/last.pt, 5.5MB
+Optimizer stripped from selection_first/ciclo2/weights/best.pt, 5.5MB
+
+Validating selection_first/ciclo2/weights/best.pt...
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.29it/s]
+                   all       7932      43421      0.514      0.448      0.483      0.304
+                person       5142       9698      0.771      0.483      0.613      0.361
+               bicycle       2306       3819      0.597      0.504      0.477      0.281
+                   car       7932      28849      0.689      0.804      0.838      0.572
+            motorcycle       1055       1055          0          0    0.00192    0.00065
+Speed: 0.2ms preprocess, 1.0ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo2
+COMET ERROR: We failed to read file 'selection_first/ciclo2/F1_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo2/P_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo2/R_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo2/PR_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo2/labels_correlogram.jpg' for uploading.
+Please double-check the file path and permissions
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : preferred_warbler_745
+COMET INFO:     url                   : https://www.comet.com/gustavo-v/selection-first/c68a441be8f44465b78caae5262b5791
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr/pg0 [26]               : (5.902400000000005e-06, 0.0001091907256140351)
+COMET INFO:     lr/pg1 [26]               : (5.902400000000005e-06, 0.0001091907256140351)
+COMET INFO:     lr/pg2 [26]               : (5.902400000000005e-06, 0.0001091907256140351)
+COMET INFO:     metrics/mAP50(B) [26]     : (0.33719, 0.48265)
+COMET INFO:     metrics/mAP50-95(B) [26]  : (0.20728, 0.30371)
+COMET INFO:     metrics/precision(B) [26] : (0.47171, 0.82934)
+COMET INFO:     metrics/recall(B) [26]    : (0.26734, 0.45497)
+COMET INFO:     model/GFLOPs              : 6.614
+COMET INFO:     model/parameters          : 2624080
+COMET INFO:     model/speed_PyTorch(ms)   : 1.102
+COMET INFO:     train/box_loss [25]       : (0.92786, 1.62288)
+COMET INFO:     train/cls_loss [25]       : (0.62659, 1.76393)
+COMET INFO:     train/dfl_loss [25]       : (0.93567, 1.26789)
+COMET INFO:     val/box_loss [25]         : (1.1881, 1.26074)
+COMET INFO:     val/cls_loss [25]         : (0.85726, 1.13508)
+COMET INFO:     val/dfl_loss [25]         : (1.01623, 1.04057)
+COMET INFO:   Others:
+COMET INFO:     Created from                 : ultralytics
+COMET INFO:     eval_batch_logging_interval  : 1
+COMET INFO:     log_confusion_matrix_on_eval : False
+COMET INFO:     log_image_predictions        : True
+COMET INFO:     max_image_predictions        : 100
+COMET INFO:   Parameters:
+COMET INFO:     agnostic_nms    : False
+COMET INFO:     amp             : True
+COMET INFO:     augment         : False
+COMET INFO:     auto_augment    : randaugment
+COMET INFO:     batch           : 16
+COMET INFO:     bgr             : 0.0
+COMET INFO:     box             : 7.5
+COMET INFO:     cache           : False
+COMET INFO:     cfg             : None
+COMET INFO:     classes         : None
+COMET INFO:     close_mosaic    : 10
+COMET INFO:     cls             : 0.5
+COMET INFO:     conf            : None
+COMET INFO:     copy_paste      : 0.0
+COMET INFO:     copy_paste_mode : flip
+COMET INFO:     cos_lr          : False
+COMET INFO:     cutmix          : 0.0
+COMET INFO:     data            : runs/selection_first/config/ciclo2/data.yaml
+COMET INFO:     degrees         : 0.0
+COMET INFO:     deterministic   : True
+COMET INFO:     device          : 0,1
+COMET INFO:     dfl             : 1.5
+COMET INFO:     dnn             : False
+COMET INFO:     dropout         : 0.0
+COMET INFO:     dynamic         : False
+COMET INFO:     embed           : None
+COMET INFO:     epochs          : 25
+COMET INFO:     erasing         : 0.4
+COMET INFO:     exist_ok        : False
+COMET INFO:     fliplr          : 0.5
+COMET INFO:     flipud          : 0.0
+COMET INFO:     format          : torchscript
+COMET INFO:     fraction        : 1.0
+COMET INFO:     freeze          : None
+COMET INFO:     half            : False
+COMET INFO:     hsv_h           : 0.015
+COMET INFO:     hsv_s           : 0.7
+COMET INFO:     hsv_v           : 0.4
+COMET INFO:     imgsz           : 640
+COMET INFO:     int8            : False
+COMET INFO:     iou             : 0.7
+COMET INFO:     keras           : False
+COMET INFO:     kobj            : 1.0
+COMET INFO:     line_width      : None
+COMET INFO:     lr0             : 0.01
+COMET INFO:     lrf             : 0.01
+COMET INFO:     mask_ratio      : 4
+COMET INFO:     max_det         : 300
+COMET INFO:     mixup           : 0.0
+COMET INFO:     mode            : train
+COMET INFO:     model           : yolo11n.pt
+COMET INFO:     momentum        : 0.937
+COMET INFO:     mosaic          : 1.0
+COMET INFO:     multi_scale     : False
+COMET INFO:     name            : ciclo2
+COMET INFO:     nbs             : 64
+COMET INFO:     nms             : False
+COMET INFO:     opset           : None
+COMET INFO:     optimize        : False
+COMET INFO:     optimizer       : auto
+COMET INFO:     overlap_mask    : True
+COMET INFO:     patience        : 100
+COMET INFO:     perspective     : 0.0
+COMET INFO:     plots           : True
+COMET INFO:     pose            : 12.0
+COMET INFO:     pretrained      : True
+COMET INFO:     profile         : False
+COMET INFO:     project         : selection_first
+COMET INFO:     rect            : False
+COMET INFO:     resume          : False
+COMET INFO:     retina_masks    : False
+COMET INFO:     save            : True
+COMET INFO:     save_conf       : False
+COMET INFO:     save_crop       : False
+COMET INFO:     save_dir        : selection_first/ciclo2
+COMET INFO:     save_frames     : False
+COMET INFO:     save_json       : False
+COMET INFO:     save_period     : -1
+COMET INFO:     save_txt        : False
+COMET INFO:     scale           : 0.5
+COMET INFO:     seed            : 0
+COMET INFO:     shear           : 0.0
+COMET INFO:     show            : False
+COMET INFO:     show_boxes      : True
+COMET INFO:     show_conf       : True
+COMET INFO:     show_labels     : True
+COMET INFO:     simplify        : True
+COMET INFO:     single_cls      : False
+COMET INFO:     source          : None
+COMET INFO:     split           : val
+COMET INFO:     stream_buffer   : False
+COMET INFO:     task            : detect
+COMET INFO:     time            : None
+COMET INFO:     tracker         : botsort.yaml
+COMET INFO:     translate       : 0.1
+COMET INFO:     val             : True
+COMET INFO:     verbose         : True
+COMET INFO:     vid_stride      : 1
+COMET INFO:     visualize       : False
+COMET INFO:     warmup_bias_lr  : 0.1
+COMET INFO:     warmup_epochs   : 3.0
+COMET INFO:     warmup_momentum : 0.8
+COMET INFO:     weight_decay    : 0.0005
+COMET INFO:     workers         : 8
+COMET INFO:     workspace       : None
+COMET INFO:   Uploads:
+COMET INFO:     confusion-matrix    : 1
+COMET INFO:     environment details : 1
+COMET INFO:     filename            : 1
+COMET INFO:     git metadata        : 1
+COMET INFO:     images              : 15
+COMET INFO:     installed packages  : 1
+COMET INFO:     model-element       : 1 (5.28 MB)
+COMET INFO:     os packages         : 1
+COMET INFO:     source_code         : 2 (25.68 KB)
+COMET INFO:
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Please wait for metadata to finish uploading (timeout is 3600 seconds)
+COMET INFO: Uploading 2 metrics, params and output messages
+Resultados do ciclo ciclo2: None
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 6917.9±955.2 MB/s, size: 355.4 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:35<00:00, 13.94it/s]
+                   all       7932      43421      0.516      0.448      0.483      0.304
+                person       5142       9698      0.772      0.485      0.615      0.359
+               bicycle       2306       3819      0.603      0.503      0.479      0.284
+                   car       7932      28849      0.688      0.804      0.837      0.574
+            motorcycle       1055       1055          0          0    0.00193   0.000657
+Speed: 0.3ms preprocess, 1.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo2_val
+runs/selection_first/config/ciclo3/ciclo3
+New https://pypi.org/project/ultralytics/8.3.168 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+engine/trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs/selection_first/config/ciclo3/data.yaml, degrees=0.0, deterministic=True, device=0,1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=25, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11n.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=ciclo3, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=selection_first, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=selection_first/ciclo3, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    111296  ultralytics.nn.modules.block.C3k2            [384, 128, 1, False]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     32096  ultralytics.nn.modules.block.C3k2            [256, 64, 1, False]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]
+ 23        [16, 19, 22]  1    464912  ultralytics.nn.modules.head.Detect           [80, [64, 128, 256]]
+YOLO11n summary: 181 layers, 2,624,080 parameters, 2,624,064 gradients, 6.6 GFLOPs
+
+Transferred 499/499 items from pretrained weights
+DDP: debug command /mnt/gustavo/active-vehicle-detection/venv/bin/python3 -m torch.distributed.run --nproc_per_node 2 --master_port 57525 /home/user/.config/Ultralytics/DDP/_temp_s9mzxnf_140442508323008.py
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/gustavo-v/selection-first/fca1db06aa12425aac202ae33e496224
+
+Transferred 499/499 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Fast image access ✅ (ping: 0.0±0.0 ms, read: 7334.7±898.3 MB/s, size: 396.0 KB)
+train: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train... 3021 images, 0 backgrounds, 0 corrupt: 100%|██████████| 3021/3021 [00:01<00:0
+train: New cache created: /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train.cache
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 3392.2±2048.2 MB/s, size: 343.0 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+Plotting labels to selection_first/ciclo3/labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: AdamW(lr=0.000119, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005), 87 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to selection_first/ciclo3
+Starting training for 25 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/25      1.51G      1.522      1.489      1.228        102        640: 100%|██████████| 189/189 [00:20<00:00,  9.38it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.76it/s]
+                   all       7932      43421       0.48      0.337      0.382      0.227
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/25      1.74G      1.306     0.9157        1.1        112        640: 100%|██████████| 189/189 [00:18<00:00, 10.49it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.428       0.36      0.409       0.25
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/25      1.74G      1.237     0.8488      1.066         90        640: 100%|██████████| 189/189 [00:17<00:00, 10.69it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.67it/s]
+                   all       7932      43421      0.497      0.432      0.459      0.272
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/25      1.75G       1.18     0.8023      1.037         96        640: 100%|██████████| 189/189 [00:17<00:00, 10.84it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.73it/s]
+                   all       7932      43421      0.461      0.424      0.442      0.269
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/25      1.75G      1.133     0.7723      1.018         90        640: 100%|██████████| 189/189 [00:17<00:00, 10.86it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.67it/s]
+                   all       7932      43421      0.516      0.436      0.472      0.299
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/25      1.75G      1.092      0.728     0.9971         97        640: 100%|██████████| 189/189 [00:17<00:00, 10.91it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.80it/s]
+                   all       7932      43421       0.49      0.443      0.459       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/25      1.76G      1.078     0.7229     0.9967         87        640: 100%|██████████| 189/189 [00:17<00:00, 10.78it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.528      0.446      0.475       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/25      1.76G      1.045     0.7003     0.9803         99        640: 100%|██████████| 189/189 [00:17<00:00, 10.92it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.69it/s]
+                   all       7932      43421      0.533       0.44      0.483      0.297
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/25      1.76G      1.018      0.682     0.9698         84        640: 100%|██████████| 189/189 [00:17<00:00, 10.84it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.65it/s]
+                   all       7932      43421      0.573      0.421      0.484      0.292
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/25      1.76G      1.008      0.676     0.9671        145        640: 100%|██████████| 189/189 [00:17<00:00, 10.85it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.596      0.402      0.487      0.304
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/25      1.76G     0.9764     0.6547     0.9576         96        640: 100%|██████████| 189/189 [00:17<00:00, 10.87it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.65it/s]
+                   all       7932      43421      0.512      0.436      0.465      0.299
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/25      1.76G     0.9682     0.6503     0.9543         91        640: 100%|██████████| 189/189 [00:17<00:00, 10.91it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.67it/s]
+                   all       7932      43421      0.524      0.423      0.468      0.296
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/25      1.76G     0.9482     0.6331     0.9479         75        640: 100%|██████████| 189/189 [00:17<00:00, 10.93it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.74it/s]
+                   all       7932      43421      0.508      0.428      0.471      0.292
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/25      1.76G     0.9583     0.6339      0.948        105        640: 100%|██████████| 189/189 [00:17<00:00, 10.95it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.85it/s]
+                   all       7932      43421      0.512       0.43      0.478      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/25      1.76G     0.9342     0.6289     0.9439        115        640: 100%|██████████| 189/189 [00:17<00:00, 10.88it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.566      0.405      0.467       0.29
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/25      1.76G     0.8955     0.5933     0.9236         74        640: 100%|██████████| 189/189 [00:17<00:00, 11.04it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.90it/s]
+                   all       7932      43421      0.568      0.418      0.481        0.3
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/25      1.76G     0.8567     0.5722     0.9139         71        640: 100%|██████████| 189/189 [00:16<00:00, 11.23it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.84it/s]
+                   all       7932      43421      0.588      0.404      0.481      0.296
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/25      1.76G     0.8363     0.5597     0.9102         57        640: 100%|██████████| 189/189 [00:16<00:00, 11.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.87it/s]
+                   all       7932      43421       0.57      0.411      0.484        0.3
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/25      1.76G     0.8224      0.551     0.9002         67        640: 100%|██████████| 189/189 [00:16<00:00, 11.18it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.76it/s]
+                   all       7932      43421      0.635      0.412      0.497        0.3
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/25      1.76G      0.823     0.5537     0.9039         57        640: 100%|██████████| 189/189 [00:16<00:00, 11.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.81it/s]
+                   all       7932      43421       0.64      0.402      0.493      0.309
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/25      1.76G     0.8008     0.5379     0.8965         81        640: 100%|██████████| 189/189 [00:16<00:00, 11.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.74it/s]
+                   all       7932      43421      0.551      0.427      0.493      0.304
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/25      1.76G     0.7888     0.5308     0.8936         48        640: 100%|██████████| 189/189 [00:16<00:00, 11.23it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.92it/s]
+                   all       7932      43421      0.598      0.412      0.489      0.297
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/25      1.76G     0.8004     0.5367     0.8935         58        640: 100%|██████████| 189/189 [00:16<00:00, 11.39it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.608      0.408      0.493      0.298
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/25      1.76G     0.7922     0.5302     0.8946         47        640: 100%|██████████| 189/189 [00:16<00:00, 11.26it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.99it/s]
+                   all       7932      43421      0.601      0.411      0.491        0.3
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/25      1.76G     0.7805     0.5242     0.8899         64        640: 100%|██████████| 189/189 [00:16<00:00, 11.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.95it/s]
+                   all       7932      43421      0.604      0.412      0.494      0.299
+
+25 epochs completed in 0.360 hours.
+Optimizer stripped from selection_first/ciclo3/weights/last.pt, 5.5MB
+Optimizer stripped from selection_first/ciclo3/weights/best.pt, 5.5MB
+
+Validating selection_first/ciclo3/weights/best.pt...
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.75it/s]
+                   all       7932      43421      0.641      0.402      0.493      0.308
+                person       5142       9698      0.932      0.295       0.56      0.325
+               bicycle       2306       3819      0.854      0.523      0.578      0.333
+                   car       7932      28849      0.779       0.79      0.831      0.576
+            motorcycle       1055       1055          0          0    0.00178   0.000494
+Speed: 0.3ms preprocess, 1.0ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo3
+COMET ERROR: We failed to read file 'selection_first/ciclo3/F1_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo3/P_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo3/R_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo3/PR_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo3/labels_correlogram.jpg' for uploading.
+Please double-check the file path and permissions
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : great_loan_14
+COMET INFO:     url                   : https://www.comet.com/gustavo-v/selection-first/fca1db06aa12425aac202ae33e496224
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr/pg0 [26]               : (5.902400000000005e-06, 0.00010938194567901235)
+COMET INFO:     lr/pg1 [26]               : (5.902400000000005e-06, 0.00010938194567901235)
+COMET INFO:     lr/pg2 [26]               : (5.902400000000005e-06, 0.00010938194567901235)
+COMET INFO:     metrics/mAP50(B) [26]     : (0.38237, 0.49688)
+COMET INFO:     metrics/mAP50-95(B) [26]  : (0.22707, 0.30857)
+COMET INFO:     metrics/precision(B) [26] : (0.42783, 0.6409547852762331)
+COMET INFO:     metrics/recall(B) [26]    : (0.33658, 0.44648)
+COMET INFO:     model/GFLOPs              : 6.614
+COMET INFO:     model/parameters          : 2624080
+COMET INFO:     model/speed_PyTorch(ms)   : 1.103
+COMET INFO:     train/box_loss [25]       : (0.78045, 1.52163)
+COMET INFO:     train/cls_loss [25]       : (0.52416, 1.48937)
+COMET INFO:     train/dfl_loss [25]       : (0.88993, 1.22828)
+COMET INFO:     val/box_loss [25]         : (1.18013, 1.25225)
+COMET INFO:     val/cls_loss [25]         : (0.84579, 1.03405)
+COMET INFO:     val/dfl_loss [25]         : (1.01001, 1.04339)
+COMET INFO:   Others:
+COMET INFO:     Created from                 : ultralytics
+COMET INFO:     eval_batch_logging_interval  : 1
+COMET INFO:     log_confusion_matrix_on_eval : False
+COMET INFO:     log_image_predictions        : True
+COMET INFO:     max_image_predictions        : 100
+COMET INFO:   Parameters:
+COMET INFO:     agnostic_nms    : False
+COMET INFO:     amp             : True
+COMET INFO:     augment         : False
+COMET INFO:     auto_augment    : randaugment
+COMET INFO:     batch           : 16
+COMET INFO:     bgr             : 0.0
+COMET INFO:     box             : 7.5
+COMET INFO:     cache           : False
+COMET INFO:     cfg             : None
+COMET INFO:     classes         : None
+COMET INFO:     close_mosaic    : 10
+COMET INFO:     cls             : 0.5
+COMET INFO:     conf            : None
+COMET INFO:     copy_paste      : 0.0
+COMET INFO:     copy_paste_mode : flip
+COMET INFO:     cos_lr          : False
+COMET INFO:     cutmix          : 0.0
+COMET INFO:     data            : runs/selection_first/config/ciclo3/data.yaml
+COMET INFO:     degrees         : 0.0
+COMET INFO:     deterministic   : True
+COMET INFO:     device          : 0,1
+COMET INFO:     dfl             : 1.5
+COMET INFO:     dnn             : False
+COMET INFO:     dropout         : 0.0
+COMET INFO:     dynamic         : False
+COMET INFO:     embed           : None
+COMET INFO:     epochs          : 25
+COMET INFO:     erasing         : 0.4
+COMET INFO:     exist_ok        : False
+COMET INFO:     fliplr          : 0.5
+COMET INFO:     flipud          : 0.0
+COMET INFO:     format          : torchscript
+COMET INFO:     fraction        : 1.0
+COMET INFO:     freeze          : None
+COMET INFO:     half            : False
+COMET INFO:     hsv_h           : 0.015
+COMET INFO:     hsv_s           : 0.7
+COMET INFO:     hsv_v           : 0.4
+COMET INFO:     imgsz           : 640
+COMET INFO:     int8            : False
+COMET INFO:     iou             : 0.7
+COMET INFO:     keras           : False
+COMET INFO:     kobj            : 1.0
+COMET INFO:     line_width      : None
+COMET INFO:     lr0             : 0.01
+COMET INFO:     lrf             : 0.01
+COMET INFO:     mask_ratio      : 4
+COMET INFO:     max_det         : 300
+COMET INFO:     mixup           : 0.0
+COMET INFO:     mode            : train
+COMET INFO:     model           : yolo11n.pt
+COMET INFO:     momentum        : 0.937
+COMET INFO:     mosaic          : 1.0
+COMET INFO:     multi_scale     : False
+COMET INFO:     name            : ciclo3
+COMET INFO:     nbs             : 64
+COMET INFO:     nms             : False
+COMET INFO:     opset           : None
+COMET INFO:     optimize        : False
+COMET INFO:     optimizer       : auto
+COMET INFO:     overlap_mask    : True
+COMET INFO:     patience        : 100
+COMET INFO:     perspective     : 0.0
+COMET INFO:     plots           : True
+COMET INFO:     pose            : 12.0
+COMET INFO:     pretrained      : True
+COMET INFO:     profile         : False
+COMET INFO:     project         : selection_first
+COMET INFO:     rect            : False
+COMET INFO:     resume          : False
+COMET INFO:     retina_masks    : False
+COMET INFO:     save            : True
+COMET INFO:     save_conf       : False
+COMET INFO:     save_crop       : False
+COMET INFO:     save_dir        : selection_first/ciclo3
+COMET INFO:     save_frames     : False
+COMET INFO:     save_json       : False
+COMET INFO:     save_period     : -1
+COMET INFO:     save_txt        : False
+COMET INFO:     scale           : 0.5
+COMET INFO:     seed            : 0
+COMET INFO:     shear           : 0.0
+COMET INFO:     show            : False
+COMET INFO:     show_boxes      : True
+COMET INFO:     show_conf       : True
+COMET INFO:     show_labels     : True
+COMET INFO:     simplify        : True
+COMET INFO:     single_cls      : False
+COMET INFO:     source          : None
+COMET INFO:     split           : val
+COMET INFO:     stream_buffer   : False
+COMET INFO:     task            : detect
+COMET INFO:     time            : None
+COMET INFO:     tracker         : botsort.yaml
+COMET INFO:     translate       : 0.1
+COMET INFO:     val             : True
+COMET INFO:     verbose         : True
+COMET INFO:     vid_stride      : 1
+COMET INFO:     visualize       : False
+COMET INFO:     warmup_bias_lr  : 0.1
+COMET INFO:     warmup_epochs   : 3.0
+COMET INFO:     warmup_momentum : 0.8
+COMET INFO:     weight_decay    : 0.0005
+COMET INFO:     workers         : 8
+COMET INFO:     workspace       : None
+COMET INFO:   Uploads:
+COMET INFO:     confusion-matrix    : 1
+COMET INFO:     environment details : 1
+COMET INFO:     filename            : 1
+COMET INFO:     git metadata        : 1
+COMET INFO:     images              : 15
+COMET INFO:     installed packages  : 1
+COMET INFO:     model-element       : 1 (5.28 MB)
+COMET INFO:     os packages         : 1
+COMET INFO:     source_code         : 2 (25.68 KB)
+COMET INFO:
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Please wait for assets to finish uploading (timeout is 10800 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+Resultados do ciclo ciclo3: None
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 7010.9±1021.5 MB/s, size: 355.4 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:35<00:00, 13.83it/s]
+                   all       7932      43421      0.646      0.402      0.493       0.31
+                person       5142       9698      0.935      0.294       0.56      0.325
+               bicycle       2306       3819      0.868      0.525      0.579      0.335
+                   car       7932      28849      0.781      0.789      0.831      0.578
+            motorcycle       1055       1055          0          0    0.00177   0.000483
+Speed: 0.3ms preprocess, 1.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo3_val
+runs/selection_first/config/ciclo4/ciclo4
+New https://pypi.org/project/ultralytics/8.3.168 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+engine/trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs/selection_first/config/ciclo4/data.yaml, degrees=0.0, deterministic=True, device=0,1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=25, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11n.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=ciclo4, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=selection_first, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=selection_first/ciclo4, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    111296  ultralytics.nn.modules.block.C3k2            [384, 128, 1, False]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     32096  ultralytics.nn.modules.block.C3k2            [256, 64, 1, False]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]
+ 23        [16, 19, 22]  1    464912  ultralytics.nn.modules.head.Detect           [80, [64, 128, 256]]
+YOLO11n summary: 181 layers, 2,624,080 parameters, 2,624,064 gradients, 6.6 GFLOPs
+
+Transferred 499/499 items from pretrained weights
+DDP: debug command /mnt/gustavo/active-vehicle-detection/venv/bin/python3 -m torch.distributed.run --nproc_per_node 2 --master_port 51687 /home/user/.config/Ultralytics/DDP/_temp_3d9a92k5140442114072512.py
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/gustavo-v/selection-first/ad96722c576040df923f6f3994b253ba
+
+Transferred 499/499 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Fast image access ✅ (ping: 0.0±0.0 ms, read: 7409.3±1136.6 MB/s, size: 382.7 KB)
+train: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train... 6043 images, 0 backgrounds, 0 corrupt: 100%|██████████| 6043/6043 [00:06<00:0
+train: New cache created: /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train.cache
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 4132.9±2225.3 MB/s, size: 343.0 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+Plotting labels to selection_first/ciclo4/labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: AdamW(lr=0.000119, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005), 87 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to selection_first/ciclo4
+Starting training for 25 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/25      1.49G      1.478      1.316      1.195         94        640: 100%|██████████| 378/378 [00:38<00:00,  9.73it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.482      0.391      0.436      0.273
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/25      1.65G      1.266     0.8633      1.072        117        640: 100%|██████████| 378/378 [00:35<00:00, 10.56it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.71it/s]
+                   all       7932      43421      0.533      0.407      0.448      0.283
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/25      1.66G      1.182     0.7991      1.033         87        640: 100%|██████████| 378/378 [00:35<00:00, 10.79it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.78it/s]
+                   all       7932      43421      0.504      0.429      0.436      0.263
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/25      1.74G      1.109     0.7432      1.002         90        640: 100%|██████████| 378/378 [00:34<00:00, 10.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.62it/s]
+                   all       7932      43421      0.507       0.45      0.462      0.278
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/25      1.75G      1.058       0.71     0.9827         62        640: 100%|██████████| 378/378 [00:34<00:00, 10.85it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.66it/s]
+                   all       7932      43421      0.526      0.428      0.468      0.278
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/25      1.75G       1.02     0.6831     0.9669         76        640: 100%|██████████| 378/378 [00:34<00:00, 10.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.75it/s]
+                   all       7932      43421      0.584      0.439      0.485      0.283
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/25      1.75G     0.9874      0.657      0.954        124        640: 100%|██████████| 378/378 [00:34<00:00, 10.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.85it/s]
+                   all       7932      43421      0.524      0.433      0.464      0.285
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/25      1.75G     0.9539      0.636     0.9444         53        640: 100%|██████████| 378/378 [00:34<00:00, 10.88it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.71it/s]
+                   all       7932      43421      0.549      0.434      0.484      0.293
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/25      1.75G      0.926     0.6183     0.9366         90        640: 100%|██████████| 378/378 [00:34<00:00, 10.82it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.543      0.434      0.484      0.299
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/25      1.75G     0.9125     0.6081     0.9334        141        640: 100%|██████████| 378/378 [00:34<00:00, 10.85it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.85it/s]
+                   all       7932      43421      0.569      0.435      0.496      0.307
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/25      1.75G     0.8984      0.596     0.9265        112        640: 100%|██████████| 378/378 [00:34<00:00, 10.84it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.513      0.441      0.464      0.287
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/25      1.75G     0.8889     0.5864     0.9236         50        640: 100%|██████████| 378/378 [00:35<00:00, 10.75it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.71it/s]
+                   all       7932      43421       0.57      0.433      0.481      0.292
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/25      1.75G     0.8662     0.5722     0.9181        132        640: 100%|██████████| 378/378 [00:35<00:00, 10.80it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.72it/s]
+                   all       7932      43421      0.584      0.435      0.494      0.301
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/25      1.75G     0.8547     0.5636     0.9119         95        640: 100%|██████████| 378/378 [00:35<00:00, 10.79it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.73it/s]
+                   all       7932      43421      0.544      0.448      0.495      0.294
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/25      1.75G     0.8494     0.5616     0.9115        103        640: 100%|██████████| 378/378 [00:35<00:00, 10.77it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.86it/s]
+                   all       7932      43421      0.564      0.439      0.494      0.304
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/25      1.76G     0.7921     0.5234     0.8908         61        640: 100%|██████████| 378/378 [00:34<00:00, 11.11it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.83it/s]
+                   all       7932      43421        0.6      0.417      0.492      0.289
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/25      1.76G     0.7565     0.5013     0.8803         61        640: 100%|██████████| 378/378 [00:33<00:00, 11.27it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.87it/s]
+                   all       7932      43421      0.524       0.45      0.489      0.304
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/25      1.76G     0.7368     0.4893     0.8763         40        640: 100%|██████████| 378/378 [00:33<00:00, 11.23it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.79it/s]
+                   all       7932      43421      0.547      0.439       0.49       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/25      1.76G     0.7322     0.4866     0.8757         66        640: 100%|██████████| 378/378 [00:33<00:00, 11.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.77it/s]
+                   all       7932      43421      0.523      0.448      0.488      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/25      1.76G     0.7325     0.4873     0.8749         51        640: 100%|██████████| 378/378 [00:33<00:00, 11.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.65it/s]
+                   all       7932      43421      0.527      0.459      0.491      0.298
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/25      1.76G     0.7147     0.4745     0.8731         36        640: 100%|██████████| 378/378 [00:33<00:00, 11.32it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.73it/s]
+                   all       7932      43421      0.552      0.446      0.494      0.293
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/25      1.76G     0.7105     0.4717      0.868         37        640: 100%|██████████| 378/378 [00:33<00:00, 11.26it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.80it/s]
+                   all       7932      43421      0.531      0.458      0.498      0.294
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/25      1.76G     0.7023     0.4671     0.8648         61        640: 100%|██████████| 378/378 [00:33<00:00, 11.37it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.86it/s]
+                   all       7932      43421      0.553      0.461      0.498      0.291
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/25      1.76G     0.6892      0.463     0.8647         35        640: 100%|██████████| 378/378 [00:33<00:00, 11.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.88it/s]
+                   all       7932      43421      0.594      0.456        0.5      0.294
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/25      1.76G     0.6904     0.4619     0.8652         64        640: 100%|██████████| 378/378 [00:33<00:00, 11.25it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.67it/s]
+                   all       7932      43421      0.593      0.454      0.499      0.294
+
+25 epochs completed in 0.480 hours.
+Optimizer stripped from selection_first/ciclo4/weights/last.pt, 5.5MB
+Optimizer stripped from selection_first/ciclo4/weights/best.pt, 5.5MB
+
+Validating selection_first/ciclo4/weights/best.pt...
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.76it/s]
+                   all       7932      43421      0.569      0.435      0.495      0.307
+                person       5142       9698      0.805      0.434      0.604      0.347
+               bicycle       2306       3819      0.704      0.534       0.55      0.308
+                   car       7932      28849      0.767      0.772      0.825      0.572
+            motorcycle       1055       1055          0          0    0.00175   0.000477
+Speed: 0.2ms preprocess, 1.0ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo4
+COMET ERROR: We failed to read file 'selection_first/ciclo4/F1_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo4/P_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo4/R_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo4/PR_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo4/labels_correlogram.jpg' for uploading.
+Please double-check the file path and permissions
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : gorgeous_raspberry_2436
+COMET INFO:     url                   : https://www.comet.com/gustavo-v/selection-first/ad96722c576040df923f6f3994b253ba
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr/pg0 [26]               : (5.902400000000005e-06, 0.00010947857283950617)
+COMET INFO:     lr/pg1 [26]               : (5.902400000000005e-06, 0.00010947857283950617)
+COMET INFO:     lr/pg2 [26]               : (5.902400000000005e-06, 0.00010947857283950617)
+COMET INFO:     metrics/mAP50(B) [26]     : (0.43577, 0.5003)
+COMET INFO:     metrics/mAP50-95(B) [26]  : (0.26277, 0.30695418412041875)
+COMET INFO:     metrics/precision(B) [26] : (0.48207, 0.59992)
+COMET INFO:     metrics/recall(B) [26]    : (0.39139, 0.46114)
+COMET INFO:     model/GFLOPs              : 6.614
+COMET INFO:     model/parameters          : 2624080
+COMET INFO:     model/speed_PyTorch(ms)   : 1.101
+COMET INFO:     train/box_loss [25]       : (0.68923, 1.47794)
+COMET INFO:     train/cls_loss [25]       : (0.46189, 1.31596)
+COMET INFO:     train/dfl_loss [25]       : (0.86475, 1.1951)
+COMET INFO:     val/box_loss [25]         : (1.19659, 1.2912)
+COMET INFO:     val/cls_loss [25]         : (0.86456, 0.96411)
+COMET INFO:     val/dfl_loss [25]         : (1.01061, 1.06917)
+COMET INFO:   Others:
+COMET INFO:     Created from                 : ultralytics
+COMET INFO:     eval_batch_logging_interval  : 1
+COMET INFO:     log_confusion_matrix_on_eval : False
+COMET INFO:     log_image_predictions        : True
+COMET INFO:     max_image_predictions        : 100
+COMET INFO:   Parameters:
+COMET INFO:     agnostic_nms    : False
+COMET INFO:     amp             : True
+COMET INFO:     augment         : False
+COMET INFO:     auto_augment    : randaugment
+COMET INFO:     batch           : 16
+COMET INFO:     bgr             : 0.0
+COMET INFO:     box             : 7.5
+COMET INFO:     cache           : False
+COMET INFO:     cfg             : None
+COMET INFO:     classes         : None
+COMET INFO:     close_mosaic    : 10
+COMET INFO:     cls             : 0.5
+COMET INFO:     conf            : None
+COMET INFO:     copy_paste      : 0.0
+COMET INFO:     copy_paste_mode : flip
+COMET INFO:     cos_lr          : False
+COMET INFO:     cutmix          : 0.0
+COMET INFO:     data            : runs/selection_first/config/ciclo4/data.yaml
+COMET INFO:     degrees         : 0.0
+COMET INFO:     deterministic   : True
+COMET INFO:     device          : 0,1
+COMET INFO:     dfl             : 1.5
+COMET INFO:     dnn             : False
+COMET INFO:     dropout         : 0.0
+COMET INFO:     dynamic         : False
+COMET INFO:     embed           : None
+COMET INFO:     epochs          : 25
+COMET INFO:     erasing         : 0.4
+COMET INFO:     exist_ok        : False
+COMET INFO:     fliplr          : 0.5
+COMET INFO:     flipud          : 0.0
+COMET INFO:     format          : torchscript
+COMET INFO:     fraction        : 1.0
+COMET INFO:     freeze          : None
+COMET INFO:     half            : False
+COMET INFO:     hsv_h           : 0.015
+COMET INFO:     hsv_s           : 0.7
+COMET INFO:     hsv_v           : 0.4
+COMET INFO:     imgsz           : 640
+COMET INFO:     int8            : False
+COMET INFO:     iou             : 0.7
+COMET INFO:     keras           : False
+COMET INFO:     kobj            : 1.0
+COMET INFO:     line_width      : None
+COMET INFO:     lr0             : 0.01
+COMET INFO:     lrf             : 0.01
+COMET INFO:     mask_ratio      : 4
+COMET INFO:     max_det         : 300
+COMET INFO:     mixup           : 0.0
+COMET INFO:     mode            : train
+COMET INFO:     model           : yolo11n.pt
+COMET INFO:     momentum        : 0.937
+COMET INFO:     mosaic          : 1.0
+COMET INFO:     multi_scale     : False
+COMET INFO:     name            : ciclo4
+COMET INFO:     nbs             : 64
+COMET INFO:     nms             : False
+COMET INFO:     opset           : None
+COMET INFO:     optimize        : False
+COMET INFO:     optimizer       : auto
+COMET INFO:     overlap_mask    : True
+COMET INFO:     patience        : 100
+COMET INFO:     perspective     : 0.0
+COMET INFO:     plots           : True
+COMET INFO:     pose            : 12.0
+COMET INFO:     pretrained      : True
+COMET INFO:     profile         : False
+COMET INFO:     project         : selection_first
+COMET INFO:     rect            : False
+COMET INFO:     resume          : False
+COMET INFO:     retina_masks    : False
+COMET INFO:     save            : True
+COMET INFO:     save_conf       : False
+COMET INFO:     save_crop       : False
+COMET INFO:     save_dir        : selection_first/ciclo4
+COMET INFO:     save_frames     : False
+COMET INFO:     save_json       : False
+COMET INFO:     save_period     : -1
+COMET INFO:     save_txt        : False
+COMET INFO:     scale           : 0.5
+COMET INFO:     seed            : 0
+COMET INFO:     shear           : 0.0
+COMET INFO:     show            : False
+COMET INFO:     show_boxes      : True
+COMET INFO:     show_conf       : True
+COMET INFO:     show_labels     : True
+COMET INFO:     simplify        : True
+COMET INFO:     single_cls      : False
+COMET INFO:     source          : None
+COMET INFO:     split           : val
+COMET INFO:     stream_buffer   : False
+COMET INFO:     task            : detect
+COMET INFO:     time            : None
+COMET INFO:     tracker         : botsort.yaml
+COMET INFO:     translate       : 0.1
+COMET INFO:     val             : True
+COMET INFO:     verbose         : True
+COMET INFO:     vid_stride      : 1
+COMET INFO:     visualize       : False
+COMET INFO:     warmup_bias_lr  : 0.1
+COMET INFO:     warmup_epochs   : 3.0
+COMET INFO:     warmup_momentum : 0.8
+COMET INFO:     weight_decay    : 0.0005
+COMET INFO:     workers         : 8
+COMET INFO:     workspace       : None
+COMET INFO:   Uploads:
+COMET INFO:     confusion-matrix    : 1
+COMET INFO:     environment details : 1
+COMET INFO:     filename            : 1
+COMET INFO:     git metadata        : 1
+COMET INFO:     images              : 15
+COMET INFO:     installed packages  : 1
+COMET INFO:     model-element       : 1 (5.28 MB)
+COMET INFO:     os packages         : 1
+COMET INFO:     source_code         : 2 (25.68 KB)
+COMET INFO:
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+Resultados do ciclo ciclo4: None
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 6407.8±880.3 MB/s, size: 355.4 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:35<00:00, 13.79it/s]
+                   all       7932      43421       0.57      0.435      0.496      0.308
+                person       5142       9698      0.804      0.435      0.604      0.347
+               bicycle       2306       3819      0.707      0.534      0.551      0.311
+                   car       7932      28849      0.767      0.772      0.825      0.573
+            motorcycle       1055       1055          0          0    0.00181    0.00048
+Speed: 0.3ms preprocess, 1.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo4_val
+runs/selection_first/config/ciclo5/ciclo5
+New https://pypi.org/project/ultralytics/8.3.168 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+engine/trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs/selection_first/config/ciclo5/data.yaml, degrees=0.0, deterministic=True, device=0,1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=25, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11n.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=ciclo5, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=selection_first, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=selection_first/ciclo5, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    111296  ultralytics.nn.modules.block.C3k2            [384, 128, 1, False]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     32096  ultralytics.nn.modules.block.C3k2            [256, 64, 1, False]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]
+ 23        [16, 19, 22]  1    464912  ultralytics.nn.modules.head.Detect           [80, [64, 128, 256]]
+YOLO11n summary: 181 layers, 2,624,080 parameters, 2,624,064 gradients, 6.6 GFLOPs
+
+Transferred 499/499 items from pretrained weights
+DDP: debug command /mnt/gustavo/active-vehicle-detection/venv/bin/python3 -m torch.distributed.run --nproc_per_node 2 --master_port 56757 /home/user/.config/Ultralytics/DDP/_temp_s3go1r9s140442500020064.py
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+COMET INFO: Experiment is live on comet.com https://www.comet.com/gustavo-v/selection-first/525fd99b33e94ea9b89e8ffa2b541e89
+
+Transferred 499/499 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Fast image access ✅ (ping: 0.0±0.0 ms, read: 6611.8±816.2 MB/s, size: 452.5 KB)
+train: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train... 12088 images, 0 backgrounds, 0 corrupt: 100%|██████████| 12088/12088 [00:18<0
+train: New cache created: /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/train.cache
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 4317.6±2531.6 MB/s, size: 343.0 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+Plotting labels to selection_first/ciclo5/labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: AdamW(lr=0.000119, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005), 87 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to selection_first/ciclo5
+Starting training for 25 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/25      1.52G      1.467      1.211       1.17         79        640: 100%|██████████| 756/756 [01:15<00:00,  9.98it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.69it/s]
+                   all       7932      43421      0.457      0.415      0.447       0.28
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/25      1.67G      1.223     0.8298      1.041         45        640: 100%|██████████| 756/756 [01:11<00:00, 10.55it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.77it/s]
+                   all       7932      43421      0.566      0.428      0.489      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/25      1.69G      1.107     0.7448     0.9951         76        640: 100%|██████████| 756/756 [01:10<00:00, 10.72it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.66it/s]
+                   all       7932      43421       0.55       0.42      0.479      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/25      1.69G      1.028     0.6849     0.9648         63        640: 100%|██████████| 756/756 [01:10<00:00, 10.79it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.80it/s]
+                   all       7932      43421      0.514      0.442       0.49      0.304
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/25      1.69G     0.9703     0.6444     0.9462         50        640: 100%|██████████| 756/756 [01:10<00:00, 10.79it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.81it/s]
+                   all       7932      43421      0.509      0.447      0.496      0.294
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/25      1.69G     0.9306     0.6158     0.9328         40        640: 100%|██████████| 756/756 [01:10<00:00, 10.77it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.75it/s]
+                   all       7932      43421       0.53      0.454        0.5      0.315
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/25      1.69G     0.9022     0.5944     0.9242         63        640: 100%|██████████| 756/756 [01:10<00:00, 10.79it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.78it/s]
+                   all       7932      43421      0.545      0.435      0.483      0.288
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/25      1.69G     0.8789     0.5771     0.9152         58        640: 100%|██████████| 756/756 [01:10<00:00, 10.76it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.75it/s]
+                   all       7932      43421      0.608       0.45      0.514      0.314
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/25      1.69G     0.8626     0.5632     0.9121         42        640: 100%|██████████| 756/756 [01:10<00:00, 10.77it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.78it/s]
+                   all       7932      43421      0.584      0.441      0.488      0.305
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/25      1.69G     0.8411     0.5457     0.9044         77        640: 100%|██████████| 756/756 [01:09<00:00, 10.83it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.74it/s]
+                   all       7932      43421       0.61      0.444      0.504      0.304
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/25      1.69G     0.8253     0.5372     0.8996         32        640: 100%|██████████| 756/756 [01:10<00:00, 10.75it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.13it/s]
+                   all       7932      43421      0.579      0.435      0.496      0.293
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/25      1.69G     0.8066     0.5255      0.895         40        640: 100%|██████████| 756/756 [01:10<00:00, 10.75it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.04it/s]
+                   all       7932      43421      0.583      0.456       0.51      0.317
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/25      1.69G     0.8048      0.523     0.8955         39        640: 100%|██████████| 756/756 [01:10<00:00, 10.76it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.06it/s]
+                   all       7932      43421      0.582      0.443      0.496      0.306
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/25      1.69G     0.7924     0.5135     0.8905         35        640: 100%|██████████| 756/756 [01:10<00:00, 10.80it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.07it/s]
+                   all       7932      43421      0.599       0.43      0.501      0.314
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/25      1.69G     0.7757     0.5057     0.8873         60        640: 100%|██████████| 756/756 [01:10<00:00, 10.77it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.13it/s]
+                   all       7932      43421      0.582      0.443      0.495      0.307
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/25      1.69G     0.7124     0.4666     0.8657         27        640: 100%|██████████| 756/756 [01:07<00:00, 11.17it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 15.03it/s]
+                   all       7932      43421      0.611      0.429      0.494      0.295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/25      1.69G     0.6896     0.4534     0.8604         26        640: 100%|██████████| 756/756 [01:07<00:00, 11.22it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.17it/s]
+                   all       7932      43421      0.572      0.433      0.482      0.297
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/25      1.69G     0.6747     0.4435     0.8579         44        640: 100%|██████████| 756/756 [01:07<00:00, 11.18it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.10it/s]
+                   all       7932      43421      0.569      0.439      0.488       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/25      1.69G     0.6669       0.44     0.8557         39        640: 100%|██████████| 756/756 [01:07<00:00, 11.22it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.19it/s]
+                   all       7932      43421      0.536      0.451      0.478      0.288
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/25      1.69G     0.6563     0.4332     0.8541         33        640: 100%|██████████| 756/756 [01:06<00:00, 11.30it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.16it/s]
+                   all       7932      43421      0.568      0.442      0.486      0.289
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/25      1.69G     0.6431     0.4267     0.8511         18        640: 100%|██████████| 756/756 [01:07<00:00, 11.27it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.23it/s]
+                   all       7932      43421      0.571      0.443      0.489      0.299
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/25      1.69G     0.6442     0.4252     0.8501         72        640: 100%|██████████| 756/756 [01:07<00:00, 11.27it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.30it/s]
+                   all       7932      43421      0.543      0.444       0.48      0.291
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/25      1.69G     0.6358     0.4221     0.8502         17        640: 100%|██████████| 756/756 [01:07<00:00, 11.23it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.31it/s]
+                   all       7932      43421       0.55      0.444      0.481       0.29
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/25      1.69G     0.6322     0.4192     0.8475         33        640: 100%|██████████| 756/756 [01:06<00:00, 11.29it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:33<00:00, 14.96it/s]
+                   all       7932      43421      0.537      0.446      0.477      0.287
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/25      1.69G     0.6207      0.414     0.8461         16        640: 100%|██████████| 756/756 [01:07<00:00, 11.27it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.26it/s]
+                   all       7932      43421      0.525       0.45      0.478      0.287
+
+25 epochs completed in 0.717 hours.
+Optimizer stripped from selection_first/ciclo5/weights/last.pt, 5.5MB
+Optimizer stripped from selection_first/ciclo5/weights/best.pt, 5.5MB
+
+Validating selection_first/ciclo5/weights/best.pt...
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+                                                       CUDA:1 (NVIDIA GeForce RTX 2080 Ti, 11004MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:32<00:00, 15.16it/s]
+                   all       7932      43421      0.583      0.457      0.511      0.318
+                person       5142       9698      0.848      0.499      0.647      0.379
+               bicycle       2306       3819      0.731      0.546      0.566       0.31
+                   car       7932      28849      0.755      0.783      0.825       0.58
+            motorcycle       1055       1055          0          0     0.0049    0.00182
+Speed: 0.2ms preprocess, 1.0ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo5
+COMET ERROR: We failed to read file 'selection_first/ciclo5/F1_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo5/P_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo5/R_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo5/PR_curve.png' for uploading.
+Please double-check the file path and permissions
+COMET ERROR: We failed to read file 'selection_first/ciclo5/labels_correlogram.jpg' for uploading.
+Please double-check the file path and permissions
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : classic_vulture_9564
+COMET INFO:     url                   : https://www.comet.com/gustavo-v/selection-first/525fd99b33e94ea9b89e8ffa2b541e89
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     lr/pg0 [26]               : (5.902400000000005e-06, 0.00010952688641975309)
+COMET INFO:     lr/pg1 [26]               : (5.902400000000005e-06, 0.00010952688641975309)
+COMET INFO:     lr/pg2 [26]               : (5.902400000000005e-06, 0.00010952688641975309)
+COMET INFO:     metrics/mAP50(B) [26]     : (0.44728, 0.51428)
+COMET INFO:     metrics/mAP50-95(B) [26]  : (0.28013, 0.31760428057098705)
+COMET INFO:     metrics/precision(B) [26] : (0.45687, 0.61089)
+COMET INFO:     metrics/recall(B) [26]    : (0.41532, 0.45689662333881464)
+COMET INFO:     model/GFLOPs              : 6.614
+COMET INFO:     model/parameters          : 2624080
+COMET INFO:     model/speed_PyTorch(ms)   : 1.101
+COMET INFO:     train/box_loss [25]       : (0.62075, 1.46669)
+COMET INFO:     train/cls_loss [25]       : (0.41402, 1.21051)
+COMET INFO:     train/dfl_loss [25]       : (0.84606, 1.17039)
+COMET INFO:     val/box_loss [25]         : (1.19234, 1.33831)
+COMET INFO:     val/cls_loss [25]         : (0.84503, 0.97658)
+COMET INFO:     val/dfl_loss [25]         : (1.01218, 1.09122)
+COMET INFO:   Others:
+COMET INFO:     Created from                 : ultralytics
+COMET INFO:     eval_batch_logging_interval  : 1
+COMET INFO:     log_confusion_matrix_on_eval : False
+COMET INFO:     log_image_predictions        : True
+COMET INFO:     max_image_predictions        : 100
+COMET INFO:   Parameters:
+COMET INFO:     agnostic_nms    : False
+COMET INFO:     amp             : True
+COMET INFO:     augment         : False
+COMET INFO:     auto_augment    : randaugment
+COMET INFO:     batch           : 16
+COMET INFO:     bgr             : 0.0
+COMET INFO:     box             : 7.5
+COMET INFO:     cache           : False
+COMET INFO:     cfg             : None
+COMET INFO:     classes         : None
+COMET INFO:     close_mosaic    : 10
+COMET INFO:     cls             : 0.5
+COMET INFO:     conf            : None
+COMET INFO:     copy_paste      : 0.0
+COMET INFO:     copy_paste_mode : flip
+COMET INFO:     cos_lr          : False
+COMET INFO:     cutmix          : 0.0
+COMET INFO:     data            : runs/selection_first/config/ciclo5/data.yaml
+COMET INFO:     degrees         : 0.0
+COMET INFO:     deterministic   : True
+COMET INFO:     device          : 0,1
+COMET INFO:     dfl             : 1.5
+COMET INFO:     dnn             : False
+COMET INFO:     dropout         : 0.0
+COMET INFO:     dynamic         : False
+COMET INFO:     embed           : None
+COMET INFO:     epochs          : 25
+COMET INFO:     erasing         : 0.4
+COMET INFO:     exist_ok        : False
+COMET INFO:     fliplr          : 0.5
+COMET INFO:     flipud          : 0.0
+COMET INFO:     format          : torchscript
+COMET INFO:     fraction        : 1.0
+COMET INFO:     freeze          : None
+COMET INFO:     half            : False
+COMET INFO:     hsv_h           : 0.015
+COMET INFO:     hsv_s           : 0.7
+COMET INFO:     hsv_v           : 0.4
+COMET INFO:     imgsz           : 640
+COMET INFO:     int8            : False
+COMET INFO:     iou             : 0.7
+COMET INFO:     keras           : False
+COMET INFO:     kobj            : 1.0
+COMET INFO:     line_width      : None
+COMET INFO:     lr0             : 0.01
+COMET INFO:     lrf             : 0.01
+COMET INFO:     mask_ratio      : 4
+COMET INFO:     max_det         : 300
+COMET INFO:     mixup           : 0.0
+COMET INFO:     mode            : train
+COMET INFO:     model           : yolo11n.pt
+COMET INFO:     momentum        : 0.937
+COMET INFO:     mosaic          : 1.0
+COMET INFO:     multi_scale     : False
+COMET INFO:     name            : ciclo5
+COMET INFO:     nbs             : 64
+COMET INFO:     nms             : False
+COMET INFO:     opset           : None
+COMET INFO:     optimize        : False
+COMET INFO:     optimizer       : auto
+COMET INFO:     overlap_mask    : True
+COMET INFO:     patience        : 100
+COMET INFO:     perspective     : 0.0
+COMET INFO:     plots           : True
+COMET INFO:     pose            : 12.0
+COMET INFO:     pretrained      : True
+COMET INFO:     profile         : False
+COMET INFO:     project         : selection_first
+COMET INFO:     rect            : False
+COMET INFO:     resume          : False
+COMET INFO:     retina_masks    : False
+COMET INFO:     save            : True
+COMET INFO:     save_conf       : False
+COMET INFO:     save_crop       : False
+COMET INFO:     save_dir        : selection_first/ciclo5
+COMET INFO:     save_frames     : False
+COMET INFO:     save_json       : False
+COMET INFO:     save_period     : -1
+COMET INFO:     save_txt        : False
+COMET INFO:     scale           : 0.5
+COMET INFO:     seed            : 0
+COMET INFO:     shear           : 0.0
+COMET INFO:     show            : False
+COMET INFO:     show_boxes      : True
+COMET INFO:     show_conf       : True
+COMET INFO:     show_labels     : True
+COMET INFO:     simplify        : True
+COMET INFO:     single_cls      : False
+COMET INFO:     source          : None
+COMET INFO:     split           : val
+COMET INFO:     stream_buffer   : False
+COMET INFO:     task            : detect
+COMET INFO:     time            : None
+COMET INFO:     tracker         : botsort.yaml
+COMET INFO:     translate       : 0.1
+COMET INFO:     val             : True
+COMET INFO:     verbose         : True
+COMET INFO:     vid_stride      : 1
+COMET INFO:     visualize       : False
+COMET INFO:     warmup_bias_lr  : 0.1
+COMET INFO:     warmup_epochs   : 3.0
+COMET INFO:     warmup_momentum : 0.8
+COMET INFO:     weight_decay    : 0.0005
+COMET INFO:     workers         : 8
+COMET INFO:     workspace       : None
+COMET INFO:   Uploads:
+COMET INFO:     confusion-matrix    : 1
+COMET INFO:     environment details : 1
+COMET INFO:     filename            : 1
+COMET INFO:     git metadata        : 1
+COMET INFO:     images              : 15
+COMET INFO:     installed packages  : 1
+COMET INFO:     model-element       : 1 (5.28 MB)
+COMET INFO:     os packages         : 1
+COMET INFO:     source_code         : 2 (25.68 KB)
+COMET INFO:
+COMET WARNING: To get all data logged automatically, import comet_ml before the following modules: torch.
+Resultados do ciclo ciclo5: None
+Ultralytics 8.3.167 🚀 Python-3.10.9 torch-2.7.0+cu126 CUDA:0 (NVIDIA GeForce RTX 2080 Ti, 11003MiB)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 6824.6±575.2 MB/s, size: 355.4 KB)
+val: Scanning /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format/labels/val.cache... 7932 images, 0 backgrounds, 0 corrupt: 100%|██████████| 7932/7932 [00:00<?,
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 496/496 [00:35<00:00, 13.92it/s]
+                   all       7932      43421      0.584      0.457      0.511      0.317
+                person       5142       9698      0.848      0.498      0.648      0.378
+               bicycle       2306       3819      0.734      0.546      0.567      0.309
+                   car       7932      28849      0.756      0.783      0.825       0.58
+            motorcycle       1055       1055          0          0    0.00475    0.00178
+Speed: 0.3ms preprocess, 1.7ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to selection_first/ciclo5_val
+Pasta 'selection_first' movida para 'runs/selection_first'.

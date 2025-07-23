@@ -1,0 +1,15 @@
+{
+    "file_name": "nneo_pcd_customdata-s6nwj6hi-defaultproject-eMavsVQFdIjYjNasycImeqJd_00266.pcd.jpg",
+    "predictions": [
+        {
+            "category_id": 2,
+            "bbox": [
+                210.71800231933594,
+                1469.38916015625,
+                419.9606018066406,
+                613.680908203125
+            ],
+            "score": 0.8267091512680054
+        }
+    ]
+}

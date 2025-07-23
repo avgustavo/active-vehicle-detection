@@ -1,0 +1,15 @@
+# 'path' resolve os caminhos para 'val' e 'test'.
+path: /mnt/gustavo/active-vehicle-detection/FOCAL/yolov5_format
+
+# Para 'train', usamos um caminho absoluto para evitar qualquer ambiguidade.
+train: /mnt/gustavo/active-vehicle-detection/runs/pipeline/config/ciclo_5/ciclo_5_labeled.txt
+
+val: images/val
+test: images/test
+
+nc: 4
+names:
+  0: pedestrian
+  1: bicycle
+  2: car
+  3: cart
