@@ -556,7 +556,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
     move_folder(dataset_name, f'runs/{dataset_name}')
     
 
-def complete_train(dataset_name: str, epochs: int ):
+def complete_train(dataset_name: str, epochs: int , classes: int = 4):
 
     create_dir('complete_train');
     data_yaml = prepare_yolo_dataset(ALL_IMAGES)
@@ -580,6 +580,7 @@ def complete_train(dataset_name: str, epochs: int ):
     with open(data_yaml, "w") as f:
         f.write(modified_content)
 
+    class_list = [i for i in range(classes)]
 
     model = YOLO('yolo11n.pt')
 
@@ -589,6 +590,7 @@ def complete_train(dataset_name: str, epochs: int ):
         project=dataset_name,
         device=[0, 1],
         plots=True,
+        classes=class_list,  
     )
 
     move_folder(dataset_name, f'runs/complete_train')
@@ -696,8 +698,15 @@ if __name__ == "__main__":
         print('='*80)
         print(f"Modo de operação: treinamento completo do modelo YOLO")
         print('='*80)
-        complete_train(dataset_name, epochs)
-        
+        if start == 0:
+            print(f"Usando todas as classes.")
+            important_classes = 4
+        else:
+            print(f'Ignorando as classes maiores que {start-1}')
+            important_classes = start
+
+        complete_train(dataset_name, epochs, important_classes)
+
     elif args.mode == 'al':
         ts = time.time()
         main(
