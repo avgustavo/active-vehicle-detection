@@ -593,6 +593,16 @@ def complete_train(dataset_name: str, epochs: int , classes: int = 4):
         classes=class_list,  
     )
 
+    final_model_path = str((Path(dataset_name)  / "weights" / "best.pt").absolute())
+
+    evaluate_yolo(
+        model_path=final_model_path,
+        yaml_path=str(data_yaml.absolute()),
+        output_dir=Path(dataset_name),
+        name=dataset_name,
+        project=dataset_name
+    )
+
     move_folder(dataset_name, f'runs/complete_train')
 
 def validate_yolo_zero(name:str):
