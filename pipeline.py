@@ -641,7 +641,7 @@ def complete_train(dataset_name: str, epochs: int):
 
     final_model = YOLO(final_model_path)
     res_val = final_model.val(data=str(data_yaml.absolute()), split='val', name='classes_3_val', project=dataset_name, classes=[0, 1, 2])
-    move_folder(dataset_name, run_dir)
+    # move_folder(dataset_name, run_dir)
 
     res_val_csv = res_val.to_csv()
     csv_filename = Path('runs/complete_train/complete_train/classes_3/val_results.csv')
