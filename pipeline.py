@@ -692,7 +692,12 @@ if __name__ == "__main__":
     elif args.mode == 'val':
         
         validate_yolo_zero(name=dataset_name)
-
+    elif args.mode == 'train':
+        print('='*80)
+        print(f"Modo de operação: treinamento completo do modelo YOLO")
+        print('='*80)
+        complete_train(dataset_name, epochs)
+        
     elif args.mode == 'al':
         ts = time.time()
         main(
