@@ -24,7 +24,7 @@ def main():
         name='bdd100k_25_epochs',
         plots=True,
         patience=15,
-        Optimizer='AdamW',
+        optimizer='AdamW',
         lr0=0.0001,
         momentum=0.9,
     )
