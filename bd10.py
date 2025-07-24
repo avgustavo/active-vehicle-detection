@@ -5,19 +5,23 @@ YAML_PATH = 'd10k/bdd10k.yaml'
 
 def main():
 
-    print('Treinamento completo bdd10k')
+    # print('Treinamento completo bdd10k')
 
-    model = YOLO('yolo11n.pt')
+    # model = YOLO('yolo11n.pt')
+
+    print('treinando do último ponto salvo')
+    model = YOLO('runsbdd/bdd10k/weights/last.pt')
 
     model.train(
         data=YAML_PATH,
-        epochs=25,
+        epochs=50,
         imgsz=640,
         batch=16,
         device=[0, 1],
         project='runsbdd',
         name='bdd10k',
         plots=True,
+        resume=True,  # Resuming from the last checkpoint
     )
 
     best_model_p = 'runsbdd/bdd10k/weights/best.pt'
@@ -35,15 +39,6 @@ def main():
     print(f"  > mAP (val):      {m_val.box.map75:.4f}")
 
     results = model(source='bdd10k/images/test', batch=16, project='runsbdd', name='bdd10k_test', stream=True)
-
-    results_csv = results.to_csv()
-    results_json = results.to_json()
-
-    with open('runsbdd/bdd10k_test/bdd10k_test.csv', 'w') as f:
-        f.write(results_csv)
-
-    with open('runsbdd/bdd10k_test/bdd10k_test.json', 'w') as f:
-        f.write(results_json)
 
     i = 0
     for result in results:
