@@ -32,7 +32,8 @@ bdd_category_map = {
     'bus': 4,
     'truck': 5,
     'traffic sign': 6,
-    'traffic light': 7
+    'traffic light': 7,
+    'rider': 0,  # 'rider' é tratado como 'person' no YOLO
 }
 
 # Lista com os nomes finais das classes na ordem correta dos IDs para o arquivo YAML.
@@ -48,7 +49,7 @@ yolo_class_names = [
 ]
 
 # Categorias a serem ignoradas durante a conversão
-ignore_categories = ["drivable area", "lane", "trailer", "other person", "bike", "train", "rider"]
+ignore_categories = ["drivable area", "lane", "trailer", "other person", "bike", "train"]
 
 
 # --- FUNÇÕES DE CONVERSÃO (SEM ALTERAÇÕES NA LÓGICA INTERNA) ---
