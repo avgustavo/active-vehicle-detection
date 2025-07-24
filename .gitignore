@@ -1,5 +1,7 @@
 venv/
 FOCAL/
 lightly/
+d10k/
+bdd100k/
 
 __pycache__/
