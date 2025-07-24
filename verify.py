@@ -2,6 +2,8 @@ import argparse
 from pathlib import Path
 import sys
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 def analisar_labels(path_labels: Path):
     """
@@ -127,8 +129,10 @@ def contar_classes_por_txt(txt_path, labels_dir):
                             class_counts[class_idx] = class_counts.get(class_idx, 0) + 1
                         except ValueError:
                             continue
-    print(f"Distribuição das classes para imagens do arquivo '{txt_path}': {class_counts}")
-    return class_counts
+    # Ordena o dicionário por chave para facilitar leitura
+    class_counts_sorted = dict(sorted(class_counts.items()))
+    print(f"Distribuição das classes para imagens do arquivo '{txt_path}': {class_counts_sorted}")
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Verifica os índices de classe em arquivos de label no formato YOLO.")
