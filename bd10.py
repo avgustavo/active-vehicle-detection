@@ -14,14 +14,14 @@ def main():
     t1 = time.time()
     model.train(
         data=YAML_PATH,
-        epochs=50,
+        epochs=100,
         imgsz=640,
         batch=16,
         device=[0, 1],
         project='runsbdd',
-        name='bdd10k',
+        name='bdd10k_100_epochs',
         plots=True,
-        resume=True,  # Resuming from the last checkpoint
+        patience=15,
     )
     t2 = time.time()
     print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
@@ -32,7 +32,7 @@ def main():
     m_val = model.val(
         data=YAML_PATH,
         split='val',
-        name='bdd10k_val',
+        name='bdd10k_100_epochs_val',
         project='runsbdd',
         save_json=True,
     )
