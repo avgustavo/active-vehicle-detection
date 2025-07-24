@@ -1,4 +1,7 @@
+import time
 from ultralytics import YOLO
+
+from pipeline import calculate_time
 #################################### COnstantes #####################################
 YAML_PATH = 'd10k/bdd10k.yaml'
 
@@ -7,11 +10,8 @@ def main():
 
     # print('Treinamento completo bdd10k')
 
-    # model = YOLO('yolo11n.pt')
-
-    print('treinando do último ponto salvo')
-    model = YOLO('runsbdd/bdd10k/weights/last.pt')
-
+    model = YOLO('yolo11n.pt')
+    t1 = time.time()
     model.train(
         data=YAML_PATH,
         epochs=50,
@@ -23,6 +23,8 @@ def main():
         plots=True,
         resume=True,  # Resuming from the last checkpoint
     )
+    t2 = time.time()
+    print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
 
     best_model_p = 'runsbdd/bdd10k/weights/best.pt'
     model = YOLO(best_model_p)
@@ -47,6 +49,7 @@ def main():
         i+=1
         if i > 10:
             break
+    t3 = time.time()
 
 if __name__ == '__main__':
     main()
