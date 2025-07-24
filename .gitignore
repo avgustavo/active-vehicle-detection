@@ -1,6 +1,6 @@
 venv/
 FOCAL/
-# lightly/
+lightly/
 d10k/
 bdd100k/
 ndata/
