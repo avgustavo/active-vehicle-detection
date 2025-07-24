@@ -29,12 +29,10 @@ bdd_category_map = {
     'bicycle': 1,        # O JSON usa 'bike'
     'car': 2,
     'motorcycle': 3,       # O JSON usa 'motor'
-    'rider': 4,
-    'bus': 5,
-    'train': 6,
-    'truck': 7,
-    'traffic sign': 8,
-    'traffic light': 9
+    'bus': 4,
+    'truck': 5,
+    'traffic sign': 6,
+    'traffic light': 7
 }
 
 # Lista com os nomes finais das classes na ordem correta dos IDs para o arquivo YAML.
@@ -43,16 +41,14 @@ yolo_class_names = [
     'bicycle',      # 1
     'car',          # 2
     'motorcycle',   # 3
-    'rider',        # 4
     'bus',          # 5
-    'train',        # 6
-    'truck',        # 7
-    'traffic sign', # 8
-    'traffic light' # 9
+    'truck',       # 6
+    'traffic sign', # 7
+    'traffic light' # 8
 ]
 
 # Categorias a serem ignoradas durante a conversão
-ignore_categories = ["drivable area", "lane", "trailer", "other person"]
+ignore_categories = ["drivable area", "lane", "trailer", "other person", "bike", "train", "rider"]
 
 
 # --- FUNÇÕES DE CONVERSÃO (SEM ALTERAÇÕES NA LÓGICA INTERNA) ---
