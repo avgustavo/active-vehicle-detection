@@ -13,7 +13,7 @@ def printf(message: str):
 
 def main(name: str):
 
-    printf('Avaliação do modelo yolo em treino_transitar')
+    # printf('Avaliação do modelo yolo em treino_transitar')
 
     # model = YOLO('yolo11n.pt')
 
@@ -29,26 +29,26 @@ def main(name: str):
     # with open(f'runstt/{name}_11n_test/results.csv', 'w') as f:
     #     f.write(res_csv)
 
-    # printf('Treinamento completo em treino_transitar')
-    # model = YOLO('yolo11n.pt')
-    # t1 = time.time()
-    # model.train(
-    #     data=YAML_PATH,
-    #     epochs=25,
-    #     imgsz=640,
-    #     batch=16,
-    #     device=[0, 1],
-    #     project='runstt',
-    #     name=name,
-    #     plots=True,
-    #     optimizer='AdamW',
-    #     lr0=0.0001,
-    #     momentum=0.9,
-    #     freeze=10,
-    #     classes=[0, 1, 2, 3, 5, 6, 7, 9]
-    # )
-    # t2 = time.time()
-    # print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
+    printf('Treinamento completo em treino_transitar')
+    model = YOLO('yolo11n.pt')
+    t1 = time.time()
+    model.train(
+        data=YAML_PATH,
+        epochs=25,
+        imgsz=640,
+        batch=16,
+        device=[0, 1],
+        project='runstt',
+        name=name,
+        plots=True,
+        # optimizer='AdamW',
+        # lr0=0.0001,
+        # momentum=0.9,
+        # freeze=10,
+        classes=[0, 1, 2, 3, 5, 6, 7, 9]
+    )
+    t2 = time.time()
+    printf(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
 
     best_model_p = f'runstt/{name}/weights/best.pt'
     model = YOLO(best_model_p)
@@ -67,16 +67,16 @@ def main(name: str):
     with open(f'runstt/{name}/res_val.csv', 'w') as f:
         f.write(m_val_csv)
 
-    # results = model(source='treino_transitar/val/images', batch=16, project='runstt', name=f'{name}_pred', stream=True)
+    results = model(source='treino_transitar/val/images', batch=16, project='runstt', name=f'{name}_pred', stream=True)
 
 
-    # i = 0
-    # for result in results:
-    #     result.save()
-    #     i+=1
-    #     if i > 10:
-    #         break
-    # t3 = time.time()
+    i = 0
+    for result in results:
+        result.save()
+        i+=1
+        if i > 10:
+            break
+    t3 = time.time()
 
 if __name__ == '__main__':
 
