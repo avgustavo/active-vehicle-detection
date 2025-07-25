@@ -58,6 +58,7 @@ def main(name: str):
         split='val',
         name=f'{name}_val',
         project='runstt',
+        classes=[0, 1, 2, 3, 5, 6, 7],
     )
     print(f"  > mAP50-95 (val): {m_val.box.map:.4f}")
     print(f"  > mAP50 (val):    {m_val.box.map50:.4f}")
@@ -69,7 +70,7 @@ def main(name: str):
 
     t3 = time.time()
     printf(f'Tempo total de validação: {calculate_time(t2, t3)} segundos')
-    printf(f'Treinamento e validação completos em treino_transitar {name} em {calculate_time(t1, t3)}')
+    printf(f'Treinamento e validação completos em treino_transitar {name} em {calculate_time(t1, t3)}c')
 
 
 if __name__ == '__main__':
