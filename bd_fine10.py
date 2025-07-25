@@ -13,7 +13,7 @@ def main(name: str):
     print(f'Fine Tuning {name}')
     print('='*100)
 
-    model_path = 'runsbdd/b10k_freeze/weights/best.pt'
+    model_path = 'runsbdd/b10k_freeze/weights/last.pt'
 
     model = YOLO(model_path)
     t1 = time.time()
