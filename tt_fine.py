@@ -40,10 +40,12 @@ def main(name: str):
         classes=[0, 1, 2, 3, 5, 6, 7, 9]
     )
     t2 = time.time()
-    print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
+    printf(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
 
     best_model_p = f'runstt/{fname}/weights/best.pt'
     model = YOLO(best_model_p)
+
+    printf('Avaliação do modelo fine tuned')
 
     m_val = model.val(
         data=YAML_PATH,
@@ -55,6 +57,7 @@ def main(name: str):
     print(f"  > mAP50 (val):    {m_val.box.map50:.4f}")
     print(f"  > mAP (val):      {m_val.box.map75:.4f}")
 
+
     results = model(source='treino_transitar/val/images', batch=16, project='runstt', name=f'{name}_pred', stream=True)
 
 
@@ -65,10 +68,13 @@ def main(name: str):
         if i > 10:
             break
     t3 = time.time()
+    printf(f'Tempo total de inferência: {calculate_time(t2, t3)} segundos')
+
+    printf(f'Tempo total de execução: {calculate_time(t1, t3)} segundos')
 
 if __name__ == '__main__':
 
-    parse = argparse.ArgumentParser(description="Treinamento do modelo YOLO com o dataset BDD10K")
+    parse = argparse.ArgumentParser(description="Treinamento do modelo YOLO com o dataset treino_transitar")
     parse.add_argument('--name', type=str, required=True, help="Nome do experimento")
     args = parse.parse_args()
     main(args.name)
