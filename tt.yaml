@@ -2,8 +2,8 @@
 path: ./treino_transitar
 
 # Conjuntos de treino e validação (caminhos relativos ao 'path' acima)
-train: images/train
-val: images/val
+train: train/images
+val: val/images
 
 # Definição das Classes
 names:

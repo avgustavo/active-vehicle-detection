@@ -44,7 +44,8 @@ def main(name: str):
         optimizer='AdamW',
         lr0=0.0001,
         momentum=0.9,
-        freeze=10
+        freeze=10,
+        classes=[0, 1, 2, 3, 5, 6, 7, 9]
     )
     t2 = time.time()
     print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
