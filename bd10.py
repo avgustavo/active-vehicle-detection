@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 from pipeline import calculate_time
 #################################### COnstantes #####################################
-YAML_PATH = 'd10k/bdd10k.yaml'
+YAML_PATH = 'd10k/bdd100k.yaml'
 
 
 def main(name: str):
@@ -15,14 +15,17 @@ def main(name: str):
     t1 = time.time()
     model.train(
         data=YAML_PATH,
-        epochs=10,
+        epochs=15,
         imgsz=640,
         batch=16,
         device=[0, 1],
         project='runsbdd',
         name=name,
         plots=True,
-        # patience=15,
+        optimizer='AdamW',
+        lr0=0.0001,
+        momentum=0.9,
+        freeze=10
     )
     t2 = time.time()
     print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
