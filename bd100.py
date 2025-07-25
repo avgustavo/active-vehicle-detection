@@ -17,7 +17,7 @@ def main(name: str):
     t1 = time.time()
     model.train(
         data=YAML_PATH,
-        epochs=25,
+        epochs=15,
         imgsz=640,
         batch=16,
         device=[0, 1],
@@ -28,7 +28,7 @@ def main(name: str):
         optimizer='AdamW',
         lr0=0.0001,
         momentum=0.9,
-        freeze=10
+        freeze=19
     )
     t2 = time.time()
 
