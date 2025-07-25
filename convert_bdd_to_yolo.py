@@ -7,7 +7,8 @@ from PIL import Image
 
 # 1. DEFINIÇÃO DA ESTRUTURA DE DIRETÓRIOS
 # O script assume que está rodando no diretório pai da pasta 'bdd100k'
-BASE_DIR = 'bdd100k'
+# BASE_DIR = 'bdd100k'
+BASE_DIR = 'd10k'
 
 PATHS = {
     # Entradas (Inputs)
@@ -25,10 +26,13 @@ PATHS = {
 # 2. MAPEAMENTO DE CLASSES (BDD100k -> YOLO)
 # Dicionário para mapear os nomes de categoria do JSON do BDD100k para o ID numérico desejado.
 bdd_category_map = {
-    'pedestrian': 0,
-    'bicycle': 1,        # O JSON usa 'bike'
+    # 'pedestrian': 0,
+    'person': 0,  
+    # 'bicycle': 1,        # O JSON usa 'bike'
+    'bike': 1,        # O JSON usa 'bike', mas no YOLO é 'bicycle'
     'car': 2,
-    'motorcycle': 3,       # O JSON usa 'motor'
+    # 'motorcycle': 3,       # O JSON usa 'motor'
+    'motor': 3,
     'bus': 4,
     'truck': 5,
     'traffic sign': 6,
@@ -42,14 +46,14 @@ yolo_class_names = [
     'bicycle',      # 1
     'car',          # 2
     'motorcycle',   # 3
-    'bus',          # 5
-    'truck',       # 6
-    'traffic sign', # 7
-    'traffic light' # 8
+    'bus',          # 4
+    'truck',       # 5
+    'traffic sign', # 6
+    'traffic light' # 7
 ]
 
 # Categorias a serem ignoradas durante a conversão
-ignore_categories = ["drivable area", "lane", "trailer", "other person", "bike", "train"]
+ignore_categories = ["drivable area", "lane", "trailer", "other person", "train"] #"bike"
 
 
 # --- FUNÇÕES DE CONVERSÃO (SEM ALTERAÇÕES NA LÓGICA INTERNA) ---
