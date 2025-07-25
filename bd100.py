@@ -13,22 +13,22 @@ def main(name: str):
     print('Treinamento completo bdd10k')
     print('='*100)
 
-    model = YOLO('yolo11s.pt')
+    model = YOLO('yolo11n.pt')
     t1 = time.time()
     model.train(
         data=YAML_PATH,
         epochs=15,
         imgsz=640,
-        batch=16,
+        batch=32,
         device=[0, 1],
         project='runsbdd',
         name=name,
         plots=True,
-        patience=10,
-        # optimizer='AdamW',
-        # lr0=0.0001,
-        # momentum=0.9,
-        freeze=19
+        patience=5,
+        optimizer='AdamW',
+        lr0=0.0001,
+        momentum=0.9,
+        # freeze=10
     )
     t2 = time.time()
 
