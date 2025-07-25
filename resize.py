@@ -43,6 +43,7 @@ def resize_dataset(
 
     # 4. Selecionar aleatoriamente as imagens que serão movidas
     # Usamos random.sample para garantir que não haja repetições
+    random.seed(42)  # Para reprodutibilidade
     images_to_move = random.sample(available_images, num_to_move)
     print(f"Selecionando aleatoriamente {len(images_to_move)} imagens para mover...")
 
