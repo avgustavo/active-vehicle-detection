@@ -25,9 +25,9 @@ def main(name: str):
         name=name,
         plots=True,
         patience=10,
-        optimizer='AdamW',
-        lr0=0.0001,
-        momentum=0.9,
+        # optimizer='AdamW',
+        # lr0=0.0001,
+        # momentum=0.9,
         freeze=19
     )
     t2 = time.time()
