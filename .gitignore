@@ -4,6 +4,7 @@ lightly/
 d10k/
 bdd100k/
 treino_transitar/
+*.zip
 *.json
 runsbdd/bdd10k_100_epochs_val/predictions.json
 __pycache__/

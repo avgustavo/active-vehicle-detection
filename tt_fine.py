@@ -1,4 +1,5 @@
 import argparse
+from os import name
 import time
 from ultralytics import YOLO
 
@@ -13,50 +14,41 @@ def printf(message: str):
 
 def main(name: str):
 
-    printf('Avaliação do modelo yolo em treino_transitar')
+    printf('Fine tuning do modelo yolo em treino_transitar')
 
-    model = YOLO('yolo11n.pt')
+    model_path = f'runstt/{name}/weights/best.pt'
 
-    results_0 = model.val(
-        data=YAML_PATH,
-        split='val',
-        name=f'{name}_11n_test',
-        project='runstt',
-        classes=[0, 1, 2, 3, 5, 6, 7, 9],
-    )
+    fname = f'{name}_fine_tune'
 
-    res_csv = results_0.to_csv()
-    with open(f'runstt/{name}_11n_test/results.csv', 'w') as f:
-        f.write(res_csv)
+    printf(f'Fine tuning de {name}')
 
-    printf('Treinamento completo em treino_transitar')
-    model = YOLO('yolo11n.pt')
+    model = YOLO(model_path)
     t1 = time.time()
     model.train(
         data=YAML_PATH,
-        epochs=25,
+        epochs=5,
         imgsz=640,
         batch=16,
         device=[0, 1],
         project='runstt',
-        name=name,
+        name=fname,
         plots=True,
         optimizer='AdamW',
-        lr0=0.0001,
+        lr0=0.00001,
         momentum=0.9,
-        freeze=10,
+        # freeze=10,
         classes=[0, 1, 2, 3, 5, 6, 7, 9]
     )
     t2 = time.time()
     print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
 
-    best_model_p = f'runstt/{name}/weights/best.pt'
+    best_model_p = f'runstt/{fname}/weights/best.pt'
     model = YOLO(best_model_p)
 
     m_val = model.val(
         data=YAML_PATH,
         split='val',
-        name=f'{name}_val',
+        name=f'{fname}_val',
         project='runstt',
     )
     print(f"  > mAP50-95 (val): {m_val.box.map:.4f}")
