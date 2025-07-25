@@ -64,6 +64,6 @@ def main(name: str):
 
 if __name__ == '__main__':
     parse = argparse.ArgumentParser(description="Treinamento do modelo YOLO com o dataset BDD10K")
-    parse.add_argument('--name', type=str, help="Nome do experimento")
+    parse.add_argument('--name', type=str, required=True, help="Nome do experimento")
     args = parse.parse_args()
     main(args.name)
