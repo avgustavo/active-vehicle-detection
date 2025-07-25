@@ -3,7 +3,7 @@ from pathlib import Path
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
-from ultralytics import YOLO
+# from ultralytics import YOLO
 
 
 def analisar_labels(path_labels: Path):
