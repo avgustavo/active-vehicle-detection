@@ -3,6 +3,7 @@ from pathlib import Path
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+from ultralytics import YOLO
 
 
 def analisar_labels(path_labels: Path):
@@ -114,7 +115,8 @@ def contar_classes_por_txt(txt_path, labels_dir):
     labels_dir = Path(labels_dir)
     with open(txt_path, 'r') as f:
         imagens = [line.strip() for line in f if line.strip()]
-
+    # c = 0
+    # model = YOLO('/home/avgus/active-vehicle-detection/runstt/tt01/weights/best.pt')
     class_counts = {}
     for img_path in imagens:
         img_stem = Path(img_path).stem
@@ -127,6 +129,15 @@ def contar_classes_por_txt(txt_path, labels_dir):
                         try:
                             class_idx = int(parts[0])
                             class_counts[class_idx] = class_counts.get(class_idx, 0) + 1
+                            # if class_idx == 6:
+                            #     c += 1
+                            #     print(f"Índice de classe {class_idx} encontrado no arquivo {label_file}.")
+                            #     print(f"Imagem: {img_path}")
+                            #     result = model.predict(source=f'treino_transitar/train/images/{img_path}')
+                            #     result[0].save()
+                            # if c == 5:
+                            #     return
+                                
                         except ValueError:
                             continue
     # Ordena o dicionário por chave para facilitar leitura
