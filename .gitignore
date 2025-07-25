@@ -3,7 +3,7 @@ FOCAL/
 lightly/
 d10k/
 bdd100k/
-ndata/
+treino_transitar/
 *.json
 runsbdd/bdd10k_100_epochs_val/predictions.json
 __pycache__/
