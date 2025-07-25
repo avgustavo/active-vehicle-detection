@@ -1,3 +1,4 @@
+import argparse
 import time
 from ultralytics import YOLO
 
@@ -6,13 +7,13 @@ from pipeline import calculate_time
 YAML_PATH = 'bdd100k/bdd100k.yaml'
 
 
-def main():
+def main(name: str):
 
     print('='*100)
     print('Treinamento completo bdd10k')
     print('='*100)
 
-    model = YOLO('yolo11n.pt')
+    model = YOLO('yolo11s.pt')
     t1 = time.time()
     model.train(
         data=YAML_PATH,
@@ -21,25 +22,25 @@ def main():
         batch=16,
         device=[0, 1],
         project='runsbdd',
-        name='bdd100k_25_epochs',
+        name=name,
         plots=True,
-        patience=15,
+        patience=10,
         optimizer='AdamW',
         lr0=0.0001,
         momentum=0.9,
     )
     t2 = time.time()
+
     print(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
 
-    best_model_p = 'runsbdd/bdd10k/weights/best.pt'
+    best_model_p = f'runsbdd/{name}/weights/best.pt'
     model = YOLO(best_model_p)
 
     m_val = model.val(
         data=YAML_PATH,
         split='val',
-        name='bdd100k_25_epochs_val',
+        name=f'{name}_val',
         project='runsbdd',
-        save_json=True,
     )
     print(f"  > mAP50-95 (val): {m_val.box.map:.4f}")
     print(f"  > mAP50 (val):    {m_val.box.map50:.4f}")
@@ -49,7 +50,7 @@ def main():
 
     i = 0
     for result in results:
-        print(f"  > {i} - {result.probs.cpu().numpy()}")
+        print(f"  > {i} - {result.probs}")
         result.save()
         i+=1
         if i > 10:
@@ -57,5 +58,12 @@ def main():
     t3 = time.time()
     print(f'Tempo total de inferência: {calculate_time(t2, t3)} segundos')
 
+    print('='*100)
+    print('tempo total de execução: ', calculate_time(t1, t3), 'segundos')
+    print('='*100)
+
 if __name__ == '__main__':
-    main()
+    parse = argparse.ArgumentParser(description="Treinamento do modelo YOLO com o dataset BDD10K")
+    parse.add_argument('--name', type=str, help="Nome do experimento")
+    args = parse.parse_args()
+    main(args.name)
