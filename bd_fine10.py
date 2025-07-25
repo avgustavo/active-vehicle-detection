@@ -27,7 +27,7 @@ def main(name: str):
         name=name,
         plots=True,
         optimizer='AdamW',
-        lr0=0.0001,
+        lr0=0.00001,
         momentum=0.9,
         # freeze=10
     )
