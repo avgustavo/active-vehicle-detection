@@ -13,23 +13,23 @@ def printf(message: str):
 
 def main(name: str):
 
-    # printf('Avaliação do modelo yolo em treino_transitar')
+    printf('Avaliação do modelo yolo em treino_transitar')
 
-    # model = YOLO('yolo11n.pt')
+    model = YOLO('yolo11n.pt')
 
-    # results_0 = model.val(
-    #     data=YAML_PATH,
-    #     split='val',
-    #     name=f'{name}_11n_test',
-    #     project='runstt',
-    #     classes=[0, 1, 2, 3, 5, 6, 7, 9],
-    # )
+    results_0 = model.val(
+        data=YAML_PATH,
+        split='val',
+        name=f'{name}_11n_test',
+        project='runstt',
+        classes=[0, 1, 2, 3, 5, 6, 7],
+    )
 
-    # res_csv = results_0.to_csv()
-    # with open(f'runstt/{name}_11n_test/results.csv', 'w') as f:
-    #     f.write(res_csv)
+    res_csv = results_0.to_csv()
+    with open(f'runstt/{name}_11n_test/results.csv', 'w') as f:
+        f.write(res_csv)
 
-    printf('Treinamento completo em treino_transitar')
+    printf(f'Treinamento completo em treino_transitar {name}')
     model = YOLO('yolo11n.pt')
     t1 = time.time()
     model.train(
@@ -45,7 +45,7 @@ def main(name: str):
         # lr0=0.0001,
         # momentum=0.9,
         # freeze=10,
-        classes=[0, 1, 2, 3, 5, 6, 7, 9]
+        classes=[0, 1, 2, 3, 5, 6, 7]
     )
     t2 = time.time()
     printf(f'Tempo total de treinamento: {calculate_time(t1, t2)} segundos')
@@ -67,16 +67,10 @@ def main(name: str):
     with open(f'runstt/{name}/res_val.csv', 'w') as f:
         f.write(m_val_csv)
 
-    results = model(source='treino_transitar/val/images', batch=16, project='runstt', name=f'{name}_pred', stream=True)
-
-
-    i = 0
-    for result in results:
-        result.save()
-        i+=1
-        if i > 10:
-            break
     t3 = time.time()
+    printf(f'Tempo total de validação: {calculate_time(t2, t3)} segundos')
+    printf(f'Treinamento e validação completos em treino_transitar {name} em {calculate_time(t1, t3)}')
+
 
 if __name__ == '__main__':
 
