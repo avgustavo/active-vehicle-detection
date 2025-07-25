@@ -10,7 +10,7 @@ YAML_PATH = 'bdd100k/bdd100k.yaml'
 def main(name: str):
 
     print('='*100)
-    print('Treinamento completo bdd10k')
+    print(f'Treinamento completo {name}')
     print('='*100)
 
     model = YOLO('yolo11n.pt')
@@ -28,7 +28,7 @@ def main(name: str):
         optimizer='AdamW',
         lr0=0.0001,
         momentum=0.9,
-        # freeze=10
+        freeze=10
     )
     t2 = time.time()
 
