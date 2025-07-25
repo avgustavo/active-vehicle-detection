@@ -63,7 +63,7 @@ def main(name: str):
     print(f"  > mAP50 (val):    {m_val.box.map50:.4f}")
     print(f"  > mAP (val):      {m_val.box.map75:.4f}")
 
-    results = model(source='treino_transitar/images/val', batch=16, project='runstt', name=f'{name}_pred', stream=True)
+    results = model(source='treino_transitar/val/images', batch=16, project='runstt', name=f'{name}_pred', stream=True)
 
 
     i = 0
