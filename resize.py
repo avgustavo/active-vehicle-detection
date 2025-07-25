@@ -36,6 +36,7 @@ def resize_dataset(
         print(f"ERRO: O diretório de imagens de validação não foi encontrado em: {val_images_dir}")
         return
 
+    available_images.sort()
     # 3. Verificar se temos imagens suficientes para mover
     if len(available_images) < num_to_move:
         print(f"ERRO: Você quer mover {num_to_move} imagens, mas apenas {len(available_images)} estão disponíveis.")
