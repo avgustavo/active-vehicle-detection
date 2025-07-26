@@ -19,9 +19,23 @@ import time
 
 ######################################## CONSTANTES ########################################
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
-DATASET_PATH = Path('FOCAL/yolov5_format')
+################### CONFIGURAÇÕES FOCAL ###################
+# DATASET_PATH = Path('FOCAL/yolov5_format')
+# LIGHTLY_INPUT = Path('lightly')
+# ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.txt')
+# TRAIN_IMAGES_DIR = DATASET_PATH / 'images/train'
+# IMPORTANT_CLASSES = [0, 1, 2, 3, 5, 6, 7]  
+DATASET_PATH = Path('treino_transitar')
 LIGHTLY_INPUT = Path('lightly')
-ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.txt')
+ALL_IMAGES = Path('treino_transitar/train_images.txt')
+TRAIN_IMAGES_DIR = DATASET_PATH / 'train/images'
+IMPORTANT_CLASSES = [0, 1, 2, 3, 5, 6, 7]  
+
+
+def printff(message: str):
+    print('=' * 100)
+    print(message)
+    print('=' * 100)
 
 
 def calculate_time(start: float, end: float) -> str:
@@ -38,13 +52,13 @@ def calculate_time(start: float, end: float) -> str:
 
 def create_dir(dataset_name:str) -> Path:
 
-    if not os.path.exists(f'runs/{dataset_name}'):
-        os.makedirs(f'runs/{dataset_name}')
+    if not os.path.exists(f'{dataset_name}'):
+        os.makedirs(f'{dataset_name}')
         print(f'Diretório do dataset {dataset_name} criado com sucesso!')
     else:
         print(f'Esse diretório {dataset_name} já existe!')
 
-    return Path(f'runs/{dataset_name}')
+    return Path(f'{dataset_name}')
 
 
 def configure_lightly_client(token: str, dataset_name: str) -> ApiWorkflowClient:
@@ -75,14 +89,13 @@ def update_pool(
     client: ApiWorkflowClient,
     all_images_path: Path,
     cycle_name: str,
-    run_dir: Path
+    run_dir: Path,
+    train_images_dir: Path
 ) -> Dict[str, Path]:    
     """
     Atualiza o pool de imagens no Lightly.
     """
-    print('='*80)
-    print(f"\n--- Atualizando pool de dados para o ciclo: {cycle_name} ---")
-    print('\n'+'='*80)
+    printff(f"\n--- Atualizando pool de dados para o ciclo: {cycle_name} ---")
     
     # Define o diretório de configuração central para este ciclo
     config_dir = run_dir / "config" / cycle_name
@@ -106,6 +119,7 @@ def update_pool(
     tags.sort(key=lambda t: t.created_at, reverse=True)
 
     new_tag = tags[0]
+    printff(f"Usando a tag mais recente: {new_tag.name}")
     image_names = client.export_filenames_by_tag_name(tag_name=new_tag.name).splitlines()
 
 
@@ -119,7 +133,7 @@ def update_pool(
 
     df.to_csv(pool_path, index=False)
 
-    abs_images_path = (DATASET_PATH / 'images' / 'train').absolute()
+    abs_images_path = train_images_dir.absolute()
     
     df_rotulado = df[df['status'] == 1]
     df_nao_rotulado = df[df['status'] == 0]
@@ -147,7 +161,7 @@ def update_pool(
         "unlabeled_txt_path": path_unlabeled_txt
     }
 
-def prepare_yolo_dataset(labeled_txt_path: Path) -> Path:
+def prepare_focal_dataset(labeled_txt_path: Path) -> Path:
     """
     Cria o arquivo data.yaml para um ciclo específico, usando a lista de treino fornecida.
     Salva o .yaml na mesma pasta que o arquivo .txt.
@@ -187,28 +201,93 @@ names:
     
     return yaml_path
 
+def prepare_yolo_dataset(labeled_txt_path: Path) -> Path:
+    """
+    Cria o arquivo data.yaml para um ciclo específico, usando a lista de treino fornecida.
+    Salva o .yaml na mesma pasta que o arquivo .txt.
+
+    Returns:
+        Path: O Path para o arquivo data.yaml criado.
+    """
+    # O diretório de configuração é o mesmo onde o 'labeled_txt_path' está
+    config_dir = labeled_txt_path.parent
+
+    print("=" * 100)
+    print(f"Criando arquivo de configuração YAML em: {config_dir}")
+    print(f"Arquivo de imagens rotuladas: {labeled_txt_path.absolute()} vai para o 'train' do data.yaml")
+    print("=" * 100)
+    
+    yaml_path = config_dir / "data.yaml"
+    yaml_content = f"""
+# 'path' resolve os caminhos para 'val' e 'test'.
+path: {DATASET_PATH.absolute()}
+
+# Para 'train', usamos um caminho absoluto para evitar qualquer ambiguidade.
+train: {labeled_txt_path.absolute()}
+val: val/images
+
+nc: 8
+# Definição das Classes
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  4: airplane
+  5: bus
+  6: van
+  7: truck
+
+""".strip()
+    with open(yaml_path, "w") as f:
+        f.write(yaml_content.strip())
+    print(f"Arquivo de configuração YAML criado em: {yaml_path}")
+    
+    return yaml_path
+
 #################################### Treinamento YOLO ####################################
-def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, model_path='yolo11n.pt'):
+def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, model_path='yolo11n.pt', classes: List[int] = IMPORTANT_CLASSES):
+
+    printff(f"Treinando o modelo YOLO para o ciclo: {cycle_name}")
 
     #Carregar modelo
     model = YOLO(model_path)
 
-    #Treinar modelo
-    results = model.train(
+    t1 = time.time()
+    model.train(
         data=yaml_path,
         epochs=epochs,
-        name=f"{cycle_name}",
-        project=project_name,
+        imgsz=640,
+        batch=16,
         device=[0, 1],
+        project=project_name,
+        name=cycle_name,
         plots=True,
+        classes=classes
     )
-    print("="*100)
-    print(f"Treinamento concluído para o ciclo {cycle_name}. ")
-    print("="*100)
-    return results
+    t2 = time.time()
+    printff(f'Tempo total de treinamento: {calculate_time(t1, t2)}')
 
+    best_model_path = Path(project_name) / cycle_name / "weights" / "best.pt"
 
-def generate_lightly_predictions(model_path, image_paths: list[str], output_dir: Path, chunk_size: int):
+    model = YOLO(best_model_path)
+    metrics = model.val(
+        data=yaml_path,
+        split='val',
+        name=f'{cycle_name}_val',
+        project=project_name,
+        classes=classes
+    )
+
+    print(f"  > mAP50-95 (val): {metrics.box.map:.4f}")
+    print(f"  > mAP50 (val):    {metrics.box.map50:.4f}")
+    print(f"  > mAP (val):      {metrics.box.map75:.4f}")
+
+    metrics_csv = metrics.to_csv()
+    with open(f'{project_name}/{cycle_name}/res_val.csv', 'w') as f:
+        f.write(metrics_csv)
+
+def generate_lightly_predictions(model_path, image_paths: list[str], output_dir: Path, chunk_size: int, important_classes: List[int] = IMPORTANT_CLASSES):
     """Executa a predição, otimizado para o ambiente Kaggle."""
     if not image_paths:
         print("Nenhuma imagem para processar nesta partição.")
@@ -229,7 +308,7 @@ def generate_lightly_predictions(model_path, image_paths: list[str], output_dir:
         for i in range(0, len(image_paths), chunk_size):
             chunk_paths = image_paths[i:i + chunk_size]
             try:
-                results = model(chunk_paths, stream=True, verbose=False, batch=32, device=gpu_id)
+                results = model.predict(chunk_paths, stream=True, verbose=False, batch=32, device=gpu_id, classes=important_classes)
                 for result in results:
                     original_filename = Path(result.path).name
                     output_json_path = output_dir / f"{Path(original_filename).stem}.json"
@@ -365,7 +444,7 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
         f.write(test_csv)
 
 
-def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, selection_type: str = 'uncert', retrain: bool = False):
+def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, selection_type: str = 'balance', retrain: bool = False):
 
     if selection_type == 'uncert':
         print('='*80)
@@ -395,9 +474,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
             ],
         }
     elif selection_type == 'balance':
-        print('='*80)
-        print(f"Configuração de seleção: com balanceamento")
-        print('='*80)
+        printff(f"Configuração de seleção: com balanceamento")
 
         selection_config = {
             "proportion_samples": 0.01, # +1% do dataset
@@ -415,6 +492,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 {
                     "input": {
                         "type": "EMBEDDINGS",
+                        "task": "object_detection", 
                     },
                     "strategy": {
                         "type": "DIVERSITY",
@@ -428,15 +506,13 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                     },
                     "strategy": {  
                         "type": "BALANCE",  
-                        "distribution": "UNIFORM"  
+                        "distribution": "UNIFORM",
+                        "strength": 2.0,
                     }
                 }                
             ],
         }
         
-
-    comet_ml.login(project_name=dataset_name)
-
     #################### 1. criar o diretório de saída da execução ####################
     run_dir = create_dir(dataset_name)
 
@@ -449,9 +525,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
 
     for i in range(start, num_total_cycles):
 
-        print('='*100)
-        print(f"--- Iniciando o ciclo {i} ---")
-        print('='*100)
+        printff(f"--- Iniciando o ciclo {i} ---")
         cycle_name = f'ciclo_{i}'
 
         if i == 0:            
@@ -501,7 +575,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         print(f"Tempo total de execução da seleção no ciclo {i}: {calculate_time(t1, t2)}")
         ####################################################################################################
         ################################ Atualização do pool de dados ######################################
-        data_splits = update_pool(client, ALL_IMAGES, cycle_name, run_dir)
+        data_splits = update_pool(client, ALL_IMAGES, cycle_name, run_dir, TRAIN_IMAGES_DIR)
         labeled_txt = data_splits["labeled_txt_path"]
         unlabeled_txt = data_splits["unlabeled_txt_path"]
         yaml_path = prepare_yolo_dataset(labeled_txt)
@@ -518,26 +592,13 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 init_model_path = str((Path(dataset_name) / f'ciclo_{i-1}' / "weights" / "best.pt").absolute())
         print(f"Modelo inicial para o ciclo {i}: {init_model_path}")    
         ####################################################################################################
-        #################################### Treinamento do modelo YOLO ####################################
-        results = train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=init_model_path)
-        print(f"Resultados do ciclo {cycle_name}: {results}")
-        t4 = time.time()
-        print(f"Tempo total do treinamento no ciclo {i}: {calculate_time(t3, t4)}")
+        ############################## Treinamento e avaliação do modelo YOLO ##############################
+        train_yolo(cycle_name, str(yaml_path.absolute()), dataset_name, epochs=epochs, model_path=init_model_path)
         ####################################################################################################
-        ##################################### Avaliação do modelo YOLO #####################################
         final_model_path = str((Path(dataset_name) / cycle_name / "weights" / "best.pt").absolute())
-
-        evaluate_yolo(
-            model_path=final_model_path,
-            yaml_path=str(yaml_path.absolute()),
-            output_dir=labeled_txt.parent,
-            name=cycle_name,
-            project=dataset_name
-        )
-        t5 = time.time()
-        print(f"Tempo total da avaliação do modelo no ciclo {i}: {calculate_time(t4, t5)}")
         ####################################################################################################
         ############################## Geração de predições para o LightlyOne ##############################
+        t5 = time.time()
         if i < num_total_cycles - 1:
         # Lê a lista de caminhos não rotulados do arquivo de texto
             with open(unlabeled_txt, 'r') as f:
@@ -554,7 +615,6 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         ####################################################################################################
         print(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
 
-    move_folder(dataset_name, f'runs/{dataset_name}')
     
 
 def complete_train(dataset_name: str, epochs: int):
@@ -934,7 +994,7 @@ if __name__ == "__main__":
     parse.add_argument("-e", "--epochs", type=int, default=25, help="Number of training epochs")
     parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
     parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
-    parse.add_argument("-t", "--type", type=str, default='uncert', help="Type of selection strategy to use (uncertainty with or without balance)")
+    parse.add_argument("-t", "--type", type=str, default='balance', help="Type of selection strategy to use (uncertainty with or without balance)")
     parse.add_argument("-r", "--retrain", action='store_true', help="Retrain the model from the beginning")
     parse.add_argument("--mode", type=str, default='al', choices=['al', 'val', 'train'], help="Mode of operation: 'al' for active learning, 'val' for zero validation, 'train' for complete training")
     parse.add_argument("--debug", action='store_true', help="Enable debug mode")
@@ -1009,6 +1069,9 @@ if __name__ == "__main__":
         complete_train(dataset_name, epochs)
 
     elif args.mode == 'al':
+        if args.retrain:
+            print(f"Modo de operação: treinamento ativo com reinício do modelo")
+        print(f'Configurações escolhidas: dataset={dataset_name}, epochs={epochs}, model={args.model}, start={start}, selection_type={selection_type}, retrain={args.retrain}')
         ts = time.time()
         main(
             dataset_name=dataset_name,
