@@ -381,7 +381,7 @@ def monitoring_run(client: ApiWorkflowClient, run_id: str):
 
     print("\n🏁 Monitoramento concluído!")
 
-def print_commands(dataset_path: Path, lightly_token: str):
+def print_commands(train_images_dir: Path, lightly_token: str):
     """
     Imprime os comandos necessários para executar o worker LightlyOne com o dataset.
 
@@ -394,7 +394,7 @@ def print_commands(dataset_path: Path, lightly_token: str):
         f"{linesep}Docker Run command: {linesep}"
         f"\033[7m"
         f"docker run {gpus_flag} --shm-size='32768m' --rm -it \\{linesep}"
-        f"\t-v '{dataset_path.absolute()}/images/train':/input_mount:ro \\{linesep}"
+        f"\t-v '{train_images_dir.absolute()}':/input_mount:ro \\{linesep}"
         f"\t-v '{Path('lightly').absolute()}':/lightly_mount \\{linesep}"
         f"\t-e LIGHTLY_TOKEN={lightly_token} \\{linesep}"
         f"\tlightly/worker:latest{linesep}"
@@ -404,7 +404,7 @@ def print_commands(dataset_path: Path, lightly_token: str):
         f"{linesep}Lightly Serve command:{linesep}"
         f"\033[7m"
         f"lightly-serve \\{linesep}"
-        f"\tinput_mount='{dataset_path.absolute()}/images/train' \\{linesep}"
+        f"\tinput_mount='{train_images_dir.absolute()}' \\{linesep}"
         f"\tlightly_mount='{Path('lightly').absolute()}'{linesep}"
         f"\033[0m"
     )
@@ -569,7 +569,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
             print(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
         ####################################### Seleção das imagens ########################################
         print('\n\n')
-        print_commands(DATASET_PATH, LIGHTLY_TOKEN)
+        print_commands(TRAIN_IMAGES_DIR, LIGHTLY_TOKEN)
         monitoring_run(client, scheduled_run_id)
         t2 = time.time()
         print(f"Tempo total de execução da seleção no ciclo {i}: {calculate_time(t1, t2)}")
