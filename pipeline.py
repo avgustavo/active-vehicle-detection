@@ -512,6 +512,64 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 }                
             ],
         }
+    elif selection_type == 'balance2':
+        printff(f"Configuração de seleção: com balanceamento para van e bicycle")
+
+        selection_config = {
+            "proportion_samples": 0.01, # +1% do dataset
+            "strategies": [
+                {
+                    "input": {
+                        "type": "SCORES",
+                        "task": "object_detection", 
+                        "score": "uncertainty_entropy",
+                    },
+                    "strategy": {
+                        "type": "WEIGHTS"
+                    }
+                },
+                {
+                    "input": {
+                        "type": "EMBEDDINGS",
+                        "task": "object_detection", 
+                    },
+                    "strategy": {
+                        "type": "DIVERSITY",
+                    },
+                },
+                {
+                    "input": {
+                        "type": "PREDICTIONS",
+                        "task": "object_detection",
+                        "name": "CLASS_DISTRIBUTION"
+                    },
+                    "strategy": {
+                        "type": "BALANCE",
+                        "distribution": "TARGET", # only needed for LightlyOne Worker version >= 2.12
+                        "target": {
+                            "bicycle": 0.25,
+                            "van": 0.25,
+                        }
+                    }
+                }                
+            ],
+        }
+    elif selection_type == 'random':
+        printff(f"Configuração de seleção: aleatória")
+        selection_config = {
+            "proportion_samples": 0.01, # 1% do dataset
+            "strategies": [
+                {
+                    "input": {
+                        "type": "RANDOM",
+                        "random_seed": 42, # optional, for reproducibility
+                    },
+                    "strategy": {
+                        "type": "WEIGHTS",
+                    }
+                }
+            ]
+        }
         
     #################### 1. criar o diretório de saída da execução ####################
     run_dir = create_dir(dataset_name)
@@ -520,6 +578,27 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
     client = configure_lightly_client(LIGHTLY_TOKEN, dataset_name)
 
     baseline_model = Path(dataset_name) / "ciclo_0" / "weights" / "best.pt"
+
+    if start > 0:
+        if selection_type != 'random':
+            printff(f"Reiniciando o pipeline a partir do ciclo {start} com o modelo do ciclo {start-1}.")
+            last_unlabeled_txt = Path(f'{dataset_name}/config/ciclo_{start-1}/unlabeled.txt')
+            m_path = str((Path(dataset_name) / f'ciclo_{start-1}' / "weights" / "best.pt").absolute())
+            ############################## Geração de predições para o LightlyOne ##############################
+            t = time.time()
+            with open(last_unlabeled_txt, 'r') as f:
+                image_paths_for_prediction = [line.strip() for line in f if line.strip()]
+            
+            generate_lightly_predictions(
+                model_path=m_path, # Carrega o modelo treinado
+                image_paths=image_paths_for_prediction,
+                output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
+                chunk_size=64
+            )
+            tk = time.time()
+            print(f"Tempo total da geração de predições no ciclo {start - 1}: {calculate_time(t, tk)}")
+        else:
+            printff(f"Retomando execução com seleção aleatória. Nenhuma predição prévia é necessária.")
 
 
     for i in range(start, end):
@@ -552,7 +631,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                     ]
                 },
             )
-            print(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
+            printff(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
         else:
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
@@ -565,7 +644,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 },
                 selection_config=selection_config
             )
-            print(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
+            printff(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
         ####################################### Seleção das imagens ########################################
         print('\n\n')
         print_commands(TRAIN_IMAGES_DIR, LIGHTLY_TOKEN)
@@ -598,21 +677,23 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         ####################################################################################################
         ############################## Geração de predições para o LightlyOne ##############################
         t5 = time.time()
-        # if i < end - 1:
+        if selection_type != 'random':
         # Lê a lista de caminhos não rotulados do arquivo de texto
-        with open(unlabeled_txt, 'r') as f:
-            image_paths_for_prediction = [line.strip() for line in f if line.strip()]
-        
-        generate_lightly_predictions(
-            model_path=final_model_path, # Carrega o modelo treinado
-            image_paths=image_paths_for_prediction,
-            output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-            chunk_size=64
-        )
+            with open(unlabeled_txt, 'r') as f:
+                image_paths_for_prediction = [line.strip() for line in f if line.strip()]
+            
+            generate_lightly_predictions(
+                model_path=final_model_path, # Carrega o modelo treinado
+                image_paths=image_paths_for_prediction,
+                output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
+                chunk_size=64
+            )
+        else:
+            printff(f"Seleção aleatória não necessita de predições.")
         t6 = time.time()
         print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
         ####################################################################################################
-        print(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
+        printff(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
 
     
 
@@ -994,7 +1075,7 @@ if __name__ == "__main__":
     parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
     parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
     parse.add_argument("-f", "--end", type=int, default=10, help="Ending cycle number")
-    parse.add_argument("-t", "--type", type=str, default='balance', help="Type of selection strategy to use (uncertainty with or without balance)")
+    parse.add_argument("-t", "--type", type=str, choices=['balance', 'balance2', 'uncert', 'random'], default='balance', help="Type of selection strategy to use (uncertainty with or without balance)")
     parse.add_argument("-r", "--retrain", action='store_true', help="Retrain the model from the beginning")
     parse.add_argument("--mode", type=str, default='al', choices=['al', 'val', 'train'], help="Mode of operation: 'al' for active learning, 'val' for zero validation, 'train' for complete training")
     parse.add_argument("--debug", action='store_true', help="Enable debug mode")
