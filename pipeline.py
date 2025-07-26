@@ -599,19 +599,19 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         ####################################################################################################
         ############################## Geração de predições para o LightlyOne ##############################
         t5 = time.time()
-        if i < num_total_cycles - 1:
+        # if i < num_total_cycles - 1:
         # Lê a lista de caminhos não rotulados do arquivo de texto
-            with open(unlabeled_txt, 'r') as f:
-                image_paths_for_prediction = [line.strip() for line in f if line.strip()]
-            
-            generate_lightly_predictions(
-                model_path=final_model_path, # Carrega o modelo treinado
-                image_paths=image_paths_for_prediction,
-                output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
-                chunk_size=64
-            )
-            t6 = time.time()
-            print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
+        with open(unlabeled_txt, 'r') as f:
+            image_paths_for_prediction = [line.strip() for line in f if line.strip()]
+        
+        generate_lightly_predictions(
+            model_path=final_model_path, # Carrega o modelo treinado
+            image_paths=image_paths_for_prediction,
+            output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
+            chunk_size=64
+        )
+        t6 = time.time()
+        print(f"Tempo total da geração de predições no ciclo {i}: {calculate_time(t5, t6)}")
         ####################################################################################################
         print(f"Tempo total de execução do ciclo {i}: {calculate_time(t1, t6)}")
 
@@ -1073,13 +1073,31 @@ if __name__ == "__main__":
             print(f"Modo de operação: treinamento ativo com reinício do modelo")
         print(f'Configurações escolhidas: dataset={dataset_name}, epochs={epochs}, model={args.model}, start={start}, selection_type={selection_type}, retrain={args.retrain}')
         ts = time.time()
-        main(
-            dataset_name=dataset_name,
-            epochs=epochs,
-            initial_model_path=args.model,
-            start=start,
-            selection_type=selection_type,
-            retrain=args.retrain
+        # main(
+        #     dataset_name=dataset_name,
+        #     epochs=epochs,
+        #     initial_model_path=args.model,
+        #     start=start,
+        #     selection_type=selection_type,
+        #     retrain=args.retrain
+        # )
+        unlabeled_txt = Path(f'final/config/ciclo_9/unlabeled.txt')
+        final_model_path = str((Path(dataset_name) / 'ciclo_9' / "weights" / "best.pt").absolute())
+        ####################################################################################################
+        ############################## Geração de predições para o LightlyOne ##############################
+        t5 = time.time()
+        # if i < num_total_cycles - 1:
+        # Lê a lista de caminhos não rotulados do arquivo de texto
+        with open(unlabeled_txt, 'r') as f:
+            image_paths_for_prediction = [line.strip() for line in f if line.strip()]
+        
+        generate_lightly_predictions(
+            model_path=final_model_path, # Carrega o modelo treinado
+            image_paths=image_paths_for_prediction,
+            output_dir=LIGHTLY_INPUT / '.lightly' / 'predictions' / 'object_detection',
+            chunk_size=64
         )
+        t6 = time.time()
+        print(f"Tempo total da geração de predições no ciclo 9: {calculate_time(t5, t6)}")
         te = time.time()
         print(f"Tempo total de execução do pipeline: {calculate_time(ts, te)}")
