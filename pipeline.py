@@ -555,7 +555,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
             ],
         }
     elif selection_type == 'balance3':
-        printff(f"Configuração de seleção: com balanceamento para van e bicycle")
+        printff(f"Configuração de seleção: com balanceamento para van e bicycle forçando 40% de cada classe e peso 4")
 
         selection_config = {
             "proportion_samples": 0.01, # +1% do dataset
