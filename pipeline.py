@@ -554,6 +554,49 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 }                
             ],
         }
+    elif selection_type == 'balance3':
+        printff(f"Configuração de seleção: com balanceamento para van e bicycle")
+
+        selection_config = {
+            "proportion_samples": 0.01, # +1% do dataset
+            "strategies": [
+                {
+                    "input": {
+                        "type": "SCORES",
+                        "task": "object_detection", 
+                        "score": "uncertainty_entropy",
+                    },
+                    "strategy": {
+                        "type": "WEIGHTS"
+                    }
+                },
+                {
+                    "input": {
+                        "type": "EMBEDDINGS",
+                        "task": "object_detection", 
+                    },
+                    "strategy": {
+                        "type": "DIVERSITY",
+                    },
+                },
+                {
+                    "input": {
+                        "type": "PREDICTIONS",
+                        "task": "object_detection",
+                        "name": "CLASS_DISTRIBUTION"
+                    },
+                    "strategy": {
+                        "type": "BALANCE",
+                        "distribution": "TARGET", # only needed for LightlyOne Worker version >= 2.12
+                        "target": {
+                            "bicycle": 0.4,
+                            "van": 0.4,
+                        },
+                        "strength": 4.0, 
+                    }
+                }                
+            ],
+        }
     elif selection_type == 'random':
         printff(f"Configuração de seleção: aleatória")
         selection_config = {
@@ -1075,7 +1118,7 @@ if __name__ == "__main__":
     parse.add_argument("-m", "--model", type=str, default='yolo11n.pt', help="Path to the YOLO model to train from")
     parse.add_argument("-s", "--start", type=int, default=0, help="Starting cycle number")
     parse.add_argument("-f", "--end", type=int, default=10, help="Ending cycle number")
-    parse.add_argument("-t", "--type", type=str, choices=['balance', 'balance2', 'uncert', 'random'], default='balance', help="Type of selection strategy to use (uncertainty with or without balance)")
+    parse.add_argument("-t", "--type", type=str, choices=['balance', 'balance2', 'balance3', 'uncert', 'random'], default='balance', help="Type of selection strategy to use (uncertainty with or without balance)")
     parse.add_argument("-r", "--retrain", action='store_true', help="Retrain the model from the beginning")
     parse.add_argument("--mode", type=str, default='al', choices=['al', 'val', 'train'], help="Mode of operation: 'al' for active learning, 'val' for zero validation, 'train' for complete training")
     parse.add_argument("--debug", action='store_true', help="Enable debug mode")
