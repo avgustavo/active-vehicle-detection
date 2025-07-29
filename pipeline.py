@@ -252,6 +252,12 @@ def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, mode
 
     #Carregar modelo
     model = YOLO(model_path)
+    if torch.cuda.is_available():
+        if torch.cuda.device_count() > 1:
+            dev = [0, 1]
+        else:
+            dev = -1
+
 
     t1 = time.time()
     model.train(
@@ -259,7 +265,7 @@ def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, mode
         epochs=epochs,
         imgsz=640,
         batch=16,
-        device=[0, 1],
+        device=dev,
         project=project_name,
         name=cycle_name,
         plots=True,
@@ -1093,12 +1099,18 @@ def validate_yolo_zero(name:str):
     data_yaml = prepare_yolo_dataset(ALL_IMAGES)
     model = YOLO('yolo11n.pt')
 
+    if torch.cuda.is_available():
+        if torch.cuda.device_count() > 1:
+            device = [0, 1]
+        else:
+            device = -1
+
     results = model.val(
         data=str(data_yaml.absolute()),
         project='yolo11n_zero_validation',
         name=name,
         split='val',
-        device=[0, 1],
+        device=device,
         plots=True,
         classes = [0, 1, 2]  # Classes: person, bicycle, car, cart
     )
