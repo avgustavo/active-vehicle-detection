@@ -705,7 +705,6 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                         }
                     ]
                 },
-                lightly_config=lightly_config_0
             ),
             printff(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
         else:
