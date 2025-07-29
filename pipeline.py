@@ -717,6 +717,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                     "datasource": {
                         "process_all": True,
                     },
+                    "embeddings": "transitar_embeddings.csv",
                 },
                 selection_config=selection_config
             )
