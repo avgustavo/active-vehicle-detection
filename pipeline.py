@@ -711,14 +711,14 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         else:
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
-                worker_config = {
-                    "shutdown_when_job_finished": True,
-                    "use_datapool": True,
-                    "datasource": {
-                        "process_all": True,
-                    },
-                    "embeddings": "transitar_embeddings.csv",
-                },
+                worker_config = worker_config_0,
+                #     "shutdown_when_job_finished": True,
+                #     "use_datapool": True,
+                #     "datasource": {
+                #         "process_all": True,
+                #     },
+                #     "embeddings": "transitar_embeddings.csv",
+                # },
                 selection_config=selection_config
             )
             printff(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
