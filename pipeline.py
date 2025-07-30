@@ -452,37 +452,37 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
 
 def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, end: int = 10, selection_type: str = 'balance', retrain: bool = False, ssl: bool = False):
 
-    worker_config_0 = {
-        "shutdown_when_job_finished": True,
-        "use_datapool": True,
-        "datasource": {
-            "process_all": True,
-        },
-    }
+    # worker_config_0 = {
+    #     "shutdown_when_job_finished": True,
+    #     "use_datapool": True,
+    #     "datasource": {
+    #         "process_all": True,
+    #     },
+    # }
 
-    lightly_config_0 = {}
+    # lightly_config_0 = {}
     
-    if ssl:
-        printff(f"Modo SSL (Semi-Supervised Learning) ativado. Antes da inicialização ele treinará um modelo SSL para gerar embeddings.")
+    # if ssl:
+    #     printff(f"Modo SSL (Semi-Supervised Learning) ativado. Antes da inicialização ele treinará um modelo SSL para gerar embeddings.")
 
-        worker_config_0["enable_training"] = True
+    #     worker_config_0["enable_training"] = True
 
-        lightly_config_0 = {
-            "model": {
-                # Name of the model, currently supports popular variants:
-                # resnet-18, resnet-34, resnet-50, resnet-101, resnet-152.
-                "name": 'resnet-18',
+    #     lightly_config_0 = {
+    #         "model": {
+    #             # Name of the model, currently supports popular variants:
+    #             # resnet-18, resnet-34, resnet-50, resnet-101, resnet-152.
+    #             "name": 'resnet-18',
 
-                # Dimensionality of output on which self-supervised loss is calculated.
-                "out_dim": 128,
+    #             # Dimensionality of output on which self-supervised loss is calculated.
+    #             "out_dim": 128,
 
-                # Dimensionality of feature vectors (embedding size).
-                "num_ftrs": 32,
+    #             # Dimensionality of feature vectors (embedding size).
+    #             "num_ftrs": 32,
 
-                # Width of the resnet.
-                "width": 1,
-            },
-        }
+    #             # Width of the resnet.
+    #             "width": 1,
+    #         },
+    #     }
 
     if selection_type == 'uncert':
         print('='*80)
@@ -690,7 +690,14 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         if i == 0:            
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
-                worker_config = worker_config_0,
+                worker_config = {
+                    "shutdown_when_job_finished": True,
+                    "use_datapool": True,
+                    "datasource": {
+                        "process_all": True,
+                    },
+                    "embeddings": "transitar_embeddings.csv",
+                },
                 selection_config={
                     "proportion_samples": 0.01, # 1% do dataset
                     "strategies": [
@@ -705,20 +712,20 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                         }
                     ]
                 },
-                lightly_config=lightly_config_0
+                # lightly_config=lightly_config_0
             )
             printff(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
         else:
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
-                worker_config = worker_config_0,
-                #     "shutdown_when_job_finished": True,
-                #     "use_datapool": True,
-                #     "datasource": {
-                #         "process_all": True,
-                #     },
-                #     "embeddings": "transitar_embeddings.csv",
-                # },
+                worker_config = {
+                    "shutdown_when_job_finished": True,
+                    "use_datapool": True,
+                    "datasource": {
+                        "process_all": True,
+                    },
+                    "embeddings": "transitar_embeddings.csv",
+                },
                 selection_config=selection_config
             )
             printff(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
