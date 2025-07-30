@@ -27,7 +27,7 @@ filename,status
 115.avi-frame0000-roi1.png,0
 115.avi-frame0002-roi1.png,1
 115.avi-frame0004-roi1.png,1
-115.avi-frame0005-roi1.png,0
+115.avi-frame0005-roi1.png,1
 115.avi-frame0007-roi1.png,0
 115.avi-frame0009-roi1.png,0
 115.avi-frame0010-roi1.png,1
@@ -60,7 +60,7 @@ filename,status
 115.avi-frame0061-roi1.png,0
 115.avi-frame0063-roi1.png,0
 115.avi-frame0064-roi1.png,0
-115.avi-frame0066-roi1.png,0
+115.avi-frame0066-roi1.png,1
 115.avi-frame0067-roi1.png,0
 115.avi-frame0068-roi1.png,0
 115.avi-frame0069-roi1.png,0
@@ -103,13 +103,13 @@ filename,status
 115.avi-frame0131-roi1.png,0
 115.avi-frame0133-roi1.png,0
 115.avi-frame0135-roi1.png,0
-115.avi-frame0136-roi1.png,0
+115.avi-frame0136-roi1.png,1
 115.avi-frame0137-roi1.png,1
 115.avi-frame0139-roi1.png,0
 115.avi-frame0143-roi1.png,1
-115.avi-frame0144-roi1.png,0
+115.avi-frame0144-roi1.png,1
 115.avi-frame0145-roi1.png,0
-115.avi-frame0146-roi1.png,0
+115.avi-frame0146-roi1.png,1
 115.avi-frame0147-roi1.png,0
 115.avi-frame0148-roi1.png,0
 115.avi-frame0149-roi1.png,0
@@ -153,16 +153,16 @@ filename,status
 115.avi-frame0208-roi1.png,0
 115.avi-frame0213-roi1.png,1
 115.avi-frame0214-roi1.png,0
-115.avi-frame0215-roi1.png,0
+115.avi-frame0215-roi1.png,1
 115.avi-frame0216-roi1.png,0
-115.avi-frame0217-roi1.png,0
+115.avi-frame0217-roi1.png,1
 115.avi-frame0218-roi1.png,0
 115.avi-frame0219-roi1.png,0
 115.avi-frame0220-roi1.png,1
 115.avi-frame0221-roi1.png,0
 115.avi-frame0222-roi1.png,0
-115.avi-frame0223-roi1.png,0
-115.avi-frame0224-roi1.png,0
+115.avi-frame0223-roi1.png,1
+115.avi-frame0224-roi1.png,1
 115.avi-frame0225-roi1.png,0
 115.avi-frame0226-roi1.png,0
 115.avi-frame0227-roi1.png,0
@@ -182,7 +182,7 @@ filename,status
 115.avi-frame0250-roi1.png,0
 115.avi-frame0251-roi1.png,0
 115.avi-frame0252-roi1.png,0
-115.avi-frame0253-roi1.png,0
+115.avi-frame0253-roi1.png,1
 115.avi-frame0254-roi1.png,1
 115.avi-frame0259-roi1.png,0
 115.avi-frame0261-roi1.png,0
@@ -214,7 +214,7 @@ filename,status
 115.avi-frame0300-roi1.png,0
 115.avi-frame0301-roi1.png,0
 115.avi-frame0302-roi1.png,0
-115.avi-frame0303-roi1.png,0
+115.avi-frame0303-roi1.png,1
 115.avi-frame0304-roi1.png,0
 115.avi-frame0306-roi1.png,0
 115.avi-frame0309-roi1.png,0
@@ -242,7 +242,7 @@ filename,status
 115.avi-frame0346-roi1.png,0
 115.avi-frame0347-roi1.png,0
 115.avi-frame0351-roi1.png,0
-115.avi-frame0352-roi1.png,0
+115.avi-frame0352-roi1.png,1
 115.avi-frame0354-roi1.png,0
 115.avi-frame0355-roi1.png,0
 115.avi-frame0357-roi1.png,0
@@ -280,7 +280,7 @@ filename,status
 115.avi-frame0411-roi1.png,0
 115.avi-frame0412-roi1.png,0
 115.avi-frame0413-roi1.png,0
-115.avi-frame0415-roi1.png,0
+115.avi-frame0415-roi1.png,1
 115.avi-frame0416-roi1.png,0
 115.avi-frame0417-roi1.png,0
 115.avi-frame0419-roi1.png,0
@@ -329,7 +329,7 @@ filename,status
 115.avi-frame0489-roi1.png,0
 115.avi-frame0492-roi1.png,1
 115.avi-frame0494-roi1.png,0
-115.avi-frame0497-roi1.png,0
+115.avi-frame0497-roi1.png,1
 115.avi-frame0498-roi1.png,0
 115.avi-frame0500-roi1.png,0
 115.avi-frame0501-roi1.png,0
@@ -359,7 +359,7 @@ filename,status
 115.avi-frame0543-roi1.png,0
 115.avi-frame0545-roi1.png,0
 115.avi-frame0548-roi1.png,0
-115.avi-frame0549-roi1.png,0
+115.avi-frame0549-roi1.png,1
 115.avi-frame0550-roi1.png,1
 115.avi-frame0551-roi1.png,0
 115.avi-frame0554-roi1.png,0
@@ -371,8 +371,8 @@ filename,status
 115.avi-frame0566-roi1.png,0
 115.avi-frame0568-roi1.png,0
 115.avi-frame0569-roi1.png,0
-115.avi-frame0570-roi1.png,0
-115.avi-frame0571-roi1.png,0
+115.avi-frame0570-roi1.png,1
+115.avi-frame0571-roi1.png,1
 115.avi-frame0572-roi1.png,1
 115.avi-frame0573-roi1.png,0
 115.avi-frame0577-roi1.png,1
@@ -397,7 +397,7 @@ filename,status
 115.avi-frame0615-roi1.png,0
 115.avi-frame0616-roi1.png,0
 115.avi-frame0622-roi1.png,1
-115.avi-frame0623-roi1.png,0
+115.avi-frame0623-roi1.png,1
 115.avi-frame0624-roi1.png,1
 115.avi-frame0625-roi1.png,0
 115.avi-frame0626-roi1.png,0
@@ -431,7 +431,7 @@ filename,status
 115.avi-frame0682-roi1.png,0
 115.avi-frame0684-roi1.png,1
 115.avi-frame0686-roi1.png,0
-115.avi-frame0688-roi1.png,0
+115.avi-frame0688-roi1.png,1
 115.avi-frame0689-roi1.png,0
 115.avi-frame0690-roi1.png,1
 115.avi-frame0693-roi1.png,1
@@ -444,7 +444,7 @@ filename,status
 115.avi-frame0705-roi1.png,0
 115.avi-frame0706-roi1.png,0
 115.avi-frame0707-roi1.png,1
-115.avi-frame0709-roi1.png,0
+115.avi-frame0709-roi1.png,1
 115.avi-frame0710-roi1.png,1
 115.avi-frame0712-roi1.png,0
 115.avi-frame0713-roi1.png,0
@@ -479,7 +479,7 @@ filename,status
 115.avi-frame0761-roi1.png,0
 115.avi-frame0764-roi1.png,0
 115.avi-frame0765-roi1.png,0
-115.avi-frame0768-roi1.png,0
+115.avi-frame0768-roi1.png,1
 115.avi-frame0769-roi1.png,0
 115.avi-frame0771-roi1.png,0
 115.avi-frame0772-roi1.png,0
@@ -511,14 +511,14 @@ filename,status
 115.avi-frame0806-roi1.png,1
 115.avi-frame0807-roi1.png,1
 115.avi-frame0811-roi1.png,0
-115.avi-frame0813-roi1.png,0
-115.avi-frame0814-roi1.png,0
+115.avi-frame0813-roi1.png,1
+115.avi-frame0814-roi1.png,1
 115.avi-frame0816-roi1.png,1
 115.avi-frame0817-roi1.png,0
 115.avi-frame0818-roi1.png,0
 115.avi-frame0819-roi1.png,0
 115.avi-frame0821-roi1.png,0
-115.avi-frame0824-roi1.png,0
+115.avi-frame0824-roi1.png,1
 115.avi-frame0825-roi1.png,0
 115.avi-frame0826-roi1.png,1
 115.avi-frame0829-roi1.png,1
@@ -534,7 +534,7 @@ filename,status
 115.avi-frame0853-roi1.png,0
 115.avi-frame0854-roi1.png,0
 115.avi-frame0855-roi1.png,0
-115.avi-frame0856-roi1.png,0
+115.avi-frame0856-roi1.png,1
 115.avi-frame0857-roi1.png,0
 115.avi-frame0861-roi1.png,0
 115.avi-frame0862-roi1.png,0
@@ -542,7 +542,7 @@ filename,status
 115.avi-frame0865-roi1.png,0
 115.avi-frame0866-roi1.png,0
 115.avi-frame0870-roi1.png,1
-115.avi-frame0872-roi1.png,0
+115.avi-frame0872-roi1.png,1
 115.avi-frame0873-roi1.png,0
 115.avi-frame0876-roi1.png,1
 115.avi-frame0877-roi1.png,1
@@ -595,7 +595,7 @@ filename,status
 115.avi-frame0958-roi1.png,0
 115.avi-frame0962-roi1.png,1
 115.avi-frame0963-roi1.png,1
-115.avi-frame0965-roi1.png,0
+115.avi-frame0965-roi1.png,1
 115.avi-frame0966-roi1.png,0
 115.avi-frame0967-roi1.png,0
 115.avi-frame0968-roi1.png,0
@@ -609,7 +609,7 @@ filename,status
 115.avi-frame0982-roi1.png,0
 115.avi-frame0987-roi1.png,0
 115.avi-frame0988-roi1.png,0
-115.avi-frame0990-roi1.png,0
+115.avi-frame0990-roi1.png,1
 115.avi-frame0992-roi1.png,0
 115.avi-frame0993-roi1.png,0
 115.avi-frame0996-roi1.png,0
@@ -641,8 +641,8 @@ filename,status
 115.avi-frame1043-roi1.png,1
 115.avi-frame1045-roi1.png,0
 115.avi-frame1046-roi1.png,0
-115.avi-frame1047-roi1.png,0
-115.avi-frame1050-roi1.png,0
+115.avi-frame1047-roi1.png,1
+115.avi-frame1050-roi1.png,1
 115.avi-frame1052-roi1.png,0
 115.avi-frame1054-roi1.png,1
 115.avi-frame1056-roi1.png,1
@@ -677,7 +677,7 @@ filename,status
 115.avi-frame1103-roi1.png,0
 115.avi-frame1105-roi1.png,0
 115.avi-frame1106-roi1.png,0
-115.avi-frame1107-roi1.png,0
+115.avi-frame1107-roi1.png,1
 115.avi-frame1108-roi1.png,0
 115.avi-frame1109-roi1.png,0
 115.avi-frame1110-roi1.png,0
@@ -701,7 +701,7 @@ filename,status
 115.avi-frame1134-roi1.png,1
 115.avi-frame1135-roi1.png,1
 115.avi-frame1136-roi1.png,1
-115.avi-frame1141-roi1.png,0
+115.avi-frame1141-roi1.png,1
 115.avi-frame1143-roi1.png,1
 115.avi-frame1144-roi1.png,0
 115.avi-frame1145-roi1.png,1
@@ -787,13 +787,13 @@ filename,status
 115.avi-frame1270-roi1.png,0
 115.avi-frame1271-roi1.png,0
 115.avi-frame1273-roi1.png,0
-115.avi-frame1274-roi1.png,0
+115.avi-frame1274-roi1.png,1
 115.avi-frame1275-roi1.png,0
 115.avi-frame1277-roi1.png,0
 115.avi-frame1279-roi1.png,0
 115.avi-frame1280-roi1.png,0
 115.avi-frame1281-roi1.png,1
-115.avi-frame1283-roi1.png,0
+115.avi-frame1283-roi1.png,1
 115.avi-frame1286-roi1.png,0
 115.avi-frame1287-roi1.png,0
 115.avi-frame1288-roi1.png,0
@@ -815,7 +815,7 @@ filename,status
 115.avi-frame1311-roi1.png,0
 115.avi-frame1312-roi1.png,0
 115.avi-frame1313-roi1.png,0
-115.avi-frame1314-roi1.png,0
+115.avi-frame1314-roi1.png,1
 115.avi-frame1317-roi1.png,0
 115.avi-frame1319-roi1.png,0
 115.avi-frame1320-roi1.png,0
@@ -848,10 +848,10 @@ filename,status
 115.avi-frame1369-roi1.png,0
 115.avi-frame1370-roi1.png,0
 115.avi-frame1371-roi1.png,1
-115.avi-frame1372-roi1.png,0
+115.avi-frame1372-roi1.png,1
 115.avi-frame1373-roi1.png,0
 115.avi-frame1374-roi1.png,0
-115.avi-frame1377-roi1.png,0
+115.avi-frame1377-roi1.png,1
 115.avi-frame1378-roi1.png,0
 115.avi-frame1381-roi1.png,0
 115.avi-frame1385-roi1.png,0
@@ -859,7 +859,7 @@ filename,status
 115.avi-frame1391-roi1.png,0
 115.avi-frame1392-roi1.png,0
 115.avi-frame1395-roi1.png,0
-115.avi-frame1398-roi1.png,0
+115.avi-frame1398-roi1.png,1
 115.avi-frame1400-roi1.png,0
 115.avi-frame1401-roi1.png,0
 115.avi-frame1402-roi1.png,0
@@ -874,13 +874,13 @@ filename,status
 115.avi-frame1418-roi1.png,0
 115.avi-frame1420-roi1.png,0
 115.avi-frame1422-roi1.png,1
-115.avi-frame1425-roi1.png,0
+115.avi-frame1425-roi1.png,1
 115.avi-frame1426-roi1.png,0
 115.avi-frame1427-roi1.png,0
 115.avi-frame1428-roi1.png,0
-115.avi-frame1429-roi1.png,0
+115.avi-frame1429-roi1.png,1
 115.avi-frame1430-roi1.png,0
-115.avi-frame1431-roi1.png,0
+115.avi-frame1431-roi1.png,1
 115.avi-frame1432-roi1.png,0
 115.avi-frame1433-roi1.png,0
 115.avi-frame1435-roi1.png,0
@@ -891,7 +891,7 @@ filename,status
 115.avi-frame1442-roi1.png,1
 115.avi-frame1443-roi1.png,0
 115.avi-frame1444-roi1.png,0
-115.avi-frame1447-roi1.png,0
+115.avi-frame1447-roi1.png,1
 115.avi-frame1450-roi1.png,0
 115.avi-frame1451-roi1.png,0
 115.avi-frame1452-roi1.png,0
@@ -903,7 +903,7 @@ filename,status
 115.avi-frame1468-roi1.png,1
 115.avi-frame1470-roi1.png,0
 115.avi-frame1471-roi1.png,0
-115.avi-frame1472-roi1.png,0
+115.avi-frame1472-roi1.png,1
 115.avi-frame1473-roi1.png,0
 115.avi-frame1474-roi1.png,1
 115.avi-frame1475-roi1.png,0
@@ -916,14 +916,14 @@ filename,status
 115.avi-frame1488-roi1.png,1
 115.avi-frame1493-roi1.png,1
 115.avi-frame1494-roi1.png,0
-115.avi-frame1495-roi1.png,0
+115.avi-frame1495-roi1.png,1
 115.avi-frame1496-roi1.png,1
 115.avi-frame1497-roi1.png,0
 115.avi-frame1498-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0000-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0001-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0002-roi1.png,0
-121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0003-roi1.png,0
+121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0003-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0004-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0005-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0006-roi1.png,0
@@ -932,7 +932,7 @@ filename,status
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0010-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0011-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0012-roi1.png,0
-121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0013-roi1.png,0
+121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0013-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0014-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0015-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0016-roi1.png,0
@@ -946,15 +946,15 @@ filename,status
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0027-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0028-roi1.png,0
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0030-roi1.png,1
-121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0031-roi1.png,0
-121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0032-roi1.png,0
+121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0031-roi1.png,1
+121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0032-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0033-roi1.png,1
-121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0034-roi1.png,0
+121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0034-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0036-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0037-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0039-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0040-roi1.png,1
-121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0042-roi1.png,0
+121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0042-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0043-roi1.png,1
 121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0044-roi1.png,0
 121 (2023-04-26 16_00_00 - 2023-04-26 16_05_00).avi-frame0001-roi1.png,0
@@ -1013,7 +1013,7 @@ filename,status
 123.avi-frame0065-roi1.png,1
 123.avi-frame0066-roi1.png,0
 123.avi-frame0067-roi1.png,0
-123.avi-frame0068-roi1.png,0
+123.avi-frame0068-roi1.png,1
 123.avi-frame0069-roi1.png,0
 123.avi-frame0070-roi1.png,0
 123.avi-frame0073-roi1.png,0
@@ -1087,7 +1087,7 @@ filename,status
 123.avi-frame0266-roi1.png,1
 123.avi-frame0270-roi1.png,0
 123.avi-frame0272-roi1.png,0
-123.avi-frame0274-roi1.png,0
+123.avi-frame0274-roi1.png,1
 123.avi-frame0275-roi1.png,0
 123.avi-frame0277-roi1.png,0
 123.avi-frame0278-roi1.png,0
@@ -1101,7 +1101,7 @@ filename,status
 123.avi-frame0290-roi1.png,0
 123.avi-frame0293-roi1.png,0
 123.avi-frame0294-roi1.png,0
-123.avi-frame0296-roi1.png,0
+123.avi-frame0296-roi1.png,1
 123.avi-frame0298-roi1.png,0
 123.avi-frame0299-roi1.png,0
 123.avi-frame0301-roi1.png,0
@@ -1129,7 +1129,7 @@ filename,status
 123.avi-frame0383-roi1.png,1
 123.avi-frame0384-roi1.png,0
 123.avi-frame0386-roi1.png,1
-123.avi-frame0388-roi1.png,0
+123.avi-frame0388-roi1.png,1
 123.avi-frame0389-roi1.png,0
 123.avi-frame0392-roi1.png,0
 123.avi-frame0393-roi1.png,0
@@ -1140,7 +1140,7 @@ filename,status
 123.avi-frame0400-roi1.png,1
 123.avi-frame0403-roi1.png,1
 123.avi-frame0404-roi1.png,0
-123.avi-frame0406-roi1.png,0
+123.avi-frame0406-roi1.png,1
 123.avi-frame0407-roi1.png,0
 123.avi-frame0408-roi1.png,0
 123.avi-frame0411-roi1.png,0
@@ -1180,7 +1180,7 @@ filename,status
 123.avi-frame0504-roi1.png,0
 123.avi-frame0505-roi1.png,0
 123.avi-frame0506-roi1.png,0
-123.avi-frame0510-roi1.png,0
+123.avi-frame0510-roi1.png,1
 123.avi-frame0511-roi1.png,0
 123.avi-frame0512-roi1.png,0
 123.avi-frame0514-roi1.png,0
@@ -1222,7 +1222,7 @@ filename,status
 123.avi-frame0607-roi1.png,0
 123.avi-frame0611-roi1.png,1
 123.avi-frame0612-roi1.png,0
-123.avi-frame0613-roi1.png,0
+123.avi-frame0613-roi1.png,1
 123.avi-frame0614-roi1.png,0
 123.avi-frame0617-roi1.png,0
 123.avi-frame0618-roi1.png,0
@@ -1293,8 +1293,8 @@ filename,status
 123.avi-frame0840-roi1.png,0
 123.avi-frame0843-roi1.png,0
 123.avi-frame0844-roi1.png,1
-123.avi-frame0845-roi1.png,0
-123.avi-frame0846-roi1.png,0
+123.avi-frame0845-roi1.png,1
+123.avi-frame0846-roi1.png,1
 123.avi-frame0847-roi1.png,0
 123.avi-frame0879-roi1.png,0
 123.avi-frame0881-roi1.png,0
@@ -1314,7 +1314,7 @@ filename,status
 123.avi-frame0921-roi1.png,0
 123.avi-frame0922-roi1.png,0
 123.avi-frame0923-roi1.png,0
-123.avi-frame0924-roi1.png,0
+123.avi-frame0924-roi1.png,1
 123.avi-frame0925-roi1.png,0
 123.avi-frame0927-roi1.png,0
 123.avi-frame0928-roi1.png,1
@@ -1322,7 +1322,7 @@ filename,status
 123.avi-frame0932-roi1.png,0
 123.avi-frame0936-roi1.png,0
 123.avi-frame0937-roi1.png,1
-123.avi-frame0942-roi1.png,0
+123.avi-frame0942-roi1.png,1
 123.avi-frame0943-roi1.png,0
 123.avi-frame0949-roi1.png,0
 123.avi-frame0952-roi1.png,1
@@ -1421,12 +1421,12 @@ filename,status
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0025-roi1.png,1
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0026-roi1.png,0
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0028-roi1.png,0
-124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0029-roi1.png,0
+124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0029-roi1.png,1
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0030-roi1.png,1
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0032-roi1.png,1
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0033-roi1.png,0
 124 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0035-roi1.png,0
-127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,0
+127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,1
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,0
@@ -1436,12 +1436,12 @@ filename,status
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0008-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0009-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0010-roi1.png,0
-127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0011-roi1.png,0
+127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0011-roi1.png,1
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0012-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0013-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0015-roi1.png,1
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0017-roi1.png,0
-127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,0
+127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,1
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,0
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,1
 127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,1
@@ -1490,9 +1490,9 @@ filename,status
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0003-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0004-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0005-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0007-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0007-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0008-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0010-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0010-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0011-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0012-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0013-roi1.png,1
@@ -1500,7 +1500,7 @@ filename,status
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0016-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0017-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0018-roi1.png,1
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0019-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0019-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0020-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0022-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0023-roi1.png,1
@@ -1530,14 +1530,14 @@ filename,status
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0053-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0054-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0055-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0057-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0057-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0058-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0059-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0060-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0061-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0062-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0063-roi1.png,1
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0064-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0064-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0065-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0068-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0069-roi1.png,0
@@ -1558,11 +1558,11 @@ filename,status
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0016-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0020-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0024-roi1.png,1
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0025-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0025-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0029-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0030-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0031-roi1.png,1
@@ -1574,12 +1574,12 @@ filename,status
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0040-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0041-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0043-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0044-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0044-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0045-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0047-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0049-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0050-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0052-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0052-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0053-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0054-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0055-roi1.png,1
@@ -1595,7 +1595,7 @@ filename,status
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0069-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0070-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0071-roi1.png,0
-127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0072-roi1.png,0
+127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0072-roi1.png,1
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0073-roi1.png,0
 127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0074-roi1.png,0
 131.avi-frame0000-roi1.png,0
@@ -1622,7 +1622,7 @@ filename,status
 131.avi-frame0034-roi1.png,0
 131.avi-frame0035-roi1.png,0
 131.avi-frame0036-roi1.png,1
-131.avi-frame0037-roi1.png,0
+131.avi-frame0037-roi1.png,1
 131.avi-frame0040-roi1.png,0
 131.avi-frame0041-roi1.png,1
 131.avi-frame0042-roi1.png,0
@@ -1633,9 +1633,9 @@ filename,status
 131.avi-frame0051-roi1.png,0
 131.avi-frame0053-roi1.png,0
 131.avi-frame0054-roi1.png,1
-131.avi-frame0056-roi1.png,0
+131.avi-frame0056-roi1.png,1
 131.avi-frame0058-roi1.png,0
-131.avi-frame0060-roi1.png,0
+131.avi-frame0060-roi1.png,1
 131.avi-frame0061-roi1.png,0
 131.avi-frame0062-roi1.png,0
 131.avi-frame0065-roi1.png,0
@@ -1644,7 +1644,7 @@ filename,status
 131.avi-frame0068-roi1.png,0
 131.avi-frame0069-roi1.png,0
 131.avi-frame0070-roi1.png,0
-131.avi-frame0071-roi1.png,0
+131.avi-frame0071-roi1.png,1
 131.avi-frame0072-roi1.png,0
 131.avi-frame0074-roi1.png,0
 131.avi-frame0075-roi1.png,0
@@ -1655,7 +1655,7 @@ filename,status
 131.avi-frame0082-roi1.png,0
 131.avi-frame0084-roi1.png,0
 131.avi-frame0086-roi1.png,0
-131.avi-frame0088-roi1.png,0
+131.avi-frame0088-roi1.png,1
 131.avi-frame0090-roi1.png,1
 131.avi-frame0091-roi1.png,0
 131.avi-frame0092-roi1.png,0
@@ -1666,7 +1666,7 @@ filename,status
 131.avi-frame0097-roi1.png,0
 131.avi-frame0098-roi1.png,0
 131.avi-frame0100-roi1.png,0
-131.avi-frame0101-roi1.png,0
+131.avi-frame0101-roi1.png,1
 131.avi-frame0102-roi1.png,0
 131.avi-frame0103-roi1.png,0
 131.avi-frame0104-roi1.png,0
@@ -1677,9 +1677,9 @@ filename,status
 131.avi-frame0112-roi1.png,0
 131.avi-frame0113-roi1.png,0
 131.avi-frame0114-roi1.png,0
-131.avi-frame0115-roi1.png,0
+131.avi-frame0115-roi1.png,1
 131.avi-frame0117-roi1.png,1
-131.avi-frame0119-roi1.png,0
+131.avi-frame0119-roi1.png,1
 131.avi-frame0122-roi1.png,0
 131.avi-frame0123-roi1.png,0
 131.avi-frame0124-roi1.png,1
@@ -1688,7 +1688,7 @@ filename,status
 131.avi-frame0129-roi1.png,1
 131.avi-frame0130-roi1.png,0
 131.avi-frame0131-roi1.png,0
-131.avi-frame0133-roi1.png,0
+131.avi-frame0133-roi1.png,1
 131.avi-frame0135-roi1.png,0
 131.avi-frame0136-roi1.png,0
 131.avi-frame0137-roi1.png,1
@@ -1751,8 +1751,8 @@ filename,status
 131.avi-frame0224-roi1.png,0
 131.avi-frame0225-roi1.png,0
 131.avi-frame0226-roi1.png,0
-131.avi-frame0227-roi1.png,0
-131.avi-frame0229-roi1.png,0
+131.avi-frame0227-roi1.png,1
+131.avi-frame0229-roi1.png,1
 131.avi-frame0235-roi1.png,0
 131.avi-frame0238-roi1.png,0
 131.avi-frame0239-roi1.png,0
@@ -1786,7 +1786,7 @@ filename,status
 131.avi-frame0288-roi1.png,0
 131.avi-frame0289-roi1.png,0
 131.avi-frame0290-roi1.png,0
-131.avi-frame0291-roi1.png,0
+131.avi-frame0291-roi1.png,1
 131.avi-frame0292-roi1.png,0
 131.avi-frame0294-roi1.png,0
 131.avi-frame0295-roi1.png,0
@@ -1848,12 +1848,12 @@ filename,status
 131.avi-frame0384-roi1.png,0
 131.avi-frame0385-roi1.png,0
 131.avi-frame0386-roi1.png,0
-131.avi-frame0388-roi1.png,0
+131.avi-frame0388-roi1.png,1
 131.avi-frame0389-roi1.png,0
 131.avi-frame0392-roi1.png,0
 131.avi-frame0393-roi1.png,1
 131.avi-frame0395-roi1.png,1
-131.avi-frame0397-roi1.png,0
+131.avi-frame0397-roi1.png,1
 131.avi-frame0398-roi1.png,0
 131.avi-frame0399-roi1.png,1
 131.avi-frame0400-roi1.png,1
@@ -1863,13 +1863,13 @@ filename,status
 131.avi-frame0412-roi1.png,0
 131.avi-frame0413-roi1.png,0
 131.avi-frame0414-roi1.png,1
-131.avi-frame0415-roi1.png,0
+131.avi-frame0415-roi1.png,1
 131.avi-frame0416-roi1.png,0
 131.avi-frame0418-roi1.png,1
-131.avi-frame0419-roi1.png,0
+131.avi-frame0419-roi1.png,1
 131.avi-frame0420-roi1.png,0
 139 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,1
-139 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
+139 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,1
 139 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,1
 139 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,0
 139 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0005-roi1.png,0
@@ -1888,17 +1888,17 @@ filename,status
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0005-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0006-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0008-roi1.png,0
-139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0009-roi1.png,0
+139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0009-roi1.png,1
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0010-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0011-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,0
-139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0014-roi1.png,0
+139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0014-roi1.png,1
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
 139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,0
-139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0020-roi1.png,0
+139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0020-roi1.png,1
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0001-roi1.png,0
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0003-roi1.png,0
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0004-roi1.png,0
@@ -1948,7 +1948,7 @@ filename,status
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0059-roi1.png,0
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0061-roi1.png,1
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0062-roi1.png,1
-140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0063-roi1.png,0
+140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0063-roi1.png,1
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0064-roi1.png,1
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0066-roi1.png,0
 140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0067-roi1.png,0
@@ -1970,7 +1970,7 @@ filename,status
 140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0012-roi1.png,0
 140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0014-roi1.png,0
 140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0015-roi1.png,0
-140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0016-roi1.png,0
+140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0016-roi1.png,1
 140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0017-roi1.png,1
 140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0018-roi1.png,0
 140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0021-roi1.png,0
@@ -2030,7 +2030,7 @@ filename,status
 14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0017-roi1.png,0
 14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0018-roi1.png,0
 14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0019-roi1.png,1
-14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0020-roi1.png,0
+14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0020-roi1.png,1
 14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0021-roi1.png,0
 14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0022-roi1.png,0
 14 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0024-roi1.png,0
@@ -2052,7 +2052,7 @@ filename,status
 145 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0019-roi1.png,1
 145 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0020-roi1.png,0
 145 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0022-roi1.png,1
-145 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0023-roi1.png,0
+145 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0023-roi1.png,1
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,1
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,1
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,0
@@ -2066,7 +2066,7 @@ filename,status
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0013-roi1.png,0
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0014-roi1.png,0
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0015-roi1.png,0
-156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0016-roi1.png,0
+156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0016-roi1.png,1
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,0
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,0
 156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0023-roi1.png,0
@@ -2169,7 +2169,7 @@ filename,status
 157.avi-frame0009-roi1.png,1
 157.avi-frame0011-roi1.png,1
 157.avi-frame0013-roi1.png,0
-157.avi-frame0014-roi1.png,0
+157.avi-frame0014-roi1.png,1
 157.avi-frame0015-roi1.png,0
 157.avi-frame0016-roi1.png,0
 157.avi-frame0020-roi1.png,0
@@ -2193,7 +2193,7 @@ filename,status
 157.avi-frame0055-roi1.png,0
 157.avi-frame0056-roi1.png,1
 157.avi-frame0058-roi1.png,0
-157.avi-frame0061-roi1.png,0
+157.avi-frame0061-roi1.png,1
 157.avi-frame0062-roi1.png,1
 157.avi-frame0064-roi1.png,0
 157.avi-frame0068-roi1.png,0
@@ -2225,7 +2225,7 @@ filename,status
 157.avi-frame0114-roi1.png,1
 157.avi-frame0115-roi1.png,1
 157.avi-frame0116-roi1.png,0
-157.avi-frame0117-roi1.png,0
+157.avi-frame0117-roi1.png,1
 157.avi-frame0119-roi1.png,1
 157.avi-frame0121-roi1.png,0
 157.avi-frame0122-roi1.png,1
@@ -2266,7 +2266,7 @@ filename,status
 157.avi-frame0173-roi1.png,1
 157.avi-frame0174-roi1.png,0
 157.avi-frame0176-roi1.png,0
-157.avi-frame0179-roi1.png,0
+157.avi-frame0179-roi1.png,1
 157.avi-frame0183-roi1.png,1
 157.avi-frame0187-roi1.png,0
 157.avi-frame0190-roi1.png,1
@@ -2278,7 +2278,7 @@ filename,status
 157.avi-frame0198-roi1.png,0
 157.avi-frame0201-roi1.png,0
 157.avi-frame0202-roi1.png,0
-157.avi-frame0203-roi1.png,0
+157.avi-frame0203-roi1.png,1
 157.avi-frame0204-roi1.png,0
 157.avi-frame0206-roi1.png,0
 157.avi-frame0207-roi1.png,0
@@ -2287,7 +2287,7 @@ filename,status
 157.avi-frame0211-roi1.png,0
 157.avi-frame0212-roi1.png,0
 157.avi-frame0213-roi1.png,0
-157.avi-frame0214-roi1.png,0
+157.avi-frame0214-roi1.png,1
 157.avi-frame0216-roi1.png,0
 157.avi-frame0218-roi1.png,0
 157.avi-frame0219-roi1.png,1
@@ -2295,7 +2295,7 @@ filename,status
 157.avi-frame0221-roi1.png,1
 157.avi-frame0223-roi1.png,1
 157.avi-frame0224-roi1.png,1
-157.avi-frame0225-roi1.png,0
+157.avi-frame0225-roi1.png,1
 157.avi-frame0227-roi1.png,1
 157.avi-frame0228-roi1.png,1
 157.avi-frame0232-roi1.png,1
@@ -2331,7 +2331,7 @@ filename,status
 157.avi-frame0287-roi1.png,0
 157.avi-frame0288-roi1.png,1
 157.avi-frame0290-roi1.png,0
-157.avi-frame0291-roi1.png,0
+157.avi-frame0291-roi1.png,1
 157.avi-frame0292-roi1.png,0
 157.avi-frame0294-roi1.png,0
 157.avi-frame0295-roi1.png,0
@@ -2346,7 +2346,7 @@ filename,status
 157.avi-frame0313-roi1.png,1
 157.avi-frame0314-roi1.png,0
 157.avi-frame0315-roi1.png,0
-157.avi-frame0317-roi1.png,0
+157.avi-frame0317-roi1.png,1
 157.avi-frame0318-roi1.png,0
 157.avi-frame0319-roi1.png,1
 157.avi-frame0321-roi1.png,1
@@ -2360,14 +2360,14 @@ filename,status
 157.avi-frame0331-roi1.png,1
 157.avi-frame0333-roi1.png,0
 157.avi-frame0334-roi1.png,0
-157.avi-frame0335-roi1.png,0
+157.avi-frame0335-roi1.png,1
 157.avi-frame0337-roi1.png,1
 157.avi-frame0338-roi1.png,0
 157.avi-frame0339-roi1.png,0
-157.avi-frame0340-roi1.png,0
+157.avi-frame0340-roi1.png,1
 157.avi-frame0341-roi1.png,0
 157.avi-frame0342-roi1.png,0
-157.avi-frame0344-roi1.png,0
+157.avi-frame0344-roi1.png,1
 157.avi-frame0345-roi1.png,0
 157.avi-frame0346-roi1.png,1
 157.avi-frame0348-roi1.png,1
@@ -2384,15 +2384,15 @@ filename,status
 157.avi-frame0362-roi1.png,1
 157.avi-frame0365-roi1.png,0
 157.avi-frame0366-roi1.png,0
-157.avi-frame0367-roi1.png,0
+157.avi-frame0367-roi1.png,1
 157.avi-frame0368-roi1.png,0
 157.avi-frame0370-roi1.png,1
 157.avi-frame0371-roi1.png,0
 157.avi-frame0372-roi1.png,0
-157.avi-frame0373-roi1.png,0
+157.avi-frame0373-roi1.png,1
 157.avi-frame0376-roi1.png,0
 157.avi-frame0380-roi1.png,1
-157.avi-frame0382-roi1.png,0
+157.avi-frame0382-roi1.png,1
 157.avi-frame0384-roi1.png,0
 157.avi-frame0385-roi1.png,0
 157.avi-frame0386-roi1.png,0
@@ -2401,7 +2401,7 @@ filename,status
 157.avi-frame0389-roi1.png,0
 157.avi-frame0390-roi1.png,0
 157.avi-frame0391-roi1.png,1
-157.avi-frame0392-roi1.png,0
+157.avi-frame0392-roi1.png,1
 157.avi-frame0393-roi1.png,0
 157.avi-frame0394-roi1.png,1
 157.avi-frame0395-roi1.png,1
@@ -2414,10 +2414,10 @@ filename,status
 157.avi-frame0412-roi1.png,0
 157.avi-frame0413-roi1.png,0
 157.avi-frame0415-roi1.png,1
-157.avi-frame0416-roi1.png,0
+157.avi-frame0416-roi1.png,1
 157.avi-frame0417-roi1.png,0
 157.avi-frame0420-roi1.png,0
-157.avi-frame0421-roi1.png,0
+157.avi-frame0421-roi1.png,1
 157.avi-frame0429-roi1.png,0
 157.avi-frame0430-roi1.png,0
 157.avi-frame0431-roi1.png,0
@@ -2438,14 +2438,14 @@ filename,status
 157.avi-frame0468-roi1.png,0
 157.avi-frame0469-roi1.png,0
 157.avi-frame0470-roi1.png,0
-157.avi-frame0471-roi1.png,0
+157.avi-frame0471-roi1.png,1
 157.avi-frame0472-roi1.png,1
 157.avi-frame0473-roi1.png,0
 157.avi-frame0474-roi1.png,1
 157.avi-frame0477-roi1.png,0
-157.avi-frame0479-roi1.png,0
+157.avi-frame0479-roi1.png,1
 157.avi-frame0481-roi1.png,0
-157.avi-frame0482-roi1.png,0
+157.avi-frame0482-roi1.png,1
 157.avi-frame0485-roi1.png,0
 157.avi-frame0486-roi1.png,0
 157.avi-frame0488-roi1.png,0
@@ -2485,7 +2485,7 @@ filename,status
 157.avi-frame0541-roi1.png,0
 157.avi-frame0542-roi1.png,0
 157.avi-frame0543-roi1.png,1
-157.avi-frame0544-roi1.png,0
+157.avi-frame0544-roi1.png,1
 157.avi-frame0546-roi1.png,0
 157.avi-frame0549-roi1.png,1
 157.avi-frame0551-roi1.png,0
@@ -2536,18 +2536,18 @@ filename,status
 157.avi-frame0624-roi1.png,0
 157.avi-frame0625-roi1.png,1
 157.avi-frame0626-roi1.png,0
-157.avi-frame0627-roi1.png,0
+157.avi-frame0627-roi1.png,1
 157.avi-frame0630-roi1.png,0
 157.avi-frame0634-roi1.png,0
 157.avi-frame0635-roi1.png,0
 157.avi-frame0636-roi1.png,1
 157.avi-frame0637-roi1.png,0
 157.avi-frame0639-roi1.png,0
-157.avi-frame0643-roi1.png,0
+157.avi-frame0643-roi1.png,1
 157.avi-frame0644-roi1.png,0
 157.avi-frame0645-roi1.png,1
 157.avi-frame0646-roi1.png,1
-157.avi-frame0650-roi1.png,0
+157.avi-frame0650-roi1.png,1
 157.avi-frame0651-roi1.png,1
 157.avi-frame0653-roi1.png,0
 157.avi-frame0654-roi1.png,1
@@ -2559,7 +2559,7 @@ filename,status
 157.avi-frame0661-roi1.png,0
 157.avi-frame0662-roi1.png,0
 157.avi-frame0663-roi1.png,0
-157.avi-frame0664-roi1.png,0
+157.avi-frame0664-roi1.png,1
 157.avi-frame0665-roi1.png,0
 157.avi-frame0666-roi1.png,0
 157.avi-frame0669-roi1.png,1
@@ -2578,7 +2578,7 @@ filename,status
 157.avi-frame0695-roi1.png,0
 157.avi-frame0697-roi1.png,0
 157.avi-frame0698-roi1.png,0
-157.avi-frame0700-roi1.png,0
+157.avi-frame0700-roi1.png,1
 157.avi-frame0701-roi1.png,0
 157.avi-frame0702-roi1.png,0
 157.avi-frame0705-roi1.png,0
@@ -2587,7 +2587,7 @@ filename,status
 157.avi-frame0711-roi1.png,0
 157.avi-frame0712-roi1.png,1
 157.avi-frame0713-roi1.png,1
-157.avi-frame0714-roi1.png,0
+157.avi-frame0714-roi1.png,1
 157.avi-frame0716-roi1.png,0
 157.avi-frame0718-roi1.png,0
 157.avi-frame0719-roi1.png,0
@@ -2612,11 +2612,11 @@ filename,status
 157.avi-frame0745-roi1.png,0
 157.avi-frame0746-roi1.png,0
 157.avi-frame0747-roi1.png,1
-157.avi-frame0748-roi1.png,0
+157.avi-frame0748-roi1.png,1
 157.avi-frame0750-roi1.png,0
 157.avi-frame0751-roi1.png,0
 157.avi-frame0753-roi1.png,0
-157.avi-frame0761-roi1.png,0
+157.avi-frame0761-roi1.png,1
 157.avi-frame0762-roi1.png,0
 157.avi-frame0763-roi1.png,1
 157.avi-frame0765-roi1.png,0
@@ -2626,7 +2626,7 @@ filename,status
 157.avi-frame0772-roi1.png,0
 157.avi-frame0775-roi1.png,0
 157.avi-frame0776-roi1.png,0
-157.avi-frame0779-roi1.png,0
+157.avi-frame0779-roi1.png,1
 157.avi-frame0780-roi1.png,0
 157.avi-frame0782-roi1.png,0
 157.avi-frame0783-roi1.png,0
@@ -2634,13 +2634,13 @@ filename,status
 157.avi-frame0786-roi1.png,0
 157.avi-frame0787-roi1.png,0
 157.avi-frame0789-roi1.png,0
-157.avi-frame0790-roi1.png,0
+157.avi-frame0790-roi1.png,1
 157.avi-frame0793-roi1.png,0
 157.avi-frame0794-roi1.png,0
 157.avi-frame0795-roi1.png,1
 157.avi-frame0796-roi1.png,0
 157.avi-frame0798-roi1.png,0
-157.avi-frame0800-roi1.png,0
+157.avi-frame0800-roi1.png,1
 157.avi-frame0801-roi1.png,0
 157.avi-frame0802-roi1.png,0
 157.avi-frame0803-roi1.png,0
@@ -2649,7 +2649,7 @@ filename,status
 157.avi-frame0806-roi1.png,0
 157.avi-frame0807-roi1.png,0
 157.avi-frame0808-roi1.png,0
-157.avi-frame0809-roi1.png,0
+157.avi-frame0809-roi1.png,1
 157.avi-frame0810-roi1.png,0
 157.avi-frame0811-roi1.png,0
 157.avi-frame0812-roi1.png,0
@@ -2662,18 +2662,18 @@ filename,status
 157.avi-frame0820-roi1.png,0
 157.avi-frame0821-roi1.png,0
 157.avi-frame0823-roi1.png,0
-157.avi-frame0825-roi1.png,0
+157.avi-frame0825-roi1.png,1
 157.avi-frame0826-roi1.png,0
 157.avi-frame0827-roi1.png,0
-157.avi-frame0828-roi1.png,0
-157.avi-frame0830-roi1.png,0
-157.avi-frame0831-roi1.png,0
-157.avi-frame0832-roi1.png,0
+157.avi-frame0828-roi1.png,1
+157.avi-frame0830-roi1.png,1
+157.avi-frame0831-roi1.png,1
+157.avi-frame0832-roi1.png,1
 157.avi-frame0833-roi1.png,1
 157.avi-frame0834-roi1.png,1
 157.avi-frame0835-roi1.png,1
 157.avi-frame0836-roi1.png,1
-157.avi-frame0838-roi1.png,0
+157.avi-frame0838-roi1.png,1
 157.avi-frame0842-roi1.png,0
 157.avi-frame0843-roi1.png,0
 157.avi-frame0845-roi1.png,0
@@ -2690,7 +2690,7 @@ filename,status
 157.avi-frame0861-roi1.png,0
 157.avi-frame0863-roi1.png,0
 157.avi-frame0865-roi1.png,0
-157.avi-frame0866-roi1.png,0
+157.avi-frame0866-roi1.png,1
 157.avi-frame0867-roi1.png,0
 157.avi-frame0868-roi1.png,0
 157.avi-frame0869-roi1.png,0
@@ -2726,12 +2726,12 @@ filename,status
 157.avi-frame0926-roi1.png,1
 157.avi-frame0928-roi1.png,1
 157.avi-frame0929-roi1.png,0
-157.avi-frame0931-roi1.png,0
+157.avi-frame0931-roi1.png,1
 157.avi-frame0935-roi1.png,0
 157.avi-frame0936-roi1.png,0
 157.avi-frame0938-roi1.png,1
 157.avi-frame0940-roi1.png,1
-157.avi-frame0941-roi1.png,0
+157.avi-frame0941-roi1.png,1
 157.avi-frame0942-roi1.png,1
 157.avi-frame0943-roi1.png,1
 157.avi-frame0944-roi1.png,0
@@ -2748,11 +2748,11 @@ filename,status
 157.avi-frame0960-roi1.png,0
 157.avi-frame0961-roi1.png,0
 157.avi-frame0962-roi1.png,0
-157.avi-frame0963-roi1.png,0
+157.avi-frame0963-roi1.png,1
 157.avi-frame0970-roi1.png,0
 157.avi-frame0972-roi1.png,0
 157.avi-frame0973-roi1.png,0
-157.avi-frame0977-roi1.png,0
+157.avi-frame0977-roi1.png,1
 157.avi-frame0978-roi1.png,0
 157.avi-frame0979-roi1.png,0
 157.avi-frame0982-roi1.png,0
@@ -2774,8 +2774,8 @@ filename,status
 157.avi-frame1013-roi1.png,0
 157.avi-frame1014-roi1.png,0
 157.avi-frame1016-roi1.png,0
-157.avi-frame1017-roi1.png,0
-157.avi-frame1020-roi1.png,0
+157.avi-frame1017-roi1.png,1
+157.avi-frame1020-roi1.png,1
 157.avi-frame1022-roi1.png,0
 157.avi-frame1023-roi1.png,0
 157.avi-frame1024-roi1.png,0
@@ -2811,7 +2811,7 @@ filename,status
 157.avi-frame1069-roi1.png,0
 157.avi-frame1070-roi1.png,0
 157.avi-frame1073-roi1.png,1
-157.avi-frame1075-roi1.png,0
+157.avi-frame1075-roi1.png,1
 157.avi-frame1076-roi1.png,0
 157.avi-frame1077-roi1.png,0
 157.avi-frame1079-roi1.png,0
@@ -2829,16 +2829,16 @@ filename,status
 157.avi-frame1100-roi1.png,0
 157.avi-frame1105-roi1.png,1
 157.avi-frame1106-roi1.png,0
-157.avi-frame1108-roi1.png,0
+157.avi-frame1108-roi1.png,1
 157.avi-frame1109-roi1.png,0
 157.avi-frame1111-roi1.png,0
 157.avi-frame1117-roi1.png,0
 157.avi-frame1118-roi1.png,0
-157.avi-frame1120-roi1.png,0
+157.avi-frame1120-roi1.png,1
 157.avi-frame1123-roi1.png,0
 157.avi-frame1124-roi1.png,0
 157.avi-frame1126-roi1.png,0
-157.avi-frame1127-roi1.png,0
+157.avi-frame1127-roi1.png,1
 157.avi-frame1129-roi1.png,0
 157.avi-frame1133-roi1.png,1
 157.avi-frame1134-roi1.png,0
@@ -2846,7 +2846,7 @@ filename,status
 157.avi-frame1139-roi1.png,0
 157.avi-frame1143-roi1.png,0
 157.avi-frame1145-roi1.png,0
-157.avi-frame1150-roi1.png,0
+157.avi-frame1150-roi1.png,1
 157.avi-frame1151-roi1.png,0
 157.avi-frame1154-roi1.png,1
 157.avi-frame1155-roi1.png,1
@@ -2859,19 +2859,19 @@ filename,status
 157.avi-frame1172-roi1.png,0
 157.avi-frame1174-roi1.png,1
 157.avi-frame1175-roi1.png,1
-157.avi-frame1176-roi1.png,0
+157.avi-frame1176-roi1.png,1
 157.avi-frame1177-roi1.png,1
 157.avi-frame1178-roi1.png,0
 157.avi-frame1180-roi1.png,1
 157.avi-frame1181-roi1.png,1
-157.avi-frame1183-roi1.png,0
+157.avi-frame1183-roi1.png,1
 157.avi-frame1185-roi1.png,0
 157.avi-frame1186-roi1.png,0
 157.avi-frame1190-roi1.png,0
 157.avi-frame1191-roi1.png,1
 157.avi-frame1192-roi1.png,0
 157.avi-frame1193-roi1.png,0
-157.avi-frame1195-roi1.png,0
+157.avi-frame1195-roi1.png,1
 157.avi-frame1196-roi1.png,0
 157.avi-frame1197-roi1.png,1
 157.avi-frame1198-roi1.png,0
@@ -2888,13 +2888,13 @@ filename,status
 157.avi-frame1216-roi1.png,0
 157.avi-frame1217-roi1.png,0
 157.avi-frame1218-roi1.png,1
-157.avi-frame1219-roi1.png,0
+157.avi-frame1219-roi1.png,1
 157.avi-frame1221-roi1.png,0
 157.avi-frame1222-roi1.png,1
 157.avi-frame1225-roi1.png,0
 157.avi-frame1229-roi1.png,0
 157.avi-frame1231-roi1.png,0
-157.avi-frame1232-roi1.png,0
+157.avi-frame1232-roi1.png,1
 157.avi-frame1233-roi1.png,0
 157.avi-frame1234-roi1.png,0
 157.avi-frame1235-roi1.png,0
@@ -2905,7 +2905,7 @@ filename,status
 157.avi-frame1243-roi1.png,0
 157.avi-frame1244-roi1.png,0
 157.avi-frame1245-roi1.png,1
-157.avi-frame1246-roi1.png,0
+157.avi-frame1246-roi1.png,1
 157.avi-frame1247-roi1.png,0
 157.avi-frame1249-roi1.png,0
 157.avi-frame1250-roi1.png,0
@@ -2919,8 +2919,8 @@ filename,status
 157.avi-frame1264-roi1.png,0
 157.avi-frame1266-roi1.png,0
 157.avi-frame1267-roi1.png,0
-157.avi-frame1269-roi1.png,0
-157.avi-frame1270-roi1.png,0
+157.avi-frame1269-roi1.png,1
+157.avi-frame1270-roi1.png,1
 157.avi-frame1272-roi1.png,0
 157.avi-frame1273-roi1.png,0
 157.avi-frame1274-roi1.png,0
@@ -2930,17 +2930,17 @@ filename,status
 157.avi-frame1280-roi1.png,0
 157.avi-frame1281-roi1.png,0
 157.avi-frame1285-roi1.png,0
-157.avi-frame1290-roi1.png,0
+157.avi-frame1290-roi1.png,1
 157.avi-frame1291-roi1.png,1
 157.avi-frame1292-roi1.png,1
 157.avi-frame1293-roi1.png,0
 157.avi-frame1294-roi1.png,0
-157.avi-frame1297-roi1.png,0
+157.avi-frame1297-roi1.png,1
 157.avi-frame1300-roi1.png,1
 157.avi-frame1303-roi1.png,1
 157.avi-frame1305-roi1.png,0
 157.avi-frame1306-roi1.png,0
-157.avi-frame1307-roi1.png,0
+157.avi-frame1307-roi1.png,1
 157.avi-frame1308-roi1.png,0
 157.avi-frame1310-roi1.png,1
 157.avi-frame1313-roi1.png,0
@@ -2965,7 +2965,7 @@ filename,status
 157.avi-frame1344-roi1.png,1
 157.avi-frame1345-roi1.png,0
 157.avi-frame1350-roi1.png,1
-157.avi-frame1351-roi1.png,0
+157.avi-frame1351-roi1.png,1
 157.avi-frame1352-roi1.png,1
 157.avi-frame1356-roi1.png,0
 157.avi-frame1357-roi1.png,0
@@ -2973,14 +2973,14 @@ filename,status
 157.avi-frame1359-roi1.png,0
 157.avi-frame1361-roi1.png,1
 157.avi-frame1362-roi1.png,1
-157.avi-frame1363-roi1.png,0
+157.avi-frame1363-roi1.png,1
 157.avi-frame1364-roi1.png,0
 157.avi-frame1365-roi1.png,0
 157.avi-frame1366-roi1.png,1
 157.avi-frame1371-roi1.png,1
-157.avi-frame1372-roi1.png,0
+157.avi-frame1372-roi1.png,1
 157.avi-frame1374-roi1.png,0
-157.avi-frame1375-roi1.png,0
+157.avi-frame1375-roi1.png,1
 157.avi-frame1377-roi1.png,1
 157.avi-frame1378-roi1.png,0
 157.avi-frame1380-roi1.png,1
@@ -2993,27 +2993,27 @@ filename,status
 157.avi-frame1394-roi1.png,0
 157.avi-frame1395-roi1.png,0
 157.avi-frame1396-roi1.png,0
-157.avi-frame1397-roi1.png,0
+157.avi-frame1397-roi1.png,1
 157.avi-frame1398-roi1.png,0
 157.avi-frame1401-roi1.png,0
 157.avi-frame1402-roi1.png,0
 157.avi-frame1403-roi1.png,0
 157.avi-frame1404-roi1.png,0
 157.avi-frame1405-roi1.png,0
-157.avi-frame1407-roi1.png,0
+157.avi-frame1407-roi1.png,1
 157.avi-frame1408-roi1.png,0
 157.avi-frame1409-roi1.png,1
 157.avi-frame1410-roi1.png,1
 157.avi-frame1412-roi1.png,0
 157.avi-frame1413-roi1.png,0
-157.avi-frame1414-roi1.png,0
+157.avi-frame1414-roi1.png,1
 157.avi-frame1417-roi1.png,0
 157.avi-frame1418-roi1.png,1
 157.avi-frame1419-roi1.png,0
 157.avi-frame1420-roi1.png,0
 157.avi-frame1423-roi1.png,0
 157.avi-frame1424-roi1.png,1
-157.avi-frame1425-roi1.png,0
+157.avi-frame1425-roi1.png,1
 157.avi-frame1427-roi1.png,0
 157.avi-frame1429-roi1.png,0
 157.avi-frame1430-roi1.png,0
@@ -3032,7 +3032,7 @@ filename,status
 157.avi-frame1446-roi1.png,0
 157.avi-frame1451-roi1.png,1
 157.avi-frame1453-roi1.png,1
-157.avi-frame1455-roi1.png,0
+157.avi-frame1455-roi1.png,1
 157.avi-frame1456-roi1.png,1
 157.avi-frame1457-roi1.png,0
 157.avi-frame1458-roi1.png,0
@@ -3099,12 +3099,12 @@ filename,status
 160.avi-frame0078-roi1.png,1
 160.avi-frame0080-roi1.png,0
 160.avi-frame0083-roi1.png,0
-160.avi-frame0084-roi1.png,0
+160.avi-frame0084-roi1.png,1
 160.avi-frame0085-roi1.png,0
 160.avi-frame0087-roi1.png,1
 160.avi-frame0089-roi1.png,0
 160.avi-frame0090-roi1.png,1
-160.avi-frame0093-roi1.png,0
+160.avi-frame0093-roi1.png,1
 160.avi-frame0094-roi1.png,0
 160.avi-frame0096-roi1.png,0
 160.avi-frame0097-roi1.png,0
@@ -3122,7 +3122,7 @@ filename,status
 160.avi-frame0116-roi1.png,0
 160.avi-frame0117-roi1.png,0
 160.avi-frame0118-roi1.png,0
-160.avi-frame0122-roi1.png,0
+160.avi-frame0122-roi1.png,1
 160.avi-frame0123-roi1.png,0
 160.avi-frame0124-roi1.png,0
 160.avi-frame0125-roi1.png,1
@@ -3137,7 +3137,7 @@ filename,status
 160.avi-frame0141-roi1.png,0
 160.avi-frame0144-roi1.png,1
 160.avi-frame0145-roi1.png,0
-160.avi-frame0147-roi1.png,0
+160.avi-frame0147-roi1.png,1
 160.avi-frame0149-roi1.png,1
 160.avi-frame0150-roi1.png,0
 160.avi-frame0151-roi1.png,0
@@ -3145,7 +3145,7 @@ filename,status
 160.avi-frame0154-roi1.png,1
 160.avi-frame0156-roi1.png,0
 160.avi-frame0158-roi1.png,0
-160.avi-frame0160-roi1.png,0
+160.avi-frame0160-roi1.png,1
 160.avi-frame0161-roi1.png,0
 160.avi-frame0171-roi1.png,0
 160.avi-frame0172-roi1.png,0
@@ -3160,20 +3160,20 @@ filename,status
 160.avi-frame0188-roi1.png,0
 160.avi-frame0190-roi1.png,1
 160.avi-frame0191-roi1.png,0
-160.avi-frame0193-roi1.png,0
+160.avi-frame0193-roi1.png,1
 160.avi-frame0195-roi1.png,0
 160.avi-frame0198-roi1.png,1
 160.avi-frame0201-roi1.png,0
 160.avi-frame0204-roi1.png,0
 160.avi-frame0205-roi1.png,0
 160.avi-frame0206-roi1.png,1
-160.avi-frame0208-roi1.png,0
+160.avi-frame0208-roi1.png,1
 160.avi-frame0209-roi1.png,0
 160.avi-frame0210-roi1.png,0
 160.avi-frame0212-roi1.png,0
 160.avi-frame0215-roi1.png,0
 160.avi-frame0219-roi1.png,1
-160.avi-frame0220-roi1.png,0
+160.avi-frame0220-roi1.png,1
 160.avi-frame0223-roi1.png,0
 160.avi-frame0224-roi1.png,1
 160.avi-frame0225-roi1.png,0
@@ -3185,13 +3185,13 @@ filename,status
 160.avi-frame0233-roi1.png,0
 160.avi-frame0234-roi1.png,0
 160.avi-frame0239-roi1.png,0
-160.avi-frame0240-roi1.png,0
+160.avi-frame0240-roi1.png,1
 160.avi-frame0242-roi1.png,1
 160.avi-frame0243-roi1.png,0
 160.avi-frame0245-roi1.png,0
 160.avi-frame0250-roi1.png,0
 160.avi-frame0251-roi1.png,0
-160.avi-frame0252-roi1.png,0
+160.avi-frame0252-roi1.png,1
 160.avi-frame0253-roi1.png,1
 160.avi-frame0254-roi1.png,0
 160.avi-frame0255-roi1.png,0
@@ -3248,7 +3248,7 @@ filename,status
 160.avi-frame0337-roi1.png,0
 160.avi-frame0339-roi1.png,0
 160.avi-frame0342-roi1.png,0
-160.avi-frame0343-roi1.png,0
+160.avi-frame0343-roi1.png,1
 160.avi-frame0344-roi1.png,0
 160.avi-frame0345-roi1.png,0
 160.avi-frame0346-roi1.png,0
@@ -3266,7 +3266,7 @@ filename,status
 160.avi-frame0369-roi1.png,0
 160.avi-frame0370-roi1.png,0
 160.avi-frame0371-roi1.png,0
-160.avi-frame0373-roi1.png,0
+160.avi-frame0373-roi1.png,1
 160.avi-frame0374-roi1.png,0
 160.avi-frame0377-roi1.png,0
 160.avi-frame0378-roi1.png,0
@@ -3302,12 +3302,12 @@ filename,status
 160.avi-frame0427-roi1.png,0
 160.avi-frame0428-roi1.png,0
 160.avi-frame0429-roi1.png,0
-160.avi-frame0430-roi1.png,0
-160.avi-frame0432-roi1.png,0
+160.avi-frame0430-roi1.png,1
+160.avi-frame0432-roi1.png,1
 160.avi-frame0433-roi1.png,0
-160.avi-frame0434-roi1.png,0
+160.avi-frame0434-roi1.png,1
 160.avi-frame0435-roi1.png,0
-160.avi-frame0437-roi1.png,0
+160.avi-frame0437-roi1.png,1
 160.avi-frame0441-roi1.png,0
 160.avi-frame0444-roi1.png,0
 160.avi-frame0445-roi1.png,0
@@ -3344,7 +3344,7 @@ filename,status
 160.avi-frame0508-roi1.png,0
 160.avi-frame0509-roi1.png,0
 160.avi-frame0510-roi1.png,0
-160.avi-frame0511-roi1.png,0
+160.avi-frame0511-roi1.png,1
 160.avi-frame0512-roi1.png,0
 160.avi-frame0514-roi1.png,0
 160.avi-frame0515-roi1.png,0
@@ -3367,7 +3367,7 @@ filename,status
 160.avi-frame0542-roi1.png,0
 160.avi-frame0544-roi1.png,0
 160.avi-frame0545-roi1.png,1
-160.avi-frame0546-roi1.png,0
+160.avi-frame0546-roi1.png,1
 160.avi-frame0549-roi1.png,0
 160.avi-frame0550-roi1.png,1
 160.avi-frame0551-roi1.png,0
@@ -3391,13 +3391,13 @@ filename,status
 160.avi-frame0587-roi1.png,0
 160.avi-frame0588-roi1.png,0
 160.avi-frame0589-roi1.png,1
-160.avi-frame0591-roi1.png,0
+160.avi-frame0591-roi1.png,1
 160.avi-frame0592-roi1.png,0
 160.avi-frame0596-roi1.png,0
 160.avi-frame0601-roi1.png,1
 160.avi-frame0602-roi1.png,0
 160.avi-frame0603-roi1.png,0
-160.avi-frame0605-roi1.png,0
+160.avi-frame0605-roi1.png,1
 160.avi-frame0606-roi1.png,0
 160.avi-frame0607-roi1.png,1
 160.avi-frame0608-roi1.png,0
@@ -3408,7 +3408,7 @@ filename,status
 160.avi-frame0617-roi1.png,0
 160.avi-frame0618-roi1.png,0
 160.avi-frame0619-roi1.png,0
-160.avi-frame0621-roi1.png,0
+160.avi-frame0621-roi1.png,1
 160.avi-frame0622-roi1.png,0
 160.avi-frame0623-roi1.png,0
 160.avi-frame0625-roi1.png,0
@@ -3418,12 +3418,12 @@ filename,status
 160.avi-frame0631-roi1.png,0
 160.avi-frame0633-roi1.png,0
 160.avi-frame0634-roi1.png,1
-160.avi-frame0635-roi1.png,0
+160.avi-frame0635-roi1.png,1
 160.avi-frame0638-roi1.png,1
 160.avi-frame0640-roi1.png,0
 160.avi-frame0644-roi1.png,0
-160.avi-frame0645-roi1.png,0
-160.avi-frame0647-roi1.png,0
+160.avi-frame0645-roi1.png,1
+160.avi-frame0647-roi1.png,1
 160.avi-frame0650-roi1.png,0
 160.avi-frame0651-roi1.png,1
 160.avi-frame0653-roi1.png,0
@@ -3432,8 +3432,8 @@ filename,status
 160.avi-frame0658-roi1.png,0
 160.avi-frame0661-roi1.png,0
 160.avi-frame0664-roi1.png,0
-160.avi-frame0666-roi1.png,0
-160.avi-frame0667-roi1.png,0
+160.avi-frame0666-roi1.png,1
+160.avi-frame0667-roi1.png,1
 160.avi-frame0671-roi1.png,0
 160.avi-frame0672-roi1.png,0
 160.avi-frame0680-roi1.png,0
@@ -3451,10 +3451,10 @@ filename,status
 160.avi-frame0703-roi1.png,0
 160.avi-frame0706-roi1.png,0
 160.avi-frame0707-roi1.png,1
-160.avi-frame0708-roi1.png,0
+160.avi-frame0708-roi1.png,1
 160.avi-frame0709-roi1.png,1
 160.avi-frame0710-roi1.png,1
-160.avi-frame0711-roi1.png,0
+160.avi-frame0711-roi1.png,1
 160.avi-frame0713-roi1.png,1
 160.avi-frame0714-roi1.png,1
 160.avi-frame0715-roi1.png,1
@@ -3462,13 +3462,13 @@ filename,status
 160.avi-frame0717-roi1.png,1
 160.avi-frame0718-roi1.png,0
 160.avi-frame0720-roi1.png,0
-160.avi-frame0721-roi1.png,0
+160.avi-frame0721-roi1.png,1
 160.avi-frame0726-roi1.png,0
 160.avi-frame0727-roi1.png,0
 160.avi-frame0728-roi1.png,0
 160.avi-frame0734-roi1.png,0
-160.avi-frame0735-roi1.png,0
-160.avi-frame0736-roi1.png,0
+160.avi-frame0735-roi1.png,1
+160.avi-frame0736-roi1.png,1
 160.avi-frame0738-roi1.png,0
 160.avi-frame0739-roi1.png,1
 160.avi-frame0740-roi1.png,0
@@ -3477,7 +3477,7 @@ filename,status
 160.avi-frame0744-roi1.png,1
 160.avi-frame0745-roi1.png,0
 160.avi-frame0746-roi1.png,1
-160.avi-frame0748-roi1.png,0
+160.avi-frame0748-roi1.png,1
 160.avi-frame0749-roi1.png,0
 160.avi-frame0750-roi1.png,0
 160.avi-frame0751-roi1.png,0
@@ -3490,7 +3490,7 @@ filename,status
 160.avi-frame0760-roi1.png,0
 160.avi-frame0761-roi1.png,1
 160.avi-frame0762-roi1.png,0
-160.avi-frame0767-roi1.png,0
+160.avi-frame0767-roi1.png,1
 160.avi-frame0768-roi1.png,0
 160.avi-frame0769-roi1.png,0
 160.avi-frame0770-roi1.png,1
@@ -3531,7 +3531,7 @@ filename,status
 160.avi-frame0829-roi1.png,1
 160.avi-frame0830-roi1.png,0
 160.avi-frame0831-roi1.png,0
-160.avi-frame0834-roi1.png,0
+160.avi-frame0834-roi1.png,1
 160.avi-frame0835-roi1.png,0
 160.avi-frame0837-roi1.png,1
 160.avi-frame0838-roi1.png,1
@@ -3553,7 +3553,7 @@ filename,status
 160.avi-frame0879-roi1.png,0
 160.avi-frame0880-roi1.png,0
 160.avi-frame0881-roi1.png,0
-160.avi-frame0882-roi1.png,0
+160.avi-frame0882-roi1.png,1
 160.avi-frame0883-roi1.png,0
 160.avi-frame0884-roi1.png,1
 160.avi-frame0885-roi1.png,0
@@ -3563,36 +3563,36 @@ filename,status
 160.avi-frame0890-roi1.png,0
 160.avi-frame0891-roi1.png,0
 160.avi-frame0892-roi1.png,0
-160.avi-frame0894-roi1.png,0
+160.avi-frame0894-roi1.png,1
 160.avi-frame0896-roi1.png,0
 160.avi-frame0897-roi1.png,0
-160.avi-frame0898-roi1.png,0
+160.avi-frame0898-roi1.png,1
 160.avi-frame0899-roi1.png,0
 160.avi-frame0902-roi1.png,0
 160.avi-frame0907-roi1.png,1
-160.avi-frame0908-roi1.png,0
-160.avi-frame0911-roi1.png,0
+160.avi-frame0908-roi1.png,1
+160.avi-frame0911-roi1.png,1
 160.avi-frame0912-roi1.png,1
 160.avi-frame0913-roi1.png,1
 160.avi-frame0914-roi1.png,1
 160.avi-frame0915-roi1.png,0
 160.avi-frame0919-roi1.png,1
 160.avi-frame0920-roi1.png,1
-160.avi-frame0922-roi1.png,0
+160.avi-frame0922-roi1.png,1
 160.avi-frame0923-roi1.png,1
 160.avi-frame0926-roi1.png,0
 160.avi-frame0927-roi1.png,0
-160.avi-frame0929-roi1.png,0
+160.avi-frame0929-roi1.png,1
 160.avi-frame0931-roi1.png,0
 160.avi-frame0932-roi1.png,0
 160.avi-frame0934-roi1.png,1
 160.avi-frame0935-roi1.png,0
 160.avi-frame0936-roi1.png,0
 160.avi-frame0941-roi1.png,0
-160.avi-frame0946-roi1.png,0
+160.avi-frame0946-roi1.png,1
 160.avi-frame0947-roi1.png,0
 160.avi-frame0948-roi1.png,0
-160.avi-frame0949-roi1.png,0
+160.avi-frame0949-roi1.png,1
 160.avi-frame0950-roi1.png,1
 160.avi-frame0951-roi1.png,0
 160.avi-frame0952-roi1.png,0
@@ -3678,13 +3678,13 @@ filename,status
 160.avi-frame1086-roi1.png,0
 160.avi-frame1087-roi1.png,0
 160.avi-frame1088-roi1.png,0
-160.avi-frame1089-roi1.png,0
+160.avi-frame1089-roi1.png,1
 160.avi-frame1092-roi1.png,0
 160.avi-frame1094-roi1.png,1
 160.avi-frame1095-roi1.png,1
 160.avi-frame1097-roi1.png,0
-160.avi-frame1098-roi1.png,0
-160.avi-frame1100-roi1.png,0
+160.avi-frame1098-roi1.png,1
+160.avi-frame1100-roi1.png,1
 160.avi-frame1103-roi1.png,0
 160.avi-frame1104-roi1.png,0
 160.avi-frame1105-roi1.png,0
@@ -3708,7 +3708,7 @@ filename,status
 160.avi-frame1138-roi1.png,0
 160.avi-frame1139-roi1.png,0
 160.avi-frame1142-roi1.png,0
-160.avi-frame1144-roi1.png,0
+160.avi-frame1144-roi1.png,1
 160.avi-frame1148-roi1.png,0
 160.avi-frame1150-roi1.png,0
 160.avi-frame1151-roi1.png,0
@@ -3764,7 +3764,7 @@ filename,status
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0038-roi1.png,0
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0039-roi1.png,0
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0040-roi1.png,0
-161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0041-roi1.png,0
+161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0041-roi1.png,1
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0042-roi1.png,0
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0043-roi1.png,0
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0044-roi1.png,1
@@ -3805,7 +3805,7 @@ filename,status
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0087-roi1.png,0
 161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0089-roi1.png,0
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0001-roi1.png,1
-161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0002-roi1.png,0
+161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0002-roi1.png,1
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0004-roi1.png,0
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0005-roi1.png,1
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0006-roi1.png,1
@@ -3855,7 +3855,7 @@ filename,status
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0060-roi1.png,0
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0063-roi1.png,0
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0064-roi1.png,0
-161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0065-roi1.png,0
+161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0065-roi1.png,1
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0066-roi1.png,0
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0068-roi1.png,0
 161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0069-roi1.png,1
@@ -3924,7 +3924,7 @@ filename,status
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0014-roi1.png,0
-162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,0
+162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,0
@@ -3936,19 +3936,19 @@ filename,status
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0026-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0027-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0029-roi1.png,1
-162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0030-roi1.png,0
+162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0030-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0031-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0032-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0033-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0034-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0035-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0036-roi1.png,0
-162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0037-roi1.png,0
+162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0037-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0038-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0040-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0041-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0042-roi1.png,0
-162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0045-roi1.png,0
+162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0045-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0046-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0049-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0050-roi1.png,0
@@ -3971,7 +3971,7 @@ filename,status
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0074-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0075-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0077-roi1.png,0
-162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0078-roi1.png,0
+162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0078-roi1.png,1
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0079-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0080-roi1.png,0
 162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0081-roi1.png,0
@@ -3987,7 +3987,7 @@ filename,status
 163.avi-frame0002-roi1.png,0
 163.avi-frame0003-roi1.png,0
 163.avi-frame0004-roi1.png,0
-163.avi-frame0005-roi1.png,0
+163.avi-frame0005-roi1.png,1
 163.avi-frame0008-roi1.png,0
 163.avi-frame0010-roi1.png,0
 163.avi-frame0011-roi1.png,0
@@ -4010,7 +4010,7 @@ filename,status
 163.avi-frame0036-roi1.png,0
 163.avi-frame0037-roi1.png,0
 163.avi-frame0040-roi1.png,0
-163.avi-frame0041-roi1.png,0
+163.avi-frame0041-roi1.png,1
 163.avi-frame0044-roi1.png,0
 163.avi-frame0046-roi1.png,0
 163.avi-frame0048-roi1.png,0
@@ -4049,7 +4049,7 @@ filename,status
 163.avi-frame0112-roi1.png,0
 163.avi-frame0113-roi1.png,0
 163.avi-frame0114-roi1.png,1
-163.avi-frame0116-roi1.png,0
+163.avi-frame0116-roi1.png,1
 163.avi-frame0117-roi1.png,1
 163.avi-frame0122-roi1.png,0
 163.avi-frame0123-roi1.png,0
@@ -4155,9 +4155,9 @@ filename,status
 163.avi-frame0296-roi1.png,0
 163.avi-frame0298-roi1.png,0
 163.avi-frame0299-roi1.png,0
-163.avi-frame0304-roi1.png,0
+163.avi-frame0304-roi1.png,1
 163.avi-frame0306-roi1.png,0
-163.avi-frame0307-roi1.png,0
+163.avi-frame0307-roi1.png,1
 163.avi-frame0308-roi1.png,0
 163.avi-frame0309-roi1.png,0
 163.avi-frame0310-roi1.png,0
@@ -4213,7 +4213,7 @@ filename,status
 163.avi-frame0401-roi1.png,0
 163.avi-frame0407-roi1.png,1
 163.avi-frame0409-roi1.png,0
-163.avi-frame0410-roi1.png,0
+163.avi-frame0410-roi1.png,1
 163.avi-frame0411-roi1.png,0
 163.avi-frame0412-roi1.png,0
 163.avi-frame0414-roi1.png,0
@@ -4233,7 +4233,7 @@ filename,status
 164 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0016-roi1.png,0
 164 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0018-roi1.png,1
 164 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0020-roi1.png,0
-164 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0021-roi1.png,0
+164 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0021-roi1.png,1
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,0
@@ -4254,7 +4254,7 @@ filename,status
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,0
-168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,0
+168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,1
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0030-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0032-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0035-roi1.png,0
@@ -4279,14 +4279,14 @@ filename,status
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0067-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0068-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0069-roi1.png,0
-168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0070-roi1.png,0
+168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0070-roi1.png,1
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0071-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0072-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0073-roi1.png,1
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0074-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0075-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0076-roi1.png,0
-168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0077-roi1.png,0
+168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0077-roi1.png,1
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0078-roi1.png,1
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0079-roi1.png,0
 168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0080-roi1.png,0
@@ -4332,10 +4332,10 @@ filename,status
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0014-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0016-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0017-roi1.png,0
-172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,0
+172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,1
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
-172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,0
+172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,1
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0023-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,0
@@ -4360,13 +4360,13 @@ filename,status
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0054-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0055-roi1.png,0
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0057-roi1.png,1
-172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0058-roi1.png,0
+172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0058-roi1.png,1
 172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0059-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0000-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0001-roi1.png,1
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0002-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0003-roi1.png,0
-172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0004-roi1.png,0
+172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0004-roi1.png,1
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0005-roi1.png,1
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0006-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0007-roi1.png,0
@@ -4380,7 +4380,7 @@ filename,status
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
-172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,0
+172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,1
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0020-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0021-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0022-roi1.png,1
@@ -4389,9 +4389,9 @@ filename,status
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0026-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0027-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0028-roi1.png,0
-172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0029-roi1.png,0
+172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0029-roi1.png,1
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0030-roi1.png,1
-172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0032-roi1.png,0
+172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0032-roi1.png,1
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0033-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0034-roi1.png,0
 172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0036-roi1.png,0
@@ -4416,8 +4416,8 @@ filename,status
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
-176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,0
-176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,0
+176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,1
+176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,1
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0005-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0006-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0007-roi1.png,0
@@ -4430,7 +4430,7 @@ filename,status
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0015-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0017-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,1
-176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,0
+176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,1
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,1
@@ -4438,7 +4438,7 @@ filename,status
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0026-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,0
-176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,0
+176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,1
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0029-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0030-roi1.png,1
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0032-roi1.png,1
@@ -4450,7 +4450,7 @@ filename,status
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0039-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0042-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0044-roi1.png,0
-176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0045-roi1.png,0
+176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0045-roi1.png,1
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0049-roi1.png,0
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0050-roi1.png,1
 176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0051-roi1.png,0
@@ -4486,7 +4486,7 @@ filename,status
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,0
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0016-roi1.png,0
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,0
-176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
+176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,1
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,1
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0021-roi1.png,0
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0022-roi1.png,0
@@ -4529,7 +4529,7 @@ filename,status
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0068-roi1.png,0
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0070-roi1.png,0
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0071-roi1.png,0
-176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0072-roi1.png,0
+176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0072-roi1.png,1
 176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0074-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,0
@@ -4540,7 +4540,7 @@ filename,status
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0007-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0008-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0009-roi1.png,0
-179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0010-roi1.png,0
+179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0010-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0011-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0012-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0014-roi1.png,0
@@ -4548,10 +4548,10 @@ filename,status
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,0
-179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
+179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
-179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,0
+179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,1
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0026-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,0
 179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,0
@@ -4563,7 +4563,7 @@ filename,status
 179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0005-roi1.png,0
 179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0006-roi1.png,1
 179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0007-roi1.png,1
-179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0008-roi1.png,0
+179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0008-roi1.png,1
 179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0011-roi1.png,0
 179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,1
 179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,0
@@ -4597,7 +4597,7 @@ filename,status
 180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,0
 180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,1
 180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,1
-180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
+180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,1
 180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,0
 180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0023-roi1.png,0
 180 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
@@ -4616,17 +4616,17 @@ filename,status
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,0
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,0
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0016-roi1.png,0
-180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,0
+180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,1
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0020-roi1.png,0
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0021-roi1.png,0
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0022-roi1.png,0
-180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0023-roi1.png,0
+180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0023-roi1.png,1
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0024-roi1.png,1
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0027-roi1.png,0
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0028-roi1.png,1
 180 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0029-roi1.png,1
-186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,0
+186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,0
@@ -4642,17 +4642,17 @@ filename,status
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0015-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0016-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0017-roi1.png,0
-186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,0
+186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0023-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
-186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,0
+186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0026-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,1
-186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,0
+186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0029-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0030-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0031-roi1.png,0
@@ -4680,7 +4680,7 @@ filename,status
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0058-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0059-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0060-roi1.png,1
-186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0061-roi1.png,0
+186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0061-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0062-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0063-roi1.png,0
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0064-roi1.png,1
@@ -4701,7 +4701,7 @@ filename,status
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0084-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0085-roi1.png,1
 186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0086-roi1.png,0
-186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0088-roi1.png,0
+186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0088-roi1.png,1
 186 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0000-roi1.png,1
 186 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0001-roi1.png,1
 186 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0002-roi1.png,1
@@ -4767,7 +4767,7 @@ filename,status
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0000-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
-188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,0
+188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0003-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0005-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0006-roi1.png,0
@@ -4805,7 +4805,7 @@ filename,status
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0044-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0048-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0049-roi1.png,0
-188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0050-roi1.png,0
+188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0050-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0051-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0052-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0053-roi1.png,0
@@ -4820,10 +4820,10 @@ filename,status
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0063-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0064-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0066-roi1.png,0
-188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0067-roi1.png,0
+188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0067-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0068-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0070-roi1.png,1
-188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0071-roi1.png,0
+188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0071-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0072-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0073-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0074-roi1.png,0
@@ -4835,7 +4835,7 @@ filename,status
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0084-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0085-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0086-roi1.png,1
-188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0087-roi1.png,0
+188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0087-roi1.png,1
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0088-roi1.png,0
 188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0089-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0000-roi1.png,1
@@ -4849,10 +4849,10 @@ filename,status
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0009-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0011-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,0
-188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,0
+188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0018-roi1.png,0
-188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,0
+188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0020-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0021-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0024-roi1.png,0
@@ -4879,7 +4879,7 @@ filename,status
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0052-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0053-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0054-roi1.png,0
-188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0055-roi1.png,0
+188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0055-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0056-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0057-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0058-roi1.png,0
@@ -4891,7 +4891,7 @@ filename,status
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0067-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0068-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0070-roi1.png,0
-188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0071-roi1.png,0
+188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0071-roi1.png,1
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0072-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0073-roi1.png,0
 188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0074-roi1.png,0
@@ -4924,10 +4924,10 @@ filename,status
 192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png,1
 192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
 192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,1
-192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0023-roi1.png,0
+192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0023-roi1.png,1
 192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,0
 192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0026-roi1.png,0
-192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,0
+192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,1
 192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,0
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0000-roi1.png,0
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0001-roi1.png,0
@@ -4937,7 +4937,7 @@ filename,status
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0005-roi1.png,0
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0006-roi1.png,1
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0007-roi1.png,0
-192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0008-roi1.png,0
+192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0008-roi1.png,1
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0009-roi1.png,0
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0011-roi1.png,0
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0012-roi1.png,0
@@ -4955,7 +4955,7 @@ filename,status
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0028-roi1.png,0
 192 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0029-roi1.png,0
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0000-roi1.png,1
-214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0001-roi1.png,0
+214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0001-roi1.png,1
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0002-roi1.png,0
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,0
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0007-roi1.png,0
@@ -4974,7 +4974,7 @@ filename,status
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0025-roi1.png,1
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0027-roi1.png,0
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0029-roi1.png,0
-214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0030-roi1.png,0
+214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0030-roi1.png,1
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0031-roi1.png,1
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0035-roi1.png,1
 214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0036-roi1.png,0
@@ -5000,20 +5000,20 @@ filename,status
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0014-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0015-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0016-roi1.png,0
-214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0017-roi1.png,0
+214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0017-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0019-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0020-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0021-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0022-roi1.png,0
-214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0023-roi1.png,0
+214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0023-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0024-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0025-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0027-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0028-roi1.png,1
-214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0029-roi1.png,0
-214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0030-roi1.png,0
+214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0029-roi1.png,1
+214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0030-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0031-roi1.png,1
-214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0032-roi1.png,0
+214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0032-roi1.png,1
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0033-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0035-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0036-roi1.png,1
@@ -5025,15 +5025,15 @@ filename,status
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0042-roi1.png,0
 214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0043-roi1.png,1
 261.avi-frame0001-roi1.png,0
-261.avi-frame0002-roi1.png,0
+261.avi-frame0002-roi1.png,1
 261.avi-frame0003-roi1.png,0
 261.avi-frame0004-roi1.png,0
 261.avi-frame0005-roi1.png,0
 261.avi-frame0007-roi1.png,1
 261.avi-frame0008-roi1.png,0
 261.avi-frame0009-roi1.png,0
-261.avi-frame0015-roi1.png,0
-261.avi-frame0016-roi1.png,0
+261.avi-frame0015-roi1.png,1
+261.avi-frame0016-roi1.png,1
 261.avi-frame0022-roi1.png,0
 261.avi-frame0024-roi1.png,0
 261.avi-frame0025-roi1.png,0
@@ -5095,7 +5095,7 @@ filename,status
 261.avi-frame0110-roi1.png,0
 261.avi-frame0111-roi1.png,0
 261.avi-frame0112-roi1.png,0
-261.avi-frame0116-roi1.png,0
+261.avi-frame0116-roi1.png,1
 261.avi-frame0117-roi1.png,0
 261.avi-frame0118-roi1.png,0
 261.avi-frame0119-roi1.png,0
@@ -5103,9 +5103,9 @@ filename,status
 261.avi-frame0121-roi1.png,0
 261.avi-frame0122-roi1.png,0
 261.avi-frame0126-roi1.png,0
-261.avi-frame0127-roi1.png,0
+261.avi-frame0127-roi1.png,1
 261.avi-frame0128-roi1.png,0
-261.avi-frame0132-roi1.png,0
+261.avi-frame0132-roi1.png,1
 261.avi-frame0133-roi1.png,0
 261.avi-frame0134-roi1.png,0
 261.avi-frame0136-roi1.png,0
@@ -5150,7 +5150,7 @@ filename,status
 261.avi-frame0208-roi1.png,0
 261.avi-frame0209-roi1.png,0
 261.avi-frame0210-roi1.png,1
-261.avi-frame0213-roi1.png,0
+261.avi-frame0213-roi1.png,1
 261.avi-frame0214-roi1.png,0
 261.avi-frame0215-roi1.png,0
 261.avi-frame0217-roi1.png,0
@@ -5197,7 +5197,7 @@ filename,status
 261.avi-frame0288-roi1.png,0
 261.avi-frame0289-roi1.png,0
 261.avi-frame0290-roi1.png,0
-261.avi-frame0293-roi1.png,0
+261.avi-frame0293-roi1.png,1
 261.avi-frame0295-roi1.png,0
 261.avi-frame0297-roi1.png,0
 261.avi-frame0299-roi1.png,1
@@ -5216,7 +5216,7 @@ filename,status
 261.avi-frame0322-roi1.png,0
 261.avi-frame0323-roi1.png,0
 261.avi-frame0325-roi1.png,0
-261.avi-frame0326-roi1.png,0
+261.avi-frame0326-roi1.png,1
 261.avi-frame0327-roi1.png,0
 261.avi-frame0328-roi1.png,0
 261.avi-frame0329-roi1.png,0
@@ -5248,7 +5248,7 @@ filename,status
 261.avi-frame0376-roi1.png,0
 261.avi-frame0378-roi1.png,0
 261.avi-frame0379-roi1.png,0
-261.avi-frame0381-roi1.png,0
+261.avi-frame0381-roi1.png,1
 261.avi-frame0385-roi1.png,0
 261.avi-frame0386-roi1.png,0
 261.avi-frame0387-roi1.png,0
@@ -5263,7 +5263,7 @@ filename,status
 261.avi-frame0402-roi1.png,0
 261.avi-frame0404-roi1.png,0
 261.avi-frame0406-roi1.png,1
-261.avi-frame0408-roi1.png,0
+261.avi-frame0408-roi1.png,1
 261.avi-frame0409-roi1.png,0
 261.avi-frame0412-roi1.png,1
 261.avi-frame0413-roi1.png,1
@@ -5315,7 +5315,7 @@ filename,status
 261.avi-frame0496-roi1.png,0
 261.avi-frame0498-roi1.png,1
 261.avi-frame0499-roi1.png,0
-261.avi-frame0500-roi1.png,0
+261.avi-frame0500-roi1.png,1
 261.avi-frame0501-roi1.png,0
 261.avi-frame0502-roi1.png,0
 261.avi-frame0503-roi1.png,0
@@ -5325,7 +5325,7 @@ filename,status
 261.avi-frame0508-roi1.png,0
 261.avi-frame0510-roi1.png,0
 261.avi-frame0511-roi1.png,0
-261.avi-frame0513-roi1.png,0
+261.avi-frame0513-roi1.png,1
 261.avi-frame0514-roi1.png,0
 261.avi-frame0515-roi1.png,0
 261.avi-frame0521-roi1.png,0
@@ -5369,9 +5369,9 @@ filename,status
 261.avi-frame0580-roi1.png,0
 261.avi-frame0581-roi1.png,1
 261.avi-frame0583-roi1.png,0
-261.avi-frame0587-roi1.png,0
+261.avi-frame0587-roi1.png,1
 261.avi-frame0589-roi1.png,0
-261.avi-frame0590-roi1.png,0
+261.avi-frame0590-roi1.png,1
 261.avi-frame0591-roi1.png,0
 261.avi-frame0593-roi1.png,0
 261.avi-frame0594-roi1.png,1
@@ -5417,7 +5417,7 @@ filename,status
 261.avi-frame0661-roi1.png,0
 261.avi-frame0664-roi1.png,0
 261.avi-frame0666-roi1.png,0
-261.avi-frame0669-roi1.png,0
+261.avi-frame0669-roi1.png,1
 261.avi-frame0670-roi1.png,0
 261.avi-frame0672-roi1.png,0
 261.avi-frame0674-roi1.png,0
@@ -5443,7 +5443,7 @@ filename,status
 261.avi-frame0716-roi1.png,0
 261.avi-frame0718-roi1.png,0
 261.avi-frame0723-roi1.png,0
-261.avi-frame0724-roi1.png,0
+261.avi-frame0724-roi1.png,1
 261.avi-frame0726-roi1.png,0
 261.avi-frame0727-roi1.png,0
 261.avi-frame0730-roi1.png,0
@@ -5530,12 +5530,12 @@ filename,status
 261.avi-frame0861-roi1.png,0
 261.avi-frame0864-roi1.png,0
 261.avi-frame0865-roi1.png,0
-261.avi-frame0866-roi1.png,0
+261.avi-frame0866-roi1.png,1
 261.avi-frame0867-roi1.png,0
 261.avi-frame0868-roi1.png,0
 261.avi-frame0870-roi1.png,0
 261.avi-frame0871-roi1.png,0
-261.avi-frame0872-roi1.png,0
+261.avi-frame0872-roi1.png,1
 261.avi-frame0874-roi1.png,0
 261.avi-frame0875-roi1.png,0
 261.avi-frame0877-roi1.png,0
@@ -5559,7 +5559,7 @@ filename,status
 261.avi-frame0909-roi1.png,0
 261.avi-frame0910-roi1.png,0
 261.avi-frame0911-roi1.png,0
-261.avi-frame0912-roi1.png,0
+261.avi-frame0912-roi1.png,1
 261.avi-frame0913-roi1.png,0
 261.avi-frame0915-roi1.png,0
 261.avi-frame0916-roi1.png,1
@@ -5607,7 +5607,7 @@ filename,status
 261.avi-frame0980-roi1.png,0
 261.avi-frame0981-roi1.png,1
 261.avi-frame0983-roi1.png,1
-261.avi-frame0984-roi1.png,0
+261.avi-frame0984-roi1.png,1
 261.avi-frame0985-roi1.png,0
 261.avi-frame0987-roi1.png,0
 261.avi-frame0988-roi1.png,0
@@ -5625,7 +5625,7 @@ filename,status
 261.avi-frame1010-roi1.png,0
 261.avi-frame1013-roi1.png,0
 261.avi-frame1016-roi1.png,0
-261.avi-frame1019-roi1.png,0
+261.avi-frame1019-roi1.png,1
 261.avi-frame1020-roi1.png,0
 261.avi-frame1022-roi1.png,0
 261.avi-frame1026-roi1.png,0
@@ -5647,7 +5647,7 @@ filename,status
 261.avi-frame1056-roi1.png,1
 261.avi-frame1057-roi1.png,1
 261.avi-frame1059-roi1.png,0
-261.avi-frame1060-roi1.png,0
+261.avi-frame1060-roi1.png,1
 261.avi-frame1061-roi1.png,0
 261.avi-frame1062-roi1.png,1
 261.avi-frame1065-roi1.png,0
@@ -5760,7 +5760,7 @@ filename,status
 312.avi-frame0037-roi1.png,0
 312.avi-frame0039-roi1.png,0
 312.avi-frame0040-roi1.png,0
-312.avi-frame0041-roi1.png,0
+312.avi-frame0041-roi1.png,1
 312.avi-frame0043-roi1.png,1
 312.avi-frame0045-roi1.png,1
 312.avi-frame0052-roi1.png,0
@@ -5775,21 +5775,21 @@ filename,status
 312.avi-frame0071-roi1.png,0
 312.avi-frame0073-roi1.png,0
 312.avi-frame0074-roi1.png,0
-312.avi-frame0075-roi1.png,0
+312.avi-frame0075-roi1.png,1
 312.avi-frame0076-roi1.png,0
 312.avi-frame0078-roi1.png,0
 312.avi-frame0079-roi1.png,1
-312.avi-frame0080-roi1.png,0
+312.avi-frame0080-roi1.png,1
 312.avi-frame0081-roi1.png,0
 312.avi-frame0082-roi1.png,1
 312.avi-frame0084-roi1.png,0
 312.avi-frame0087-roi1.png,1
-312.avi-frame0088-roi1.png,0
+312.avi-frame0088-roi1.png,1
 312.avi-frame0089-roi1.png,0
 312.avi-frame0090-roi1.png,0
 312.avi-frame0091-roi1.png,0
 312.avi-frame0094-roi1.png,0
-312.avi-frame0095-roi1.png,0
+312.avi-frame0095-roi1.png,1
 312.avi-frame0096-roi1.png,0
 312.avi-frame0098-roi1.png,0
 312.avi-frame0099-roi1.png,0
@@ -5819,7 +5819,7 @@ filename,status
 312.avi-frame0132-roi1.png,0
 312.avi-frame0133-roi1.png,0
 312.avi-frame0135-roi1.png,0
-312.avi-frame0136-roi1.png,0
+312.avi-frame0136-roi1.png,1
 312.avi-frame0137-roi1.png,0
 312.avi-frame0138-roi1.png,0
 312.avi-frame0139-roi1.png,0
@@ -5838,7 +5838,7 @@ filename,status
 312.avi-frame0167-roi1.png,0
 312.avi-frame0168-roi1.png,0
 312.avi-frame0169-roi1.png,0
-312.avi-frame0170-roi1.png,0
+312.avi-frame0170-roi1.png,1
 312.avi-frame0171-roi1.png,0
 312.avi-frame0172-roi1.png,0
 312.avi-frame0173-roi1.png,0
@@ -5850,7 +5850,7 @@ filename,status
 312.avi-frame0183-roi1.png,0
 312.avi-frame0184-roi1.png,0
 312.avi-frame0185-roi1.png,0
-312.avi-frame0186-roi1.png,0
+312.avi-frame0186-roi1.png,1
 312.avi-frame0187-roi1.png,0
 312.avi-frame0188-roi1.png,0
 312.avi-frame0189-roi1.png,0
@@ -5864,7 +5864,7 @@ filename,status
 312.avi-frame0198-roi1.png,0
 312.avi-frame0199-roi1.png,0
 312.avi-frame0200-roi1.png,0
-312.avi-frame0201-roi1.png,0
+312.avi-frame0201-roi1.png,1
 312.avi-frame0202-roi1.png,0
 312.avi-frame0203-roi1.png,0
 312.avi-frame0206-roi1.png,0
@@ -5904,10 +5904,10 @@ filename,status
 312.avi-frame0257-roi1.png,1
 312.avi-frame0258-roi1.png,0
 312.avi-frame0259-roi1.png,0
-312.avi-frame0260-roi1.png,0
+312.avi-frame0260-roi1.png,1
 312.avi-frame0262-roi1.png,0
 312.avi-frame0263-roi1.png,0
-312.avi-frame0264-roi1.png,0
+312.avi-frame0264-roi1.png,1
 312.avi-frame0266-roi1.png,0
 312.avi-frame0271-roi1.png,0
 312.avi-frame0273-roi1.png,0
@@ -5922,7 +5922,7 @@ filename,status
 312.avi-frame0287-roi1.png,0
 312.avi-frame0289-roi1.png,1
 312.avi-frame0293-roi1.png,0
-312.avi-frame0295-roi1.png,0
+312.avi-frame0295-roi1.png,1
 312.avi-frame0296-roi1.png,0
 312.avi-frame0297-roi1.png,0
 312.avi-frame0298-roi1.png,0
@@ -5934,7 +5934,7 @@ filename,status
 312.avi-frame0307-roi1.png,0
 312.avi-frame0308-roi1.png,0
 312.avi-frame0313-roi1.png,0
-312.avi-frame0315-roi1.png,0
+312.avi-frame0315-roi1.png,1
 312.avi-frame0317-roi1.png,0
 312.avi-frame0318-roi1.png,0
 312.avi-frame0319-roi1.png,0
@@ -5950,7 +5950,7 @@ filename,status
 312.avi-frame0332-roi1.png,1
 312.avi-frame0333-roi1.png,1
 312.avi-frame0334-roi1.png,0
-312.avi-frame0335-roi1.png,0
+312.avi-frame0335-roi1.png,1
 312.avi-frame0336-roi1.png,0
 312.avi-frame0337-roi1.png,1
 312.avi-frame0338-roi1.png,0
@@ -5960,7 +5960,7 @@ filename,status
 312.avi-frame0344-roi1.png,0
 312.avi-frame0346-roi1.png,0
 312.avi-frame0347-roi1.png,0
-312.avi-frame0350-roi1.png,0
+312.avi-frame0350-roi1.png,1
 312.avi-frame0352-roi1.png,0
 312.avi-frame0354-roi1.png,0
 312.avi-frame0356-roi1.png,0
@@ -5999,7 +5999,7 @@ filename,status
 312.avi-frame0404-roi1.png,0
 312.avi-frame0405-roi1.png,0
 312.avi-frame0406-roi1.png,0
-312.avi-frame0407-roi1.png,0
+312.avi-frame0407-roi1.png,1
 312.avi-frame0408-roi1.png,0
 312.avi-frame0411-roi1.png,0
 312.avi-frame0412-roi1.png,0
@@ -6032,7 +6032,7 @@ filename,status
 312.avi-frame0458-roi1.png,0
 312.avi-frame0459-roi1.png,0
 312.avi-frame0460-roi1.png,0
-312.avi-frame0463-roi1.png,0
+312.avi-frame0463-roi1.png,1
 312.avi-frame0465-roi1.png,0
 312.avi-frame0466-roi1.png,0
 312.avi-frame0467-roi1.png,0
@@ -6049,8 +6049,8 @@ filename,status
 312.avi-frame0487-roi1.png,0
 312.avi-frame0488-roi1.png,0
 312.avi-frame0489-roi1.png,0
-312.avi-frame0490-roi1.png,0
-312.avi-frame0492-roi1.png,0
+312.avi-frame0490-roi1.png,1
+312.avi-frame0492-roi1.png,1
 312.avi-frame0493-roi1.png,1
 312.avi-frame0495-roi1.png,0
 312.avi-frame0496-roi1.png,0
@@ -6112,7 +6112,7 @@ filename,status
 312.avi-frame0605-roi1.png,0
 312.avi-frame0606-roi1.png,0
 312.avi-frame0607-roi1.png,0
-312.avi-frame0609-roi1.png,0
+312.avi-frame0609-roi1.png,1
 312.avi-frame0610-roi1.png,0
 312.avi-frame0611-roi1.png,0
 312.avi-frame0612-roi1.png,0
@@ -6120,7 +6120,7 @@ filename,status
 312.avi-frame0615-roi1.png,0
 312.avi-frame0616-roi1.png,0
 312.avi-frame0617-roi1.png,0
-312.avi-frame0619-roi1.png,0
+312.avi-frame0619-roi1.png,1
 312.avi-frame0620-roi1.png,0
 312.avi-frame0621-roi1.png,1
 312.avi-frame0622-roi1.png,0
@@ -6173,7 +6173,7 @@ filename,status
 312.avi-frame0709-roi1.png,0
 312.avi-frame0710-roi1.png,0
 312.avi-frame0712-roi1.png,0
-312.avi-frame0714-roi1.png,0
+312.avi-frame0714-roi1.png,1
 312.avi-frame0716-roi1.png,0
 312.avi-frame0719-roi1.png,0
 312.avi-frame0721-roi1.png,1
@@ -6192,11 +6192,11 @@ filename,status
 312.avi-frame0739-roi1.png,0
 312.avi-frame0740-roi1.png,0
 312.avi-frame0742-roi1.png,0
-312.avi-frame0744-roi1.png,0
+312.avi-frame0744-roi1.png,1
 312.avi-frame0746-roi1.png,0
 312.avi-frame0747-roi1.png,0
 312.avi-frame0748-roi1.png,0
-312.avi-frame0749-roi1.png,0
+312.avi-frame0749-roi1.png,1
 312.avi-frame0750-roi1.png,0
 312.avi-frame0751-roi1.png,1
 312.avi-frame0752-roi1.png,1
@@ -6204,7 +6204,7 @@ filename,status
 312.avi-frame0754-roi1.png,0
 312.avi-frame0755-roi1.png,1
 312.avi-frame0759-roi1.png,0
-312.avi-frame0761-roi1.png,0
+312.avi-frame0761-roi1.png,1
 312.avi-frame0762-roi1.png,1
 312.avi-frame0764-roi1.png,0
 312.avi-frame0765-roi1.png,1
@@ -6219,7 +6219,7 @@ filename,status
 312.avi-frame0782-roi1.png,1
 312.avi-frame0784-roi1.png,1
 312.avi-frame0789-roi1.png,1
-312.avi-frame0790-roi1.png,0
+312.avi-frame0790-roi1.png,1
 312.avi-frame0795-roi1.png,1
 312.avi-frame0796-roi1.png,1
 312.avi-frame0799-roi1.png,1
@@ -6234,51 +6234,51 @@ filename,status
 312.avi-frame0815-roi1.png,0
 312.avi-frame0816-roi1.png,0
 312.avi-frame0817-roi1.png,1
-312.avi-frame0818-roi1.png,0
+312.avi-frame0818-roi1.png,1
 312.avi-frame0819-roi1.png,0
 312.avi-frame0822-roi1.png,0
 312.avi-frame0823-roi1.png,0
 312.avi-frame0824-roi1.png,1
 312.avi-frame0826-roi1.png,1
-312.avi-frame0827-roi1.png,0
+312.avi-frame0827-roi1.png,1
 312.avi-frame0828-roi1.png,1
-312.avi-frame0830-roi1.png,0
+312.avi-frame0830-roi1.png,1
 312.avi-frame0833-roi1.png,0
 312.avi-frame0834-roi1.png,1
 312.avi-frame0835-roi1.png,0
-312.avi-frame0836-roi1.png,0
-312.avi-frame0837-roi1.png,0
+312.avi-frame0836-roi1.png,1
+312.avi-frame0837-roi1.png,1
 312.avi-frame0838-roi1.png,1
 312.avi-frame0844-roi1.png,1
 312.avi-frame0845-roi1.png,1
 312.avi-frame0846-roi1.png,1
-312.avi-frame0847-roi1.png,0
+312.avi-frame0847-roi1.png,1
 312.avi-frame0848-roi1.png,1
-312.avi-frame0850-roi1.png,0
+312.avi-frame0850-roi1.png,1
 312.avi-frame0851-roi1.png,1
 312.avi-frame0852-roi1.png,1
 312.avi-frame0853-roi1.png,1
 312.avi-frame0854-roi1.png,1
 312.avi-frame0856-roi1.png,0
 312.avi-frame0857-roi1.png,1
-312.avi-frame0858-roi1.png,0
+312.avi-frame0858-roi1.png,1
 312.avi-frame0859-roi1.png,1
 312.avi-frame0860-roi1.png,1
 312.avi-frame0861-roi1.png,0
 312.avi-frame0862-roi1.png,0
-312.avi-frame0863-roi1.png,0
+312.avi-frame0863-roi1.png,1
 312.avi-frame0864-roi1.png,0
 312.avi-frame0865-roi1.png,1
 312.avi-frame0866-roi1.png,0
-312.avi-frame0868-roi1.png,0
+312.avi-frame0868-roi1.png,1
 312.avi-frame0869-roi1.png,0
 312.avi-frame0870-roi1.png,1
-312.avi-frame0871-roi1.png,0
+312.avi-frame0871-roi1.png,1
 312.avi-frame0872-roi1.png,0
 312.avi-frame0873-roi1.png,0
 312.avi-frame0876-roi1.png,0
 312.avi-frame0877-roi1.png,0
-312.avi-frame0878-roi1.png,0
+312.avi-frame0878-roi1.png,1
 312.avi-frame0879-roi1.png,0
 312.avi-frame0881-roi1.png,1
 312.avi-frame0885-roi1.png,0
@@ -6311,7 +6311,7 @@ filename,status
 312.avi-frame0922-roi1.png,1
 312.avi-frame0923-roi1.png,0
 312.avi-frame0924-roi1.png,0
-312.avi-frame0926-roi1.png,0
+312.avi-frame0926-roi1.png,1
 312.avi-frame0927-roi1.png,0
 312.avi-frame0929-roi1.png,0
 312.avi-frame0930-roi1.png,0
@@ -6335,12 +6335,12 @@ filename,status
 312.avi-frame0958-roi1.png,0
 312.avi-frame0961-roi1.png,0
 312.avi-frame0963-roi1.png,0
-312.avi-frame0965-roi1.png,0
+312.avi-frame0965-roi1.png,1
 312.avi-frame0966-roi1.png,0
 312.avi-frame0967-roi1.png,0
 312.avi-frame0969-roi1.png,0
 312.avi-frame0971-roi1.png,0
-312.avi-frame0972-roi1.png,0
+312.avi-frame0972-roi1.png,1
 312.avi-frame0973-roi1.png,0
 312.avi-frame0974-roi1.png,0
 312.avi-frame0975-roi1.png,0
@@ -6348,19 +6348,19 @@ filename,status
 312.avi-frame0978-roi1.png,0
 312.avi-frame0979-roi1.png,0
 312.avi-frame0981-roi1.png,0
-312.avi-frame0982-roi1.png,0
+312.avi-frame0982-roi1.png,1
 312.avi-frame0984-roi1.png,0
 312.avi-frame0985-roi1.png,0
-312.avi-frame0986-roi1.png,0
-312.avi-frame0988-roi1.png,0
+312.avi-frame0986-roi1.png,1
+312.avi-frame0988-roi1.png,1
 312.avi-frame0991-roi1.png,0
-312.avi-frame0992-roi1.png,0
+312.avi-frame0992-roi1.png,1
 312.avi-frame0995-roi1.png,1
 312.avi-frame0999-roi1.png,0
 312.avi-frame1000-roi1.png,0
 312.avi-frame1003-roi1.png,0
 312.avi-frame1004-roi1.png,0
-312.avi-frame1005-roi1.png,0
+312.avi-frame1005-roi1.png,1
 312.avi-frame1007-roi1.png,1
 312.avi-frame1008-roi1.png,0
 312.avi-frame1009-roi1.png,1
@@ -6386,7 +6386,7 @@ filename,status
 312.avi-frame1044-roi1.png,0
 312.avi-frame1048-roi1.png,0
 312.avi-frame1050-roi1.png,0
-312.avi-frame1051-roi1.png,0
+312.avi-frame1051-roi1.png,1
 312.avi-frame1052-roi1.png,0
 312.avi-frame1055-roi1.png,0
 312.avi-frame1056-roi1.png,0
@@ -6420,7 +6420,7 @@ filename,status
 312.avi-frame1091-roi1.png,0
 312.avi-frame1092-roi1.png,0
 312.avi-frame1093-roi1.png,0
-312.avi-frame1094-roi1.png,0
+312.avi-frame1094-roi1.png,1
 312.avi-frame1097-roi1.png,0
 312.avi-frame1100-roi1.png,0
 312.avi-frame1101-roi1.png,0
@@ -6430,10 +6430,10 @@ filename,status
 312.avi-frame1105-roi1.png,1
 312.avi-frame1107-roi1.png,0
 312.avi-frame1108-roi1.png,0
-312.avi-frame1110-roi1.png,0
+312.avi-frame1110-roi1.png,1
 312.avi-frame1111-roi1.png,0
 312.avi-frame1113-roi1.png,0
-312.avi-frame1115-roi1.png,0
+312.avi-frame1115-roi1.png,1
 312.avi-frame1116-roi1.png,0
 312.avi-frame1117-roi1.png,0
 312.avi-frame1118-roi1.png,0
@@ -6442,12 +6442,12 @@ filename,status
 312.avi-frame1122-roi1.png,0
 312.avi-frame1123-roi1.png,0
 312.avi-frame1124-roi1.png,1
-312.avi-frame1125-roi1.png,0
-312.avi-frame1126-roi1.png,0
+312.avi-frame1125-roi1.png,1
+312.avi-frame1126-roi1.png,1
 312.avi-frame1127-roi1.png,1
-312.avi-frame1128-roi1.png,0
+312.avi-frame1128-roi1.png,1
 312.avi-frame1129-roi1.png,0
-312.avi-frame1130-roi1.png,0
+312.avi-frame1130-roi1.png,1
 312.avi-frame1131-roi1.png,1
 312.avi-frame1132-roi1.png,0
 312.avi-frame1133-roi1.png,1
@@ -6458,14 +6458,14 @@ filename,status
 312.avi-frame1140-roi1.png,1
 312.avi-frame1143-roi1.png,1
 312.avi-frame1144-roi1.png,0
-312.avi-frame1145-roi1.png,0
+312.avi-frame1145-roi1.png,1
 312.avi-frame1146-roi1.png,0
-312.avi-frame1148-roi1.png,0
+312.avi-frame1148-roi1.png,1
 312.avi-frame1152-roi1.png,1
 312.avi-frame1153-roi1.png,1
 312.avi-frame1154-roi1.png,1
 312.avi-frame1155-roi1.png,1
-312.avi-frame1156-roi1.png,0
+312.avi-frame1156-roi1.png,1
 312.avi-frame1157-roi1.png,0
 312.avi-frame1158-roi1.png,1
 312.avi-frame1160-roi1.png,0
@@ -6499,7 +6499,7 @@ filename,status
 312.avi-frame1197-roi1.png,1
 312.avi-frame1198-roi1.png,0
 312.avi-frame1200-roi1.png,0
-312.avi-frame1201-roi1.png,0
+312.avi-frame1201-roi1.png,1
 312.avi-frame1202-roi1.png,0
 312.avi-frame1203-roi1.png,0
 312.avi-frame1204-roi1.png,0
@@ -6517,7 +6517,7 @@ filename,status
 312.avi-frame1218-roi1.png,0
 312.avi-frame1219-roi1.png,0
 312.avi-frame1220-roi1.png,0
-312.avi-frame1221-roi1.png,0
+312.avi-frame1221-roi1.png,1
 312.avi-frame1222-roi1.png,0
 312.avi-frame1224-roi1.png,1
 312.avi-frame1225-roi1.png,1
@@ -6561,19 +6561,19 @@ filename,status
 312.avi-frame1272-roi1.png,0
 312.avi-frame1273-roi1.png,1
 312.avi-frame1274-roi1.png,0
-312.avi-frame1275-roi1.png,0
-312.avi-frame1276-roi1.png,0
-312.avi-frame1278-roi1.png,0
+312.avi-frame1275-roi1.png,1
+312.avi-frame1276-roi1.png,1
+312.avi-frame1278-roi1.png,1
 312.avi-frame1279-roi1.png,1
 312.avi-frame1283-roi1.png,1
 312.avi-frame1286-roi1.png,0
 312.avi-frame1288-roi1.png,1
-312.avi-frame1289-roi1.png,0
-312.avi-frame1290-roi1.png,0
+312.avi-frame1289-roi1.png,1
+312.avi-frame1290-roi1.png,1
 312.avi-frame1291-roi1.png,0
 312.avi-frame1292-roi1.png,1
 312.avi-frame1293-roi1.png,0
-312.avi-frame1294-roi1.png,0
+312.avi-frame1294-roi1.png,1
 312.avi-frame1295-roi1.png,0
 312.avi-frame1296-roi1.png,0
 312.avi-frame1297-roi1.png,0
@@ -6589,12 +6589,12 @@ filename,status
 312.avi-frame1307-roi1.png,0
 312.avi-frame1308-roi1.png,0
 312.avi-frame1309-roi1.png,0
-312.avi-frame1310-roi1.png,0
+312.avi-frame1310-roi1.png,1
 312.avi-frame1311-roi1.png,0
 312.avi-frame1314-roi1.png,0
 312.avi-frame1315-roi1.png,0
 312.avi-frame1316-roi1.png,0
-312.avi-frame1317-roi1.png,0
+312.avi-frame1317-roi1.png,1
 312.avi-frame1318-roi1.png,0
 312.avi-frame1322-roi1.png,0
 312.avi-frame1323-roi1.png,0
@@ -6606,7 +6606,7 @@ filename,status
 312.avi-frame1329-roi1.png,0
 312.avi-frame1330-roi1.png,0
 312.avi-frame1332-roi1.png,1
-312.avi-frame1333-roi1.png,0
+312.avi-frame1333-roi1.png,1
 312.avi-frame1334-roi1.png,0
 312.avi-frame1335-roi1.png,0
 312.avi-frame1337-roi1.png,0
@@ -6661,12 +6661,12 @@ filename,status
 312.avi-frame1400-roi1.png,1
 312.avi-frame1401-roi1.png,0
 312.avi-frame1402-roi1.png,1
-312.avi-frame1403-roi1.png,0
+312.avi-frame1403-roi1.png,1
 312.avi-frame1404-roi1.png,0
 312.avi-frame1405-roi1.png,0
 312.avi-frame1406-roi1.png,0
 312.avi-frame1407-roi1.png,0
-312.avi-frame1408-roi1.png,0
+312.avi-frame1408-roi1.png,1
 312.avi-frame1409-roi1.png,1
 312.avi-frame1411-roi1.png,0
 312.avi-frame1412-roi1.png,0
@@ -6682,8 +6682,8 @@ filename,status
 312.avi-frame1423-roi1.png,0
 312.avi-frame1424-roi1.png,0
 312.avi-frame1428-roi1.png,1
-312.avi-frame1429-roi1.png,0
-312.avi-frame1430-roi1.png,0
+312.avi-frame1429-roi1.png,1
+312.avi-frame1430-roi1.png,1
 312.avi-frame1431-roi1.png,0
 312.avi-frame1433-roi1.png,0
 312.avi-frame1436-roi1.png,0
@@ -6739,7 +6739,7 @@ filename,status
 312.avi-frame1499-roi1.png,0
 312.avi-frame1500-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png,0
-47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,0
+47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0002-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0008-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0009-roi1.png,0
@@ -6765,7 +6765,7 @@ filename,status
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0038-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0039-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0040-roi1.png,1
-47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0042-roi1.png,0
+47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0042-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0043-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0044-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0046-roi1.png,0
@@ -6777,7 +6777,7 @@ filename,status
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0056-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0058-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0059-roi1.png,0
-47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0061-roi1.png,0
+47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0061-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0062-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0063-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0064-roi1.png,0
@@ -6790,7 +6790,7 @@ filename,status
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0073-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0074-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0075-roi1.png,1
-47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0076-roi1.png,0
+47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0076-roi1.png,1
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0077-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0079-roi1.png,0
 47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0080-roi1.png,0
@@ -6873,7 +6873,7 @@ filename,status
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0005-roi1.png,0
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0006-roi1.png,0
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0007-roi1.png,0
-50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0008-roi1.png,0
+50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0008-roi1.png,1
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0009-roi1.png,1
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0010-roi1.png,1
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0011-roi1.png,0
@@ -6913,7 +6913,7 @@ filename,status
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0056-roi1.png,0
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0057-roi1.png,0
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0059-roi1.png,0
-50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0060-roi1.png,0
+50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0060-roi1.png,1
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0061-roi1.png,0
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0063-roi1.png,0
 50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0064-roi1.png,0
@@ -7133,7 +7133,7 @@ filename,status
 51.avi-frame0254-roi1.png,0
 51.avi-frame0255-roi1.png,0
 51.avi-frame0256-roi1.png,0
-51.avi-frame0257-roi1.png,0
+51.avi-frame0257-roi1.png,1
 51.avi-frame0259-roi1.png,0
 51.avi-frame0260-roi1.png,0
 51.avi-frame0261-roi1.png,0
@@ -7174,9 +7174,9 @@ filename,status
 51.avi-frame0303-roi1.png,0
 51.avi-frame0306-roi1.png,0
 51.avi-frame0310-roi1.png,0
-51.avi-frame0311-roi1.png,0
+51.avi-frame0311-roi1.png,1
 51.avi-frame0312-roi1.png,1
-51.avi-frame0313-roi1.png,0
+51.avi-frame0313-roi1.png,1
 51.avi-frame0314-roi1.png,0
 51.avi-frame0315-roi1.png,0
 51.avi-frame0316-roi1.png,0
@@ -7187,7 +7187,7 @@ filename,status
 51.avi-frame0323-roi1.png,0
 51.avi-frame0324-roi1.png,1
 51.avi-frame0325-roi1.png,0
-51.avi-frame0327-roi1.png,0
+51.avi-frame0327-roi1.png,1
 51.avi-frame0328-roi1.png,0
 51.avi-frame0329-roi1.png,0
 51.avi-frame0330-roi1.png,0
@@ -7277,13 +7277,13 @@ filename,status
 51.avi-frame0457-roi1.png,0
 51.avi-frame0458-roi1.png,0
 51.avi-frame0459-roi1.png,1
-51.avi-frame0460-roi1.png,0
-51.avi-frame0461-roi1.png,0
+51.avi-frame0460-roi1.png,1
+51.avi-frame0461-roi1.png,1
 51.avi-frame0462-roi1.png,1
 51.avi-frame0463-roi1.png,0
 51.avi-frame0464-roi1.png,1
 51.avi-frame0465-roi1.png,0
-51.avi-frame0466-roi1.png,0
+51.avi-frame0466-roi1.png,1
 51.avi-frame0467-roi1.png,0
 51.avi-frame0469-roi1.png,1
 51.avi-frame0470-roi1.png,1
@@ -7376,7 +7376,7 @@ filename,status
 51.avi-frame0586-roi1.png,0
 51.avi-frame0587-roi1.png,0
 51.avi-frame0588-roi1.png,0
-51.avi-frame0590-roi1.png,0
+51.avi-frame0590-roi1.png,1
 51.avi-frame0591-roi1.png,0
 51.avi-frame0592-roi1.png,0
 51.avi-frame0593-roi1.png,0
@@ -7394,7 +7394,7 @@ filename,status
 51.avi-frame0607-roi1.png,0
 51.avi-frame0608-roi1.png,0
 51.avi-frame0609-roi1.png,0
-51.avi-frame0610-roi1.png,0
+51.avi-frame0610-roi1.png,1
 51.avi-frame0612-roi1.png,0
 51.avi-frame0613-roi1.png,0
 51.avi-frame0614-roi1.png,0
@@ -7467,7 +7467,7 @@ filename,status
 51.avi-frame0706-roi1.png,0
 51.avi-frame0707-roi1.png,0
 51.avi-frame0708-roi1.png,0
-51.avi-frame0710-roi1.png,0
+51.avi-frame0710-roi1.png,1
 51.avi-frame0711-roi1.png,0
 51.avi-frame0712-roi1.png,0
 51.avi-frame0713-roi1.png,0
@@ -7498,7 +7498,7 @@ filename,status
 51.avi-frame0747-roi1.png,0
 51.avi-frame0748-roi1.png,0
 51.avi-frame0750-roi1.png,0
-51.avi-frame0751-roi1.png,0
+51.avi-frame0751-roi1.png,1
 51.avi-frame0752-roi1.png,0
 51.avi-frame0753-roi1.png,0
 51.avi-frame0755-roi1.png,0
@@ -7510,7 +7510,7 @@ filename,status
 51.avi-frame0762-roi1.png,0
 51.avi-frame0763-roi1.png,0
 51.avi-frame0764-roi1.png,0
-51.avi-frame0765-roi1.png,0
+51.avi-frame0765-roi1.png,1
 51.avi-frame0766-roi1.png,0
 51.avi-frame0767-roi1.png,0
 51.avi-frame0768-roi1.png,0
@@ -7525,7 +7525,7 @@ filename,status
 51.avi-frame0780-roi1.png,0
 51.avi-frame0782-roi1.png,0
 51.avi-frame0784-roi1.png,0
-51.avi-frame0785-roi1.png,0
+51.avi-frame0785-roi1.png,1
 51.avi-frame0786-roi1.png,0
 51.avi-frame0787-roi1.png,0
 51.avi-frame0788-roi1.png,0
@@ -7584,7 +7584,7 @@ filename,status
 51.avi-frame0852-roi1.png,0
 51.avi-frame0853-roi1.png,0
 51.avi-frame0854-roi1.png,0
-51.avi-frame0855-roi1.png,0
+51.avi-frame0855-roi1.png,1
 51.avi-frame0856-roi1.png,0
 51.avi-frame0857-roi1.png,0
 51.avi-frame0858-roi1.png,0
@@ -7609,7 +7609,7 @@ filename,status
 51.avi-frame0886-roi1.png,0
 51.avi-frame0887-roi1.png,0
 51.avi-frame0889-roi1.png,0
-51.avi-frame0890-roi1.png,0
+51.avi-frame0890-roi1.png,1
 51.avi-frame0892-roi1.png,0
 51.avi-frame0893-roi1.png,0
 51.avi-frame0894-roi1.png,0
@@ -7679,7 +7679,7 @@ filename,status
 51.avi-frame0976-roi1.png,0
 51.avi-frame0978-roi1.png,0
 51.avi-frame0979-roi1.png,0
-51.avi-frame0980-roi1.png,0
+51.avi-frame0980-roi1.png,1
 51.avi-frame0981-roi1.png,1
 51.avi-frame0982-roi1.png,0
 51.avi-frame0983-roi1.png,0
@@ -7687,9 +7687,9 @@ filename,status
 51.avi-frame0985-roi1.png,0
 51.avi-frame0986-roi1.png,1
 51.avi-frame0988-roi1.png,1
-51.avi-frame0989-roi1.png,0
+51.avi-frame0989-roi1.png,1
 51.avi-frame0990-roi1.png,0
-51.avi-frame0992-roi1.png,0
+51.avi-frame0992-roi1.png,1
 51.avi-frame0993-roi1.png,1
 51.avi-frame0994-roi1.png,0
 51.avi-frame0995-roi1.png,1
@@ -7810,7 +7810,7 @@ filename,status
 51.avi-frame1139-roi1.png,0
 51.avi-frame1140-roi1.png,0
 51.avi-frame1141-roi1.png,0
-51.avi-frame1142-roi1.png,0
+51.avi-frame1142-roi1.png,1
 51.avi-frame1143-roi1.png,0
 51.avi-frame1144-roi1.png,0
 51.avi-frame1149-roi1.png,0
@@ -7822,7 +7822,7 @@ filename,status
 51.avi-frame1159-roi1.png,0
 51.avi-frame1160-roi1.png,0
 51.avi-frame1161-roi1.png,0
-51.avi-frame1162-roi1.png,0
+51.avi-frame1162-roi1.png,1
 51.avi-frame1163-roi1.png,0
 51.avi-frame1164-roi1.png,0
 51.avi-frame1165-roi1.png,1
@@ -7840,7 +7840,7 @@ filename,status
 51.avi-frame1178-roi1.png,0
 51.avi-frame1179-roi1.png,0
 51.avi-frame1182-roi1.png,1
-51.avi-frame1183-roi1.png,0
+51.avi-frame1183-roi1.png,1
 51.avi-frame1184-roi1.png,1
 51.avi-frame1186-roi1.png,0
 51.avi-frame1188-roi1.png,0
@@ -7860,7 +7860,7 @@ filename,status
 51.avi-frame1202-roi1.png,0
 51.avi-frame1203-roi1.png,1
 51.avi-frame1204-roi1.png,0
-51.avi-frame1205-roi1.png,0
+51.avi-frame1205-roi1.png,1
 51.avi-frame1206-roi1.png,0
 51.avi-frame1207-roi1.png,0
 51.avi-frame1208-roi1.png,0
@@ -7874,7 +7874,7 @@ filename,status
 51.avi-frame1217-roi1.png,0
 51.avi-frame1219-roi1.png,0
 51.avi-frame1220-roi1.png,0
-51.avi-frame1221-roi1.png,0
+51.avi-frame1221-roi1.png,1
 51.avi-frame1222-roi1.png,0
 51.avi-frame1224-roi1.png,0
 51.avi-frame1225-roi1.png,0
@@ -8045,7 +8045,7 @@ filename,status
 51.avi-frame1440-roi1.png,0
 51.avi-frame1442-roi1.png,0
 51.avi-frame1443-roi1.png,0
-51.avi-frame1444-roi1.png,0
+51.avi-frame1444-roi1.png,1
 51.avi-frame1446-roi1.png,0
 51.avi-frame1447-roi1.png,0
 51.avi-frame1448-roi1.png,0
@@ -8091,7 +8091,7 @@ filename,status
 51.avi-frame1526-roi1.png,0
 51.avi-frame1527-roi1.png,0
 51.avi-frame1528-roi1.png,0
-51.avi-frame1529-roi1.png,0
+51.avi-frame1529-roi1.png,1
 51.avi-frame1530-roi1.png,0
 51.avi-frame1531-roi1.png,0
 51.avi-frame1533-roi1.png,0
@@ -8339,14 +8339,14 @@ filename,status
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0020-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0021-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0022-roi1.png,0
-54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,0
+54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0024-roi1.png,1
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0025-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0027-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0028-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0029-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0031-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0032-roi1.png,0
-54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0033-roi1.png,0
+54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0033-roi1.png,1
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0034-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0035-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0036-roi1.png,0
@@ -8365,7 +8365,7 @@ filename,status
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0060-roi1.png,1
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0061-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0062-roi1.png,0
-54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0063-roi1.png,0
+54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0063-roi1.png,1
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0064-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0065-roi1.png,0
 54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0066-roi1.png,1
@@ -8403,7 +8403,7 @@ filename,status
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0011-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0013-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0014-roi1.png,0
-54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,0
+54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png,1
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0016-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0017-roi1.png,1
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0019-roi1.png,1
@@ -8436,7 +8436,7 @@ filename,status
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0051-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0052-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0054-roi1.png,0
-54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0056-roi1.png,0
+54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0056-roi1.png,1
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0059-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0060-roi1.png,0
 54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0062-roi1.png,0
@@ -8527,7 +8527,7 @@ filename,status
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0020-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0021-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0022-roi1.png,0
-64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0023-roi1.png,0
+64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0023-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0024-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0025-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0026-roi1.png,0
@@ -8535,7 +8535,7 @@ filename,status
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0028-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0029-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0031-roi1.png,1
-64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0032-roi1.png,0
+64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0032-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0033-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0034-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0035-roi1.png,1
@@ -8549,9 +8549,9 @@ filename,status
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0049-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0050-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0051-roi1.png,0
-64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0056-roi1.png,0
+64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0056-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0057-roi1.png,0
-64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0061-roi1.png,0
+64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0061-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0062-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0063-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0065-roi1.png,0
@@ -8562,12 +8562,12 @@ filename,status
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0071-roi1.png,0
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0072-roi1.png,1
 64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0073-roi1.png,0
-64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0074-roi1.png,0
+64 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0074-roi1.png,1
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0000-roi1.png,0
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0002-roi1.png,1
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0003-roi1.png,0
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0004-roi1.png,0
-68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,0
+68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,1
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0006-roi1.png,0
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,0
 68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0009-roi1.png,1
@@ -8601,7 +8601,7 @@ filename,status
 69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0005-roi1.png,1
 69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0006-roi1.png,0
 69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0007-roi1.png,0
-69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0008-roi1.png,0
+69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0008-roi1.png,1
 69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0009-roi1.png,0
 69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0010-roi1.png,0
 69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0014-roi1.png,1
@@ -8617,10 +8617,10 @@ filename,status
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0006-roi1.png,1
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0007-roi1.png,0
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,0
-71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,0
+71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,1
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0011-roi1.png,0
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0012-roi1.png,0
-71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0013-roi1.png,0
+71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0013-roi1.png,1
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0016-roi1.png,0
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0018-roi1.png,0
 71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0019-roi1.png,0
@@ -8639,7 +8639,7 @@ filename,status
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0007-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,0
-73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0009-roi1.png,0
+73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0009-roi1.png,1
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0011-roi1.png,1
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0012-roi1.png,0
@@ -8647,7 +8647,7 @@ filename,status
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0015-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0016-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0017-roi1.png,0
-73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0018-roi1.png,0
+73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0018-roi1.png,1
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0019-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0020-roi1.png,0
 73 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0021-roi1.png,0
@@ -8657,12 +8657,12 @@ filename,status
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0001-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0002-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0003-roi1.png,0
-74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,0
+74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,1
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0006-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0007-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,0
-74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0011-roi1.png,0
+74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0011-roi1.png,1
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0013-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0014-roi1.png,0
 74 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0015-roi1.png,0
@@ -8677,7 +8677,7 @@ filename,status
 74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0005-roi1.png,1
 74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0006-roi1.png,0
 74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0007-roi1.png,0
-74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0008-roi1.png,0
+74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0008-roi1.png,1
 74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0011-roi1.png,0
 74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0013-roi1.png,1
 74 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0014-roi1.png,0
@@ -8706,7 +8706,7 @@ filename,status
 77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0002-roi1.png,0
 77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0003-roi1.png,1
 77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0004-roi1.png,1
-77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,0
+77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,1
 77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0009-roi1.png,1
 77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,0
 77 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0012-roi1.png,1
@@ -8746,7 +8746,7 @@ filename,status
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0004-roi1.png,0
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0005-roi1.png,0
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0006-roi1.png,1
-78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0007-roi1.png,0
+78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0007-roi1.png,1
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0008-roi1.png,0
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0009-roi1.png,0
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,0
@@ -8758,7 +8758,7 @@ filename,status
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0019-roi1.png,0
 78 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0020-roi1.png,0
 78 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0000-roi1.png,0
-78 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0001-roi1.png,0
+78 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0001-roi1.png,1
 78 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0002-roi1.png,1
 78 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0003-roi1.png,0
 78 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0004-roi1.png,1
@@ -8823,7 +8823,7 @@ filename,status
 83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0010-roi1.png,0
 83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0011-roi1.png,0
 83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0012-roi1.png,0
-83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0013-roi1.png,0
+83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0013-roi1.png,1
 83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0014-roi1.png,0
 83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0015-roi1.png,0
 83 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0019-roi1.png,0
@@ -8840,7 +8840,7 @@ filename,status
 83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0012-roi1.png,0
 83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0013-roi1.png,1
 83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0014-roi1.png,0
-83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0016-roi1.png,0
+83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0016-roi1.png,1
 83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0018-roi1.png,0
 83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0019-roi1.png,0
 83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0020-roi1.png,0
@@ -8855,19 +8855,19 @@ frame_1114.png,0
 frame_1116.png,1
 frame_1229.png,0
 frame_1285.png,0
-frame_1287.png,0
+frame_1287.png,1
 frame_1344.png,1
 frame_1380.png,0
-frame_1384.png,0
-frame_1387.png,0
+frame_1384.png,1
+frame_1387.png,1
 frame_1390.png,0
 frame_1392.png,0
 frame_1398.png,1
 frame_1401.png,1
 frame_1403.png,0
 frame_1417.png,0
-frame_1424.png,0
-frame_1428.png,0
+frame_1424.png,1
+frame_1428.png,1
 frame_1431.png,0
 frame_1537.png,1
 frame_1623.png,0
@@ -8875,7 +8875,7 @@ frame_1624.png,0
 frame_1648.png,0
 frame_1649.png,0
 frame_1752.png,1
-frame_1754.png,0
+frame_1754.png,1
 frame_1782.png,0
 frame_1838.png,0
 frame_1848.png,0
@@ -8884,7 +8884,7 @@ frame_1881.png,1
 frame_1922.png,1
 frame_1926.png,1
 frame_1951.png,0
-frame_1952.png,0
+frame_1952.png,1
 frame_197.png,0
 frame_200.png,0
 frame_2070.png,0
@@ -8894,13 +8894,13 @@ frame_220.png,0
 frame_227.png,0
 frame_228.png,1
 frame_255.png,0
-frame_257.png,0
+frame_257.png,1
 frame_259.png,0
 frame_268.png,1
 frame_277.png,0
 frame_278.png,0
 frame_282.png,0
-frame_31.png,0
+frame_31.png,1
 frame_434.png,1
 frame_436.png,0
 frame_439.png,0
@@ -8921,7 +8921,7 @@ frame_566.png,0
 frame_567.png,0
 frame_570.png,0
 frame_573.png,1
-frame_574.png,0
+frame_574.png,1
 frame_575.png,0
 frame_578.png,0
 frame_579.png,0
@@ -8930,11 +8930,11 @@ frame_607.png,0
 frame_610.png,0
 frame_646.png,0
 frame_647.png,0
-frame_659.png,0
+frame_659.png,1
 frame_660.png,1
 frame_662.png,1
 frame_674.png,0
 frame_78.png,0
 frame_842.png,0
-frame_847.png,0
+frame_847.png,1
 frame_875.png,0
