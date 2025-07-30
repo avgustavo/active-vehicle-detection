@@ -1,0 +1,267 @@
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0006-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0025-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115 (2023-04-20 11_00_00 - 2023-04-20 11_02_00).avi-frame0027-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0025-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0066-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0169-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0213-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0254-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0330-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0333-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0344-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0378-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0420-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0502-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0526-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0653-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0679-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0785-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame0962-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1097-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1151-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1195-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1232-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1286-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1358-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1442-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/115.avi-frame1470-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/121 (2023-04-26 08_00_00 - 2023-04-26 08_05_00).avi-frame0043-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0040-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0074-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0216-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0296-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0400-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0414-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0504-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0519-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0541-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0607-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame0712-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame1125-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame1155-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/123.avi-frame1188-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0007-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/127 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0050-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0053-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00) (2).avi-frame0054-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/127 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0010-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/131.avi-frame0015-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/131.avi-frame0036-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/131.avi-frame0334-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/131.avi-frame0349-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/131.avi-frame0400-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/139 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0005-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0016-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/140 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0066-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0009-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/140 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0031-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/145 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0006-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/156 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0035-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/156 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0069-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0002-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0068-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0093-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0114-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0174-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0190-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0223-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0241-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0260-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0323-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0342-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0346-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0435-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0603-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0607-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0618-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0712-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0826-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame0836-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1080-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1124-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1145-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1175-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1208-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1402-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1418-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1456-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1457-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1467-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/157.avi-frame1472-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0003-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0181-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0206-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0212-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0242-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0284-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0293-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0413-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0441-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0520-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0596-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0638-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0786-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0795-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0811-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0859-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame0889-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame1042-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame1070-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame1079-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame1134-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/160.avi-frame1162-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/161 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0041-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0056-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0058-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/161 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0089-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/162 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0006-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/162 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0034-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/162 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0056-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0022-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/162 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0041-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0000-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0002-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0013-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0031-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0078-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0117-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0214-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0360-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/163.avi-frame0407-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/168 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/172 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0033-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0015-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/172 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0046-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0010-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0045-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/176 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0049-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0037-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/176 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0066-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/179 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0011-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/179 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0026-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0042-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0046-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/186 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0080-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/186 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0009-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/186 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0036-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/186 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0045-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0044-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0085-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/188 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0088-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/188 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0040-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/192 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0019-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/214 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0001-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/214 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0038-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0068-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0102-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0133-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0341-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0373-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0540-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0590-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0605-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0622-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0835-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0841-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0901-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0904-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame0916-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame1002-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame1038-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame1100-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/261.avi-frame1199-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0096-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0123-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0263-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0333-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0383-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0402-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0433-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0474-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0558-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0563-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0590-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0603-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0605-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0626-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0637-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0642-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0658-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0710-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0721-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0746-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0846-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0853-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0886-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0912-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame0949-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1007-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1134-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1143-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1146-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1158-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1233-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1255-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1289-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1290-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1353-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1364-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1390-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/312.avi-frame1447-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/47 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0001-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/47 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0063-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/47 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0071-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/47 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0082-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0004-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/50 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0029-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0142-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0271-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0324-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0437-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0533-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0567-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0623-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0677-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0688-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0707-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0765-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0846-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0848-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0851-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0919-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0932-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0959-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame0986-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1024-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1067-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1165-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1184-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1195-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1197-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1243-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1274-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1331-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1335-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1498-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1507-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1522-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1552-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1620-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1710-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1742-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1771-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/51.avi-frame1775-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0015-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0018-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0060-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0066-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 08-00-00 - 2023-04-27 08-05-00).avi-frame0072-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0008-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/54 (2023-04-27 16-00-00 - 2023-04-27 16-05-00).avi-frame0070-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/68 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0016-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/69 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0002-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/71 (2023-04-27 08_00_00 - 2023-04-27 08_05_00).avi-frame0020-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0002-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/83 (2023-04-27 16_00_00 - 2023-04-27 16_05_00).avi-frame0018-roi1.png
+/mnt/gustavo/active-vehicle-detection/treino_transitar/train/images/frame_1881.png
