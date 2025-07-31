@@ -771,7 +771,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                     "datasource": {
                         "process_all": True,
                     },
-                    "embeddings": "transitar_embeddings.csv",
+                    "embeddings": "d10_embedding.csv",
                 },
                 selection_config={
                     "proportion_samples": 0.01, # 1% do dataset
@@ -799,7 +799,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                     "datasource": {
                         "process_all": True,
                     },
-                    "embeddings": "transitar_embeddings.csv",
+                    "embeddings": "d10_embedding.csv",
                 },
                 selection_config=selection_config
             )
