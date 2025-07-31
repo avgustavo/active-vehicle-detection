@@ -1397,7 +1397,7 @@ if __name__ == "__main__":
         # print(f"Tempo total de execução do pipeline {dataset_name}: {calculate_time(ts, te)}")
         t1 = time.time()
         main(
-            dataset_name='dd_balance2',
+            dataset_name='dd_balance3',
             epochs=epochs,
             initial_model_path=args.model,
             start=start,
