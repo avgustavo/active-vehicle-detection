@@ -16,6 +16,7 @@ import torch
 from typing import Dict, List
 import pandas as pd
 import time
+import comet_ml
 
 ######################################## CONSTANTES ########################################
 LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8" 
@@ -25,11 +26,16 @@ LIGHTLY_TOKEN = "6ef4b5e20f6a1dba87a72a9eb4ddceb3f9529cd3d46b94a8"
 # ALL_IMAGES = Path('FOCAL/yolov5_format/images/all_images.txt')
 # TRAIN_IMAGES_DIR = DATASET_PATH / 'images/train'
 # IMPORTANT_CLASSES = [0, 1, 2, 3, 5, 6, 7]  
-DATASET_PATH = Path('treino_transitar')
+# DATASET_PATH = Path('treino_transitar')
+# LIGHTLY_INPUT = Path('lightly')
+# ALL_IMAGES = Path('treino_transitar/train_images.txt')
+# TRAIN_IMAGES_DIR = DATASET_PATH / 'train/images'
+# IMPORTANT_CLASSES = [0, 1, 2, 3, 5, 6, 7]  
+DATASET_PATH = Path('d10k')
 LIGHTLY_INPUT = Path('lightly')
-ALL_IMAGES = Path('treino_transitar/train_images.txt')
-TRAIN_IMAGES_DIR = DATASET_PATH / 'train/images'
-IMPORTANT_CLASSES = [0, 1, 2, 3, 5, 6, 7]  
+ALL_IMAGES = Path('d10k/train_images.txt')
+TRAIN_IMAGES_DIR = DATASET_PATH / 'images/train'
+IMPORTANT_CLASSES = [0, 1, 2, 3, 4, 5, 6, 7]  
 
 
 def printff(message: str):
@@ -201,7 +207,7 @@ names:
     
     return yaml_path
 
-def prepare_yolo_dataset(labeled_txt_path: Path) -> Path:
+def prepare_tt_dataset(labeled_txt_path: Path) -> Path:
     """
     Cria o arquivo data.yaml para um ciclo específico, usando a lista de treino fornecida.
     Salva o .yaml na mesma pasta que o arquivo .txt.
@@ -244,6 +250,49 @@ names:
     print(f"Arquivo de configuração YAML criado em: {yaml_path}")
     
     return yaml_path
+def prepare_d10k_dataset(labeled_txt_path: Path) -> Path:
+    """
+    Cria o arquivo data.yaml para um ciclo específico, usando a lista de treino fornecida.
+    Salva o .yaml na mesma pasta que o arquivo .txt.
+
+    Returns:
+        Path: O Path para o arquivo data.yaml criado.
+    """
+    # O diretório de configuração é o mesmo onde o 'labeled_txt_path' está
+    config_dir = labeled_txt_path.parent
+
+    print("=" * 100)
+    print(f"Criando arquivo de configuração YAML em: {config_dir}")
+    print(f"Arquivo de imagens rotuladas: {labeled_txt_path.absolute()} vai para o 'train' do data.yaml")
+    print("=" * 100)
+    
+    yaml_path = config_dir / "data.yaml"
+    yaml_content = f"""
+# 'path' resolve os caminhos para 'val' e 'test'.
+path: {DATASET_PATH.absolute()}
+
+# Para 'train', usamos um caminho absoluto para evitar qualquer ambiguidade.
+train: {labeled_txt_path.absolute()}
+val: images/val
+
+nc: 8
+# Definição das Classes
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  4: bus
+  5: truck
+  6: traffic sign
+  7: traffic light
+
+""".strip()
+    with open(yaml_path, "w") as f:
+        f.write(yaml_content.strip())
+    print(f"Arquivo de configuração YAML criado em: {yaml_path}")
+    
+    return yaml_path
 
 #################################### Treinamento YOLO ####################################
 def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, model_path='yolo11n.pt', classes: List[int] = IMPORTANT_CLASSES):
@@ -269,7 +318,10 @@ def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, mode
         project=project_name,
         name=cycle_name,
         plots=True,
-        classes=classes
+        classes=classes,
+        optimizer='AdamW',
+        momentum=0.9,
+        lr0=0.000833
     )
     t2 = time.time()
     printff(f'Tempo total de treinamento: {calculate_time(t1, t2)}')
@@ -1255,8 +1307,17 @@ if __name__ == "__main__":
         print(f"Tempo total de execução do ciclo {start}: {calculate_time(t1, t4)}")
     
     elif args.mode == 'val':
+
+        comet_ml.login(project_name=dataset_name)
         
         validate_yolo_zero(name=dataset_name)
+        train_yolo(
+            cycle_name='zero',
+            yaml_path='d10k/bdd100k.yaml',
+            project_name=dataset_name,
+            epochs=epochs,
+            model_path=args.model
+        )
     elif args.mode == 'train':
         print('='*100)
         print(f"Modo de operação: treinamento completo do modelo YOLO")
