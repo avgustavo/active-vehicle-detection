@@ -37,6 +37,7 @@ def resize_dataset(
         return
 
     available_images.sort()
+    print(f"Imagens disponíveis: {len(available_images)}")
     # 3. Verificar se temos imagens suficientes para mover
     if len(available_images) < num_to_move:
         print(f"ERRO: Você quer mover {num_to_move} imagens, mas apenas {len(available_images)} estão disponíveis.")
@@ -90,16 +91,16 @@ if __name__ == '__main__':
     
     # Defina a estrutura de pastas do seu projeto
     # Exemplo para um formato comum como o do YOLO
-    base_dir = 'treino_transitar'
+    base_dir = 'd10k'
     
-    VAL_IMAGES_PATH = os.path.join(base_dir, 'val/images')
-    TRAIN_IMAGES_PATH = os.path.join(base_dir, 'train/images')
-    
-    VAL_LABELS_PATH = os.path.join(base_dir, 'val/labels')
-    TRAIN_LABELS_PATH = os.path.join(base_dir, 'train/labels')
-    
+    VAL_IMAGES_PATH = os.path.join(base_dir, 'images/val')
+    TRAIN_IMAGES_PATH = os.path.join(base_dir, 'images/train')
+
+    VAL_LABELS_PATH = os.path.join(base_dir, 'labels/val')
+    TRAIN_LABELS_PATH = os.path.join(base_dir, 'labels/train')
+
     # Número de imagens a mover (conforme calculado)
-    NUM_IMAGES_TO_MOVE = 1118
+    NUM_IMAGES_TO_MOVE = 600
     
     # Extensão dos seus arquivos de anotação
     LABEL_FILE_EXTENSION = '.txt'  # Mude para '.xml' ou '.json' se necessário
@@ -112,11 +113,19 @@ if __name__ == '__main__':
     # input("Pressione Enter para continuar ou Ctrl+C para cancelar...")
 
     # Chama a função principal
+    # resize_dataset(
+    #     val_images_dir=VAL_IMAGES_PATH,
+    #     train_images_dir=TRAIN_IMAGES_PATH,
+    #     val_labels_dir=VAL_LABELS_PATH,
+    #     train_labels_dir=TRAIN_LABELS_PATH,
+    #     num_to_move=NUM_IMAGES_TO_MOVE,
+    #     label_extension=LABEL_FILE_EXTENSION
+    # )
     resize_dataset(
-        val_images_dir=VAL_IMAGES_PATH,
-        train_images_dir=TRAIN_IMAGES_PATH,
-        val_labels_dir=VAL_LABELS_PATH,
-        train_labels_dir=TRAIN_LABELS_PATH,
+        val_images_dir=TRAIN_IMAGES_PATH,
+        train_images_dir=VAL_IMAGES_PATH,
+        val_labels_dir=TRAIN_LABELS_PATH,
+        train_labels_dir=VAL_LABELS_PATH,
         num_to_move=NUM_IMAGES_TO_MOVE,
         label_extension=LABEL_FILE_EXTENSION
     )
