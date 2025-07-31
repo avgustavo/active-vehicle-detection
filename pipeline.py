@@ -250,7 +250,7 @@ names:
     print(f"Arquivo de configuração YAML criado em: {yaml_path}")
     
     return yaml_path
-def prepare_d10k_dataset(labeled_txt_path: Path) -> Path:
+def prepare_yolo_dataset(labeled_txt_path: Path) -> Path:
     """
     Cria o arquivo data.yaml para um ciclo específico, usando a lista de treino fornecida.
     Salva o .yaml na mesma pasta que o arquivo .txt.
