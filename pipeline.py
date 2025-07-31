@@ -1381,23 +1381,23 @@ if __name__ == "__main__":
         #     ssl = args.ssl
         # )
         # te = time.time()
-        retrieve_embeddings()
-        main(
-            dataset_name=dataset_name, #dd_uncert
-            epochs=epochs,
-            initial_model_path=args.model,
-            start=start,
-            end=end,
-            selection_type=selection_type, #uncert 
-            retrain=args.retrain, #-r0
-            ssl = args.ssl
-        )
+        # retrieve_embeddings()
+        # main(
+        #     dataset_name=dataset_name, #dd_uncert
+        #     epochs=epochs,
+        #     initial_model_path=args.model,
+        #     start=start,
+        #     end=end,
+        #     selection_type=selection_type, #uncert 
+        #     retrain=args.retrain, #-r0
+        #     ssl = args.ssl
+        # )
         te = time.time()
 
-        print(f"Tempo total de execução do pipeline {dataset_name}: {calculate_time(ts, te)}")
+        # print(f"Tempo total de execução do pipeline {dataset_name}: {calculate_time(ts, te)}")
         t1 = time.time()
         main(
-            dataset_name='dd_balance',
+            dataset_name='dd_balance2',
             epochs=epochs,
             initial_model_path=args.model,
             start=start,
