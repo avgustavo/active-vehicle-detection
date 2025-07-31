@@ -1,0 +1,21 @@
+{
+    "task_type": "object-detection",
+    "categories": [
+        {
+            "id": 0,
+            "name": "person"
+        },
+        {
+            "id": 2,
+            "name": "car"
+        },
+        {
+            "id": 6,
+            "name": "traffic sign"
+        },
+        {
+            "id": 7,
+            "name": "traffic light"
+        }
+    ]
+}
