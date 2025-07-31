@@ -504,6 +504,7 @@ def evaluate_yolo(model_path, yaml_path: Path, output_dir: Path, name: str, proj
 
 def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt', start: int = 0, end: int = 10, selection_type: str = 'balance', retrain: bool = False, ssl: bool = False):
 
+    comet_ml.login(project_name=dataset_name)
     # worker_config_0 = {
     #     "shutdown_when_job_finished": True,
     #     "use_datapool": True,
@@ -1232,6 +1233,45 @@ def validate_yolo_zero(name:str):
     move_folder('yolo11n_zero_validation', f'runs/yolo11n_zero_validation')
 
 
+def retrieve_embeddings():
+    """
+    Retrieve embeddings from the Lightly API and save them to a CSV file.
+    """
+    client = configure_lightly_client(LIGHTLY_TOKEN, "d10_all")
+
+    scheduled_run_id = client.schedule_compute_worker_run(
+        worker_config = {
+            "shutdown_when_job_finished": True,
+            "use_datapool": True,
+            "datasource": {
+                "process_all": True,
+            },
+            "enable_training": True,
+        },
+        selection_config={
+            "proportion_samples": 1, # 1% do dataset
+            "strategies": [
+                {
+                    "input": {
+                        "type": "RANDOM",
+                        "random_seed": 42, # optional, for reproducibility
+                    },
+                    "strategy": {
+                        "type": "WEIGHTS",
+                    }
+                }
+            ]
+        },
+    )
+    monitoring_run(client, scheduled_run_id)
+    print_commands(TRAIN_IMAGES_DIR, LIGHTLY_TOKEN)
+
+
+    # Ensure the directory exists
+    Path('lightly/.lightly/embeddings').mkdir(parents=True, exist_ok=True)
+    client.download_embeddings_csv(output_path="lightly/.lightly/embeddings/d10_embedding.csv")
+
+
 if __name__ == "__main__":
 
     parse = argparse.ArgumentParser(description="Train YOLO model with Lightly dataset")
@@ -1341,6 +1381,7 @@ if __name__ == "__main__":
         #     ssl = args.ssl
         # )
         # te = time.time()
+        retrieve_embeddings()
         main(
             dataset_name=dataset_name, #dd_uncert
             epochs=epochs,
