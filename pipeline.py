@@ -35,7 +35,7 @@ DATASET_PATH = Path('d10k')
 LIGHTLY_INPUT = Path('lightly')
 ALL_IMAGES = Path('d10k/train_images.txt')
 TRAIN_IMAGES_DIR = DATASET_PATH / 'images/train'
-IMPORTANT_CLASSES = [0, 1, 2, 3, 4, 5, 6, 7]  
+IMPORTANT_CLASSES = [0, 2, 6, 7]  
 
 
 def printff(message: str):
@@ -1310,9 +1310,9 @@ if __name__ == "__main__":
 
         comet_ml.login(project_name=dataset_name)
         
-        validate_yolo_zero(name=dataset_name)
+        # validate_yolo_zero(name=dataset_name)
         train_yolo(
-            cycle_name='zero',
+            cycle_name='zero1',
             yaml_path='d10k/bdd100k.yaml',
             project_name=dataset_name,
             epochs=epochs,
