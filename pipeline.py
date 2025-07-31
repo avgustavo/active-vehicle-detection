@@ -1263,8 +1263,8 @@ def retrieve_embeddings():
             ]
         },
     )
-    monitoring_run(client, scheduled_run_id)
     print_commands(TRAIN_IMAGES_DIR, LIGHTLY_TOKEN)
+    monitoring_run(client, scheduled_run_id)
 
 
     # Ensure the directory exists
