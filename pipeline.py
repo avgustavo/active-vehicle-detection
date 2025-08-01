@@ -520,8 +520,8 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
 
         worker_config_0["enable_training"] = True
         worker_config_0["training"] = { 						# optional, remove to train on the full images
-            "task_name": "object-detection",
-        },
+            "task_name": "object_detection",
+        }
 
         lightly_config_0 = {
             "model": {
