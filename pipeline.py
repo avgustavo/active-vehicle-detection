@@ -793,7 +793,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
             printff(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
         else:
             worker_config_0["training"] = { 						# optional, remove to train on the full images
-                "task_name": "bdd_object_detection",
+                "task_name": "object_detection",
             }
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
