@@ -808,7 +808,8 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 #     "embeddings": "d10_embedding.csv",
                 # },
                 worker_config=worker_config_0,
-                selection_config=selection_config
+                selection_config=selection_config,
+                lightly_config=lightly_config_0,
             )
             printff(f'Executando o worker LightlyOne para selecionar 1% do dataset.')
         ####################################### Seleção das imagens ########################################
