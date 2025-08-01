@@ -519,9 +519,6 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
         printff(f"Modo SSL (Semi-Supervised Learning) ativado. Antes da inicialização ele treinará um modelo SSL para gerar embeddings.")
 
         worker_config_0["enable_training"] = True
-        worker_config_0["training"] = { 						# optional, remove to train on the full images
-            "task_name": "bdd_object_detection",
-        }
 
         lightly_config_0 = {
             "model": {
@@ -795,6 +792,9 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
             )
             printff(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
         else:
+            worker_config_0["training"] = { 						# optional, remove to train on the full images
+                "task_name": "bdd_object_detection",
+            }
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
                 # worker_config = {
