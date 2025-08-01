@@ -545,6 +545,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 'max_epochs': 10, # default
             },
         }
+        printff(worker_config_0)
 
     if selection_type == 'uncert':
         print('='*80)
