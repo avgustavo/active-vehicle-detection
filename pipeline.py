@@ -590,7 +590,7 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
                 {
                     "input": {
                         "type": "EMBEDDINGS",
-                        "task": "object_detection", 
+                        # "task": "object_detection", 
                     },
                     "strategy": {
                         "type": "DIVERSITY",
@@ -792,11 +792,11 @@ def main(dataset_name: str, epochs: int, initial_model_path: str = 'yolo11n.pt',
             )
             printff(f'Executando o worker LightlyOne para selecionar aleatoriamente 1% do dataset.')
         else:
-            if i>=5 and ssl:
-                printff(f"Modo SSL --- Treinando modelo com crops para gerar melhores embeddings")
-                worker_config_0["training"] = { 						# optional, remove to train on the full images
-                    "task_name": "object_detection",
-                }
+            # if i>=5 and ssl:
+            #     printff(f"Modo SSL --- Treinando modelo com crops para gerar melhores embeddings")
+            #     worker_config_0["training"] = { 						# optional, remove to train on the full images
+            #         "task_name": "object_detection",
+            #     }
             t1 = time.time()
             scheduled_run_id = client.schedule_compute_worker_run(
                 # worker_config = {
