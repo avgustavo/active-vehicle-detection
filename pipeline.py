@@ -1370,56 +1370,16 @@ if __name__ == "__main__":
             print(f"Modo de operação: treinamento ativo com reinício do modelo")
         print(f'Configurações escolhidas: dataset={dataset_name}, epochs={epochs}, model={args.model}, start={start}, end={end}, selection_type={selection_type}, retrain={args.retrain}')
         ts = time.time()
-        # main(
-        #     dataset_name=dataset_name,
-        #     epochs=epochs,
-        #     initial_model_path=args.model,
-        #     start=start,
-        #     end=end,
-        #     selection_type=selection_type,
-        #     retrain=args.retrain,
-        #     ssl = args.ssl
-        # )
-        # te = time.time()
-        # retrieve_embeddings()
-        # main(
-        #     dataset_name=dataset_name, #dd_uncert
-        #     epochs=epochs,
-        #     initial_model_path=args.model,
-        #     start=start,
-        #     end=end,
-        #     selection_type=selection_type, #uncert 
-        #     retrain=args.retrain, #-r0
-        #     ssl = args.ssl
-        # )
+        main(
+            dataset_name=dataset_name,
+            epochs=epochs,
+            initial_model_path=args.model,
+            start=start,
+            end=end,
+            selection_type=selection_type,
+            retrain=args.retrain,
+            ssl = args.ssl
+        )
         te = time.time()
-
-        # print(f"Tempo total de execução do pipeline {dataset_name}: {calculate_time(ts, te)}")
-        t1 = time.time()
-        main(
-            dataset_name='dd_balance3',
-            epochs=epochs,
-            initial_model_path=args.model,
-            start=start,
-            end=end,
-            selection_type='balance', # balance
-            retrain=args.retrain, # -r
-            ssl = args.ssl
-        )
-        t2 = time.time()
-        print(f"Tempo total de execução do pipeline dd_balance: {calculate_time(t1, t2)}")
-        t3 = time.time()
-        main(
-            dataset_name='dd_random',
-            epochs=epochs,
-            initial_model_path=args.model,
-            start=start,
-            end=end,
-            selection_type='random', # random
-            retrain=args.retrain, # -r
-            ssl = args.ssl
-        )
-        t4 = time.time()
-        print(f"Tempo total de execução do pipeline dd_random: {calculate_time(t3, t4)}")
+        print(f"Tempo total de execução do pipeline {dataset_name}: {calculate_time(ts, te)}")
         
-        print(f"Tempo total de execução do pipeline: {calculate_time(ts, t4)}")
