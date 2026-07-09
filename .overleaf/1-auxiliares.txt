@@ -1,0 +1,28 @@
+def printff(message: str):
+    print('=' * 100)
+    print(message)
+    print('=' * 100)
+
+
+def calculate_time(start: float, end: float) -> str:
+    diff = end - start
+    h = int(diff // 3600)
+    m = int((diff % 3600) // 60)
+    s = int(diff % 60)
+    if h > 0:
+        return f"{h} horas, {m} minutos e {s} segundos"
+    elif m > 0:
+        return f"{m} minutos e {s} segundos"
+    else:
+        return f"{s} segundos"
+
+
+def create_dir(dataset_name:str) -> Path:
+
+    if not os.path.exists(f'{dataset_name}'):
+        os.makedirs(f'{dataset_name}')
+        print(f'Diretorio do dataset {dataset_name} criado com sucesso!')
+    else:
+        print(f'Esse diretorio {dataset_name} ja existe!')
+
+    return Path(f'{dataset_name}')

@@ -1,0 +1,49 @@
+def train_yolo(cycle_name:str, yaml_path:str, project_name:str, epochs:int, model_path='yolo11n.pt', classes: List[int] = IMPORTANT_CLASSES):
+
+    printff(f"Treinando o modelo YOLO para o ciclo: {cycle_name}")
+
+    #Carregar modelo
+    model = YOLO(model_path)
+    if torch.cuda.is_available():
+        if torch.cuda.device_count() > 1:
+            dev = [0, 1]
+        else:
+            dev = -1
+
+
+    t1 = time.time()
+    model.train(
+        data=yaml_path,
+        epochs=epochs,
+        imgsz=640,
+        batch=16,
+        device=dev,
+        project=project_name,
+        name=cycle_name,
+        plots=True,
+        classes=classes,
+        optimizer='AdamW',
+        momentum=0.9,
+        lr0=0.000833
+    )
+    t2 = time.time()
+    printff(f'Tempo total de treinamento: {calculate_time(t1, t2)}')
+
+    best_model_path = Path(project_name) / cycle_name / "weights" / "best.pt"
+
+    model = YOLO(best_model_path)
+    metrics = model.val(
+        data=yaml_path,
+        split='val',
+        name=f'{cycle_name}_val',
+        project=project_name,
+        classes=classes
+    )
+
+    print(f"  > mAP50-95 (val): {metrics.box.map:.4f}")
+    print(f"  > mAP50 (val):    {metrics.box.map50:.4f}")
+    print(f"  > mAP (val):      {metrics.box.map75:.4f}")
+
+    metrics_csv = metrics.to_csv()
+    with open(f'{project_name}/{cycle_name}/res_val.csv', 'w') as f:
+        f.write(metrics_csv)

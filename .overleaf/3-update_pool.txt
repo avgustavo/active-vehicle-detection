@@ -1,0 +1,75 @@
+def update_pool(
+    client: ApiWorkflowClient,
+    all_images_path: Path,
+    cycle_name: str,
+    run_dir: Path,
+    train_images_dir: Path
+) -> Dict[str, Path]:    
+    """
+    Atualiza o pool de imagens no Lightly.
+    """
+    printff(f"\n--- Atualizando pool de dados para o ciclo: {cycle_name} ---")
+    
+    # Define o diretorio de configuracao central para este ciclo
+    config_dir = run_dir / "config" / cycle_name
+    config_dir.mkdir(parents=True, exist_ok=True)
+    pool_path = run_dir / "pool.csv"
+
+    if not pool_path.exists():
+        print('Criando o arquivo principal controle de imagens rotuladas e nao rotuladas...')
+
+        with open(all_images_path, 'r') as f:
+            all_filenames = [line.strip() for line in f if line.strip()]
+        
+        df = pd.DataFrame(all_filenames, columns=['filename'])
+        df['status'] = 0  # Status inicial para todas as imagens (nao rotuladas)
+
+    else:
+        print('Arquivo de controle de imagens ja existe. Atualizando...')
+        df = pd.read_csv(pool_path)
+
+    tags = client.get_all_tags()
+    tags.sort(key=lambda t: t.created_at, reverse=True)
+
+    new_tag = tags[0]
+    printff(f"Usando a tag mais recente: {new_tag.name}")
+    image_names = client.export_filenames_by_tag_name(tag_name=new_tag.name).splitlines()
+
+
+    new_labeled_images = []
+    for name in image_names:
+        if name:
+            new_labeled_images.append(name.strip())
+
+    # Atualiza o status para rotulado
+    df.loc[df['filename'].isin(new_labeled_images), 'status'] = 1  
+
+    df.to_csv(pool_path, index=False)
+
+    abs_images_path = train_images_dir.absolute()
+    
+    df_rotulado = df[df['status'] == 1]
+    df_nao_rotulado = df[df['status'] == 0]
+    
+    caminhos_rotulados = [str(abs_images_path / fname) for fname in df_rotulado['filename']]
+    caminhos_nao_rotulados = [str(abs_images_path / fname) for fname in df_nao_rotulado['filename']]
+
+
+    # Salva os arquivos .txt DENTRO do diretorio de configuracao do ciclo
+    path_labeled_txt = config_dir / "labeled.txt"
+    path_unlabeled_txt = config_dir / "unlabeled.txt"
+    
+    # Escreve os caminhos nos arquivos de texto
+    print(f"Salvando lista de {len(caminhos_rotulados)} caminhos rotulados em: {path_labeled_txt}")
+    with open(path_labeled_txt, "w") as f:
+        f.write('\n'.join(caminhos_rotulados))
+
+    print(f"Salvando lista de {len(caminhos_nao_rotulados)} caminhos nao rotulados em: {path_unlabeled_txt}")
+    with open(path_unlabeled_txt, "w") as f:
+        f.write('\n'.join(caminhos_nao_rotulados))
+
+    # Retorna os caminhos para os arquivos criados
+    return {
+        "labeled_txt_path": path_labeled_txt,
+        "unlabeled_txt_path": path_unlabeled_txt
+    }

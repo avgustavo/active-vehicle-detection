@@ -1,0 +1,126 @@
+def prepare_focal_dataset(labeled_txt_path: Path) -> Path:
+    """
+    Cria o arquivo data.yaml para um ciclo especifico, usando a lista de treino fornecida.
+    Salva o .yaml na mesma pasta que o arquivo .txt.
+
+    Returns:
+        Path: O Path para o arquivo data.yaml criado.
+    """
+    # O diretorio de configuracao e o mesmo onde o 'labeled_txt_path' esta
+    config_dir = labeled_txt_path.parent
+
+    print("=" * 100)
+    print(f"Criando arquivo de configuracao YAML em: {config_dir}")
+    print(f"Arquivo de imagens rotuladas: {labeled_txt_path.absolute()} vai para o 'train' do data.yaml")
+    print("=" * 100)
+    
+    yaml_path = config_dir / "data.yaml"
+    yaml_content = f"""
+# 'path' resolve os caminhos para 'val' e 'test'.
+path: {DATASET_PATH.absolute()}
+
+# Para 'train', usamos um caminho absoluto para evitar qualquer ambiguidade.
+train: {labeled_txt_path.absolute()}
+
+val: images/val
+test: images/test
+
+nc: 4
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: cart
+""".strip()
+    with open(yaml_path, "w") as f:
+        f.write(yaml_content.strip())
+    print(f"Arquivo de configuracao YAML criado em: {yaml_path}")
+    
+    return yaml_path
+
+def prepare_tt_dataset(labeled_txt_path: Path) -> Path:
+    """
+    Cria o arquivo data.yaml para um ciclo especifico, usando a lista de treino fornecida.
+    Salva o .yaml na mesma pasta que o arquivo .txt.
+
+    Returns:
+        Path: O Path para o arquivo data.yaml criado.
+    """
+    # O diretorio de configuracao e o mesmo onde o 'labeled_txt_path' esta
+    config_dir = labeled_txt_path.parent
+
+    print("=" * 100)
+    print(f"Criando arquivo de configuracao YAML em: {config_dir}")
+    print(f"Arquivo de imagens rotuladas: {labeled_txt_path.absolute()} vai para o 'train' do data.yaml")
+    print("=" * 100)
+    
+    yaml_path = config_dir / "data.yaml"
+    yaml_content = f"""
+# 'path' resolve os caminhos para 'val' e 'test'.
+path: {DATASET_PATH.absolute()}
+
+# Para 'train', usamos um caminho absoluto para evitar qualquer ambiguidade.
+train: {labeled_txt_path.absolute()}
+val: val/images
+
+nc: 8
+# Definicao das Classes
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  4: airplane
+  5: bus
+  6: van
+  7: truck
+
+""".strip()
+    with open(yaml_path, "w") as f:
+        f.write(yaml_content.strip())
+    print(f"Arquivo de configuracao YAML criado em: {yaml_path}")
+    
+    return yaml_path
+def prepare_yolo_dataset(labeled_txt_path: Path) -> Path:
+    """
+    Cria o arquivo data.yaml para um ciclo especifico, usando a lista de treino fornecida.
+    Salva o .yaml na mesma pasta que o arquivo .txt.
+
+    Returns:
+        Path: O Path para o arquivo data.yaml criado.
+    """
+    # O diretorio de configuracao e o mesmo onde o 'labeled_txt_path' esta
+    config_dir = labeled_txt_path.parent
+
+    print("=" * 100)
+    print(f"Criando arquivo de configuracao YAML em: {config_dir}")
+    print(f"Arquivo de imagens rotuladas: {labeled_txt_path.absolute()} vai para o 'train' do data.yaml")
+    print("=" * 100)
+    
+    yaml_path = config_dir / "data.yaml"
+    yaml_content = f"""
+# 'path' resolve os caminhos para 'val' e 'test'.
+path: {DATASET_PATH.absolute()}
+
+# Para 'train', usamos um caminho absoluto para evitar qualquer ambiguidade.
+train: {labeled_txt_path.absolute()}
+val: images/val
+
+nc: 8
+# Definicao das Classes
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  4: bus
+  5: truck
+  6: traffic sign
+  7: traffic light
+
+""".strip()
+    with open(yaml_path, "w") as f:
+        f.write(yaml_content.strip())
+    print(f"Arquivo de configuracao YAML criado em: {yaml_path}")
+    
+    return yaml_path
