@@ -100,6 +100,7 @@ requests-toolbelt==1.0.0
 rich==14.0.0
 rpds-py==0.26.0
 scipy==1.15.3
+seaborn==0.13.2
 semantic-version==2.10.0
 sentry-sdk==2.33.0
 simplejson==3.20.1
